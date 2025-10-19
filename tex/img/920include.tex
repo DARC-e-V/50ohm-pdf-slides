@@ -1,0 +1,51 @@
+% Author: Michael Groni, DB7YI, Matthias Jung, DL9MJ
+% Year: 2022, 2024
+
+\begin{tikzpicture}
+
+    \tikzstyle{interface}=[draw, minimum width=1.4cm, minimum height=0.2cm, align=center, inner sep=1]
+    \tikzstyle{bigBox}=[minimum width=1.2cm, minimum height=1.2cm, fill=lightgray, draw=lightgray]
+    
+    \tikzstyle{label}=[]
+    \def\labelSpacingSouth{0.12cm}
+      
+    \def\deltaY{1.25}
+    
+    % Zeile 6 (von unten nach oben nummeriert)	
+    \draw(0,0) node[bigBox](left6){}; 
+    \draw(0,0) ++(4,0) node [bigBox] (right6) {};
+    \draw(right6.center) node[trxshape, scale=0.66](){};
+    \draw[thick](left6.east) node[waves, anchor=left, scale=0.66](){}; 
+    \draw[thick](right6.west) node[waves, anchor=left, rotate=180, scale=0.66](){};
+
+    % Zeile 5 (von unten nach oben nummeriert)	
+    \draw(left6.south) node [bigBox, below=0.25cm](left5){};
+    \draw(right6.south) node [bigBox, below=0.25cm](right5) {};
+    \path (left5) -- (right5) node[midway, cloud, draw, minimum width=37, minimum height=18, cloud puffs = 15, cloud puff arc = 105] (net) {};	% Netzwerk
+    \node at (net) {\tiny Netzwerk}; % Netzwerk
+    \draw (left5.east) -- (net.west); 
+    \draw (net.east) -- (right5.west);
+    
+    % Zeile 4 (von unten nach oben nummeriert)	
+    \draw(left5.south) node [bigBox, below=0.25cm] (left4) {}; 
+    \draw(right5.south) node [bigBox, below=0.25cm] (right4) {};	% Transceiver
+    \path (left4.330) -- (right4.210) node (center4b) [interface, midway] {\tiny CAT-\\[-0.6em] \tiny Interface};	% Interface
+    \draw (left4.330) -- (center4b.west); % Linie Computer - Interface
+    \draw (center4b.east) -- (right4.210); % Linie Interface - Transceiver
+    \draw [] (left4.30) to (right4.150); % Linie Audio
+    \node [label, above=\labelSpacingSouth of left4.30, anchor=west] {\tiny Audio};		% Beschriftung Audio am Computer
+    \node [label, above=\labelSpacingSouth of right4.150, anchor=east] {\tiny Audio};	% Beschriftung Audio am Transceiver
+    \node [label, above=\labelSpacingSouth of left4.330, anchor=west] {\tiny USB};		% Beschriftung USB am Computer
+    \node [label, above=\labelSpacingSouth of right4.210, anchor=east] {\tiny CAT};	% Beschriftung CAT am Transceiver
+    
+    %% Draw computers:
+    \computer {left5.center}{comp5}
+    \computer {left4.center}{comp4}
+
+    %% Draw smartphone
+    \smartphone{(left6.center)}{0.6cm}{sp}
+    
+    %% Draw TRXs
+    \draw(right5.center) node[trxshape, scale=0.66](){};
+    \draw(right4.center) node[trxshape, scale=0.66](){};
+\end{tikzpicture}

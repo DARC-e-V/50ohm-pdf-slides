@@ -1,0 +1,51 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% (5)
+\begin{tikzpicture}
+    % Schwingkreis
+    \draw (1,0) coordinate(h0)
+        to [short, name={foo}] ++(0,-2)
+        to [short] ++(0,0) coordinate(h1);
+    \draw(h1) -- ++(0,0) coordinate(c1);
+    \draw(h0) -- ++(0,0) coordinate(h2);
+    \draw(h2) -- ++(0,0) coordinate(c2);
+
+    \draw[thick](c1) -- ++(+0.2,0) coordinate(cc1);
+    \draw[thick](c1) -- ++(-0.2,0) coordinate(cc2);
+    \draw[thick](c2) -- ++(-0.2,0) coordinate(cc3);
+    \draw[thick](c2) -- ++(+0.2,0) coordinate(cc4);
+
+    \foreach \i in {0,1}{
+        \path
+            (cc3) ++(+\i*0.8/6,0) coordinate(start\i);
+        \path
+            (cc2) ++(+\i*0.8/6,0) coordinate(end\i);
+
+        % Geraden:
+        \path (start\i)  ++(0,+0.5+0.5*\i) coordinate(t1);
+        \path (foo.center) ++(-0.5-0.25*\i,0) coordinate(mid\i) ++(0,+1.0+0.5*\i) coordinate(t2);
+        \path (end\i)  ++(0,-0.5-0.5*\i) coordinate(t3);
+        \path (foo.center) ++(-0.5-0.25*\i,0) coordinate(mid\i) ++(0,-1.0-0.5*\i) coordinate(t4);
+        \draw[DARCorange] (start\i) .. controls (t1) and (t2) .. (mid\i);
+        \draw[DARCorange,Triangle-] (end\i) .. controls (t3) and (t4) .. (mid\i);
+    }
+
+    \foreach \i in {0,1}{
+        \path
+            (cc4) ++(-\i*0.8/6,0) coordinate(start\i);
+        \path
+            (cc1) ++(-\i*0.8/6,0) coordinate(end\i);
+
+        % Geraden:
+        \path (start\i)  ++(0,+0.5+0.5*\i) coordinate(t1);
+        \path (foo.center) ++(+0.5+0.25*\i,0) coordinate(mid\i) ++(0,+1.0+0.5*\i) coordinate(t2);
+        \path (end\i)  ++(0,-0.5-0.5*\i) coordinate(t3);
+        \path (foo.center) ++(+0.5+0.25*\i,0) coordinate(mid\i) ++(0,-1.0-0.5*\i) coordinate(t4);
+        \draw[DARCorange] (start\i) .. controls (t1) and (t2) .. (mid\i);
+        \draw[DARCorange,Triangle-] (end\i) .. controls (t3) and (t4) .. (mid\i);
+    }
+
+    % Margin:
+    \useasboundingbox (-0.5,+0.25+2) rectangle (+2.5,-2.25-2);
+
+\end{tikzpicture}%

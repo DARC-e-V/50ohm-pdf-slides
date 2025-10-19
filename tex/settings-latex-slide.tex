@@ -24,6 +24,13 @@
 \DeclareSIUnit{\WPM}{WPM}
 \DeclareSIUnit\noop{\relax}
 
+\sisetup{
+    mode=match,
+    reset-text-family=false,
+    reset-text-series=false,
+    reset-text-shape=false
+}
+
 \definecolor{DARCgreen}{RGB}{0,155,110}
 \definecolor{DARCorange}{RGB}{250,180,0}
 \definecolor{DARCred}{RGB}{225,80,35}
@@ -102,6 +109,33 @@
                     \item[C:] #5
                     \item[D:] #6
                 \end{itemize}
+            \end{column}
+        \end{columns}
+    \end{block}
+}
+
+\newenvironment{P2Question}[7]{
+    \begin{block}{#1}
+        \begin{columns}
+            \begin{column}{0.48\linewidth}
+                #2
+                #7
+            \end{column}
+            \begin{column}{0.48\linewidth}
+                \begin{columns}
+                    \begin{column}{0.48\linewidth}
+                        \begin{itemize}
+                            \item[A:] #3
+                            \item[B:] #4
+                        \end{itemize}
+                    \end{column}
+                    \begin{column}{0.48\linewidth}
+                        \begin{itemize}
+                            \item[C:] #5
+                            \item[D:] #6
+                        \end{itemize}
+                    \end{column}
+        \end{columns}
             \end{column}
         \end{columns}
     \end{block}

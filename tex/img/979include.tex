@@ -1,0 +1,29 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% 6-Minuten Grenzwerte BIMSCHV
+\pgfkeys{/pgf/number format/.cd,1000 sep={\,}}
+\begin{tikzpicture}
+    \pgfplotsset{samples=200}
+    \begin{axis}[
+        axis on top,
+        height=5cm,
+        scale only axis,
+        width=\linewidth*\getDarcImageFactor,
+        xmin =  0.1,
+        xmax =  300000,
+        ymin =  0,
+        ymax =  100,
+        domain = 0:300000,
+        xmode=log,
+        log ticks with fixed point,
+        smooth,
+        xlabel={Frequenz in \unit{\mega\hertz}},
+        ylabel={Feldstärke in \unit{\volt\per\metre}}
+    ]
+        \addplot[DARCred, very thick, domain={0.1:1}]{87};
+        \addplot[DARCred, very thick, domain={1:10}]{87/sqrt(x)};
+        \addplot[DARCred, very thick, domain={10:400}]{28};
+        \addplot[DARCred, very thick, domain={400:2000}]{1.375*sqrt(x)};
+        \addplot[DARCred, very thick, domain={2000:300000}]{61};
+    \end{axis}
+\end{tikzpicture}

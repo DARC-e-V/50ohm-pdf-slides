@@ -1,13 +1,43 @@
 
 \section{Verstärker}
 \label{section:verstaerker}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Mittels Transistoren lassen sich, abhängig von der Art der Schaltung, alle Arten von Signalen (Digital, NF oder HF) verstärken.
-  \item Dabei ist die Ausgangsleistung gegenüber der Eingangsleistung größer.
-  \item Es ist eine Spannungsquelle notwendig.
-  \item Wir haben im Kapitel Transistor schon gesehen, wie das funktioniert.
-  \end{itemize}
+\begin{frame}{Verstärker}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \begin{itemize}
+                \item Mittels Transistoren lassen sich, abhängig von der Art der Schaltung, alle Arten von Signalen (Digital, NF oder HF) verstärken.
+                \item Dabei ist die Ausgangsleistung gegenüber der Eingangsleistung größer.
+                \item Es ist eine Energiequelle z.B. in Form einer Spannungsquelle notwendig.
+                \item Analogie des Transistors haben wir bereits kennen gelernt
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \DARCimage{1.0\linewidth}{836include}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Verstärker}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            Im Amatuerfunk finden wir Verstärker in verschiedenen Bereichen:
+            \begin{itemize}
+                \item NF-Verstärker finden im Amateurfunk zum Beispiel bei der
+                Anhebung eines Audiosignals für eine Ausgabe im Lautsprecher
+                Anwendung.
+                \item HF-Verstärker werden in Sendern und Empfängern eingesetzt
+                um Ausgangssignale z.\,B. in einer Endstufe, oder Schwache
+                eingehende signale zu verstärken.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{1.0\linewidth}{763include}
+                \caption{\scriptsize Beispiel: Schaltbild eines NF-Verstärkers}
+                \label{e_nf_verstaerker}
+            \end{figure}
+       \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -48,28 +78,14 @@
 }
 \end{frame}
 
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}{Linearität}
+    \begin{center}
+        \DARCimage{0.85\linewidth}{828include}
+    \end{center}
     \begin{itemize}
-  \item \emph{Linearität} bedeutet: Eine Verdoppelung des Eingangssignals muss zu einer Verdoppelung des Ausgangssignals führen
-  \item Linearitätsabweichungen sind unerwünscht, weil sie zu Frequenzen führen, die im Originalsignal nicht vorhanden sind.
-  \item Sie werden im NF-Bereich als \emph{Verzerrungen} wahrgenommen und im HF-Bereich als \emph{Oberwellen}
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{828include}
-    \caption{\scriptsize Das Eingangssignal wird verstärkt. Bei Begrenzung durch fehlende Linearität wird das Ausgangssignal verformt.}
-    \label{e_verstaerker_linearitaet}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+        \item Linearitätsabweichungen sind unerwünscht, weil sie zu Frequenzen führen, die im Originalsignal nicht vorhanden sind.
+        \item Sie werden im NF-Bereich als \emph{Verzerrungen} wahrgenommen und im HF-Bereich als \emph{Oberwellen}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -92,28 +108,6 @@
 \end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item NF-Verstärker finden im Amateurfunk zum Beispiel bei der Anhebung des Signals für eine Ausgabe im Lautsprecher Anwendung
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{763include}
-    \caption{\scriptsize Schaltbild eines NF-Verstärkers}
-    \label{e_nf_verstaerker}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
 \only<1>{
 \begin{PQuestion}{ED402}{Worum handelt es sich bei dieser Schaltung?}{Tongenerator}
 {ZF-Verstärker}
@@ -132,7 +126,7 @@
 }
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Mikrofonverstärker}
 \begin{columns}
     \begin{column}{0.48\textwidth}
     \begin{itemize}
@@ -146,7 +140,7 @@
        
 \begin{figure}
     \DARCimage{0.85\linewidth}{246include}
-    \caption{\scriptsize Typischer Frequenzgang für einen Amateurfunk Mikrofonverstärker}
+    \caption{\scriptsize Typischer Frequenzgang eines Filters für einen Amateurfunk Mikrofonverstärker}
     \label{e_frequenzgang_mikrofonverstaerker}
 \end{figure}
 
@@ -158,18 +152,20 @@
 
 \begin{frame}
 \only<1>{
-\begin{question2x2}{EF307}{Welcher Frequenzgang ist am besten für den Mikrofonverstärker eines Sprechfunkgeräts geeignet?}{\DARCimage{0.75\linewidth}{249include}}
-{\DARCimage{0.75\linewidth}{247include}}
-{\DARCimage{0.75\linewidth}{248include}}
-{\DARCimage{0.75\linewidth}{246include}}
+\begin{question2x2}{EF307}{Welcher Frequenzgang ist am besten für den Mikrofonverstärker eines Sprechfunkgeräts geeignet?}
+    {\DARCimage{0.6\linewidth}{249include}}
+    {\DARCimage{0.6\linewidth}{247include}}
+    {\DARCimage{0.6\linewidth}{248include}}
+    {\DARCimage{0.6\linewidth}{246include}}
 \end{question2x2}
 
 }
 \only<2>{
-\begin{question2x2}{EF307}{Welcher Frequenzgang ist am besten für den Mikrofonverstärker eines Sprechfunkgeräts geeignet?}{\DARCimage{0.75\linewidth}{249include}}
-{\DARCimage{0.75\linewidth}{247include}}
-{\DARCimage{0.75\linewidth}{248include}}
-{\textbf{\textcolor{DARCgreen}{\DARCimage{0.75\linewidth}{246include}}}}
+\begin{question2x2}{EF307}{Welcher Frequenzgang ist am besten für den Mikrofonverstärker eines Sprechfunkgeräts geeignet?}
+    {\DARCimage{0.6\linewidth}{249include}}
+    {\DARCimage{0.6\linewidth}{247include}}
+    {\DARCimage{0.6\linewidth}{248include}}
+    {\textbf{\textcolor{DARCgreen}{\DARCimage{0.6\linewidth}{246include}}}}
 \end{question2x2}
 
 }
@@ -195,7 +191,8 @@
 
 \end{frame}
 
-\begin{frame}\begin{itemize}
+\begin{frame}{Stromzufuhr}
+    \begin{itemize}
   \item Die Stromzufuhr eines Senders sollte neben Stabilität auch einen guten Schutz gegen HF-Einstrahlung haben
   \item Damit verhindert man das Einströmen von Hochfrequenz in das Stromnetz
   \end{itemize}

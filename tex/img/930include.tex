@@ -1,0 +1,23 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% (6)
+\begin{tikzpicture}
+    % Schwingkreis
+    \draw (1,-0.1-1) coordinate(h0)
+        to [short, name={foo},o-*] ++(0,-0.9)
+        to [short] ++(0,0) coordinate(c2);
+
+    \draw (1,+0.1-1) coordinate(h0)
+        to [short, name={foo},o-*] ++(0,0.9)
+        to [short] ++(0,0) coordinate(c1);
+
+    \draw[-Triangle, DARCorange] (c1) to[out=45,  in=-45 ] (c2);
+    \draw[-Triangle, DARCorange] (c1) to[out=135, in=-135] (c2);
+
+    \draw[-Triangle, DARCorange] (c1) to[out=55,  in=-55,  looseness=2] (c2);
+    \draw[-Triangle, DARCorange] (c1) to[out=125, in=-125, looseness=2] (c2);
+
+    % Margin:
+    \useasboundingbox (-0.5,+0.25+2) rectangle (+2.5,-2.25-2);
+
+\end{tikzpicture}%

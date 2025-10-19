@@ -2,142 +2,148 @@
 \section{Frequenzmodulation (FM)}
 \label{section:fm}
 \begin{frame}%STARTCONTENT
+    \begin{figure}
+        \DARCimage{0.85\linewidth}{906include}
+        \caption{\scriptsize Frequenzmodulation}
+        \label{n_fm_frequenzmodulation}
+    \end{figure}
+    \begin{itemize}
+        \item $U(t) = A \cdot \sin(2\pi \cdot f(t) \cdot t + \phi)$
+        \item Modulationssignal wird durch Änderung der Frequenz $f(t)$ des Trägers erzeugt
+        \item Amplitude $A$ des Trägers wird nicht verändert und bleibt idealerweise konstant
+    \end{itemize}
+\end{frame}
 
-\begin{figure}
-    \DARCimage{0.85\linewidth}{357include}
-    \caption{\scriptsize Frequenzmodulation}
-    \label{n_fm_frequenzmodulation}
-\end{figure}
-
-\begin{itemize}
-  \item Modulationssignal wird durch Änderung der Frequenz auf den Träger aufmoduliert
-  \item Amplitude des Trägers wird nicht verändert und bleibt idealerweise konstant
-  \end{itemize}
+\begin{frame}{FM im Wasserfalldiagramm}
+    \begin{figure}
+        \centering
+        \DARCimage{0.35\linewidth}{711include}
+        \caption{\scriptsize FM-Signal}
+        \label{n_Wasserfall_FM}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NE301}{Welche Aussage zur Frequenzmodulation ist richtig? Durch das Informationssignal~...}{wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}
-{wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant. }
-{werden gleichzeitig Frequenz und Amplitude des Trägers beeinflusst.}
-{wird zuerst die Frequenz und dann die Amplitude des Trägers beeinflusst.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE301}{Welche Aussage zur Frequenzmodulation ist richtig? Durch das Informationssignal~...}{wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}
+            {wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant. }
+            {werden gleichzeitig Frequenz und Amplitude des Trägers beeinflusst.}
+            {wird zuerst die Frequenz und dann die Amplitude des Trägers beeinflusst.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NE301}{Welche Aussage zur Frequenzmodulation ist richtig? Durch das Informationssignal~...}{\textbf{\textcolor{DARCgreen}{wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}}}
-{wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant. }
-{werden gleichzeitig Frequenz und Amplitude des Trägers beeinflusst.}
-{wird zuerst die Frequenz und dann die Amplitude des Trägers beeinflusst.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE301}{Welche Aussage zur Frequenzmodulation ist richtig? Durch das Informationssignal~...}{\textbf{\textcolor{DARCgreen}{wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}}}
+            {wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant. }
+            {werden gleichzeitig Frequenz und Amplitude des Trägers beeinflusst.}
+            {wird zuerst die Frequenz und dann die Amplitude des Trägers beeinflusst.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NE302}{Welche Antwort beschreibt die Modulationsart \glqq FM\grqq{}?}{Die Richtung eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
-{Die Amplitude eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
-{Die Polarisation eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
-{Die Frequenz eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE302}{Welche Antwort beschreibt die Modulationsart \glqq FM\grqq{}?}{Die Richtung eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
+            {Die Amplitude eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
+            {Die Polarisation eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
+            {Die Frequenz eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NE302}{Welche Antwort beschreibt die Modulationsart \glqq FM\grqq{}?}{Die Richtung eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
-{Die Amplitude eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
-{Die Polarisation eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
-{\textbf{\textcolor{DARCgreen}{Die Frequenz eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE302}{Welche Antwort beschreibt die Modulationsart \glqq FM\grqq{}?}{Die Richtung eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
+            {Die Amplitude eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
+            {Die Polarisation eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}
+            {\textbf{\textcolor{DARCgreen}{Die Frequenz eines Trägersignals wird anhand eines zu übertragenden Signals verändert.}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NE303}{Welche Auswirkung hat Frequenzmodulation (FM) auf die Amplitude des Sendesignals?}{Je schneller die Schwingung des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
-{Idealerweise entspricht die Amplitude des Sendesignals der Amplitude des Modulationssignals.}
-{Idealerweise hat das Modulationssignal keine Auswirkung auf die Amplitude des Sendesignals.}
-{Je größer die Amplitude des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE303}{Welche Auswirkung hat Frequenzmodulation (FM) auf die Amplitude des Sendesignals?}{Je schneller die Schwingung des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
+            {Idealerweise entspricht die Amplitude des Sendesignals der Amplitude des Modulationssignals.}
+            {Idealerweise hat das Modulationssignal keine Auswirkung auf die Amplitude des Sendesignals.}
+            {Je größer die Amplitude des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NE303}{Welche Auswirkung hat Frequenzmodulation (FM) auf die Amplitude des Sendesignals?}{Je schneller die Schwingung des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
-{Idealerweise entspricht die Amplitude des Sendesignals der Amplitude des Modulationssignals.}
-{\textbf{\textcolor{DARCgreen}{Idealerweise hat das Modulationssignal keine Auswirkung auf die Amplitude des Sendesignals.}}}
-{Je größer die Amplitude des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE303}{Welche Auswirkung hat Frequenzmodulation (FM) auf die Amplitude des Sendesignals?}{Je schneller die Schwingung des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
+            {Idealerweise entspricht die Amplitude des Sendesignals der Amplitude des Modulationssignals.}
+            {\textbf{\textcolor{DARCgreen}{Idealerweise hat das Modulationssignal keine Auswirkung auf die Amplitude des Sendesignals.}}}
+            {Je größer die Amplitude des Modulationssignals ist, umso größer wird die Amplitude des Sendesignals.}
+        \end{QQuestion}
 
-}
+    }
+\end{frame}
+
+\begin{frame}{Frequenzhub}
+    \begin{itemize}
+        \item Je lauter in das Mikrofon gesprochen wird, umso größer die Änderung der Trägerfrequenz
+        \item Dadurch steigt auch die belegte Bandbreite der Aussendung
+        \item Maximalwert der Änderung der Trägerfrequenz wird als \emph{Frequenzhub} oder kurz \emph{Hub} bezeichnet
+        \item In der Praxis kommt Schmalband-FM (englisch Narrow- FM, kurz NFM) mit \qty{12}{\kilo\hertz} Bandbreite zum Einsatz
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Frequenzhub}
-\begin{itemize}
-  \item Je lauter in das Mikrofon gesprochen wird, umso größer die Änderung der Trägerfrequenz
-  \item Dadurch steigt auch die belegte Bandbreite der Aussendung
-  \item Maximalwert der Änderung der Trägerfrequenz wird als \emph{Frequenzhub} oder kurz \emph{Hub} bezeichnet
-  \item In der Praxis kommt Schmalband-FM (englisch Narrow- FM, kurz NFM) mit \qty{12}{\kilo\hertz} Bandbreite zum Einsatz
-  \end{itemize}
+    \only<1>{
+        \begin{QQuestion}{BC216}{Warum sollten Sie bei FM-Telefonie auf \qty{145,525}{\MHz} darauf achten, ihr Funkgerät auf Schmalband-FM (Narrow FM) einzustellen? Der IARU-Bandplan empfiehlt~...}{ein Kanalraster von \qty{5}{\kHz} einzuhalten.}
+            {in diesem Frequenzbereich nicht mehr als \qty{25}{\kHz} Bandbreite zu belegen.}
+            {einen Kanalabstand von \qty{50}{\kHz} einzuhalten.}
+            {in diesem Frequenzbereich nicht mehr als \qty{12}{\kHz} Bandbreite zu belegen.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{BC216}{Warum sollten Sie bei FM-Telefonie auf \qty{145,525}{\MHz} darauf achten, ihr Funkgerät auf Schmalband-FM (Narrow FM) einzustellen? Der IARU-Bandplan empfiehlt~...}{ein Kanalraster von \qty{5}{\kHz} einzuhalten.}
+            {in diesem Frequenzbereich nicht mehr als \qty{25}{\kHz} Bandbreite zu belegen.}
+            {einen Kanalabstand von \qty{50}{\kHz} einzuhalten.}
+            {\textbf{\textcolor{DARCgreen}{in diesem Frequenzbereich nicht mehr als \qty{12}{\kHz} Bandbreite zu belegen.}}}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{NE306}{Was kann man tun, wenn der Hub bei einem Handfunkgerät oder Mobil-Transceiver zu groß ist?}{Weniger Leistung verwenden}
+            {Lauter ins Mikrofon sprechen}
+            {Leiser ins Mikrofon sprechen}
+            {Mehr Leistung verwenden}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{NE306}{Was kann man tun, wenn der Hub bei einem Handfunkgerät oder Mobil-Transceiver zu groß ist?}{Weniger Leistung verwenden}
+            {Lauter ins Mikrofon sprechen}
+            {\textbf{\textcolor{DARCgreen}{Leiser ins Mikrofon sprechen}}}
+            {Mehr Leistung verwenden}
+        \end{QQuestion}
+
+    }
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{BC216}{Warum sollten Sie bei FM-Telefonie auf \qty{145,525}{\MHz} darauf achten, ihr Funkgerät auf Schmalband-FM (Narrow FM) einzustellen? Der IARU-Bandplan empfiehlt~...}{ein Kanalraster von \qty{5}{\kHz} einzuhalten.}
-{in diesem Frequenzbereich nicht mehr als \qty{25}{\kHz} Bandbreite zu belegen.}
-{einen Kanalabstand von \qty{50}{\kHz} einzuhalten.}
-{in diesem Frequenzbereich nicht mehr als \qty{12}{\kHz} Bandbreite zu belegen.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE304}{Sie senden mit \qty{2}{\W} in FM auf dem \qty{70}{\cm}-Band. Wie groß ist die angezeigte Sendeleistung, wenn Sie zuerst laut, danach leise und dann nicht mehr in das Mikrofon sprechen?}{zuerst \qty{1}{\W}, dann \qty{0,5}{\W} und zum Schluss \qty{0}{\W}}
+            {zuerst \qty{2}{\W}, dann \qty{1}{\W} und zum Schluss \qty{0}{\W}}
+            {immer \qty{2}{\W}}
+            {immer \qty{1}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{BC216}{Warum sollten Sie bei FM-Telefonie auf \qty{145,525}{\MHz} darauf achten, ihr Funkgerät auf Schmalband-FM (Narrow FM) einzustellen? Der IARU-Bandplan empfiehlt~...}{ein Kanalraster von \qty{5}{\kHz} einzuhalten.}
-{in diesem Frequenzbereich nicht mehr als \qty{25}{\kHz} Bandbreite zu belegen.}
-{einen Kanalabstand von \qty{50}{\kHz} einzuhalten.}
-{\textbf{\textcolor{DARCgreen}{in diesem Frequenzbereich nicht mehr als \qty{12}{\kHz} Bandbreite zu belegen.}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE304}{Sie senden mit \qty{2}{\W} in FM auf dem \qty{70}{\cm}-Band. Wie groß ist die angezeigte Sendeleistung, wenn Sie zuerst laut, danach leise und dann nicht mehr in das Mikrofon sprechen?}{zuerst \qty{1}{\W}, dann \qty{0,5}{\W} und zum Schluss \qty{0}{\W}}
+            {zuerst \qty{2}{\W}, dann \qty{1}{\W} und zum Schluss \qty{0}{\W}}
+            {\textbf{\textcolor{DARCgreen}{immer \qty{2}{\W}}}}
+            {immer \qty{1}{\W}}
+        \end{QQuestion}
 
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NE306}{Was kann man tun, wenn der Hub bei einem Handfunkgerät oder Mobil-Transceiver zu groß ist?}{Weniger Leistung verwenden}
-{Lauter ins Mikrofon sprechen}
-{Leiser ins Mikrofon sprechen}
-{Mehr Leistung verwenden}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NE306}{Was kann man tun, wenn der Hub bei einem Handfunkgerät oder Mobil-Transceiver zu groß ist?}{Weniger Leistung verwenden}
-{Lauter ins Mikrofon sprechen}
-{\textbf{\textcolor{DARCgreen}{Leiser ins Mikrofon sprechen}}}
-{Mehr Leistung verwenden}
-\end{QQuestion}
-
-}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NE304}{Sie senden mit \qty{2}{\W} in FM auf dem \qty{70}{\cm}-Band. Wie groß ist die angezeigte Sendeleistung, wenn Sie zuerst laut, danach leise und dann nicht mehr in das Mikrofon sprechen?}{zuerst \qty{1}{\W}, dann \qty{0,5}{\W} und zum Schluss \qty{0}{\W}}
-{zuerst \qty{2}{\W}, dann \qty{1}{\W} und zum Schluss \qty{0}{\W}}
-{immer \qty{2}{\W}}
-{immer \qty{1}{\W}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NE304}{Sie senden mit \qty{2}{\W} in FM auf dem \qty{70}{\cm}-Band. Wie groß ist die angezeigte Sendeleistung, wenn Sie zuerst laut, danach leise und dann nicht mehr in das Mikrofon sprechen?}{zuerst \qty{1}{\W}, dann \qty{0,5}{\W} und zum Schluss \qty{0}{\W}}
-{zuerst \qty{2}{\W}, dann \qty{1}{\W} und zum Schluss \qty{0}{\W}}
-{\textbf{\textcolor{DARCgreen}{immer \qty{2}{\W}}}}
-{immer \qty{1}{\W}}
-\end{QQuestion}
-
-}
+    }
 
 \end{frame}%ENDCONTENT

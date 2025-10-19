@@ -10,6 +10,7 @@
   \item Eine Diode lässt den Stromfluss nur in eine Richtung durch
   \item In die andere Richtung wirkt sie wie ein hoher Widerstand
   \item Dioden werden u.a. zur Gleichrichtung von Wechselspannung eingesetzt
+  \item Wie genau die Diode arbeitet, ist Thema in der Klasse A oder in Rechenanlagen
   \end{itemize}
 
     \end{column}
@@ -64,28 +65,49 @@
 }
 \end{frame}
 
-\begin{frame}
-\frametitle{Schwellenspannung}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Damit eine Diode in Durchlassrichtung leitet, muss eine bestimmte Spannung -- die Schwellenspannung oder Durchlassspannung -- überschritten werden
-  \item Je nach Basis des chemischen Elements ist die Schwellenspannung unterschiedlich hoch
-  \end{itemize}
 
+\begin{frame}{Kennlinien}
+    \begin{Columns}[T]
+        \Column{0.50}{
+            \begin{itemize}
+                \item<1-> Strom nur in eine Richtung: 
+                $$U_\text{d} = U_\text{a} - U_\text{k} > 0$$
+                \item<2-> Expotentielle Kennlinie:
+                $$I_\text{d} = I_\text{S} \cdot \left(e^{\frac{U_\text{d}}{U_\text{T}}}-1\right)$$
+                \item<3-> $U_\text{T}$ ist eine Konstante, die bei Raumtemperatur etwa \qty{26}{\milli\volt} beträgt.
+                \item<4-> $I_\text{S}$ ist hier der \emph{Sperrsättigungsstrom}, das ist der sehr kleine Strom, der bei negativen Spannungen durch die Diode fließt. 
+            \end{itemize}
+        }
+        \Column{0.50}{
+            \only<1>{\DARCimage{\linewidth}{859include}}%
+            \only<2->{\DARCimage{\linewidth}{861include}}%
+        }
+    \end{Columns}
+\end{frame}
+
+\begin{frame}{Schwellspannung}
+    \begin{columns}
+        \begin{column}{0.38\textwidth}
+            \begin{itemize}
+                \item Damit eine Diode in Durchlassrichtung leitet, muss eine bestimmte Spannung -- die Schwellenspannung oder Durchlassspannung -- überschritten werden
+                \item Je nach Basis des chemischen Elements ist die Schwellenspannung unterschiedlich hoch
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.58\textwidth}
+            \only<1>{%
+                \begin{itemize}
+                    \item Germanium: \qty{0,2}{\volt}-\qty{0,4}{\volt}
+                    \item Silizium: \qty{0,6}{\volt}-\qty{0,8}{\volt}
+                    \item LED (Rot): \qty{1,6}{\volt}-\qty{2,2}{\volt}
+                    \item LED (Gelb, Grün): \qty{1,9}{\volt}-\qty{2,5}{\volt}
+                    \item LED (Blau, Weiß): \qty{2,7}{\volt}-\qty{3,5}{\volt}
+                \end{itemize}%
+            }
+            \only<2>{%
+                \DARCimage{\linewidth}{858include}%
+            }
     \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Germanium: \qty{0,2}{\volt}-\qty{0,4}{\volt}
-  \item Silizium: \qty{0,6}{\volt}-\qty{0,8}{\volt}
-  \item LED (Rot): \qty{1,6}{\volt}-\qty{2,2}{\volt}
-  \item LED (Gelb, Grün): \qty{1,9}{\volt}-\qty{2,5}{\volt}
-  \item LED (Blau, Weiß): \qty{2,7}{\volt}-\qty{3,5}{\volt}
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -108,11 +130,11 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Schottky-Diode}
-\begin{itemize}
-  \item Erlaubt eine hohe Schaltfrequenz
-  \item Nur eine sehr niedrige Schwellenspannung von \qty{0,4}{\volt} bis unter \qty{0,1}{\volt} ist nötig
-  \end{itemize}
+    \frametitle{Schottky-Diode}
+    \begin{itemize}
+      \item Erlaubt eine hohe Schaltfrequenz
+      \item Nur eine sehr niedrige Schwellenspannung von \qty{0,4}{\volt} bis unter \qty{0,1}{\volt} ist nötig
+      \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -132,10 +154,6 @@
 \end{QQuestion}
 
 }
-\end{frame}
-
-\begin{frame}
-\frametitle{Kennlinien}
 \end{frame}
 
 \begin{frame}
@@ -376,36 +394,25 @@
 }
 \end{frame}
 
-\begin{frame}
-\frametitle{Vorwiderstand}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Da die LED selbst kaum einen Widerstand hat, würde sie bei einem direkten Anschluss an eine Spannungsquelle wie ein Kurzschluss wirken
-  \item Mit einem Vorwiderstand wird der Durchlassstrom begrenzt
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{324include}
-    \caption{\scriptsize LED mit Vorwiderstand}
-    \label{e_led_schaltung}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}\begin{itemize}
-  \item Berechnung: $R = \dfrac{U_q -- U_{LED}}{I_D}$
-  \item $U_q$: Spannungsquelle
-  \item $U_{LED}$: Schwellenspannung LED
-  \item $I_D$: Durchlassstrom
-  \end{itemize}
+\begin{frame}{Vorwiderstand}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Da die LED selbst kaum einen Widerstand hat, würde sie bei einem direkten Anschluss an eine Spannungsquelle wie ein Kurzschluss wirken
+                \item Mit einem Vorwiderstand wird der Durchlassstrom begrenzt
+                \item Berechnung: $R = \frac{U_\text{q} - U_\text{LED}}{I_\text{D}}$
+                \item $U_\text{q}$: Spannungsquelle
+                \item $U_\text{LED}$: Schwellenspannung LED
+                \item $I_\text{D}$: Durchlassstrom
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{324include}
+                \caption{\scriptsize LED mit Vorwiderstand}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -447,28 +454,24 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Z-Diode}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Normalerweise liegt die maximale Sperrspannung einer Diode bei ca. \qty{1000}{\volt}
-  \item Bei Z-Dioden erfolgt ein Spannungsdurchbruch je nach Bauart zwischen \qty{3}{\volt} und \qty{100}{\volt}
-  \item Dienen zur Spannungsstabilisierung
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{560include}
-    \caption{\scriptsize Schaltzeichen Z-Diode}
-    \label{_e_z_diode}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+    \frametitle{Z-Diode}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Normalerweise liegt die maximale Sperrspannung einer Diode bei ca. \qty{1000}{\volt}
+                \item Bei Z-Dioden erfolgt ein Spannungsdurchbruch je nach Bauart zwischen \qty{3}{\volt} und \qty{100}{\volt}
+                \item Dienen zur Spannungsstabilisierung
+            \end{itemize}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{560include}
+                \caption{\scriptsize Schaltzeichen Z-Diode}
+                \label{_e_z_diode}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \DARCimage{\linewidth}{862include}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -553,18 +556,18 @@
 
 \begin{frame}
 \only<1>{
-\begin{question2x2}{EC520}{In welcher der folgenden Schaltungen ist die Z-Diode zur Spannungsstabilisierung richtig eingesetzt?}{\DARCimage{1.0\linewidth}{317include}}
-{\DARCimage{1.0\linewidth}{318include}}
-{\DARCimage{1.0\linewidth}{319include}}
-{\DARCimage{1.0\linewidth}{320include}}
+\begin{question2x2}{EC520}{In welcher der folgenden Schaltungen ist die Z-Diode zur Spannungsstabilisierung richtig eingesetzt?}{\DARCimage{0.75\linewidth}{317include}}
+{\DARCimage{0.75\linewidth}{318include}}
+{\DARCimage{0.75\linewidth}{319include}}
+{\DARCimage{0.75\linewidth}{320include}}
 \end{question2x2}
 
 }
 \only<2>{
-\begin{question2x2}{EC520}{In welcher der folgenden Schaltungen ist die Z-Diode zur Spannungsstabilisierung richtig eingesetzt?}{\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{317include}}}}
-{\DARCimage{1.0\linewidth}{318include}}
-{\DARCimage{1.0\linewidth}{319include}}
-{\DARCimage{1.0\linewidth}{320include}}
+\begin{question2x2}{EC520}{In welcher der folgenden Schaltungen ist die Z-Diode zur Spannungsstabilisierung richtig eingesetzt?}{\textbf{\textcolor{DARCgreen}{\DARCimage{0.75\linewidth}{317include}}}}
+{\DARCimage{0.75\linewidth}{318include}}
+{\DARCimage{0.75\linewidth}{319include}}
+{\DARCimage{0.75\linewidth}{320include}}
 \end{question2x2}
 
 }
@@ -575,9 +578,13 @@
 \begin{columns}
     \begin{column}{0.48\textwidth}
     \begin{itemize}
-  \item $U_Z$ ist die Spannung, auf die die Z-Diode stabiliert
-  \item $U_V = U_1 -- U_Z = 13,8\,V -- 5\,V = 8,8\,V$
-  \item $R_V = \frac{U_V}{I} = \frac{8,8\,V}{30\,mA} \approx 293\,\Omega$
+        \item test
+  \item $U_\text{Z}$ ist die Spannung, auf die die Z-Diode stabiliert
+  \item $U_\text{V} = U_1 - U_\text{Z} = \qty{13,8}{\volt} - \qty{5}{\volt} = \qty{8,8}{\volt}$
+  \item $R_\text{V}
+            = \frac{U_\text{V}}{I}
+            = \frac{\qty{8,8}{\volt}}{\qty{30}{\milli\ampere}}
+            \approx \qty{293}{\ohm}$
   \end{itemize}
 
     \end{column}

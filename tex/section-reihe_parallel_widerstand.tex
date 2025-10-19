@@ -19,34 +19,28 @@ Beispiel: $R_{ G } = 100 \Omega + 200 \Omega + 300 \Omega$
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Parallelschaltung}
-Bei einer Parallelschaltung von Widerständen ist der Gesamtwiderstand kleiner als der Wert des kleinsten Widerstandes
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{811include}
-    \caption{\scriptsize Parallelschaltung von 3 Widerständen}
-    \label{e_parallelschaltung_von_r}
-\end{figure}
-
-$\frac{ 1 }{ R_{ G } } = \frac{ 1 }{ R_{ 1 } } + \frac{ 1 }{ R_{ 2 } } + \frac{ 1 }{ R_{ 3 } }$
-
+\begin{frame}{Parallelschaltung}
+    
+    \begin{columns}
+        \begin{column}{0.58\linewidth}
+            \begin{itemize}
+                \item Bei einer Parallelschaltung von Widerständen ist der Gesamtwiderstand kleiner als der Wert des kleinsten Widerstandes
+                $$\frac{ 1 }{ R_{ G } } = \frac{ 1 }{ R_{ 1 } } + \frac{ 1 }{ R_{ 2 } } + \frac{ 1 }{ R_{ 3 } }$$
+                \item Vereinfachung für zwei Widerstände:
+                $$R_{ G } = \dfrac{ R_{ 1 } \cdot R_{ 2 } }{ R_{ 1 } + R_{ 2 }}$$
+                \item Vereinfachung für gleiche Widerstände ($n$ steht für die Anzahl der Widerstände): $$R_{ G } = \dfrac{ R }{ n }$$
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.38\linewidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{811include}
+                \caption{\scriptsize Parallelschaltung von 3 Widerständen}
+                \label{e_parallelschaltung_von_r}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}Vereinfachung für zwei Widerstände:
-
-$R_{ G } = \dfrac{ R_{ 1 } \cdot R_{ 2 } }{ R_{ 1 } + R_{ 2 }}$
-
-\end{frame}
-
-\begin{frame}Vereinfachung für gleiche Widerstände:
-
-$R_{ G } = \dfrac{ R }{ n }$
-
-$n$ steht für die Anzahl der Widerstände
-
-\end{frame}
 
 \begin{frame}
 \only<1>{

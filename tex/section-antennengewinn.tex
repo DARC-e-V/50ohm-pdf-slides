@@ -1,78 +1,77 @@
-
 \section{Antennengewinn in dBi und dBd}
 \label{section:antennengewinn}
-\begin{frame}%STARTCONTENT
-
-\frametitle{Richtwirkung}
-\begin{itemize}
-  \item \emph{Isotropstrahler}: Hypothetische Antenne, die in alle Richtungen gleich stark abstrahlt
-  \item Eine reale Antenne weist eine Richtwirkung auf
-  \item In bestimmten Richtungen stärker als der Isotropstrahler
-  \item In bestimmten Richtungen schwächer als der Isotropstrahler
-  \item Die \emph{Hauptstrahlrichtung} ist die Richtung mit dem maximalen Antennengewinn
-  \end{itemize}
+\begin{frame}{Isotropstrahler und Richtwirkung}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \textbf{Isotropstrahler}: 
+            \begin{itemize}
+                \item Hypothetische Antenne, die in alle Richtungen gleich stark abstrahlt
+                \item Keine reale Antenne, dient als Referenz
+            \end{itemize}
+            \textbf{Reale Antenne}: 
+            \begin{itemize}
+                \item Eine reale Antenne weist eine Richtwirkung auf
+                \item In bestimmten Richtungen stärker als der Isotropstrahler, in bestimmten Richtungen schwächer als der Isotropstrahler
+                \item Die \emph{Hauptstrahlrichtung} ist die Richtung mit dem maximalen Antennengewinn
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \DARCimage{\linewidth}{751include}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Gewinn in dBi}
-\begin{itemize}
-  \item Gewinn in eine Richtung gegenüber dem Isotropstrahler
-  \item Kann in dB angegeben werden
-  \item Bei Bezug auf den Isotropstrahler wird \emph{dBi} verwendet
-  \end{itemize}
+    \frametitle{Gewinn in dBi}
+    \begin{itemize}
+        \item Gewinn in eine Richtung gegenüber dem Isotropstrahler
+        \item Bei Bezug auf den Isotropstrahler wird \textcolor{DARCblue}{dBi} verwendet
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG220}{Der Gewinn von Antennen wird häufig in dBi angegeben. Auf welche Vergleichsantenne bezieht man sich dabei? Man bezieht sich dabei auf den~...}{Halbwellenstrahler.}
-{Isotropstrahler.}
-{Horizontalstrahler.}
-{Vertikalstrahler.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG220}{Der Gewinn von Antennen wird häufig in dBi angegeben. Auf welche Vergleichsantenne bezieht man sich dabei? Man bezieht sich dabei auf den~...}{Halbwellenstrahler.}
+            {Isotropstrahler.}
+            {Horizontalstrahler.}
+            {Vertikalstrahler.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG220}{Der Gewinn von Antennen wird häufig in dBi angegeben. Auf welche Vergleichsantenne bezieht man sich dabei? Man bezieht sich dabei auf den~...}{Halbwellenstrahler.}
-{\textbf{\textcolor{DARCgreen}{Isotropstrahler.}}}
-{Horizontalstrahler.}
-{Vertikalstrahler.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG220}{Der Gewinn von Antennen wird häufig in dBi angegeben. Auf welche Vergleichsantenne bezieht man sich dabei? Man bezieht sich dabei auf den~...}{Halbwellenstrahler.}
+            {\textbf{\textcolor{DARCgreen}{Isotropstrahler.}}}
+            {Horizontalstrahler.}
+            {Vertikalstrahler.}
+        \end{QQuestion}
 
-}
+    }
+\end{frame}
+
+\begin{frame}{Gewinn eines Halbwellendipols}
+    \begin{itemize}
+        \item Ein Halbwellendipol strahlt senkrecht zum Leiter um \qty{2,15}{\dB} stärker ab als ein Isotropstrahler
+        \item Der Gewinn beträgt \qty{2,15}{\dBi}
+        \item Bei Bezug auf den Halbwellendipol wird \textcolor{DARCblue}{dBd} verwendet
+        \item Ein Halbwellendipol hat in Hauptstrahlrichtung einen Gewinn von \qty{0}{dBd} und \qty{2,15}{\dBi}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Gewinn eines Halbwellendipols}
-\begin{itemize}
-  \item Ein Halbwellendipol strahlt senkrecht zum Leiter um \qty{2,15}{\dB} stärker ab als ein Isotropstrahler
-  \item Der Gewinn beträgt \qty{2,15}{\dBi}
-  \end{itemize}
-\end{frame}
+    \only<1>{
+        \begin{QQuestion}{EG221}{Ein Antennenhersteller gibt den Gewinn einer Antenne mit 5 dBd an. Wie groß ist der Gewinn der Antenne in dBi?}{\qty{2,85}{\dBi}}
+            {\qty{5}{\dBi}}
+            {\qty{2,5}{\dBi}}
+            {\qty{7,15}{\dBi}}
+        \end{QQuestion}
 
-\begin{frame}
-\frametitle{Gewinn in dBd}
-\begin{itemize}
-  \item Bei anderen Antennen ist der Gewinn gegenüber einem Halbwellendipol interessant
-  \item Bei Bezug auf den Halbwellendipol wird \emph{dBd} verwendet
-  \item Ein Halbwellendipol hat in Hauptstrahlrichtung einen Gewinn von 0 dBd und \qty{2,15}{\dBi}
-  \end{itemize}
-\end{frame}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG221}{Ein Antennenhersteller gibt den Gewinn einer Antenne mit 5 dBd an. Wie groß ist der Gewinn der Antenne in dBi?}{\qty{2,85}{\dBi}}
+            {\qty{5}{\dBi}}
+            {\qty{2,5}{\dBi}}
+            {\textbf{\textcolor{DARCgreen}{\qty{7,15}{\dBi}}}}
+        \end{QQuestion}
 
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG221}{Ein Antennenhersteller gibt den Gewinn einer Antenne mit 5 dBd an. Wie groß ist der Gewinn der Antenne in dBi?}{\qty{2,85}{\dBi}}
-{\qty{5}{\dBi}}
-{\qty{2,5}{\dBi}}
-{\qty{7,15}{\dBi}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG221}{Ein Antennenhersteller gibt den Gewinn einer Antenne mit 5 dBd an. Wie groß ist der Gewinn der Antenne in dBi?}{\qty{2,85}{\dBi}}
-{\qty{5}{\dBi}}
-{\qty{2,5}{\dBi}}
-{\textbf{\textcolor{DARCgreen}{\qty{7,15}{\dBi}}}}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

@@ -1,0 +1,29 @@
+\begin{tikzpicture}[
+    viewpoint/.pic={
+        \draw (22.5:0.45) -- (0,0) -- (-22.5:0.45);
+        \draw (0,0) ++ (22.5:0.35) arc (22.5:-22.5:0.35);
+        \draw (0.225,0) circle (0.02 and 0.09);
+    }]
+    \begin{scope}[3d view={-20}{20}]
+        \draw[DARCgray](0,0,0) circle (2);
+
+        \draw[Triangle-Triangle] (-3,0,0) node[anchor=south east](){180\textdegree~S} -- (3,0,0) node[anchor=west]{0\textdegree~N};
+        \draw[Triangle-Triangle] (0,-3,0) node[anchor=north west](){90\textdegree~O} -- (0,3,0) node[anchor=south east]{270\textdegree~W};
+        \draw[-Triangle] (0,0,-0.5) -- (0,0,3) node[anchor=south]{90\textdegree~Zenit};
+
+        \pgfmathsetmacro\az{45}
+        \pgfmathsetmacro\el{45}
+        
+        \begin{scope}[rotate around z=\az]
+            \begin{scope}[canvas is yz plane at x=0]
+                \draw[DARCred, -Triangle, thick] (0,0) ++(-2,0) arc (180:180-\el:2) coordinate[pos=0.5](el);
+                \draw[DARCred] (el) -- ++(180-\el/2:1) node[above]{Elevation};
+                \draw[dashed] (0,0) -- ++(180-\el:3) node[anchor=south west](){\faSatellite};
+            \end{scope}
+        \end{scope}
+
+        \draw[dashed] (0,0,0) -- (1.414,-1.414,0);
+        \draw[DARCblue, -Triangle, thick] (2,0,0) arc (0:-90+\az:2) coordinate[pos=0.5](az);
+        \draw[DARCblue] (az) -- ++(-90+\az/2:1) node[right]{Azimuth};
+    \end{scope}
+\end{tikzpicture}

@@ -4,19 +4,19 @@
 \begin{frame}%STARTCONTENT
 
 \begin{columns}
-    \begin{column}{0.48\textwidth}
+    \begin{column}{0.58\textwidth}
      
 \begin{figure}
-    \DARCimage{0.85\linewidth}{732include}
+    \DARCimage{1.0\linewidth}{731include}
     \caption{\scriptsize Brechung an der Ionosphäre}
     \label{n_ionosphaere}
 \end{figure}
 
 
     \end{column}
-   \begin{column}{0.48\textwidth}
+   \begin{column}{0.38\textwidth}
        \begin{itemize}
-  \item Im oberen Teil der Erdatmosphäre
+  \item Im oberen Teil der Erdatmosphäre in ca. \qtyrange{50}{450}{\kilo\metre} Höhe
   \item Hat großen Einfluss im Kurzwellenbereich
   \item Sonnenstrahlung erzeugt elektrisch geladene Teilchen
   \item Funkwellen werden daran gebrochen (refraktiert) $\rightarrow$ Raumwelle
@@ -71,8 +71,8 @@
     \begin{column}{0.48\textwidth}
     
 \begin{figure}
-    \DARCimage{0.85\linewidth}{729include}
-    \caption{\scriptsize Die Anzahl der Sonnenflecken, die über den elfjährige Sonnenzyklus schwankt}
+    \DARCimage{1.0\linewidth}{729include}
+    \caption{\scriptsize Die Anzahl der Sonnenflecken, die über den elfjährige Sonnenzyklus schwankt, seit 1749}
     \label{n_ionosphaere_sonnenflecken}
 \end{figure}
 
@@ -82,6 +82,7 @@
        \begin{itemize}
   \item Ausbreitungsbedingungen wechseln täglich und nach Jahreszeit
   \item Sonnenflecken haben einen großen Einfluss
+  \item Führt zu starker Ionisation der $\text{F}_2$-Region
   \item Alle 11 Jahre treten starke Sonnenflecken auf
   \item Mehr elektromagnetische Strahlung und Materie in der Ionosphäre
   \end{itemize}
@@ -111,43 +112,57 @@
 \end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{741include}
-    \caption{\scriptsize Die Tote Zone, die für die Bodenwelle zu nah und für die Raumwelle zu weit weg ist.}
-    \label{n_ionosphaere_tote_zone}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Auf Kurzwelle kann es zu einer \emph{Toten Zone} kommen
-  \item Für die Bodenwelle zu weit -- für die Raumwelle zu nah
-  \item Nur eine Seite einer Funkverbindung hörbar
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
 \only<1>{
-\begin{QQuestion}{BE106}{Eine Frequenz auf einem höheren Kurzwellenband erscheint zunächst frei, stellt sich aber anschließend als besetzt heraus. Was ist die häufigste Ursache dafür?}{Die auf dieser Frequenz sendende Station wurde durch den Mögel-Dellinger-Effekt kurzfristig unterbrochen.}
-{Eine Station auf dieser Frequenz verwendet das andere Seitenband.}
-{Für die auf dieser Frequenz sendenden Stationen sind die Ausbreitungsbedingungen zu schlecht.}
-{Eine auf dieser Frequenz sendende Station liegt innerhalb der toten Zone und konnte daher von mir nicht gehört werden.}
+\begin{QQuestion}{EH107}{Die Sonnenaktivität ist einem regelmäßigen Zyklus unterworfen. Welchen Zeitraum hat dieser Zyklus ungefähr?}{12 Monate}
+{6 Monate}
+{11 Jahre}
+{7 Jahre}
 \end{QQuestion}
 
 }
 \only<2>{
-\begin{QQuestion}{BE106}{Eine Frequenz auf einem höheren Kurzwellenband erscheint zunächst frei, stellt sich aber anschließend als besetzt heraus. Was ist die häufigste Ursache dafür?}{Die auf dieser Frequenz sendende Station wurde durch den Mögel-Dellinger-Effekt kurzfristig unterbrochen.}
-{Eine Station auf dieser Frequenz verwendet das andere Seitenband.}
-{Für die auf dieser Frequenz sendenden Stationen sind die Ausbreitungsbedingungen zu schlecht.}
-{\textbf{\textcolor{DARCgreen}{Eine auf dieser Frequenz sendende Station liegt innerhalb der toten Zone und konnte daher von mir nicht gehört werden.}}}
+\begin{QQuestion}{EH107}{Die Sonnenaktivität ist einem regelmäßigen Zyklus unterworfen. Welchen Zeitraum hat dieser Zyklus ungefähr?}{12 Monate}
+{6 Monate}
+{\textbf{\textcolor{DARCgreen}{11 Jahre}}}
+{7 Jahre}
+\end{QQuestion}
+
+}
+\end{frame}
+
+\begin{frame}
+\only<1>{
+\begin{QQuestion}{EH205}{Welche Aussage ist für das Sonnenfleckenmaximum richtig?}{Die Sonnenaktivität ist sehr hoch und führt zu stärkerer Ionisation in der F-Region.}
+{Die Sonnenaktivität ist sehr hoch und führt zu schwächerer Ionisation in der F-Region.}
+{Die Sonnenaktivität verringert sich stark und führt zu stärkerer Ionisation in der F-Region.}
+{Die Sonnenaktivität ist in der Nacht sehr hoch, am Tag sehr schwach und führt deshalb zu keiner Ionisation in der D-Region.}
+\end{QQuestion}
+
+}
+\only<2>{
+\begin{QQuestion}{EH205}{Welche Aussage ist für das Sonnenfleckenmaximum richtig?}{\textbf{\textcolor{DARCgreen}{Die Sonnenaktivität ist sehr hoch und führt zu stärkerer Ionisation in der F-Region.}}}
+{Die Sonnenaktivität ist sehr hoch und führt zu schwächerer Ionisation in der F-Region.}
+{Die Sonnenaktivität verringert sich stark und führt zu stärkerer Ionisation in der F-Region.}
+{Die Sonnenaktivität ist in der Nacht sehr hoch, am Tag sehr schwach und führt deshalb zu keiner Ionisation in der D-Region.}
+\end{QQuestion}
+
+}
+\end{frame}
+
+\begin{frame}
+\only<1>{
+\begin{QQuestion}{EH219}{Welches Frequenzband kann im Sonnenfleckenmaximum tagsüber auch mit kleiner Leistung für weltweite Funkverbindungen verwendet werden?}{\qty{10}{\m}-Band}
+{\qty{2}{\m}-Band}
+{\qty{80}{\m}-Band}
+{\qty{160}{\m}-Band}
+\end{QQuestion}
+
+}
+\only<2>{
+\begin{QQuestion}{EH219}{Welches Frequenzband kann im Sonnenfleckenmaximum tagsüber auch mit kleiner Leistung für weltweite Funkverbindungen verwendet werden?}{\textbf{\textcolor{DARCgreen}{\qty{10}{\m}-Band}}}
+{\qty{2}{\m}-Band}
+{\qty{80}{\m}-Band}
+{\qty{160}{\m}-Band}
 \end{QQuestion}
 
 }

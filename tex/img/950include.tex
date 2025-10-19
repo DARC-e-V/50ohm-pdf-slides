@@ -1,0 +1,89 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{tikzpicture}
+    \pgfplotsset{
+        compat=1.10,
+        width=\getDarcImageFactor * 16cm,
+        standard/.style={
+                axis x line=middle,
+                axis y line=left,
+                ticklabel style={fill=white},
+                set layers=tick labels on top% use layers and choose the new layer set
+            },
+        layers/tick labels on top/.define layer set=% define the new layer set based on the standard one
+            {axis background,axis grid,axis ticks,axis lines,main,%
+                axis tick labels,% <- tick labels before main
+                axis descriptions,axis foreground}
+            {/pgfplots/layers/standard},
+        clip=false
+    }
+
+    \begin{polaraxis}[
+        /pgf/number format/.cd,
+        use comma,
+        domain=-180:180,
+        ymin=-0.2,
+        ymax=1.05,
+        xmin=-45,
+        xmax=45,
+        axis line style={draw=none},
+        ytick={0.3,0.4,0.5,0.6,0.7,0.8,0.9,1},
+        yticklabels={,,},
+        xtick={-40,-30,-20,-10,0,10,20,30,40},
+        xticklabel={$\pgfmathprintnumber{\tick}^{\circ}$},
+        xticklabel style={
+            inner sep=6pt
+        },
+        xticklabels={$-40^{\circ}$,$-30^{\circ}$,$-20^{\circ}$,$-10^{\circ}$,$~~0^{\circ}$,$10^{\circ}$,$20^{\circ}$,$30^{\circ}$,$40^{\circ}$},
+    ]
+
+        \draw[very thick, DARCred] plot[
+                variable=\t,
+                domain=0:360,
+                smooth,samples=101
+            ]
+        ({40*sin(\t)}:{129*pow(0.95*sin(\t/2),5)});
+
+        \draw[very thick, DARCred] plot[
+                variable=\t,
+                domain=0:360,
+                smooth,samples=101
+            ]
+        ({180+40*sin(\t)}:{12*pow(sin(\t/2),9)});
+
+        \draw[anchor=base] (0,0) node[](origin){};
+
+        \path[every node/.style={fill=white, below}]
+        (0:30) node {\qty{-6}{\dB}}
+        (0:60) node {\qty{-3}{\dB}}
+        (0:100) node {\qty{0}{\dB}};
+        \path(0:0) -- ++(-40:100) coordinate (E1);
+        \path(0:0) -- ++(0:110) coordinate (F1);
+        \path(0:0) -- ++(180:30) coordinate (G1);
+    \end{polaraxis}
+
+    \draw[very thick]
+    (origin) ++(0,0) -- +(1.5,0)
+    (origin) ++(0,-0.8)   -- +(0, 1.6)
+    (origin) ++(0.3,-0.7) -- +(0.0, 1.4)
+    (origin) ++(0.6,-.6)  -- +(0.0, 1.2)
+    (origin) ++(0.9,-.5)  -- +(0.0, 1)
+    (origin) ++(1.2,-.4)  -- +(0.0, 0.8)
+    (origin) ++(1.5,-.3)  -- +(0.0, 0.6);
+    \draw[very thick] (origin) ++(0.15,0) coordinate(E2) -- (E2|-E1) coordinate (E3);
+    \draw[very thick] (E3) -- (E3-|F1) coordinate (F2);
+    \draw[very thick] (E3) -- (E3-|G1) coordinate (G2);
+
+    \draw[DARCred](E1) ++(-1.0,0) coordinate(b1);
+    \draw(b1) -- ++(0.5,0) coordinate(b2);
+    \draw[thick](b1) -- ++(0.25,0.5) coordinate(geschlechtsteil);
+    \draw[thick](b2) -- (geschlechtsteil);
+    \draw[thick](geschlechtsteil) -- ++(0,0.5) coordinate(hals);
+    \draw[thick](hals) -- ++( 0.25,-0.5) coordinate(h1);
+    \draw[thick](hals) -- ++(-0.25,-0.5) coordinate(h2);
+    \draw[thick](hals) to [open] ++(0,0.25) circle (0.25);
+    \draw[thick](hals) to [open] ++(0,0.125) arc (90:55:0.45*0.5);
+    \draw[thick](hals) to [open] ++(0,0.125) arc (90:125:0.45*0.5);
+    \draw[thick](hals) to [open, -*] ++(-0.1,0.65*0.5);
+    \draw[thick](hals) to [open, -*] ++(+0.1,0.65*0.5);
+\end{tikzpicture}

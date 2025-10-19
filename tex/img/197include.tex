@@ -1,36 +1,21 @@
-% Author: Dr. Matthias Jung, DL9MJ
-% Year: 2020
-% TD403A
-
-
-
-
-
-
-\ctikzset{%
-}%
-
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
 \begin{circuitikz}[american]
-    %\tikzstyle{help lines}=[blue!50];
-    %\draw[style=help lines] (-6,-4) grid (16,4);
-    \draw (0,0) node[transformer, yscale=0.95](T){};
-    %%
-    \draw (T.A1) node [ocirc](I1){};
-    \draw (T.A2) node [ocirc](I2){};
-    \draw (T.B1) to [short, -o] ++(0,0);
+    \draw (0,0) node[transformer core](T){};
     %
-    \draw(T.B2) to [short, -o] ++(0,0);
+    \draw (T.A1) to [short, -o] ++(0,0) coordinate(a1);
+    \draw (T.A2) to [short, -o] ++(0,0) coordinate(a2);
+    \draw (T.B1) to [short, -o] ++(0,0) coordinate(b1);
+    \draw (T.B2) to [short, -o] ++(0,0) coordinate(b2);
     %
-    \draw(1.35, 1) node[]{a};
-    \draw(1.35,-1) node[]{b};
+    \draw(b1) node[anchor=west]{a};
+    \draw(b2) node[anchor=west]{b};
     %
-    \draw (0,0.5) to [short] (0,-0.5);
-    %
-
-    \def\x{0.15}
-    \draw[] (-1.3,-0.25) sin ++(\x, \x)
-                        cos ++(\x,-\x)
-                        sin ++(\x,-\x)
-                        cos ++(\x, \x);
-    \draw(-1.0, 0.25) node[]{\small 230\,V};
+    \draw(a1 |- T-L1.south west) node[]{\qty{230}{\volt}};
+    \draw(a2 |- T-L1.south east) coordinate(start);
+    \def\x{0.05}
+    \draw (start) sin ++(+\x, \x)
+                  cos ++(+\x,-\x);
+    \draw (start) sin ++(-\x,-\x)
+                  cos ++(-\x,+\x);
 \end{circuitikz}

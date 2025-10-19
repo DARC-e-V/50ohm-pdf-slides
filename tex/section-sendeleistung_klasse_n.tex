@@ -1,88 +1,95 @@
-
 \section{Sendeleistung Klasse N}
 \label{section:sendeleistung_klasse_n}
 \begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item 10~m-Band: 10~W ERP
-  \item 2~m- und 70~cm-Band: 10~W EIRP
-  \end{itemize}
+    \begin{itemize}
+        \item 10~m-Band: 10~W ERP
+        \item 2~m- und 70~cm-Band: 10~W EIRP
+        \item Unglücklicherweise wird in der Anlage 1 der AFuV die Leistung seit neustem in ERP angegeben:
+        \item \qty{10}{\watt} EIRP entsprechen einer Leistung von \qty{6,1}{\watt} ERP an einem Dipol
+    \end{itemize}
     \pause
-    Ein Funkgerät mit 5W Sendeleistung und einem Gewinnfaktor von 1,8 bezogen auf den isotropen Kugelstrahler darf damit betrieben werden:<br/>5~W $\cdot$ 1,8 = 9~W
+    \begin{exampleblock}{Beispiel}
+        Ein Funkgerät mit \qty{5}{W} Sendeleistung und einem Gewinnfaktor von 1,8
+        bezogen auf den isotropen Kugelstrahler darf damit betrieben
+        werden:
+
+        $\qty{5}{\watt} \cdot 1{,}8 = \qty{9}{\watt}$
+    \end{exampleblock}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD724}{Wie hoch ist die maximal zulässige isotrope Strahlungsleistung (EIRP) für Funkamateure mit der Zulassungsklasse~N im \qty{2}{\m}- und \qty{70}{\cm}-Band?}{\qty{100}{\W}}
-{\qty{5}{\W}}
-{\qty{10}{\W}}
-{\qty{25}{\W}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD724}{Wie hoch ist die maximal zulässige isotrope Strahlungsleistung (EIRP) für Funkamateure mit der Zulassungsklasse~N im \qty{2}{\m}- und \qty{70}{\cm}-Band?}{\qty{100}{\W}}
+            {\qty{5}{\W}}
+            {\qty{10}{\W}}
+            {\qty{25}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD724}{Wie hoch ist die maximal zulässige isotrope Strahlungsleistung (EIRP) für Funkamateure mit der Zulassungsklasse~N im \qty{2}{\m}- und \qty{70}{\cm}-Band?}{\qty{100}{\W}}
-{\qty{5}{\W}}
-{\textbf{\textcolor{DARCgreen}{\qty{10}{\W}}}}
-{\qty{25}{\W}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD724}{Wie hoch ist die maximal zulässige isotrope Strahlungsleistung (EIRP) für Funkamateure mit der Zulassungsklasse~N im \qty{2}{\m}- und \qty{70}{\cm}-Band?}{\qty{100}{\W}}
+            {\qty{5}{\W}}
+            {\textbf{\textcolor{DARCgreen}{\qty{10}{\W}}}}
+            {\qty{25}{\W}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD743}{Wie hoch ist die maximal zulässige effektive Strahlungsleistung (ERP) für Funkamateure mit der Zulassungsklasse~N im \qty{10}{\m}-Band?}{\qty{100}{\W}}
-{\qty{5}{\W}}
-{\qty{10}{\W}}
-{\qty{25}{\W}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD743}{Wie hoch ist die maximal zulässige effektive Strahlungsleistung (ERP) für Funkamateure mit der Zulassungsklasse~N im \qty{10}{\m}-Band?}{\qty{100}{\W}}
+            {\qty{5}{\W}}
+            {\qty{10}{\W}}
+            {\qty{25}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD743}{Wie hoch ist die maximal zulässige effektive Strahlungsleistung (ERP) für Funkamateure mit der Zulassungsklasse~N im \qty{10}{\m}-Band?}{\qty{100}{\W}}
-{\qty{5}{\W}}
-{\textbf{\textcolor{DARCgreen}{\qty{10}{\W}}}}
-{\qty{25}{\W}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD743}{Wie hoch ist die maximal zulässige effektive Strahlungsleistung (ERP) für Funkamateure mit der Zulassungsklasse~N im \qty{10}{\m}-Band?}{\qty{100}{\W}}
+            {\qty{5}{\W}}
+            {\textbf{\textcolor{DARCgreen}{\qty{10}{\W}}}}
+            {\qty{25}{\W}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD726}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 1,8 bezogen auf den isotropen Kugelstrahler (entspricht 2,6 dBi Gewinn) verwenden?}{Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}
-{Ja, außer wenn die Amateurfunkstelle ortsfest betrieben wird.}
-{Ja, da die Strahlungsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}
-{Nein, da ich Antennen mit Gewinn nicht benutzen darf}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD726}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 1,8 bezogen auf den isotropen Kugelstrahler (entspricht 2,6 dBi Gewinn) verwenden?}{Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}
+            {Ja, außer wenn die Amateurfunkstelle ortsfest betrieben wird.}
+            {Ja, da die Strahlungsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}
+            {Nein, da ich Antennen mit Gewinn nicht benutzen darf}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD726}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 1,8 bezogen auf den isotropen Kugelstrahler (entspricht 2,6 dBi Gewinn) verwenden?}{Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}
-{Ja, außer wenn die Amateurfunkstelle ortsfest betrieben wird.}
-{\textbf{\textcolor{DARCgreen}{Ja, da die Strahlungsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}}}
-{Nein, da ich Antennen mit Gewinn nicht benutzen darf}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD726}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 1,8 bezogen auf den isotropen Kugelstrahler (entspricht 2,6 dBi Gewinn) verwenden?}{Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}
+            {Ja, außer wenn die Amateurfunkstelle ortsfest betrieben wird.}
+            {\textbf{\textcolor{DARCgreen}{Ja, da die Strahlungsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}}}
+            {Nein, da ich Antennen mit Gewinn nicht benutzen darf}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD725}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 2,5 bezogen auf den isotropen Kugelstrahler (entspricht 4,0 dBi Gewinn) verwenden?}{Ja, da die Senderausgangsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}
-{Nein, da ich Antennen mit Gewinn nicht benutzen darf.}
-{Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}
-{Ja, sofern es sich um ein Handfunkgerät handelt.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD725}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 2,5 bezogen auf den isotropen Kugelstrahler (entspricht 4,0 dBi Gewinn) verwenden?}{Ja, da die Senderausgangsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}
+            {Nein, da ich Antennen mit Gewinn nicht benutzen darf.}
+            {Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}
+            {Ja, sofern es sich um ein Handfunkgerät handelt.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD725}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 2,5 bezogen auf den isotropen Kugelstrahler (entspricht 4,0 dBi Gewinn) verwenden?}{Ja, da die Senderausgangsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}
-{Nein, da ich Antennen mit Gewinn nicht benutzen darf.}
-{\textbf{\textcolor{DARCgreen}{Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}}}
-{Ja, sofern es sich um ein Handfunkgerät handelt.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD725}{Sie sind Inhaber einer Zulassung für den Amateurfunkdienst der Klasse N und nutzen ein Funkgerät mit 5 W Senderausgangsleistung. Dürfen Sie bei Sendebetrieb im \qty{2}{\m}-Band eine direkt angeschlossene Antenne mit Gewinnfaktor 2,5 bezogen auf den isotropen Kugelstrahler (entspricht 4,0 dBi Gewinn) verwenden?}{Ja, da die Senderausgangsleistung den Grenzwert von 10 W EIRP nicht überschreitet.}
+            {Nein, da ich Antennen mit Gewinn nicht benutzen darf.}
+            {\textbf{\textcolor{DARCgreen}{Nein, da sich eine Strahlungsleistung von über 10 W EIRP ergibt.}}}
+            {Ja, sofern es sich um ein Handfunkgerät handelt.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

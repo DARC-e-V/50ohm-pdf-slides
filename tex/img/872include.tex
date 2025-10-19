@@ -1,0 +1,60 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{tikzpicture}
+    \pgfplotsset{every tick label/.append style={rotate=-90}}
+    \begin{axis}[%
+        axis lines=middle,
+        %yticklabel=\empty,
+        xmin=0,
+        xmax=100,
+        ymin=0,
+        ymax=5000,
+        xtick={0,10,20,30,40,50,60,70,80,90},
+        xticklabels={
+            \qty{0}{\textdegree},
+            \qty{10}{\textdegree},
+            \qty{20}{\textdegree},
+            \qty{30}{\textdegree},
+            \qty{40}{\textdegree},
+            \qty{50}{\textdegree},
+            \qty{60}{\textdegree},
+            \qty{70}{\textdegree},
+            \qty{80}{\textdegree},
+            \qty{90}{\textdegree}},
+        ytick={1000,2000,3000,4000},
+        yticklabels={
+            \qty{1000}{\kilo\metre},
+            \qty{2000}{\kilo\metre},
+            \qty{3000}{\kilo\metre},
+            \qty{4000}{\kilo\metre}
+        },
+        yticklabel style={rotate=90},  axis line style={-Triangle},
+        xticklabel style={/pgf/number format/.cd,fixed,precision=1,use comma,fixed,fixed zerofill},
+        xlabel style={at={(ticklabel* cs:1)},anchor=north},
+        ylabel style={at={(ticklabel* cs:1)},anchor=north east},
+        ylabel={Distanz},
+        xlabel={$\alpha$},
+        scale only axis,
+        height=5cm,
+        width=\linewidth*\getDarcImageFactor        
+    ]
+        \addplot+ [
+            smooth,
+            DARCred,
+            mark=*,
+            mark options={DARCred}
+        ] coordinates {
+            (0 ,4025)
+            (10,2315)
+            (20,1475)
+            (30,1000)
+            (40, 700)
+            (50, 500)
+            (60, 345)
+            (70, 220)
+            (80, 100)
+            (90,  10)
+        };
+ 
+    \end{axis}
+\end{tikzpicture}%

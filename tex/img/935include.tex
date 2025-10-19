@@ -1,0 +1,33 @@
+% Author: Malte, DE7LMS
+% Year: 2021
+
+\def\domain{6}
+\def\saxis#1{#1/\domain*2, 0, 0}
+\def\hfield#1{#1/\domain*2, {1.5 * -sin(#1 r)}, {1.5 * cos(#1 r)}}
+\def\efield#1{#1/\domain*2, {1.5 * sin((#1 + pi/2) r)}, {1.5 * -cos((#1 + pi/2) r)}}
+\def\saxisPi#1{(\saxis{#1 * pi})}
+\def\hfieldPi#1{(\hfield{#1 * pi})}
+\def\efieldPi#1{(\efield{#1 * pi})}
+
+\begin{tikzpicture}[
+    thick,
+    >={Triangle},
+    samples=500,
+    x={(1cm,0.2cm)},
+    y={(0cm,1cm)},
+    z={(0.6cm,-0.2cm)},
+    domain=0:\domain*pi
+    ]
+
+    \fill[lightgray] (0, -2.1, -2) -- (2.2 * pi, -2.1, -2) -- (2.2 * pi, -2.1, 2) -- (0, -2.1, 2) -- cycle;
+    \node[left] at (2, -2.1, 0) {Erde};
+    \draw[draw=gray, ->] (0, 0, 0) -- (2.35 * pi, 0, 0) node[right] {S};
+    \draw[DARCgreen] plot (\hfield\x);
+    \draw[DARCorange] plot (\efield\x);
+    \path \hfieldPi{0.5} node[below] {H};
+    \path \efieldPi{0.5} node[right] {E};
+    \foreach \x in {0,0.5,1,...,\domain} {
+            \draw[->, DARCgreen!50] \saxisPi\x -- \hfieldPi\x;
+            \draw[->, DARCorange!50] \saxisPi\x -- \efieldPi\x;
+        }
+\end{tikzpicture}

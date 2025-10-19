@@ -1,15 +1,18 @@
 
-\section{Störungen elektronischer Geräte I}
+\section{Störende Beeinflussung elektronischer Geräte I}
 \label{section:stoerungen_elektronischer_geraete_1}
 \begin{frame}%STARTCONTENT
 \begin{itemize}
-  \item Starke Sender führen zu unterschiedlichen Störungen und Beeinflussungen von elektronischen Geräten und Anlagen
+  \item Starke Sender können zu störenden Beeinflussungen von elektronischen Geräten und Anlagen führen
   \item Ziel: Störungen vermeiden oder Ursachen durch Gegenmaßnahmen beseitigen
   \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Einströmung}
+\begin{center}
+    \DARCimage{0.4\linewidth}{747include}
+\end{center}
 \begin{itemize}
   \item Hochfrequenz gelangt durch Leitungen oder Kabel in ein Gerät
   \item Zum Beispiel über die Netzleitung, Antennenleitung, Lautsprecherkabel
@@ -37,6 +40,9 @@
 
 \begin{frame}
 \frametitle{Einstrahlung}
+\begin{center}
+    \DARCimage{0.4\linewidth}{746include}
+\end{center}
 \begin{itemize}
   \item Hochfrequenz gelangt wegen ungenügend geschirmten Gehäuse in die Elektronik
   \item Führt dort zu Störungen
@@ -132,8 +138,8 @@
 \frametitle{Intermodulation}
 \begin{itemize}
   \item Beim Auftreten von mehreren starken Empfangssignalen
-  \item Z.B. TV-Sender und starke Amateurfunkstation in der Nachbarschaft
-  \item Führt zu unerwünschten Oberwellen und deren Mischprodukten
+  \item Z.\,B. TV-Sender und starke Amateurfunkstation in der Nachbarschaft
+  \item Führt zu unerwünschten Harmonischen und deren Mischprodukten
   \item Durch Intermodulation werden Phantomsignale hervorgerufen
   \end{itemize}
 \end{frame}
@@ -229,6 +235,7 @@
 \end{QQuestion}
 
 }
+\visible<3->{Gilt auch für Streaming ...}
 \end{frame}
 
 \begin{frame}
@@ -401,19 +408,19 @@
 
 \begin{frame}
 \only<1>{
-\begin{question2x2}{EJ117}{Eine KW-Amateurfunkstelle verursacht im Sendebetrieb in einem in der Nähe betriebenen Fernsehempfänger Störungen. Welches Filter schleifen Sie in das Fernsehantennenkabel ein, um die Störwahrscheinlichkeit zu verringern?}{\DARCimage{1.0\linewidth}{165include}}
+\begin{P2Question}{EJ117}{Eine KW-Amateurfunkstelle verursacht im Sendebetrieb in einem in der Nähe betriebenen Fernsehempfänger Störungen. Welches Filter schleifen Sie in das Fernsehantennenkabel ein, um die Störwahrscheinlichkeit zu verringern?}{\DARCimage{1.0\linewidth}{165include}}
 {\DARCimage{1.0\linewidth}{166include}}
 {\DARCimage{1.0\linewidth}{167include}}
-{\DARCimage{1.0\linewidth}{168include}}
-\end{question2x2}
+{\DARCimage{1.0\linewidth}{168include}}{}
+\end{P2Question}
 
 }
 \only<2>{
-\begin{question2x2}{EJ117}{Eine KW-Amateurfunkstelle verursacht im Sendebetrieb in einem in der Nähe betriebenen Fernsehempfänger Störungen. Welches Filter schleifen Sie in das Fernsehantennenkabel ein, um die Störwahrscheinlichkeit zu verringern?}{\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{165include}}}}
+\begin{P2Question}{EJ117}{Eine KW-Amateurfunkstelle verursacht im Sendebetrieb in einem in der Nähe betriebenen Fernsehempfänger Störungen. Welches Filter schleifen Sie in das Fernsehantennenkabel ein, um die Störwahrscheinlichkeit zu verringern?}{\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{165include}}}}
 {\DARCimage{1.0\linewidth}{166include}}
 {\DARCimage{1.0\linewidth}{167include}}
-{\DARCimage{1.0\linewidth}{168include}}
-\end{question2x2}
+{\DARCimage{1.0\linewidth}{168include}}{}
+\end{P2Question}
 
 }
 \end{frame}
@@ -536,7 +543,7 @@
 \begin{frame}
 \frametitle{Schlechte Empfangsverhältnisse}
 \begin{itemize}
-  \item Z.B. TV-Zimmerantenne für Empfang
+  \item Z.\,B. TV-Zimmerantenne für Empfang
   \item Verwendung einer Außenantenne mit entsprechenden Vorfiltern
   \end{itemize}
 \end{frame}
@@ -562,11 +569,20 @@
 
 \begin{frame}
 \frametitle{Übersteuerung}
-\begin{itemize}
-  \item Bei Übersteuerung von Sendern und Endstufen entstehen Nebenaussendungen
-  \item Diese stören benachbarte Stationen
-  \item Übersteuerung vermeiden
-  \end{itemize}
+\begin{columns}
+    \begin{column}{0.48\linewidth}
+        \DARCimage{\linewidth}{868include}
+    \end{column}
+    \begin{column}{0.48\linewidth}
+        \begin{itemize}
+            \item Bei Übersteuerung von Sendern und Endstufen entstehen Nebenaussendungen
+            \item \enquote{Splatter}
+            \item Diese stören benachbarte Stationen
+            \item Übersteuerung vermeiden
+            \end{itemize}
+    \end{column}
+\end{columns}
+
 \end{frame}
 
 \begin{frame}

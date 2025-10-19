@@ -1,20 +1,35 @@
 
 \section{Schaltnetzteil I}
 \label{section:schaltnetzteil_1}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Das im vorigen Kapitel vorgestellte Netzteil hat den Nachteil eines hohen Gewichts durch den Transformator und einen schlechten Wirkungsgrad aufgrund von Verlusten bei der Konstanthaltung der Ausgangsspannung.
-  \item Schaltnetzteile bringen die Eingangsspannung auf eine höhere Frequenz, wodurch kleinere Transformatoren eingesetzt werden können und bieten effizientere Wege die Ausgangsspannung konstant zu halten.
-  \end{itemize}
+\begin{frame}{Schaltnetzteil}
+    \begin{itemize}
+        \item Das im vorigen Kapitel vorgestellte Netzteil hat den Nachteil eines
+        hohen Gewichts durch den Transformator und einen schlechten Wirkungsgrad
+        aufgrund von Verlusten bei der Konstanthaltung der Ausgangsspannung.
+        \item Schaltnetzteile Nutzen erzeugen eine hohe Gleichspannung welche
+        dann duch einen Schalter (Transistor) in ein hochfrequente
+        Rechteckspannung \enquote{zerhackt} und anschließend zu einer
+        Gleichspannung geglättet wird. Eine Regelschleife passt die
+        Schaltfrequenz an, sodass die gewünschte Ausgangsspannung erreicht
+        wird.
+    \end{itemize}
+    \pause
+    Details auch hier in den Klasse-A-Fragen, wir konzentrieren uns
+    für die Klasse-E-Fragen auf die positiven Eigenschaften:
+    \begin{itemize}
+        \item Hoher Wirkungsgrad
+        \item Geringes Gewicht
+        \item Geringes Volumen
+    \end{itemize}
 \end{frame}
 
-\begin{frame}Details auch hier im Klasse~A Kurs, wir konzentrieren uns auf die positiven Eigenschaften:
-
-\begin{itemize}
-  \item \emph{Hoher Wirkungsgrad}
-  \item \emph{Geringes Gewicht}
-  \item \emph{Geringes Volumen}
-  \end{itemize}
+\begin{frame}{Schaltnetzteil (Vorschau Klasse A)}
+    \begin{center}
+        \begin{figure}
+            \DARCimage{0.85\linewidth}{35include}
+            \caption{Prinzip eines Schaltnetzteils}
+        \end{figure}
+    \end{center}
 \end{frame}
 
 \begin{frame}
@@ -36,11 +51,15 @@
 }
 \end{frame}
 
-\begin{frame}Aber: Wo Licht ist, ist auch Schatten.
+\begin{frame}{Nachteile von Schaltnetzteilen}
 
 \begin{itemize}
-  \item Durch die hohen Frequenzen kann es zu \emph{hochfrequenten Störungen} kommen, die besonders im Kurzwellenbereich stören.
-  \item Bei für den Amateurfunk konzipierten Netzgeräten ist das inzwischen kein Problem mehr, bei Netzgeräten in der Unterhaltungselektronik schon.
+  \item Durch die hohen Frequenzen kann es zu \emph{hochfrequenten Störungen}
+  kommen, die besonders im Kurzwellenbereich stören.
+  \item Bei für den Amateurfunk konzipierten Netzgeräten ist das inzwischen kein
+  Problem mehr, bei Netzgeräten in der Unterhaltungselektronik schon.
+  \item Es gibt auch Schaltnetzteile, welche ihre Schaltfrequenz anhand der
+  eingestellen VFO-Frequenz anpassen (z.B. QMX+)
   \end{itemize}
 \end{frame}
 

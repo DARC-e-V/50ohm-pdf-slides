@@ -1,89 +1,106 @@
-
 \section{Amplitudenmodulation (AM)}
 \label{section:am}
-\begin{frame}%STARTCONTENT
 
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{716include}
-    \caption{\scriptsize Signal eines AM-Rundfunksenders (Sprache / Musik)}
-    \label{n_Wasserfall0}
-\end{figure}
+\begin{frame}{Amplitudenmodalation}
+    \begin{columns}[T]
+        \begin{column}{0.48\linewidth}
+            \textbf{Zeitbereich:}\\
 
+            \vspace{0.5cm}
+            \DARCimage{1.0\linewidth}{800include}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \textbf{Frequenzbereich:}\\
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Modulationssignal wird durch Änderung der Amplitude auf den Träger aufmoduliert
-  \item Frequenz des Trägers bleibt unverändert
-  \item Änderung der Amplitude ändert die Form des Trägers $\rightarrow$ entspricht nicht mehr einer Sinusschwingung
-  \item Zusätzliche Frequenzen heißen \emph{Seitenbänder}
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+            \DARCimage{1.0\linewidth}{476include}
+        \end{column}
+    \end{columns}
     \begin{itemize}
-  \item In den Seitenbändern steckt die übertragene Information, also z.\,B. die Sprache
-  \item Die von AM belegte \emph{Bandbreite} ist doppelt so hoch wie die höchste Frequenz des Modulationssignals
-  \end{itemize}
+        \item $U(t) = A(t) \cdot \sin(2\pi \cdot f_T\cdot t + \phi)$
+        \item Amplitude $A(t)$ wird zeitabhängig variiert und bildet eine Modulationshüllkurve (\href{https://tinyurl.com/27um62re}{Simulation})
+        \item Trägerfrequenz $f_T$ bleibt unverändert
+        \item Änderung von $A$ ändert die Form des Trägers $\rightarrow$ entspricht nicht mehr einer Sinusschwingung
+        \item Es entstehen Seitenbänder, welche die Sprachinformation beinhalten (\href{http://websdr.ewi.utwente.nl:8901}{Web SDR})
+    \end{itemize}
+\end{frame}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{476include}
-    \caption{\scriptsize Symbolische Darstellung eines amplitudenmodulierten Signals mit Träger und Seitenbändern}
-    \label{n_seitenband}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+\begin{frame}{AM im Wasserfalldiagramm}
+    \begin{figure}
+        \centering
+        \DARCimage{0.35\linewidth}{716include}
+        \caption{\scriptsize Signal eines AM-Rundfunksenders (Sprache / Musik)}
+        \label{n_Wasserfall_AM}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NE202}{Welche Aussage zur Amplitudenmodulation ist richtig? Durch das Informationssignal~...}{wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant.}
-{wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}
-{werden gleichzeitig Amplitude und Frequenz des Trägers beeinflusst.}
-{werden nacheinander Amplitude und Frequenz des Trägers beeinflusst.}
-\end{QQuestion}
+	\frametitle{Amplitudenmodalation (AM)}
+    \begin{exampleblock}{Woher kommen die Seitenbänder? Beispiel anhand von Cosinunsschwingung:}
+        \begin{description}[Trigonometrische Identität:]
+            \item<1->[Trägersignal:] $\cos(\omega_T\cdot t)$
+            \item<2->[Gleichanteil:] $A_T$
+            \item<3->[Modulierendes Signal:] $A_T + A_{mod} \cdot \cos(\omega_{mod}\cdot t)$
+            \item<4->[Resultierendes Signal:] $\cos(\omega_T \cdot t) \cdot \left( A_T + A_{mod} \cdot \cos(\omega_{mod} \cdot t) \right)$
+            \item<5->[Trigonometrische Identität:] $\cos(u) \cdot \cos(v) = \frac{1}{2}\left[\cos(u-v) + cos(u+v)\right]$
+        \end{description}
+        \vspace{0.25cm}
+        \visible<6->{\begin{center}
+            \Large $\frac{1}{2} \cdot A_{mod} \cdot (\cos((\omega_T - \omega_{mod})\cdot t) + \cos((\omega_T + \omega_{mod})\cdot t)) + A_T \cdot \cos(\omega_T \cdot t)$
+        \end{center}}
+    \end{exampleblock}
+\end{frame}
 
-}
-\only<2>{
-\begin{QQuestion}{NE202}{Welche Aussage zur Amplitudenmodulation ist richtig? Durch das Informationssignal~...}{\textbf{\textcolor{DARCgreen}{wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant.}}}
-{wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}
-{werden gleichzeitig Amplitude und Frequenz des Trägers beeinflusst.}
-{werden nacheinander Amplitude und Frequenz des Trägers beeinflusst.}
-\end{QQuestion}
 
-}
+\begin{frame}{Bandbreite von AM}
+    \frametitle{Bandbreite bei AM}
+    \begin{center}
+        \DARCimage{0.8\linewidth}{789include}
+    \end{center}
+    Bandbreite ist die Differenz zwischen der höchsten und der niedrigsten Frequenz des HF-Signals
+    \begin{block}{Bandbreite}
+        {$B = 2 \cdot f_{max}$}
+    \end{block}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{NE206}{Welche spektrale Darstellung ergibt sich für die Modulationsart AM bei diesem  Audiospektrum?}{\DARCimage{1.0\linewidth}{477include}}
-{\DARCimage{1.0\linewidth}{476include}}
-{\DARCimage{1.0\linewidth}{478include}}
-{\DARCimage{1.0\linewidth}{479include}}
-{\DARCimage{1.0\linewidth}{475include}}\end{PQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE202}{Welche Aussage zur Amplitudenmodulation ist richtig? Durch das Informationssignal~...}
+            {wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant.}
+            {wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}
+            {werden gleichzeitig Amplitude und Frequenz des Trägers beeinflusst.}
+            {werden nacheinander Amplitude und Frequenz des Trägers beeinflusst.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{PQuestion}{NE206}{Welche spektrale Darstellung ergibt sich für die Modulationsart AM bei diesem  Audiospektrum?}{\DARCimage{1.0\linewidth}{477include}}
-{\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{476include}}}}
-{\DARCimage{1.0\linewidth}{478include}}
-{\DARCimage{1.0\linewidth}{479include}}
-{\DARCimage{1.0\linewidth}{475include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE202}{Welche Aussage zur Amplitudenmodulation ist richtig? Durch das Informationssignal~...}
+            {\textbf{\textcolor{DARCgreen}{wird die Amplitude des Trägers beeinflusst. Die Frequenz des Trägers bleibt dabei konstant.}}}
+            {wird die Frequenz des Trägers beeinflusst. Die Amplitude des Trägers bleibt dabei konstant.}
+            {werden gleichzeitig Amplitude und Frequenz des Trägers beeinflusst.}
+            {werden nacheinander Amplitude und Frequenz des Trägers beeinflusst.}
+        \end{QQuestion}
 
-}
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{P2Question}{NE206}{~\\Welche spektrale Darstellung ergibt sich für die Modulationsart AM bei diesem  Audiospektrum?}
+            {\DARCimage{1.0\linewidth}{477include}}
+            {\DARCimage{1.0\linewidth}{476include}}
+            {\DARCimage{1.0\linewidth}{478include}}
+            {\DARCimage{1.0\linewidth}{479include}}
+            {\DARCimage{1.0\linewidth}{475include}}
+        \end{P2Question}
+
+    }
+    \only<2>{
+        \begin{P2Question}{NE206}{~\\Welche spektrale Darstellung ergibt sich für die Modulationsart AM bei diesem  Audiospektrum?}
+            {\DARCimage{1.0\linewidth}{477include}}
+            {\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{476include}}}}
+            {\DARCimage{1.0\linewidth}{478include}}
+            {\DARCimage{1.0\linewidth}{479include}}
+            {\DARCimage{1.0\linewidth}{475include}}
+    \end{P2Question}
+    }
 \end{frame}%ENDCONTENT

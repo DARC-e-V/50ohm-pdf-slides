@@ -1,0 +1,39 @@
+% Author: Malte, DE7LMS and Prof. Dr. Matthias Jung
+% Year: 2021/2024
+% Colored version of 194
+\begin{tikzpicture}[
+    thick,
+    >={Triangle},
+    samples=100,
+    x={(1 * \getDarcImageFactor cm, 0.2 * \getDarcImageFactor cm)},
+    y={(0, 1 * \getDarcImageFactor cm)},
+    z={(0.6 * \getDarcImageFactor cm, -0.2 * \getDarcImageFactor cm)}
+  ]
+
+  \fill[lightgray] (0,-2.1,-2) -- (2.2*pi,-2.1,-2) -- (2.2*pi,-2.1,2) -- (0,-2.1,2) -- cycle;
+  \node[left] at (2,-2.1,0) {Erde};
+  \draw[draw=black, ->] (0,0,0) -- (2.2*pi,0,0) node[right] {S};
+  %
+  \foreach \i in {1,2,3,4,5} {
+    \draw[->, DARCorange!50] (\i*pi/6,0,0) -- (\i*pi/6,0,{-2*sin(\i*pi/6 r)});
+  }
+  \draw[domain=0:1*pi, DARCorange] plot (\x, 0, {-2*sin(\x r)});
+  %
+  \foreach \i in {1,2,3,4,5} {
+    \draw[->, DARCgreen!50] (\i*pi/6,0,0) -- (\i*pi/6,{2*sin(\i*pi/6 r)},0);
+  }
+  \draw[domain=0:1*pi, DARCgreen] plot (\x,{2*sin(\x r)}, 0);
+  %
+  \foreach \i in {7,8,9,10,11} {
+    \draw[->, DARCgreen!50] (\i*pi/6,0,0) -- (\i*pi/6,{2*sin(\i*pi/6 r)},0);
+  }
+  \draw[domain=1*pi:2*pi, DARCgreen] plot (\x,{2*sin(\x r)}, 0);
+  %
+  \foreach \i in {7,8,9,10,11} {
+    \draw[->, DARCorange!50] (\i*pi/6,0,0) -- (\i*pi/6,0,{-2*sin(\i*pi/6 r)});
+  }
+  \draw[domain=1*pi:2*pi, DARCorange] plot (\x, 0, {-2*sin(\x r)});
+  %
+  \path (pi/2, {2*sin(pi/2 r)}, 0) node[above] {H};
+  \path (pi/3, 0, {-2*sin(pi/3 r)}) node[above left] {E};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    %
+    \draw (0,0) coordinate(start)
+        to[amp, boxed, >, o-, name={amp1}] ++(2,0)
+        to[amp, boxed, >    , name={amp2}] ++(2,0)
+        to[amp, boxed, >, -o, name={amp3}] ++(2,0) coordinate(end);
+    %
+    \draw[DARCblue](amp1.north) node[anchor=south](){$\cdot 10$};
+    \draw[DARCblue](amp2.north) node[anchor=south](){$\cdot 100$};
+    \draw[DARCblue](amp3.north) node[anchor=south](){$\cdot 1000$};
+    %
+    \draw[DARCred](amp1.south) node[anchor=north](){$+\qty{10}{dB}$};
+    \draw[DARCred](amp2.south) node[anchor=north](){$+\qty{20}{dB}$};
+    \draw[DARCred](amp3.south) node[anchor=north](){$+\qty{30}{dB}$};
+    %
+    \draw[DARCblue](start) node[anchor=south](){$\qty{1}{\milli\watt}$};
+    \draw[DARCred](start) node[anchor=north](){$\qty{0}{dBm}$};
+    %
+    \draw[DARCblue](end) node[anchor=south](){$\qty{1000}{\watt}$};
+    \draw[DARCred](end) node[anchor=north](){$\qty{60}{dBm}$};
+    %
+\end{tikzpicture}
+    

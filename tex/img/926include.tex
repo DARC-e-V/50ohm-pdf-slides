@@ -1,0 +1,26 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% (2)
+\begin{tikzpicture}
+    % Schwingkreis
+    \draw (0,0) coordinate(h0)
+        to [cute inductor, inductors/coils=4, name={l}] ++(0,-2)
+        to [short] ++(2,0) coordinate(h1);
+    \draw(h1) -- ++(0,0.3) coordinate(c1);
+    \draw(h0) -- ++(2,0) coordinate(h2);
+    \draw(h2) -- ++(0,-0.3) coordinate(c2);
+
+    \draw[thick](c1) -- ++(-0.4,0) coordinate(cc1);
+    \draw[thick](c1) -- ++(+0.4,0) coordinate(cc2);
+    \draw[thick](c2) -- ++(-0.4,0) coordinate(cc3);
+    \draw[thick](c2) -- ++(+0.4,0) coordinate(cc4);
+
+    \foreach \i in {0,1,2,3,4,5,6}{
+        \draw[DARCorange, -Triangle]
+            (cc3) ++(\i*0.8/6, 0) -- ++(0,-1.4);
+    }
+
+    % Margin:
+    \useasboundingbox (-0.5,+0.25+2) rectangle (+2.5,-2.25-2);
+
+\end{tikzpicture}

@@ -1,0 +1,199 @@
+% 2023 de DL9MJ, Prof. Dr. Matthias Jung
+\begin{circuitikz}%[scale=0.66]
+
+	% CONFIGURATION:
+
+	\newboolean{tx}\setboolean{tx}{true}   
+	\newboolean{labels}\setboolean{labels}{false}   
+	\def \alcval {0.5}
+	\def \pwrval {0.6666}
+	\def \volval {0.8}
+
+	% DONT CHANGE ANYTHING AFTER THIS LINE
+    \def\darclw{12cm*\getDarcImageFactor}
+	
+	\begin{axis}[%
+		view={0}{90},
+		name=axis2,
+		at={(0,0)},
+		anchor=outer south west,
+		colormap name={slategraywhite},
+		hide axis,
+        width=\darclw,
+        height=\getDarcImageFactor*2cm,
+		scale only axis,
+		xticklabel=\empty,
+		yticklabel=\empty,
+		xtick style={draw=none},
+		ytick style={draw=none},
+		xmin=-28,
+		xmax=50,
+		ymin=0.0,
+		ymax=1,
+		xmajorgrids=false,
+		ymajorgrids=false,
+		inner sep=0,
+		outer sep=0
+	]
+	\addplot3[surf, shader=interp] table [row sep=newline] {
+        -28 0 0
+        -10 0 0.5
+        0 0 0 
+        1 0 0.5
+        2 0 0.5
+        3 0 0
+        4 0 0.7
+        5 0 0.5
+        6 0 0.5
+        7 0 1 
+        8 0 5
+        8.5 0 18.9
+        9 0 20.0
+        9.5 0 19
+        10 0 10
+        11 0 13
+        12 0 10 
+        13 0 12 
+        14 0 10 
+        15 0 11 
+        16 0 5 
+        17 0 0.5 
+        19 0 0 
+        32 0 0.5 
+        64 0 0 
+
+        -28 1 0
+        -10 1 0.5
+        0 1 0 
+        1 1 0.5
+        2 1 0.5
+        3 1 0
+        4 1 0.7
+        5 1 0.5
+        6 1 0.5
+        7 1 1 
+        8 1 5
+        8.5 1 18.9
+        9 1 20.0
+        9.5 1 19
+        10 1 10
+        11 1 13
+        12 1 10 
+        13 1 12 
+        14 1 10 
+        15 1 11 
+        16 1 5 
+        17 1 0.5 
+        19 1 0 
+        32 1 0.5 
+        64 1 0 
+	};
+	\end{axis}
+
+    \begin{axis}[%
+		name=axis1,
+		at={(axis2.outer north west)},
+		anchor=outer south west,
+        /pgf/number format/1000 sep={ },
+        /pgf/number format/use comma,        
+        width=\darclw,
+        height=\getDarcImageFactor*2cm,
+		hide axis,
+        scale only axis,
+        xticklabel=\empty,
+        yticklabel=\empty,
+        xtick style={draw=none},
+        ytick style={draw=none},
+        xmin=-28,
+        xmax=50,
+        ymin=0.0,
+        ymax=25,
+        xmajorgrids=true,
+        ymajorgrids=true,
+        xminorgrids=true,
+        yminorgrids=true,
+		inner sep=0.0,
+		outer sep=0.0
+    ]
+
+    \fill[black!20] (axis cs: 7, 0) rectangle (axis cs: 17,50);
+
+    \addplot[color=black,smooth, very thick] coordinates{
+        (-28,0)
+        (-10,0.5)
+        (0,0)
+        (1,0.5)
+        (2,0.5)
+        (3,0)
+        (4,0.7)
+        (5,0.5)
+        (6,0.5)
+        (7,1)
+        (8,5)
+        (8.5,18.9)
+        (9,20.0)
+        (9.5,19)
+        (10,10)
+        (11,13)
+        (12,10)
+        (13,12)
+        (14,10)
+        (15,11)
+        (16,5)
+        (17,0.5)
+        (19,0)
+        (32,0.5)
+        (64,0)
+    };
+	\end{axis}
+
+	\draw[very thick] (0,0) rectangle (\darclw,8);
+	\draw[very thick] (0,4) -- (\darclw, 4);
+	\draw[very thick] (0,2) -- (\darclw, 2);
+
+	\alc{0.650*\darclw}{4.75}{0.950*\darclw}{4.75+1.5*\dist}{\alcval}{\ifthenelse{\boolean{labels}}{}{ALC}}
+	\pwr{0.050*\darclw}{4.75}{0.550*\darclw}{4.75+1.5*\dist}{\pwrval}
+	\vol{0.650*\darclw}{6.50}{0.950*\darclw}{6.50+1.5*\dist}{\volval}
+	\qrg{0.050*\darclw}{7.00}
+	\mdl{USB}{\ifthenelse{\boolean{tx}}{TX}{RX}};
+
+	\ifthenelse{\boolean{tx}}{ }{%
+		% Morse:
+	    \def\base{0.075}
+        \def\dash{-2*\base}
+        \def\dot{-\base}
+        \def\lp{-2*\base}
+        \def\sp{-\base}
+        \draw[very thick,white] 
+            (0.20*\darclw,1.75)
+            -- ++(0,\dash) to [open] ++(0,\sp) % - % Q
+            -- ++(0,\dot)  to [open] ++(0,\sp) % . %
+            -- ++(0,\dash) to [open] ++(0,\sp) % - %
+            -- ++(0,\dash) to [open] ++(0,\lp) % - %
+            %
+            -- ++(0,\dot)  to [open] ++(0,\sp) % . % C
+            -- ++(0,\dash) to [open] ++(0,\sp) % - %
+            -- ++(0,\dot)  to [open] ++(0,\sp) % . %
+            -- ++(0,\dash) to [open] ++(0,\sp);% - %
+		% Leila:
+        \draw[thick,gray] 
+            (0.8*\darclw,0.25) 
+                -- ++(0,2*\base) -- ++(1*\base,0) -- ++(0,2*\base) -- ++(-1*\base,0)
+                -- ++(0,2*\base) -- ++(1*\base,0) -- ++(0,2*\base) -- ++(-1*\base,0)
+                -- ++(0,2*\base) -- ++(1*\base,0) -- ++(0,2*\base) -- ++(-1*\base,0)
+                -- ++(0,2*\base) -- ++(1*\base,0) -- ++(0,2*\base) -- ++(-1*\base,0)
+                -- ++(0,2*\base) -- ++(1*\base,0);
+	}
+
+	% Labels:
+	\ifthenelse{\boolean{labels}}{
+	    \node[draw,very thick,circle,black,inner sep=2pt](node1) at (0.875*\darclw, 5.75) {1};
+	    \node[draw,very thick,circle,black,inner sep=2pt](node2) at (0.100*\darclw, 2.75) {2};
+	    \node[draw,very thick,circle,black,inner sep=2pt](node3) at (0.875*\darclw, 2.75) {3};
+	    \node[draw,very thick,circle,white,inner sep=2pt](node4) at (0.100*\darclw, 1.00) {4};
+
+	    \draw[-Triangle,thick](node1.west)  -| (0.8*\darclw,5.25);
+	    \draw[-Triangle,thick](node2.north) -- (0.1*\darclw,4.5);
+	}{}
+
+\end{circuitikz}

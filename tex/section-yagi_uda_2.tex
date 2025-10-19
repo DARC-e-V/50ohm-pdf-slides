@@ -1,137 +1,133 @@
-
 \section{Yagi-Uda Antenne II}
 \label{section:yagi_uda_2}
 \begin{frame}%STARTCONTENT
+    \frametitle{Funktionsprinzip}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Einspeisung an \emph{Strahler} ausgeführt als Dipol oder Faltdipol
+                \item Welle trifft auf längeren \emph{Reflektor} und kürzeren \emph{Direktor}
+                \item Es kann auch mehrere Direktoren geben
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{531include}
+                \caption{\scriptsize Die Elemente einer Yagi-Uda-Antenne}
+                \label{e_yagi_uda_aufbau}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-\frametitle{Funktionsprinzip}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}
+    \only<1>{
+        \begin{PQuestion}{EG111}{Das folgende Bild enthält eine einfache Richtantenne. Die Bezeichnungen der Elemente in numerischer Reihenfolge lauten~...}{1 Strahler, 2 Direktor und 3 Reflektor.}
+            {1 Reflektor, 2 Strahler und 3 Direktor.}
+            {1 Direktor, 2 Strahler und 3 Reflektor.}
+            {1 Direktor, 2 Reflektor und 3 Strahler.}
+            {\DARCimage{1.0\linewidth}{531include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{PQuestion}{EG111}{Das folgende Bild enthält eine einfache Richtantenne. Die Bezeichnungen der Elemente in numerischer Reihenfolge lauten~...}{1 Strahler, 2 Direktor und 3 Reflektor.}
+            {\textbf{\textcolor{DARCgreen}{1 Reflektor, 2 Strahler und 3 Direktor.}}}
+            {1 Direktor, 2 Strahler und 3 Reflektor.}
+            {1 Direktor, 2 Reflektor und 3 Strahler.}
+            {\DARCimage{1.0\linewidth}{531include}}\end{PQuestion}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Parasitäre Elemente}
     \begin{itemize}
-  \item Einspeisung an \emph{Strahler} ausgeführt als Dipol oder Faltdipol
-  \item Welle trifft auf längeren \emph{Reflektor} und kürzeren \emph{Direktor}
-  \item Es kann auch mehrere Direktoren geben
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{531include}
-    \caption{\scriptsize Die Elemente einer Yagi-Uda-Antenne}
-    \label{e_yagi_uda_aufbau}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+        \item Reflektor und Direktor schwingen ohne elektrische Verbindung zum Strahler zu haben
+        \item Haben auch keine Antenneneinspeisung
+        \item Nehmen dennoch Energie auf und geben sie wieder ab
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{EG111}{Das folgende Bild enthält eine einfache Richtantenne. Die Bezeichnungen der Elemente in numerischer Reihenfolge lauten~...}{1 Strahler, 2 Direktor und 3 Reflektor.}
-{1 Reflektor, 2 Strahler und 3 Direktor.}
-{1 Direktor, 2 Strahler und 3 Reflektor.}
-{1 Direktor, 2 Reflektor und 3 Strahler.}
-{\DARCimage{1.0\linewidth}{531include}}\end{PQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG212}{An welchem Element einer Yagi-Uda-Antenne erfolgt die Energieeinspeisung? Sie erfolgt am~...}{Direktor}
+            {Strahler}
+            {Reflektor}
+            {Strahler und am Reflektor gleichzeitig}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{PQuestion}{EG111}{Das folgende Bild enthält eine einfache Richtantenne. Die Bezeichnungen der Elemente in numerischer Reihenfolge lauten~...}{1 Strahler, 2 Direktor und 3 Reflektor.}
-{\textbf{\textcolor{DARCgreen}{1 Reflektor, 2 Strahler und 3 Direktor.}}}
-{1 Direktor, 2 Strahler und 3 Reflektor.}
-{1 Direktor, 2 Reflektor und 3 Strahler.}
-{\DARCimage{1.0\linewidth}{531include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG212}{An welchem Element einer Yagi-Uda-Antenne erfolgt die Energieeinspeisung? Sie erfolgt am~...}{Direktor}
+            {\textbf{\textcolor{DARCgreen}{Strahler}}}
+            {Reflektor}
+            {Strahler und am Reflektor gleichzeitig}
+        \end{QQuestion}
 
-}
+    }
+\end{frame}
+
+%\begin{frame}
+%    \frametitle{Richtwirkung}
+%    begin{itemize}
+%        \item Zwischen Strahler und Elementen gibt es eine räumliche und zeitliche Phasenverschiebung
+%        \item Durch die Überlagerung der Abstrahlung entsteht eine Richtwirkung
+%        \item \emph{Destruktive Interferenz}: Wellen löschen sich aus
+%        \item \emph{Konstruktive Interferenz}: Wellen verstärken sich
+%    \end{itemize}
+%\end{frame}
+
+\begin{frame}
+    \frametitle{Strahlungsdiagramm}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Große Hauptkeule in Richtung der Direktoren
+                \item Kleine Nebenkeulen und insbesondere Rückkeule
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{\linewidth}{934include}
+                \caption{\scriptsize Strahlungsdiagramm einer Yagi-Uda-Antenne}
+                \label{e_yagi_uda_strahlungsdiagramm}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Parasitäre Elemente}
-\begin{itemize}
-  \item Reflektor und Direktor schwingen ohne elektrische Verbindung zum Strahler zu haben
-  \item Haben auch keine Antenneneinspeisung
-  \item Nehmen dennoch Energie auf und geben sie wieder ab
-  \end{itemize}
-\end{frame}
+    \only<1>{
+        \begin{PQuestion}{EG218}{Für welche Antenne ist dieses Strahlungsdiagramm typisch?}{Yagi-Uda}
+            {Groundplane}
+            {Dipol}
+            {Kugelstrahler}
+            {\DARCimage{1.0\linewidth}{265include}}\end{PQuestion}
 
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG212}{An welchem Element einer Yagi-Uda-Antenne erfolgt die Energieeinspeisung? Sie erfolgt am~...}{Direktor}
-{Strahler}
-{Reflektor}
-{Strahler und am Reflektor gleichzeitig}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{PQuestion}{EG218}{Für welche Antenne ist dieses Strahlungsdiagramm typisch?}{\textbf{\textcolor{DARCgreen}{Yagi-Uda}}}
+            {Groundplane}
+            {Dipol}
+            {Kugelstrahler}
+            {\DARCimage{1.0\linewidth}{265include}}\end{PQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG212}{An welchem Element einer Yagi-Uda-Antenne erfolgt die Energieeinspeisung? Sie erfolgt am~...}{Direktor}
-{\textbf{\textcolor{DARCgreen}{Strahler}}}
-{Reflektor}
-{Strahler und am Reflektor gleichzeitig}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Richtwirkung}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Zwischen Strahler und Elementen gibt es eine räumliche und zeitliche Phasenverschiebung
-  \item Durch die Überlagerung der Abstrahlung entsteht eine Richtwirkung
-  \item \emph{Destruktive Interferenz}: Wellen löschen sich aus
-  \item \emph{Konstruktive Interferenz}: Wellen verstärken sich
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Strahlungsdiagramm}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Große Hauptkeule in Richtung der Direktoren
-  \item Kleine Nebenkeulen und insbesondere Rückkeule
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{265include}
-    \caption{\scriptsize Strahlungsdiagramm einer Yagi-Uda-Antenne}
-    \label{e_yagi_uda_strahlungsdiagramm}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{PQuestion}{EG218}{Für welche Antenne ist dieses Strahlungsdiagramm typisch?}{Yagi-Uda}
-{Groundplane}
-{Dipol}
-{Kugelstrahler}
-{\DARCimage{1.0\linewidth}{265include}}\end{PQuestion}
-
-}
-\only<2>{
-\begin{PQuestion}{EG218}{Für welche Antenne ist dieses Strahlungsdiagramm typisch?}{\textbf{\textcolor{DARCgreen}{Yagi-Uda}}}
-{Groundplane}
-{Dipol}
-{Kugelstrahler}
-{\DARCimage{1.0\linewidth}{265include}}\end{PQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT
+
+\begin{frame}
+    \only<1>{
+        \begin{PQuestion}{EG217}{Dieses Strahlungsdiagramm ist typisch für~...}{einen Viertelwellenstrahler.}
+            {einen Halbwellendipol.}
+            {eine Richtantenne.}
+            {eine Marconi-Antenne.}
+            {\DARCimage{0.5\linewidth}{262include}}\end{PQuestion}
+
+    }
+    \only<2>{
+        \begin{PQuestion}{EG217}{Dieses Strahlungsdiagramm ist typisch für~...}{einen Viertelwellenstrahler.}
+            {einen Halbwellendipol.}
+            {\textbf{\textcolor{DARCgreen}{eine Richtantenne.}}}
+            {eine Marconi-Antenne.}
+            {\DARCimage{0.5\linewidth}{262include}}\end{PQuestion}
+
+    }
+\end{frame}

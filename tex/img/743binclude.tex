@@ -1,0 +1,65 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2023
+\begin{circuitikz}[european]
+    \draw[-Triangle](0.0,0.0) -- (3.5,0.0)  node[right]{$f$};
+    \draw[-Triangle](0.0,0.0) -- (0.0,1.75) node[above left, rotate=90] () {};
+    \draw[thick](0.3,0.0) coordinate(c1) -- ++ (0,1.25) -- ++ (2.4,-0.5) -- (2.7,0) coordinate(c2);
+    \draw(c1) node[below]{$\qty{300}{\hertz}$};
+    \draw(c2) node[below]{$\qty{3}{\kilo\hertz}$};
+    %
+    \draw[-Triangle, DARCblue] (4,0.75) -- ++(1,0);  
+    \draw[DARCblue] (4.5,1.25) node [](){AM};
+    %
+	\draw[-Triangle](5.5,0.0) -- ++(5.0,0.0);
+	\draw[-Triangle](5.5,0.0) -- ++(0.0,1.75);
+    \draw[thick](5.5+3.5,0.0) -- ++ (0,1.75) ++(0,0.25) coordinate(f1);
+    \draw[thick](5.5+3.65,0.0) -- ++ (0,1.25) -- ++ ( 0.5,-0.5) -- ++(0,-0.75) coordinate(h1);
+    \draw[thick](5.5+3.35,0.0) -- ++ (0,1.25) -- ++ (-0.5,-0.5) -- ++(0,-0.75) coordinate(h2);
+    \draw(5.5+5.25,0.0) node[] () {$f$};
+    \draw(5.5+3.5,-0.5) node[] () {$f_\mathrm{T}$};
+    %
+    \draw[Triangle-Triangle, DARCred] (f1-|h1) -- (f1-|h2);
+    \draw[DARCred](f1) node[anchor=south](){\qty{6}{\kilo\hertz}};
+    %
+    \begin{scope}[yshift=-2.5cm]
+        \draw[-Triangle](0.0,0.0) -- (3.5,0.0)  node[right]{$f$};
+        \draw[-Triangle](0.0,0.0) -- (0.0,1.75) node[above left, rotate=90] () {};
+        \draw[thick](0.3,0.0) coordinate(c1) -- ++ (0,1.25) -- ++ (2.4,-0.5) -- (2.7,0) coordinate(c2);
+        \draw(c2) node[below]{$\qty{3}{\kilo\hertz}$};
+        \draw(c1) node[below]{$\qty{300}{\hertz}$};
+        %
+        \draw[-Triangle, DARCblue] (4,0.75) -- ++(1,0);  
+        \draw[DARCblue] (4.5,1.25) node [](){USB};
+        %
+        \draw[-Triangle](5.5,0.0) -- ++(5.0,0.0);
+        \draw[-Triangle](5.5,0.0) -- ++(0.0,1.75);
+        \draw[thick](5.5+3.65,0.0) coordinate(h1) -- ++ (0,1.25) coordinate(f0) -- ++ ( 0.5,-0.5) -- ++(0,-0.75) coordinate(h2);
+        \path(f0) ++(0,0.25) coordinate(f1);
+        \draw(5.5+5.25,0.0) node[] () {$f$};
+        \draw(5.5+3.5,-0.5) node[] () {$f_\mathrm{T}$};
+        %
+        \draw[Triangle-Triangle, DARCred] (f1-|h1) -- (f1-|h2);
+        \draw[DARCred](f1) node[anchor=south](){\qty{2,7}{\kilo\hertz}};
+    \end{scope}
+    %
+    \begin{scope}[yshift=-5cm]
+        \draw[-Triangle](0.0,0.0) -- (3.5,0.0)  node[right]{$f$};
+        \draw[-Triangle](0.0,0.0) -- (0.0,1.75) node[above left, rotate=90] () {};
+        \draw[thick](0.3,0.0) coordinate(c1) -- ++ (0,1.25) -- ++ (2.4,-0.5) -- (2.7,0) coordinate(c2);
+        \draw(c2) node[below]{$\qty{3}{\kilo\hertz}$};
+        \draw(c1) node[below]{$\qty{300}{\hertz}$};
+        %
+        \draw[-Triangle, DARCblue] (4,0.75) -- ++(1,0);  
+        \draw[DARCblue] (4.5,1.25) node [](){LSB};
+        %
+        \draw[-Triangle](5.5,0.0) -- ++(5.0,0.0);
+        \draw[-Triangle](5.5,0.0) -- ++(0.0,1.75);
+        \draw[thick](5.5+3.35,0.0) coordinate(h1) -- ++ (0,1.25) coordinate(f0) -- ++ (-0.5,-0.5) -- ++(0,-0.75) coordinate(h2);
+        \draw(5.5+5.25,0.0) node[] () {$f$};
+        \draw(5.5+3.5,-0.5) node[] () {$f_\mathrm{T}$};
+        \path(f0) ++(0,0.25) coordinate(f1);
+        %
+        \draw[Triangle-Triangle, DARCred] (f1-|h1) -- (f1-|h2);
+        \draw[DARCred](f1) node[anchor=south](){\qty{2,7}{\kilo\hertz}};
+    \end{scope}
+\end{circuitikz}

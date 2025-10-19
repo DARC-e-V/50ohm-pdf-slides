@@ -2,216 +2,75 @@
 \section{Detektorempfänger}
 \label{section:detektorempfänger}
 \begin{frame}%STARTCONTENT
-
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Einer der ersten und einfachsten Empfänger für AM
-  \item Energie wird direkt aus dem empfangenen Signal gezogen
-  \item Nur im Lokalbereich von starken Rundfunksendern nutzbar
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \includegraphics[width=0.85\textwidth]{foto/193}
-    \caption{\scriptsize Detektor-Empfänger}
-    \label{am_detektor}
-\end{figure}
-
-   \end{column}
-\end{columns}
-
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Einer der ersten und einfachsten Empfänger für AM
+                \item Energie wird direkt aus dem empfangenen Signal gezogen
+                \item Nur im Lokalbereich von starken Rundfunksendern nutzbar
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \includegraphics[width=0.8\textwidth]{foto/193}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{799include}
-    \caption{\scriptsize Schaltbild eines einfachen Detektor-Empfängers}
-    \label{am_detektor}
-\end{figure}
+\begin{frame}{Der einfachste AM-Empfänger}
+    \begin{columns}[T]
+        \begin{column}{0.48\linewidth}
+            \DARCimage{0.85\linewidth}{799include}
 
-\begin{itemize}
-  \item Parallel-Schwingkreis aus Spule und variablen Kondensator
-  \end{itemize}
+            \vspace{1cm}
+            \href{https://tinyurl.com/2yrgdghz}{\textcolor{DARCblue}{\faLink~Simulation}}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \visible<2->{\DARCimage{0.85\linewidth}{800include}}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{800include}
-    \caption{\scriptsize Signal an der Antenne}
-    \label{am_detektor_antenne}
-\end{figure}
+            \vspace{10pt}
 
+            \visible<3->{\DARCimage{0.85\linewidth}{801include}}
 
-\begin{figure}
-    \DARCimage{0.85\linewidth}{801include}
-    \caption{\scriptsize Gleichgerichtetes Signal an der Diode}
-    \label{am_detektor_diode}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{802include}
-    \caption{\scriptsize Hörbares NF Signal}
-    \label{am_detektor_kopfhoerer}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+            \visible<4->{\DARCimage{0.85\linewidth}{802include}}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{799include}
-    \caption{\scriptsize Schaltbild eines einfachen Detektor-Empfängers}
-    \label{am_detektor}
-\end{figure}
-
-\begin{itemize}
-  \item Signal von Antenne (rot) regt Schwingkreis an, wenn dieser auf die Frequenz abgestimmt ist
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{800include}
-    \caption{\scriptsize Signal an der Antenne}
-    \label{am_detektor_antenne}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{801include}
-    \caption{\scriptsize Gleichgerichtetes Signal an der Diode}
-    \label{am_detektor_diode}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{802include}
-    \caption{\scriptsize Hörbares NF Signal}
-    \label{am_detektor_kopfhoerer}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{799include}
-    \caption{\scriptsize Schaltbild eines einfachen Detektor-Empfängers}
-    \label{am_detektor}
-\end{figure}
+    \only<1>{
+        \begin{PQuestion}{EF101}{Was stellt nachfolgende Schaltung dar?}{Modulator}
+            {Verstärker}
+            {Oszillator}
+            {Detektorempfänger}
+            {\DARCimage{1.0\linewidth}{523include}}\end{PQuestion}
 
-\begin{itemize}
-  \item Diode (blau) richtet die AM-Modulation gleich
-  \end{itemize}
+    }
+    \only<2>{
+        \begin{PQuestion}{EF101}{Was stellt nachfolgende Schaltung dar?}{Modulator}
+            {Verstärker}
+            {Oszillator}
+            {\textbf{\textcolor{DARCgreen}{Detektorempfänger}}}
+            {\DARCimage{1.0\linewidth}{523include}}\end{PQuestion}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{800include}
-    \caption{\scriptsize Signal an der Antenne}
-    \label{am_detektor_antenne}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{801include}
-    \caption{\scriptsize Gleichgerichtetes Signal an der Diode}
-    \label{am_detektor_diode}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{802include}
-    \caption{\scriptsize Hörbares NF Signal}
-    \label{am_detektor_kopfhoerer}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{799include}
-    \caption{\scriptsize Schaltbild eines einfachen Detektor-Empfängers}
-    \label{am_detektor}
-\end{figure}
-
-\begin{itemize}
-  \item Hochohmiger Kopfhörer (grün) macht das Signal hörbar, da der Kopfhörer träge ist und den einzelnen Stromstößen nicht folgen kann
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{800include}
-    \caption{\scriptsize Signal an der Antenne}
-    \label{am_detektor_antenne}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{801include}
-    \caption{\scriptsize Gleichgerichtetes Signal an der Diode}
-    \label{am_detektor_diode}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{802include}
-    \caption{\scriptsize Hörbares NF Signal}
-    \label{am_detektor_kopfhoerer}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{PQuestion}{EF101}{Was stellt nachfolgende Schaltung dar?}{Modulator}
-{Verstärker}
-{Oszillator}
-{Detektorempfänger}
-{\DARCimage{1.0\linewidth}{523include}}\end{PQuestion}
-
-}
-\only<2>{
-\begin{PQuestion}{EF101}{Was stellt nachfolgende Schaltung dar?}{Modulator}
-{Verstärker}
-{Oszillator}
-{\textbf{\textcolor{DARCgreen}{Detektorempfänger}}}
-{\DARCimage{1.0\linewidth}{523include}}\end{PQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT
+
+\begin{frame}{Geradeausempfänger}
+    \begin{Columns}[T]
+        \Column{0.5}{
+            \DARCimage{\linewidth}{736include}
+            \vspace{1cm}
+        }
+        \Column{0.5}{
+            \begin{itemize}[<+->]
+                \item Das von der Antenne aufgenommene Signal bleibt in seiner Frequenz bis zur Demodulation erhalten.
+                \item Ein einzelner Filter hat zu geringe Trennschärfe
+                \item Deshalb werden mehrere Filter kombiniert um eine höhere Trennschärfe zu erreichen
+                \item Alle Filter müssten dann exakt auf die Empfangsfrequenz angepasst werden, dies ist Aufwändig
+            \end{itemize}
+        }
+    \end{Columns}
+\end{frame}

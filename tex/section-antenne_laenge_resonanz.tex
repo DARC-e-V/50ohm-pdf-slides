@@ -2,98 +2,86 @@
 \section{Antennenlänge und -resonanz}
 \label{section:antenne_laenge_resonanz}
 \begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Die Drähte einer Antennen können eine beliebige Länge oder Form haben
-  \item Jedoch ist dann deren Wellenwiderstand anders
-  \item Dieser Wellenwiderstand muss an die Speiseleitung angepasst werden, z.B. durch einen Balun
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG102}{Eine Drahtantenne für den Amateurfunk im KW-Bereich~...}{kann grundsätzlich eine beliebige Länge haben.}
-{muss unbedingt $\lambda/2$ lang sein.}
-{muss genau $\lambda/4$ lang sein.}
-{muss eine Länge von $3/4~\lambda$  haben.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG102}{Eine Drahtantenne für den Amateurfunk im KW-Bereich~...}{\textbf{\textcolor{DARCgreen}{kann grundsätzlich eine beliebige Länge haben.}}}
-{muss unbedingt $\lambda/2$ lang sein.}
-{muss genau $\lambda/4$ lang sein.}
-{muss eine Länge von $3/4~\lambda$  haben.}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG109}{Berechnen Sie die elektrische Länge eines 5/8 $\lambda$ langen Vertikalstrahlers für das \qty{10}{\m}-Band (\qty{28,5}{\MHz}).}{\qty{2,08}{\m}}
-{\qty{3,29}{\m}}
-{\qty{6,58}{\m}}
-{\qty{5,26}{\m}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG109}{Berechnen Sie die elektrische Länge eines 5/8 $\lambda$ langen Vertikalstrahlers für das \qty{10}{\m}-Band (\qty{28,5}{\MHz}).}{\qty{2,08}{\m}}
-{\qty{3,29}{\m}}
-{\textbf{\textcolor{DARCgreen}{\qty{6,58}{\m}}}}
-{\qty{5,26}{\m}}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Lösungsweg}
-Anstatt direkt die ungefähre Wellenlänge des 10m-Bands zu verwenden, wird hier erst die angegebene Frequenz in die exakte Wellenlänge umgerechnet.
-
-\begin{equation} \begin{split} l &= \frac{5}{8}\lambda\\ &= \frac{5}{8} \cdot \dfrac{300}{28,5MHz}\\ &= \frac{5}{8} \cdot 10,53m\\ &= 6,58m\\ \end{split} \end{equation}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Faltdipol}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
     \begin{itemize}
-  \item Ein Draht einer Wellenlänge wird an den Enden zur Länge eines Halbwellen-Dipols umgebogen
-  \item Die Einspeisung ist immer noch in der Mitte
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{531include}
-    \caption{\scriptsize Die Elemente einer Yagi-Uda-Antenne mit einem Faltdipol als Strahler bei der Nummer 2}
-    \label{e_antenne_laenge_resonanz}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+        \item Die Drähte einer Antennen können eine beliebige Länge oder Form haben
+        \item Jedoch ist dann deren Wellenwiderstand anders
+        \item Dieser Wellenwiderstand muss an die Speiseleitung angepasst werden, z.B. durch einen Balun
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG110}{Die Länge des Drahtes zur Herstellung eines Faltdipols entspricht~...}{einer Wellenlänge.}
-{einer Halbwellenlänge.}
-{zwei Wellenlängen.}
-{vier Wellenlängen.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG102}{Eine Drahtantenne für den Amateurfunk im KW-Bereich~...}{kann grundsätzlich eine beliebige Länge haben.}
+            {muss unbedingt $\lambda/2$ lang sein.}
+            {muss genau $\lambda/4$ lang sein.}
+            {muss eine Länge von $3/4~\lambda$  haben.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG110}{Die Länge des Drahtes zur Herstellung eines Faltdipols entspricht~...}{\textbf{\textcolor{DARCgreen}{einer Wellenlänge.}}}
-{einer Halbwellenlänge.}
-{zwei Wellenlängen.}
-{vier Wellenlängen.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG102}{Eine Drahtantenne für den Amateurfunk im KW-Bereich~...}{\textbf{\textcolor{DARCgreen}{kann grundsätzlich eine beliebige Länge haben.}}}
+            {muss unbedingt $\lambda/2$ lang sein.}
+            {muss genau $\lambda/4$ lang sein.}
+            {muss eine Länge von $3/4~\lambda$  haben.}
+        \end{QQuestion}
 
-}
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EG109}{Berechnen Sie die elektrische Länge eines 5/8 $\lambda$ langen Vertikalstrahlers für das \qty{10}{\m}-Band (\qty{28,5}{\MHz}).}{\qty{2,08}{\m}}
+            {\qty{3,29}{\m}}
+            {\qty{6,58}{\m}}
+            {\qty{5,26}{\m}}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EG109}{Berechnen Sie die elektrische Länge eines 5/8 $\lambda$ langen Vertikalstrahlers für das \qty{10}{\m}-Band (\qty{28,5}{\MHz}).}{\qty{2,08}{\m}}
+            {\qty{3,29}{\m}}
+            {\textbf{\textcolor{DARCgreen}{\qty{6,58}{\m}}}}
+            {\qty{5,26}{\m}}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lösungsweg}
+    Anstatt direkt die ungefähre Wellenlänge des 10m-Bands zu verwenden, wird hier erst die angegebene Frequenz in die exakte Wellenlänge umgerechnet.
+
+    \begin{equation} \begin{split} l &= \frac{5}{8}\lambda\\ &= \frac{5}{8} \cdot \dfrac{300}{28,5MHz}\\ &= \frac{5}{8} \cdot 10,53m\\ &= 6,58m\\ \end{split} \end{equation}
+
+\end{frame}
+
+\begin{frame}{Faltdipol}
+    \begin{figure}
+        \DARCimage{0.5\linewidth}{933include}
+        \caption{\scriptsize Ein Faltdipol}
+        \label{e_antenne_laenge_resonanz}
+    \end{figure}
+    \begin{itemize}
+        \item Ein Draht einer Wellenlänge wird an den Enden zur Länge eines Halbwellen-Dipols umgebogen
+        \item Die Einspeisung ist immer noch in der Mitte
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EG110}{Die Länge des Drahtes zur Herstellung eines Faltdipols entspricht~...}{einer Wellenlänge.}
+            {einer Halbwellenlänge.}
+            {zwei Wellenlängen.}
+            {vier Wellenlängen.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EG110}{Die Länge des Drahtes zur Herstellung eines Faltdipols entspricht~...}{\textbf{\textcolor{DARCgreen}{einer Wellenlänge.}}}
+            {einer Halbwellenlänge.}
+            {zwei Wellenlängen.}
+            {vier Wellenlängen.}
+        \end{QQuestion}
+
+    }
 \end{frame}%ENDCONTENT

@@ -1,102 +1,94 @@
-
 \section{Dipol-Antenne}
 \label{section:dipol}
 \begin{frame}%STARTCONTENT
+    \begin{figure}
+        \DARCimage{0.85\linewidth}{589include}
+        \caption{\scriptsize Darstellung einer Dipol-Antenne}
+        \label{n_dipol}
+    \end{figure}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item In der Praxis wird häufig der Halbwellendipol verwendet
+                \item Ist eine halbe Wellenlänge lang
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \pause
+            \begin{exampleblock}{Beispiel:}
+                \begin{itemize}
+                    \item Wellenlänge von \qty{10}{\metre}
+                    \item halbe Wellenlänge \qty{5}{\metre}
+                    \item Jedes Teilstück des Dipols \qty{2,5}{\metre}
+                \end{itemize}
+            \end{exampleblock}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-\begin{figure}
-    \DARCimage{0.85\linewidth}{589include}
-    \caption{\scriptsize Darstellung einer Dipol-Antenne}
-    \label{n_dipol}
-\end{figure}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}
+    \only<1>{
+        \begin{PQuestion}{NG103}{Wie wird die dargestellte Antenne bezeichnet?}{Endgespeiste Antenne}
+            {Groundplane-Antenne}
+            {Dipol-Antenne}
+            {Yagi-Uda-Antenne}
+            {\DARCimage{1.0\linewidth}{589include}}\end{PQuestion}
+
+    }
+    \only<2>{
+        \begin{PQuestion}{NG103}{Wie wird die dargestellte Antenne bezeichnet?}{Endgespeiste Antenne}
+            {Groundplane-Antenne}
+            {\textbf{\textcolor{DARCgreen}{Dipol-Antenne}}}
+            {Yagi-Uda-Antenne}
+            {\DARCimage{1.0\linewidth}{589include}}\end{PQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Anpassung}
+    Dipol-Antenne auf die gewünschte Frequenz bringen durch gleichmäßiges Kürzen oder Verlängern
+
     \begin{itemize}
-  \item In der Praxis wird häufig der Halbwellendipol verwendet
-  \item Ist eine halbe Wellenlänge lang
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-    \pause
-    Beispiel:
-
-\begin{itemize}
-  \item Wellenlänge von \qty{10}{\metre}
-  \item halbe Wellenlänge \qty{5}{\metre}
-  \item Jedes Teilstück des Dipols \qty{2,5}{\metre}
-  \end{itemize}
-
-
-
-   \end{column}
-\end{columns}
-
+        \item Zu hohe Resonanzfrequenz: Beide Seiten gleichmäßig verlängern
+        \item Zu niedrige Resonanzfrequenz: Beide Seiten gleichmäßig verkürzen
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{NG103}{Wie wird die dargestellte Antenne bezeichnet?}{Endgespeiste Antenne}
-{Groundplane-Antenne}
-{Dipol-Antenne}
-{Yagi-Uda-Antenne}
-{\DARCimage{1.0\linewidth}{589include}}\end{PQuestion}
+    \only<1>{
+        \begin{QQuestion}{NG304}{Ihre selbstgebaute Dipol-Antenne ist unterhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung verringern}
+            {Beide Enden gleichmäßig verlängern}
+            {Sendeleistung erhöhen}
+            {Beide Enden gleichmäßig kürzen}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{PQuestion}{NG103}{Wie wird die dargestellte Antenne bezeichnet?}{Endgespeiste Antenne}
-{Groundplane-Antenne}
-{\textbf{\textcolor{DARCgreen}{Dipol-Antenne}}}
-{Yagi-Uda-Antenne}
-{\DARCimage{1.0\linewidth}{589include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NG304}{Ihre selbstgebaute Dipol-Antenne ist unterhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung verringern}
+            {Beide Enden gleichmäßig verlängern}
+            {Sendeleistung erhöhen}
+            {\textbf{\textcolor{DARCgreen}{Beide Enden gleichmäßig kürzen}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{Anpassung}
-Dipol-Antenne auf die gewünschte Frequenz bringen durch gleichmäßiges Kürzen oder Verlängern
+    \only<1>{
+        \begin{QQuestion}{NG305}{Ihre selbstgebaute Dipol-Antenne ist oberhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung erhöhen}
+            {Beide Enden gleichmäßig kürzen}
+            {Beide Enden gleichmäßig verlängern}
+            {Sendeleistung verringern}
+        \end{QQuestion}
 
-\begin{itemize}
-  \item Zu hohe Resonanzfrequenz: Beide Seiten gleichmäßig verlängern
-  \item Zu niedrige Resonanzfrequenz: Beide Seiten gleichmäßig verkürzen
-  \end{itemize}
-\end{frame}
+    }
+    \only<2>{
+        \begin{QQuestion}{NG305}{Ihre selbstgebaute Dipol-Antenne ist oberhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung erhöhen}
+            {Beide Enden gleichmäßig kürzen}
+            {\textbf{\textcolor{DARCgreen}{Beide Enden gleichmäßig verlängern}}}
+            {Sendeleistung verringern}
+        \end{QQuestion}
 
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NG304}{Ihre selbstgebaute Dipol-Antenne ist unterhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung verringern}
-{Beide Enden gleichmäßig verlängern}
-{Sendeleistung erhöhen}
-{Beide Enden gleichmäßig kürzen}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NG304}{Ihre selbstgebaute Dipol-Antenne ist unterhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung verringern}
-{Beide Enden gleichmäßig verlängern}
-{Sendeleistung erhöhen}
-{\textbf{\textcolor{DARCgreen}{Beide Enden gleichmäßig kürzen}}}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NG305}{Ihre selbstgebaute Dipol-Antenne ist oberhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung erhöhen}
-{Beide Enden gleichmäßig kürzen}
-{Beide Enden gleichmäßig verlängern}
-{Sendeleistung verringern}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NG305}{Ihre selbstgebaute Dipol-Antenne ist oberhalb der gewünschten Frequenz resonant. Welche Änderung können Sie vornehmen, um die Resonanz in den gewünschten Bereich zu bringen?}{Sendeleistung erhöhen}
-{Beide Enden gleichmäßig kürzen}
-{\textbf{\textcolor{DARCgreen}{Beide Enden gleichmäßig verlängern}}}
-{Sendeleistung verringern}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

@@ -1,0 +1,13 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{circuitikz}
+    \ctikzset{
+        RF/scale=\getDarcImageFactor,
+    }
+    \draw[thick] (0,0) coordinate(start) arc (85:-265:2) coordinate(end);
+    \draw(start) to [vC] (end);
+    \path(start) arc (85:-90:2) ++(0.1,0.25) coordinate(bottom);
+    \draw(bottom) to [TL, name=tl1, bipoles/tline/width={1}] ++(0,-2.0);
+    \draw[thick](bottom) arc (-85:265:0.75) coordinate(end2);
+    \draw(end2) to [short,-*] (tl1.bottom left);
+\end{circuitikz}

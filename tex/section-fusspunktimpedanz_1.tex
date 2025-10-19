@@ -1,138 +1,138 @@
-
 \section{Fußpunktimpedanz I}
 \label{section:fusspunktimpedanz_1}
 \begin{frame}%STARTCONTENT
-
-\frametitle{Mittengespeister Dipol}
-\begin{itemize}
-  \item Speiseimpedanz 73,1 Ω
-  \item Im Freiraum, also bei einer Aufbauhöhe von min. einer Wellenlänge
-  \item Recht nahe bei 50 Ω
-  \end{itemize}
+    \frametitle{Mittengespeister Dipol}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \begin{itemize}
+                \item Speiseimpedanz 73,1 Ω
+                \item Im Freiraum, also bei einer Aufbauhöhe von min. einer Wellenlänge
+                \item Recht nahe bei 50 Ω
+                \item Bei geringerer Aufbauhöhe kommt es zu Wechselwirkungen mit dem Boden
+                \item Speiseimpedanz ca. 40 Ω bis 90 Ω
+                \item Simulation mit \href{https://gist.github.com/myzinsky/3390169527cc4dc6d3325602c7704804}{\textcolor{DARCblue}{\faLink~NECPP}}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \DARCimage{0.9\linewidth}{788include}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG207}{Die Fußpunktimpedanz eines mittengespeisten Halbwellendipols in einer Höhe von mindestens einer Wellenlänge über dem Boden beträgt ungefähr~...}{\qty{50}{\ohm}.}
-{\qty{75}{\ohm}.}
-{\qty{30}{\ohm}.}
-{\qty{600}{\ohm}.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG207}{Die Fußpunktimpedanz eines mittengespeisten Halbwellendipols in einer Höhe von mindestens einer Wellenlänge über dem Boden beträgt ungefähr~...}{\qty{50}{\ohm}.}
+            {\qty{75}{\ohm}.}
+            {\qty{30}{\ohm}.}
+            {\qty{600}{\ohm}.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG207}{Die Fußpunktimpedanz eines mittengespeisten Halbwellendipols in einer Höhe von mindestens einer Wellenlänge über dem Boden beträgt ungefähr~...}{\qty{50}{\ohm}.}
-{\textbf{\textcolor{DARCgreen}{\qty{75}{\ohm}.}}}
-{\qty{30}{\ohm}.}
-{\qty{600}{\ohm}.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG207}{Die Fußpunktimpedanz eines mittengespeisten Halbwellendipols in einer Höhe von mindestens einer Wellenlänge über dem Boden beträgt ungefähr~...}{\qty{50}{\ohm}.}
+            {\textbf{\textcolor{DARCgreen}{\qty{75}{\ohm}.}}}
+            {\qty{30}{\ohm}.}
+            {\qty{600}{\ohm}.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{Mittengespeister Dipol}
-\begin{itemize}
-  \item Bei geringerer Aufbauhöhe kommt es zu Wechselwirkungen mit dem Boden
-  \item Speiseimpedanz ca. 40 Ω bis 90 Ω
-  \end{itemize}
+    \only<1>{
+        \begin{QQuestion}{EG208}{Der Fußpunktwiderstand in der Mitte eines Halbwellendipols beträgt je nach Aufbauhöhe ungefähr~...}{\qtyrange{100}{120}{\ohm}.}
+            {\qtyrange{40}{90}{\ohm}.}
+            {\qtyrange{120}{240}{\ohm}.}
+            {\qtyrange{240}{600}{\ohm}.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EG208}{Der Fußpunktwiderstand in der Mitte eines Halbwellendipols beträgt je nach Aufbauhöhe ungefähr~...}{\qtyrange{100}{120}{\ohm}.}
+            {\textbf{\textcolor{DARCgreen}{\qtyrange{40}{90}{\ohm}.}}}
+            {\qtyrange{120}{240}{\ohm}.}
+            {\qtyrange{240}{600}{\ohm}.}
+        \end{QQuestion}
+
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG208}{Der Fußpunktwiderstand in der Mitte eines Halbwellendipols beträgt je nach Aufbauhöhe ungefähr~...}{\qtyrange{100}{120}{\ohm}.}
-{\qtyrange{40}{90}{\ohm}.}
-{\qtyrange{120}{240}{\ohm}.}
-{\qtyrange{240}{600}{\ohm}.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG209}{Welchen Eingangswiderstand hat ein gestreckter mittengespeister Halbwellendipol?}{ca. \num{40} bis \qty{90}{\ohm}}
+            {ca. \qty{30}{\ohm}}
+            {ca. \qty{120}{\ohm}}
+            {ca. \num{240} bis \qty{300}{\ohm}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG208}{Der Fußpunktwiderstand in der Mitte eines Halbwellendipols beträgt je nach Aufbauhöhe ungefähr~...}{\qtyrange{100}{120}{\ohm}.}
-{\textbf{\textcolor{DARCgreen}{\qtyrange{40}{90}{\ohm}.}}}
-{\qtyrange{120}{240}{\ohm}.}
-{\qtyrange{240}{600}{\ohm}.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG209}{Welchen Eingangswiderstand hat ein gestreckter mittengespeister Halbwellendipol?}{\textbf{\textcolor{DARCgreen}{ca. \num{40} bis \qty{90}{\ohm}}}}
+            {ca. \qty{30}{\ohm}}
+            {ca. \qty{120}{\ohm}}
+            {ca. \num{240} bis \qty{300}{\ohm}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG209}{Welchen Eingangswiderstand hat ein gestreckter mittengespeister Halbwellendipol?}{ca. \num{40} bis \qty{90}{\ohm}}
-{ca. \qty{30}{\ohm}}
-{ca. \qty{120}{\ohm}}
-{ca. \num{240} bis \qty{300}{\ohm}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG209}{Welchen Eingangswiderstand hat ein gestreckter mittengespeister Halbwellendipol?}{\textbf{\textcolor{DARCgreen}{ca. \num{40} bis \qty{90}{\ohm}}}}
-{ca. \qty{30}{\ohm}}
-{ca. \qty{120}{\ohm}}
-{ca. \num{240} bis \qty{300}{\ohm}}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Faltdipol}
-\begin{itemize}
-  \item Antennenabschnitte sind teilweise parallel geführt
-  \item Verdoppelt die Spannung
-  \item Halbiert den Strom
-  \item $R = \frac{2 \cdot U}{\frac{I}{2}} = 4 \cdot \frac{U}{I}$
-  \item Speiseimpedanz vervierfacht sich: ca. 240 Ω bis 300 Ω
-  \end{itemize}
+    \frametitle{Faltdipol}
+    \begin{itemize}
+        \item Antennenabschnitte sind teilweise parallel geführt
+        \item Verdoppelt die Spannung
+        \item Halbiert den Strom
+        \item $R = \frac{2 \cdot U}{\frac{I}{2}} = 4 \cdot \frac{U}{I}$
+        \item Speiseimpedanz vervierfacht sich: ca. 240 Ω bis 300 Ω
+    \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG210}{Welchen Eingangs- bzw. Fußpunktwiderstand hat ein Faltdipol?}{ca. \qtyrange{240}{300}{\ohm}}
-{ca. \qtyrange{30}{60}{\ohm}}
-{ca. \qty{60}{\ohm}}
-{ca. \qty{120}{\ohm}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG210}{Welchen Eingangs- bzw. Fußpunktwiderstand hat ein Faltdipol?}{ca. \qtyrange{240}{300}{\ohm}}
+            {ca. \qtyrange{30}{60}{\ohm}}
+            {ca. \qty{60}{\ohm}}
+            {ca. \qty{120}{\ohm}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG210}{Welchen Eingangs- bzw. Fußpunktwiderstand hat ein Faltdipol?}{\textbf{\textcolor{DARCgreen}{ca. \qtyrange{240}{300}{\ohm}}}}
-{ca. \qtyrange{30}{60}{\ohm}}
-{ca. \qty{60}{\ohm}}
-{ca. \qty{120}{\ohm}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG210}{Welchen Eingangs- bzw. Fußpunktwiderstand hat ein Faltdipol?}{\textbf{\textcolor{DARCgreen}{ca. \qtyrange{240}{300}{\ohm}}}}
+            {ca. \qtyrange{30}{60}{\ohm}}
+            {ca. \qty{60}{\ohm}}
+            {ca. \qty{120}{\ohm}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{Groundplane-Antenne}
-\begin{itemize}
-  \item Ein Dipolschenkel entfällt und wird durch eine Erde mit möglichst geringem Widerstand ersetzt
-  \item Hälfte eines Dipols im Freiraum
-  \item $\rightarrow$ Speisewiderstand: $\dfrac{73,1 Ω}{2} \approx 37 Ω$
-  \item Radiale um \qty{45}{\degree} nach unten abwinkeln ergibt zusätzliche Abstrahlung
-  \item $\rightarrow$ Speisewiderstand: 50 Ω
-  \end{itemize}
+    \frametitle{Groundplane-Antenne}
+    \begin{itemize}
+        \item Ein Dipolschenkel entfällt und wird durch eine Erde mit möglichst geringem Widerstand ersetzt
+        \item Hälfte eines Dipols im Freiraum
+        \item $\rightarrow$ Speisewiderstand: $\dfrac{73,1 Ω}{2} \approx 37 Ω$
+        \item Radiale um \qty{45}{\degree} nach unten abwinkeln ergibt zusätzliche Abstrahlung
+        \item $\rightarrow$ Speisewiderstand: 50 Ω
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG211}{Welchen Eingangswiderstand hat eine Groundplane-Antenne?}{ca. \qty{600}{\ohm}}
-{ca. \qtyrange{60}{120}{\ohm}}
-{ca. \qtyrange{30}{50}{\ohm}}
-{ca. \qty{240}{\ohm}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG211}{Welchen Eingangswiderstand hat eine Groundplane-Antenne?}{ca. \qty{600}{\ohm}}
+            {ca. \qtyrange{60}{120}{\ohm}}
+            {ca. \qtyrange{30}{50}{\ohm}}
+            {ca. \qty{240}{\ohm}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG211}{Welchen Eingangswiderstand hat eine Groundplane-Antenne?}{ca. \qty{600}{\ohm}}
-{ca. \qtyrange{60}{120}{\ohm}}
-{\textbf{\textcolor{DARCgreen}{ca. \qtyrange{30}{50}{\ohm}}}}
-{ca. \qty{240}{\ohm}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG211}{Welchen Eingangswiderstand hat eine Groundplane-Antenne?}{ca. \qty{600}{\ohm}}
+            {ca. \qtyrange{60}{120}{\ohm}}
+            {\textbf{\textcolor{DARCgreen}{ca. \qtyrange{30}{50}{\ohm}}}}
+            {ca. \qty{240}{\ohm}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

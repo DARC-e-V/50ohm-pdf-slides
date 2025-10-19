@@ -1,293 +1,132 @@
-
 \section{Aufbau eines Senders}
 \label{section:aufbau_sender}
-\begin{frame}%STARTCONTENT
-
-\frametitle{1. Mikrofon}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Wandelt Schallwellen in NF-Signal um
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
+\begin{frame}
+    \frametitle{Aufbau eines Senders}
+    \begin{columns}[T]
+        \begin{column}{0.38\textwidth}
+            \begin{figure}
+                \DARCimage{1.0\linewidth}{735include}
+                \caption{\scriptsize Blockdiagramm eines einfachen Senders}
+                \label{aufbau_sender}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.58\textwidth}
+            \small
+            \begin{enumerate}[<+->]
+                \item Wandelt Schallwellen in NF-Signal um
+                \item Verstärkt das NF-Signal vom Mikrofon
+                \item Mischt das NF-Signal mit dem HF-Träger vom Osz. (4)
+                \item Erzeugt hochfrequente Schwingung der Sendefrequenz
+                \item Mischer erzeugt unerwünschte Frequenzen, Mit dem Bandfilter werden nur die gewünschten Frequenzen durchgelassen
+                \item Verstärkt das HF-Signal auf gewünschte Sendeleistung
+                \item Verstärker kann unerwünschte Frequenzen erzeugen, nur die gewünschten Frequenzen werden durchgelassen
+                \item HF-Signal wird auf Antenne gegeben, diese strahlt es als Funkwelle ab
+            \end{enumerate}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{2. Niederfrequenz-Verstärker}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
+    \only<1>{
+        \begin{PQuestion}{NF401}{Was stellt folgendes Blockdiagramm dar?}
+            {Sender}
+            {Empfänger}
+            {Relaisfunkstelle}
+            {Antennenvorverstärker}
+            {\DARCimage{1.0\linewidth}{524include}}\end{PQuestion}
 
+    }
+    \only<2>{
+        \begin{PQuestion}{NF401}{Was stellt folgendes Blockdiagramm dar?}
+            {\textbf{\textcolor{DARCgreen}{Sender}}}
+            {Empfänger}
+            {Relaisfunkstelle}
+            {Antennenvorverstärker}
+            {\DARCimage{1.0\linewidth}{524include}}\end{PQuestion}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Verstärkt das NF-Signal vom Mikrofon
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{3. Mischer}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
+    \only<1>{
+        \begin{PQuestion}{NF403}{Das nachfolgende Blockschaltbild zeigt einen einfachen Sender. An welcher Stelle befindet sich welche Stufe?}{1 HF-Verstärker;
+                2 Filter;
+                3 HF-Oszillator;
+                4 NF-Verstärker;
+                5 Mischer;
+                6 NF-Verstärker
+            }
+            {1 HF-Verstärker;
+                2 Mischer;
+                3 HF-Oszillator;
+                4 Filter;
+                5 NF-Verstärker;
+                6 Filter
+            }
+            {1 NF-Verstärker;
+                2 Filter;
+                3 HF-Oszillator;
+                4 Mischer;
+                5 HF-Verstärker;
+                6 Mischer}
+            {1 NF-Verstärker;
+                2 Mischer;
+                3 HF-Oszillator;
+                4 Filter;
+                5 HF-Verstärker;
+                6 Filter}
+            {\DARCimage{1.0\linewidth}{495include}}\end{PQuestion}
 
+    }
+    \only<2>{
+        \begin{PQuestion}{NF403}{Das nachfolgende Blockschaltbild zeigt einen einfachen Sender. An welcher Stelle befindet sich welche Stufe?}{1 HF-Verstärker;
+                2 Filter;
+                3 HF-Oszillator;
+                4 NF-Verstärker;
+                5 Mischer;
+                6 NF-Verstärker
+            }
+            {1 HF-Verstärker;
+                2 Mischer;
+                3 HF-Oszillator;
+                4 Filter;
+                5 NF-Verstärker;
+                6 Filter
+            }
+            {1 NF-Verstärker;
+                2 Filter;
+                3 HF-Oszillator;
+                4 Mischer;
+                5 HF-Verstärker;
+                6 Mischer}
+            {\textbf{\textcolor{DARCgreen}{1 NF-Verstärker;
+                        2 Mischer;
+                        3 HF-Oszillator;
+                        4 Filter;
+                        5 HF-Verstärker;
+                        6 Filter}}}
+            {\DARCimage{1.0\linewidth}{495include}}\end{PQuestion}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Mischt das NF-Signal mit dem HF-Träger vom Oszillator (4)
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{4. Oszillator}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
+    \only<1>{
+        \begin{QQuestion}{NF402}{Aus welchen Stufen besteht ein einfacher Sender?}{Vorverstärker, Filter, NF-Verstärker, Antenne}
+            {Vorverstärker, Filter, Demodulator, NF-Verstärker}
+            {Oszillator, Mischer, Filter, Leistungsverstärker}
+            {NF-Verstärker, Filter, Leistungsverstärker, Antenne}
+        \end{QQuestion}
 
+    }
+    \only<2>{
+        \begin{QQuestion}{NF402}{Aus welchen Stufen besteht ein einfacher Sender?}{Vorverstärker, Filter, NF-Verstärker, Antenne}
+            {Vorverstärker, Filter, Demodulator, NF-Verstärker}
+            {\textbf{\textcolor{DARCgreen}{Oszillator, Mischer, Filter, Leistungsverstärker}}}
+            {NF-Verstärker, Filter, Leistungsverstärker, Antenne}
+        \end{QQuestion}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Erzeugt hochfrequente Schwingung der Sendefrequenz
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{5. Bandfilter}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Mischer erzeugt unerwünschte Frequenzen
-  \item Mit dem Bandfilter werden nur die gewünschten Frequenzen durchgelassen
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{6. Verstärker}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Verstärkt das HF-Signal auf gewünschte Sendeleistung
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{7. Bandfilter}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Verstärker kann unerwünschte Frequenzen erzeugen
-  \item Nur die gewünschten Frequenzen werden durchgelassen
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{8. Antenne}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{735include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Senders}
-    \label{aufbau_sender}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item HF-Signal wird auf Antenne gegeben
-  \item Antenne strahlt es als Funkwelle ab
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{PQuestion}{NF401}{Was stellt folgendes Blockdiagramm dar?}{Sender}
-{Empfänger}
-{Relaisfunkstelle}
-{Antennenvorverstärker}
-{\DARCimage{1.0\linewidth}{524include}}\end{PQuestion}
-
-}
-\only<2>{
-\begin{PQuestion}{NF401}{Was stellt folgendes Blockdiagramm dar?}{\textbf{\textcolor{DARCgreen}{Sender}}}
-{Empfänger}
-{Relaisfunkstelle}
-{Antennenvorverstärker}
-{\DARCimage{1.0\linewidth}{524include}}\end{PQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{PQuestion}{NF403}{Das nachfolgende Blockschaltbild zeigt einen einfachen Sender. An welcher Stelle befindet sich welche Stufe?}{1 HF-Verstärker; 
-2 Filter; 
-3 HF-Oszillator;  
-4 NF-Verstärker; 
-5 Mischer;
-6 NF-Verstärker
-}
-{1 HF-Verstärker; 
-2 Mischer; 
-3 HF-Oszillator;  
-4 Filter; 
-5 NF-Verstärker; 
-6 Filter
-}
-{1 NF-Verstärker; 
-2 Filter; 
-3 HF-Oszillator;  
-4 Mischer; 
-5 HF-Verstärker;
-6 Mischer}
-{1 NF-Verstärker; 
-2 Mischer; 
-3 HF-Oszillator;  
-4 Filter; 
-5 HF-Verstärker; 
-6 Filter}
-{\DARCimage{1.0\linewidth}{495include}}\end{PQuestion}
-
-}
-\only<2>{
-\begin{PQuestion}{NF403}{Das nachfolgende Blockschaltbild zeigt einen einfachen Sender. An welcher Stelle befindet sich welche Stufe?}{1 HF-Verstärker; 
-2 Filter; 
-3 HF-Oszillator;  
-4 NF-Verstärker; 
-5 Mischer;
-6 NF-Verstärker
-}
-{1 HF-Verstärker; 
-2 Mischer; 
-3 HF-Oszillator;  
-4 Filter; 
-5 NF-Verstärker; 
-6 Filter
-}
-{1 NF-Verstärker; 
-2 Filter; 
-3 HF-Oszillator;  
-4 Mischer; 
-5 HF-Verstärker;
-6 Mischer}
-{\textbf{\textcolor{DARCgreen}{1 NF-Verstärker; 
-2 Mischer; 
-3 HF-Oszillator;  
-4 Filter; 
-5 HF-Verstärker; 
-6 Filter}}}
-{\DARCimage{1.0\linewidth}{495include}}\end{PQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NF402}{Aus welchen Stufen besteht ein einfacher Sender?}{Vorverstärker, Filter, NF-Verstärker, Antenne}
-{Vorverstärker, Filter, Demodulator, NF-Verstärker}
-{Oszillator, Mischer, Filter, Leistungsverstärker}
-{NF-Verstärker, Filter, Leistungsverstärker, Antenne}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NF402}{Aus welchen Stufen besteht ein einfacher Sender?}{Vorverstärker, Filter, NF-Verstärker, Antenne}
-{Vorverstärker, Filter, Demodulator, NF-Verstärker}
-{\textbf{\textcolor{DARCgreen}{Oszillator, Mischer, Filter, Leistungsverstärker}}}
-{NF-Verstärker, Filter, Leistungsverstärker, Antenne}
-\end{QQuestion}
-
-}
+    }
 \end{frame}
 
 \begin{frame}Eine Amateurfunkanlage muss nach den allgemein anerkannten Regeln der Technik aufgebaut und betrieben werden. Das gilt natürlich auch ganz besonders für Sender.
@@ -295,20 +134,20 @@
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD106}{Welche technischen Anforderungen stellt die Amateurfunkverordnung u.~a. an eine Amateurfunkstelle?}{Alle für den Sendebetrieb notwendigen Geräte müssen über ein CE-Zeichen verfügen.}
-{Sie ist nach den allgemein anerkannten Regeln der Technik einzurichten und zu unterhalten.}
-{Das Sendesignal muss über ein Koaxialkabel der Antenne zugeführt werden.}
-{Sie darf bauartbedingt keine höhere Leistung erzeugen, als der Besitzer verwenden darf.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD106}{Welche technischen Anforderungen stellt die Amateurfunkverordnung u.~a. an eine Amateurfunkstelle?}{Alle für den Sendebetrieb notwendigen Geräte müssen über ein CE-Zeichen verfügen.}
+            {Sie ist nach den allgemein anerkannten Regeln der Technik einzurichten und zu unterhalten.}
+            {Das Sendesignal muss über ein Koaxialkabel der Antenne zugeführt werden.}
+            {Sie darf bauartbedingt keine höhere Leistung erzeugen, als der Besitzer verwenden darf.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD106}{Welche technischen Anforderungen stellt die Amateurfunkverordnung u.~a. an eine Amateurfunkstelle?}{Alle für den Sendebetrieb notwendigen Geräte müssen über ein CE-Zeichen verfügen.}
-{\textbf{\textcolor{DARCgreen}{Sie ist nach den allgemein anerkannten Regeln der Technik einzurichten und zu unterhalten.}}}
-{Das Sendesignal muss über ein Koaxialkabel der Antenne zugeführt werden.}
-{Sie darf bauartbedingt keine höhere Leistung erzeugen, als der Besitzer verwenden darf.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD106}{Welche technischen Anforderungen stellt die Amateurfunkverordnung u.~a. an eine Amateurfunkstelle?}{Alle für den Sendebetrieb notwendigen Geräte müssen über ein CE-Zeichen verfügen.}
+            {\textbf{\textcolor{DARCgreen}{Sie ist nach den allgemein anerkannten Regeln der Technik einzurichten und zu unterhalten.}}}
+            {Das Sendesignal muss über ein Koaxialkabel der Antenne zugeführt werden.}
+            {Sie darf bauartbedingt keine höhere Leistung erzeugen, als der Besitzer verwenden darf.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

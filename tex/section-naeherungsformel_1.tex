@@ -3,162 +3,172 @@
 \label{section:naeherungsformel_1}
 \begin{frame}%STARTCONTENT
 
-\frametitle{Näherungsformel für Feldstärke}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Berechnung der elektrischen Feldstärke
-  \item Im Abstand zu einem Strahler
-  \item Bei gegebener Leistung und Gewinn
-  \item Gilt nur im Freiraum <br/> ($d > \frac{\lambda}{2\pi}$)
-  \end{itemize}
+    \frametitle{Näherungsformel für Feldstärke}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Berechnung der elektrischen Feldstärke
+                \item Im Abstand zu einem Strahler
+                \item Bei gegebener Leistung und Gewinn
+                \item Gilt nur im Freiraum ($d > \frac{\lambda}{2\pi}$)
+            \end{itemize}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{equation}\begin{split} E &= \dfrac{\sqrt{30\Omega \cdot P_A \cdot G_i}}{d}\\ &= \dfrac{\sqrt{30\Omega \cdot P_{\textrm{EIRP}}}}{d} \end{split}\end{equation}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Näherungsformel für Abstand}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Bei gegebener Feldstärke
-  \item Umstellen nach $d$
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{equation}\begin{split} d &= \dfrac{\sqrt{30\Omega \cdot P_A \cdot G_i}}{E}\\ &= \dfrac{\sqrt{30\Omega \cdot P_{\textrm{EIRP}}}}{E} \end{split}\end{equation}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{equation}\begin{split} E &= \dfrac{\sqrt{30\Omega \cdot P_A \cdot G_i}}{d}\\ &= \dfrac{\sqrt{30\Omega \cdot P_{\textrm{EIRP}}}}{d} \end{split}\end{equation}
 
 
-   \end{column}
-\end{columns}
+        \end{column}
+    \end{columns}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EK108}{Sie möchten den Personenschutz-Sicherheitsabstand für die Antenne Ihrer Amateurfunkstelle für das \qty{10}{\m}-Band und das Modulationsverfahren FM berechnen. Der Grenzwert im Fall des Personenschutzes beträgt \qty{28}{\V}/m. Sie betreiben eine Yagi-Uda-Antenne mit einem Gewinn von $7,5~$dBd. Die Antenne wird von einem Sender mit einer Leistung von \qty{100}{\W} über ein langes Koaxialkabel gespeist. Die Kabeldämpfung beträgt \qty{1,5}{\decibel}. Wie groß muss der Sicherheitsabstand sein?}{\qty{3,9}{\m}}
-{\qty{5,0}{\m}}
-{\qty{2,5}{\m}}
-{\qty{20,7}{\m}}
-\end{QQuestion}
+    \frametitle{Näherungsformel für Abstand}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Bei gegebener Feldstärke
+                \item Umstellen nach $d$
+            \end{itemize}
 
-}
-\only<2>{
-\begin{QQuestion}{EK108}{Sie möchten den Personenschutz-Sicherheitsabstand für die Antenne Ihrer Amateurfunkstelle für das \qty{10}{\m}-Band und das Modulationsverfahren FM berechnen. Der Grenzwert im Fall des Personenschutzes beträgt \qty{28}{\V}/m. Sie betreiben eine Yagi-Uda-Antenne mit einem Gewinn von $7,5~$dBd. Die Antenne wird von einem Sender mit einer Leistung von \qty{100}{\W} über ein langes Koaxialkabel gespeist. Die Kabeldämpfung beträgt \qty{1,5}{\decibel}. Wie groß muss der Sicherheitsabstand sein?}{\qty{3,9}{\m}}
-{\textbf{\textcolor{DARCgreen}{\qty{5,0}{\m}}}}
-{\qty{2,5}{\m}}
-{\qty{20,7}{\m}}
-\end{QQuestion}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{equation*}
+                \begin{split}
+                    d &= \dfrac{\sqrt{30\Omega \cdot P_A \cdot G_i}}{E}\\
+                      &= \dfrac{\sqrt{30\Omega \cdot P_{\text{EIRP}}}}{E}
+                \end{split}\end{equation*}
+        \end{column}
+    \end{columns}
 
-}
 \end{frame}
 
 \begin{frame}
-\frametitle{Lösungsweg}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item gegeben: $E = 28\frac{V}{m}$
-  \item gegeben: $g_d = 7,5dBd$
-  \item gegeben: $P_S = 100W$
-  \end{itemize}
+    \only<1>{
+        \begin{QQuestion}{EK108}{Sie möchten den Personenschutz-Sicherheitsabstand für die Antenne Ihrer Amateurfunkstelle für das \qty{10}{\m}-Band und das Modulationsverfahren FM berechnen. Der Grenzwert im Fall des Personenschutzes beträgt \qty{28}{\V}/m. Sie betreiben eine Yagi-Uda-Antenne mit einem Gewinn von $7,5~$dBd. Die Antenne wird von einem Sender mit einer Leistung von \qty{100}{\W} über ein langes Koaxialkabel gespeist. Die Kabeldämpfung beträgt \qty{1,5}{\decibel}. Wie groß muss der Sicherheitsabstand sein?}{\qty{3,9}{\m}}
+            {\qty{5,0}{\m}}
+            {\qty{2,5}{\m}}
+            {\qty{20,7}{\m}}
+        \end{QQuestion}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item gegeben: $a_{\textrm{Kabel}} = 1,5dB$
-  \item gesucht: $P_{\textrm{EIRP}}$
-  \item gesucht: $d$
-  \end{itemize}
+    }
+    \only<2>{
+        \begin{QQuestion}{EK108}{Sie möchten den Personenschutz-Sicherheitsabstand für die Antenne Ihrer Amateurfunkstelle für das \qty{10}{\m}-Band und das Modulationsverfahren FM berechnen. Der Grenzwert im Fall des Personenschutzes beträgt \qty{28}{\V}/m. Sie betreiben eine Yagi-Uda-Antenne mit einem Gewinn von $7,5~$dBd. Die Antenne wird von einem Sender mit einer Leistung von \qty{100}{\W} über ein langes Koaxialkabel gespeist. Die Kabeldämpfung beträgt \qty{1,5}{\decibel}. Wie groß muss der Sicherheitsabstand sein?}{\qty{3,9}{\m}}
+            {\textbf{\textcolor{DARCgreen}{\qty{5,0}{\m}}}}
+            {\qty{2,5}{\m}}
+            {\qty{20,7}{\m}}
+        \end{QQuestion}
 
-   \end{column}
-\end{columns}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Lösungsweg}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item gegeben: $E = \qty{28}{\volt\per\metre}$
+                \item gegeben: $g_d = 7,5dBd$
+                \item gegeben: $P_S = 100W$
+            \end{itemize}
+
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item gegeben: $a_{\textrm{Kabel}} = 1,5dB$
+                \item gesucht: $P_{\textrm{EIRP}}$
+                \item gesucht: $d$
+            \end{itemize}
+
+        \end{column}
+    \end{columns}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+
+            \pause
+            \begin{equation*}
+                \begin{split}
+                    P_{\textrm{EIRP}} & = P_S \cdot 10^{\frac{g_d - a + \qty{2,15}{\decibel}}{\qty{10}{\decibel}}}\\
+                                      & = \qty{100}{\watt} \cdot 10^{\frac{\qty{7,5}{\decibel} - \qty{1,5}{\decibel} + \qty{2,15}{\decibel}}{\qty{10}{\decibel}}}\\
+                                      & \approx \qty{100}{\watt} \cdot 6,5\\ &= \qty{650}{\watt} 
+                \end{split}
+            \end{equation*}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+
+            \pause
+            \begin{equation}
+                \begin{split}
+                    \nonumber d &= \dfrac{\sqrt{\qty{30}{\ohm} \cdot P_{\text{EIRP}}}}{E}\\
+                                &= \dfrac{\sqrt{\qty{30}{\ohm} \cdot \qty{650}{\watt}}}{\qty{28}{\volt\per\metre}}\\
+                                &\approx 5m
+                \end{split}
+            \end{equation}
+        \end{column}
+    \end{columns}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bonusfrage}
+    Liegen die errechneten 5m nicht im Nahfeld für das 10m-Band aus der Frage?
     \pause
-    \begin{equation}\begin{split} \nonumber P_{\textrm{EIRP}} &= P_S \cdot 10^{\frac{g_d -- a + 2,15dB}{10dB}}\\ &= 100W \cdot 10^{\frac{7,5dB -- 1,5dB + 2,15dB}{10dB}}\\ &\approx 100W \cdot 6,5\\ &= 650W \end{split}\end{equation}
-
-
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-    \pause
-    \begin{equation}\begin{split} \nonumber d &= \dfrac{\sqrt{30\Omega \cdot P_{\textrm{EIRP}}}}{E}\\ &= \dfrac{\sqrt{30\Omega \cdot 650W}}{28\frac{V}{m}}\\ &\approx 5m \end{split}\end{equation}
-
-
-
-
-   \end{column}
-\end{columns}
-
+    \begin{equation}
+        \nonumber 
+        \begin{split}
+            d               &> \frac{\lambda}{2\pi}\\
+            \qty{5}{\metre} & > \frac{\qty{10}{\metre}}{2\pi}\\
+            \qty{5}{\metre} & > \qty{1,6}{\metre}
+        \end{split}
+    \end{equation}
 \end{frame}
 
 \begin{frame}
-\frametitle{Bonusfrage}
-Liegen die errechneten 5m nicht im Nahfeld für das 10m-Band aus der Frage?
-    \pause
-    \begin{equation}\nonumber \begin{split} \nonumber d &> \frac{\lambda}{2\pi}\\ \nonumber 5m &> \frac{10m}{2\pi}\\ \nonumber 5m &\gtrapprox 1,6m \end{split}\end{equation}
+    \only<1>{
+        \begin{QQuestion}{EK106}{Wann ist die Berechnung des Personenschutz-Sicherheitsabstands mit der Näherungsformel für die Fernfeldberechnung auf den Bändern \qty{160}{\m} und \qty{80}{\m} ungültig? Die Berechnung ist ungültig, wenn das Ergebnis kleiner ist als~...}{\qty{160}{\m}-Band:~\qty{12,8}{\m}, \qty{80}{\m}-Band:~\qty{6,4}{\m}}
+            {\qty{160}{\m}-Band:~\qty{51,0}{\m}, \qty{80}{\m}-Band:~\qty{25,4}{\m}}
+            {\qty{160}{\m}-Band:~\qty{25,5}{\m}, \qty{80}{\m}-Band:~\qty{12,7}{\m}}
+            {\qty{160}{\m}-Band:~\qty{640}{\m}, \qty{80}{\m}-Band: \qty{320}{\m}}
+        \end{QQuestion}
 
+    }
+    \only<2>{
+        \begin{QQuestion}{EK106}{Wann ist die Berechnung des Personenschutz-Sicherheitsabstands mit der Näherungsformel für die Fernfeldberechnung auf den Bändern \qty{160}{\m} und \qty{80}{\m} ungültig? Die Berechnung ist ungültig, wenn das Ergebnis kleiner ist als~...}{\qty{160}{\m}-Band:~\qty{12,8}{\m}, \qty{80}{\m}-Band:~\qty{6,4}{\m}}
+            {\qty{160}{\m}-Band:~\qty{51,0}{\m}, \qty{80}{\m}-Band:~\qty{25,4}{\m}}
+            {\textbf{\textcolor{DARCgreen}{\qty{160}{\m}-Band:~\qty{25,5}{\m}, \qty{80}{\m}-Band:~\qty{12,7}{\m}}}}
+            {\qty{160}{\m}-Band:~\qty{640}{\m}, \qty{80}{\m}-Band: \qty{320}{\m}}
+        \end{QQuestion}
 
-
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EK106}{Wann ist die Berechnung des Personenschutz-Sicherheitsabstands mit der Näherungsformel für die Fernfeldberechnung auf den Bändern \qty{160}{\m} und \qty{80}{\m} ungültig? Die Berechnung ist ungültig, wenn das Ergebnis kleiner ist als~...}{\qty{160}{\m}-Band:~\qty{12,8}{\m}, \qty{80}{\m}-Band:~\qty{6,4}{\m}}
-{\qty{160}{\m}-Band:~\qty{51,0}{\m}, \qty{80}{\m}-Band:~\qty{25,4}{\m}}
-{\qty{160}{\m}-Band:~\qty{25,5}{\m}, \qty{80}{\m}-Band:~\qty{12,7}{\m}}
-{\qty{160}{\m}-Band:~\qty{640}{\m}, \qty{80}{\m}-Band: \qty{320}{\m}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EK106}{Wann ist die Berechnung des Personenschutz-Sicherheitsabstands mit der Näherungsformel für die Fernfeldberechnung auf den Bändern \qty{160}{\m} und \qty{80}{\m} ungültig? Die Berechnung ist ungültig, wenn das Ergebnis kleiner ist als~...}{\qty{160}{\m}-Band:~\qty{12,8}{\m}, \qty{80}{\m}-Band:~\qty{6,4}{\m}}
-{\qty{160}{\m}-Band:~\qty{51,0}{\m}, \qty{80}{\m}-Band:~\qty{25,4}{\m}}
-{\textbf{\textcolor{DARCgreen}{\qty{160}{\m}-Band:~\qty{25,5}{\m}, \qty{80}{\m}-Band:~\qty{12,7}{\m}}}}
-{\qty{160}{\m}-Band:~\qty{640}{\m}, \qty{80}{\m}-Band: \qty{320}{\m}}
-\end{QQuestion}
-
-}
+    \frametitle{Lösung}
+    \begin{itemize}
+        \item Personenschutz-Sicherheitsabstand gilt nur im Freiraum
+        \item $d > \frac{\lambda}{2\pi}$
+        \item 160m-Band: \qty{25,5}{\metre}
+        \item 80m-Band: \qty{12,7}{\metre}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Lösung}
-\begin{itemize}
-  \item Personenschutz-Sicherheitsabstand gilt nur im Freiraum
-  \item $d > \frac{\lambda}{2\pi}$
-  \item 160m-Band: \qty{25,5}{\metre}
-  \item 80m-Band: \qty{12,7}{\metre}
-  \end{itemize}
-\end{frame}
+    \only<1>{
+        \begin{QQuestion}{EK105}{Sie möchten den Personenschutz-Sicherheitsabstand für ihren neuen, fest aufgebauten Halbwellendipol für das \qty{80}{\m}-Band (3,5 - \qty{3,8}{\MHz}) bestimmen. Bei \qty{100}{\W} Sendeleistung errechnen Sie mit Hilfe der Näherungsformel für die Fernfeldberechnung einen erforderlichen Abstand von \qty{3,65}{\m}. Ist dieser Sicherheitsabstand gültig?}{Der errechnete Personenschutz-Sicherheitsabstand muss erst noch mit einem Sicherheitszuschlag ($\sqrt{2}$) multipliziert werden.}
+            {Der errechnete Personenschutz-Sicherheitsabstand ist gültig, da Berechnungen mit der Näherungsformel für die Fernfeldberechnung im Amateurfunk hinreichend genau sind.}
+            {Der errechnete Abstand ist ungültig, da er im reaktiven Nahfeld der Antenne liegt, und muss deshalb durch andere Methoden wie z. B. Messungen der E- und H-Feldanteile, Simulations- oder Nahfeldberechnungen bestimmt werden.}
+            {Der errechnete Personenschutz-Sicherheitsabstand ist akzeptiert, sofern die vor Inbetriebnahme einzureichende \glqq Anzeige ortsfester Amateurfunkanlagen\grqq{} gemäß \S 9 BEMFV von der Bundesnetzagentur nicht beanstandet wird.}
+        \end{QQuestion}
 
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EK105}{Sie möchten den Personenschutz-Sicherheitsabstand für ihren neuen, fest aufgebauten Halbwellendipol für das \qty{80}{\m}-Band (3,5 - \qty{3,8}{\MHz}) bestimmen. Bei \qty{100}{\W} Sendeleistung errechnen Sie mit Hilfe der Näherungsformel für die Fernfeldberechnung einen erforderlichen Abstand von \qty{3,65}{\m}. Ist dieser Sicherheitsabstand gültig?}{Der errechnete Personenschutz-Sicherheitsabstand muss erst noch mit einem Sicherheitszuschlag ($\sqrt{2}$) multipliziert werden.}
-{Der errechnete Personenschutz-Sicherheitsabstand ist gültig, da Berechnungen mit der Näherungsformel für die Fernfeldberechnung im Amateurfunk hinreichend genau sind.}
-{Der errechnete Abstand ist ungültig, da er im reaktiven Nahfeld der Antenne liegt, und muss deshalb durch andere Methoden wie z. B. Messungen der E- und H-Feldanteile, Simulations- oder Nahfeldberechnungen bestimmt werden.}
-{Der errechnete Personenschutz-Sicherheitsabstand ist akzeptiert, sofern die vor Inbetriebnahme einzureichende \glqq Anzeige ortsfester Amateurfunkanlagen\grqq{} gemäß \S 9 BEMFV von der Bundesnetzagentur nicht beanstandet wird.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EK105}{Sie möchten den Personenschutz-Sicherheitsabstand für ihren neuen, fest aufgebauten Halbwellendipol für das \qty{80}{\m}-Band (3,5 - \qty{3,8}{\MHz}) bestimmen. Bei \qty{100}{\W} Sendeleistung errechnen Sie mit Hilfe der Näherungsformel für die Fernfeldberechnung einen erforderlichen Abstand von \qty{3,65}{\m}. Ist dieser Sicherheitsabstand gültig?}{Der errechnete Personenschutz-Sicherheitsabstand muss erst noch mit einem Sicherheitszuschlag ($\sqrt{2}$) multipliziert werden.}
+            {Der errechnete Personenschutz-Sicherheitsabstand ist gültig, da Berechnungen mit der Näherungsformel für die Fernfeldberechnung im Amateurfunk hinreichend genau sind.}
+            {\textbf{\textcolor{DARCgreen}{Der errechnete Abstand ist ungültig, da er im reaktiven Nahfeld der Antenne liegt, und muss deshalb durch andere Methoden wie z. B. Messungen der E- und H-Feldanteile, Simulations- oder Nahfeldberechnungen bestimmt werden.}}}
+            {Der errechnete Personenschutz-Sicherheitsabstand ist akzeptiert, sofern die vor Inbetriebnahme einzureichende \glqq Anzeige ortsfester Amateurfunkanlagen\grqq{} gemäß \S 9 BEMFV von der Bundesnetzagentur nicht beanstandet wird.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EK105}{Sie möchten den Personenschutz-Sicherheitsabstand für ihren neuen, fest aufgebauten Halbwellendipol für das \qty{80}{\m}-Band (3,5 - \qty{3,8}{\MHz}) bestimmen. Bei \qty{100}{\W} Sendeleistung errechnen Sie mit Hilfe der Näherungsformel für die Fernfeldberechnung einen erforderlichen Abstand von \qty{3,65}{\m}. Ist dieser Sicherheitsabstand gültig?}{Der errechnete Personenschutz-Sicherheitsabstand muss erst noch mit einem Sicherheitszuschlag ($\sqrt{2}$) multipliziert werden.}
-{Der errechnete Personenschutz-Sicherheitsabstand ist gültig, da Berechnungen mit der Näherungsformel für die Fernfeldberechnung im Amateurfunk hinreichend genau sind.}
-{\textbf{\textcolor{DARCgreen}{Der errechnete Abstand ist ungültig, da er im reaktiven Nahfeld der Antenne liegt, und muss deshalb durch andere Methoden wie z. B. Messungen der E- und H-Feldanteile, Simulations- oder Nahfeldberechnungen bestimmt werden.}}}
-{Der errechnete Personenschutz-Sicherheitsabstand ist akzeptiert, sofern die vor Inbetriebnahme einzureichende \glqq Anzeige ortsfester Amateurfunkanlagen\grqq{} gemäß \S 9 BEMFV von der Bundesnetzagentur nicht beanstandet wird.}
-\end{QQuestion}
-
-}
+    }
 
 \end{frame}%ENDCONTENT

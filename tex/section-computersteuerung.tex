@@ -1,114 +1,106 @@
-
 \section{Computersteuerung}
 \label{section:computersteuerung}
 \begin{frame}%STARTCONTENT
+    \frametitle{Steuersignale}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \DARCimage{0.8\linewidth}{920include}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \DARCimage{0.8\linewidth}{919include}
+        \end{column}
+    \end{columns}
 
-\frametitle{Steuersignale}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+    \vspace{20pt}
     \begin{itemize}
-  \item Übertragung von Audio- sowie Steuersignalen (CAT) zwischen Computer und Transceiver
-  \item Z.B. Transceiver auf Sendung schalten und Signal vom Computer übertragen
-  \end{itemize}
+        \item Übertragung von Audio- sowie Steuersignalen (CAT) zwischen Computer und Transceiver
+        \item Z.B. Transceiver auf Sendung schalten und Signal vom Computer übertragen
+    \end{itemize}
+\end{frame}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{630include}
-    \caption{\scriptsize Beispiele für Verbindungen zwischen Computer und Funkgerät}
-    \label{n_computersteuerung_verbindungen}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
+\begin{frame}
+    \frametitle{Datenanschluss}
+    \begin{itemize}
+        \item Hinter dem Mikrofonanschluss im Funkgerät können Verstärker- und Filterstufen für Sprachübertragung liegen $\rightarrow$ ungeeignet für Datenübertragung
+        \item Eigener Datenanschluss am Transceiver
+        \item Lässt Signale vom Computer unverfälscht passieren
+    \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Datenanschluss}
-\begin{itemize}
-  \item Hinter dem Mikrofonanschluss im Funkgerät können Verstärker- und Filterstufen für Sprachübertragung liegen $\rightarrow$ ungeeignet für Datenübertragung
-  \item Eigener Datenanschluss am Transceiver
-  \item Lässt Signale vom Computer unverfälscht passieren
-  \end{itemize}
+    \only<1>{
+        \begin{QQuestion}{NF114}{Wie kann eine Verbindung zwischen Funkgerät und Computer für digitale Übertragungsverfahren (z.~B. FT8 oder WSPR) hergestellt werden?}{Der ALC-Anschluss des Funkgeräts wird mittels eines Hardware-Modems mit Audio- oder Datenanschlüssen des Computers verbunden.}
+            {Eine Audioverbindung (NF-Signal oder digital z.~B. per USB-Kabel) wird zwischen Computer und Funkgerät hergestellt oder es wird ein Hardware-Modem verwendet.}
+            {Es wird ein Software-Modem installiert und der ALC-Anschluss des Funkgeräts direkt mit dem Computer verbunden (ggf. auch mittels Adapter).}
+            {Der HF-Anschluss (z.~B. Antennenausgang) des Funkgeräts wird mittels eines Y-Kabels mit einer geeigneten Datenschnittstelle des Computers verbunden.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{NF114}{Wie kann eine Verbindung zwischen Funkgerät und Computer für digitale Übertragungsverfahren (z.~B. FT8 oder WSPR) hergestellt werden?}{Der ALC-Anschluss des Funkgeräts wird mittels eines Hardware-Modems mit Audio- oder Datenanschlüssen des Computers verbunden.}
+            {\textbf{\textcolor{DARCgreen}{Eine Audioverbindung (NF-Signal oder digital z.~B. per USB-Kabel) wird zwischen Computer und Funkgerät hergestellt oder es wird ein Hardware-Modem verwendet.}}}
+            {Es wird ein Software-Modem installiert und der ALC-Anschluss des Funkgeräts direkt mit dem Computer verbunden (ggf. auch mittels Adapter).}
+            {Der HF-Anschluss (z.~B. Antennenausgang) des Funkgeräts wird mittels eines Y-Kabels mit einer geeigneten Datenschnittstelle des Computers verbunden.}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{NF116}{Manche Transceiver verfügen über eine sogenannte CAT-Schnittstelle. Dieser Anschluss dient dazu,~...}{mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern oder Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}
+            {durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}
+            {das empfangene HF-Signal möglichst ungefiltert an einen Computer zur Weiterverarbeitung mittels digitaler Signalverarbeitung auszuleiten.}
+            {ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{NF116}{Manche Transceiver verfügen über eine sogenannte CAT-Schnittstelle. Dieser Anschluss dient dazu,~...}{\textbf{\textcolor{DARCgreen}{mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern oder Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}}}
+            {durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}
+            {das empfangene HF-Signal möglichst ungefiltert an einen Computer zur Weiterverarbeitung mittels digitaler Signalverarbeitung auszuleiten.}
+            {ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{NF117}{Welcher unerwünschte Effekt kann eintreten, wenn ein Funkgerät mittels Computer gesteuert wird?}{Der Computer kann wie ein Elektrolytkondensator im Antennenkreis wirken und somit die Sendefrequenz verschieben.}
+            {Der Vorverstärker ist außer Funktion, wodurch Nachbarkanäle und Frequenzen in anderen Bändern gestört werden könnten.}
+            {Die automatische Pegelregelung (ALC) könnte ausgelöst werden und andere digitale Geräte stören.}
+            {Das Funkgerät könnte unerwartet auf Sendung schalten und somit unerwünschte Aussendungen verursachen oder Menschen in Gefahr bringen.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{NF117}{Welcher unerwünschte Effekt kann eintreten, wenn ein Funkgerät mittels Computer gesteuert wird?}{Der Computer kann wie ein Elektrolytkondensator im Antennenkreis wirken und somit die Sendefrequenz verschieben.}
+            {Der Vorverstärker ist außer Funktion, wodurch Nachbarkanäle und Frequenzen in anderen Bändern gestört werden könnten.}
+            {Die automatische Pegelregelung (ALC) könnte ausgelöst werden und andere digitale Geräte stören.}
+            {\textbf{\textcolor{DARCgreen}{Das Funkgerät könnte unerwartet auf Sendung schalten und somit unerwünschte Aussendungen verursachen oder Menschen in Gefahr bringen.}}}
+        \end{QQuestion}
+
+    }
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NF114}{Wie kann eine Verbindung zwischen Funkgerät und Computer für digitale Übertragungsverfahren (z.~B. FT8 oder WSPR) hergestellt werden?}{Der ALC-Anschluss des Funkgeräts wird mittels eines Hardware-Modems mit Audio- oder Datenanschlüssen des Computers verbunden.}
-{Eine Audioverbindung (NF-Signal oder digital z.~B. per USB-Kabel) wird zwischen Computer und Funkgerät hergestellt oder es wird ein Hardware-Modem verwendet.}
-{Es wird ein Software-Modem installiert und der ALC-Anschluss des Funkgeräts direkt mit dem Computer verbunden (ggf. auch mittels Adapter).}
-{Der HF-Anschluss (z.~B. Antennenausgang) des Funkgeräts wird mittels eines Y-Kabels mit einer geeigneten Datenschnittstelle des Computers verbunden.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NF115}{Manche FM-Transceiver verfügen über einen analogen Datenanschluss (z.~B. mit DATA beschriftet oder als 9600-Port bezeichnet). Dieser dient im Wesentlichen dazu,~...}{durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}
+            {mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern und Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}
+            {das empfangene HF-Signal möglichst ungefiltert an einen Computer auszuleiten und mittels digitaler Signalverarbeitung weiterzuverarbeiten.}
+            {ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NF114}{Wie kann eine Verbindung zwischen Funkgerät und Computer für digitale Übertragungsverfahren (z.~B. FT8 oder WSPR) hergestellt werden?}{Der ALC-Anschluss des Funkgeräts wird mittels eines Hardware-Modems mit Audio- oder Datenanschlüssen des Computers verbunden.}
-{\textbf{\textcolor{DARCgreen}{Eine Audioverbindung (NF-Signal oder digital z.~B. per USB-Kabel) wird zwischen Computer und Funkgerät hergestellt oder es wird ein Hardware-Modem verwendet.}}}
-{Es wird ein Software-Modem installiert und der ALC-Anschluss des Funkgeräts direkt mit dem Computer verbunden (ggf. auch mittels Adapter).}
-{Der HF-Anschluss (z.~B. Antennenausgang) des Funkgeräts wird mittels eines Y-Kabels mit einer geeigneten Datenschnittstelle des Computers verbunden.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NF115}{Manche FM-Transceiver verfügen über einen analogen Datenanschluss (z.~B. mit DATA beschriftet oder als 9600-Port bezeichnet). Dieser dient im Wesentlichen dazu,~...}{\textbf{\textcolor{DARCgreen}{durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}}}
+            {mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern und Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}
+            {das empfangene HF-Signal möglichst ungefiltert an einen Computer auszuleiten und mittels digitaler Signalverarbeitung weiterzuverarbeiten.}
+            {ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
+        \end{QQuestion}
 
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NF116}{Manche Transceiver verfügen über eine sogenannte CAT-Schnittstelle. Dieser Anschluss dient dazu,~...}{mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern oder Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}
-{durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}
-{das empfangene HF-Signal möglichst ungefiltert an einen Computer zur Weiterverarbeitung mittels digitaler Signalverarbeitung auszuleiten.}
-{ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NF116}{Manche Transceiver verfügen über eine sogenannte CAT-Schnittstelle. Dieser Anschluss dient dazu,~...}{\textbf{\textcolor{DARCgreen}{mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern oder Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}}}
-{durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}
-{das empfangene HF-Signal möglichst ungefiltert an einen Computer zur Weiterverarbeitung mittels digitaler Signalverarbeitung auszuleiten.}
-{ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NF117}{Welcher unerwünschte Effekt kann eintreten, wenn ein Funkgerät mittels Computer gesteuert wird?}{Der Computer kann wie ein Elektrolytkondensator im Antennenkreis wirken und somit die Sendefrequenz verschieben.}
-{Der Vorverstärker ist außer Funktion, wodurch Nachbarkanäle und Frequenzen in anderen Bändern gestört werden könnten.}
-{Die automatische Pegelregelung (ALC) könnte ausgelöst werden und andere digitale Geräte stören.}
-{Das Funkgerät könnte unerwartet auf Sendung schalten und somit unerwünschte Aussendungen verursachen oder Menschen in Gefahr bringen.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NF117}{Welcher unerwünschte Effekt kann eintreten, wenn ein Funkgerät mittels Computer gesteuert wird?}{Der Computer kann wie ein Elektrolytkondensator im Antennenkreis wirken und somit die Sendefrequenz verschieben.}
-{Der Vorverstärker ist außer Funktion, wodurch Nachbarkanäle und Frequenzen in anderen Bändern gestört werden könnten.}
-{Die automatische Pegelregelung (ALC) könnte ausgelöst werden und andere digitale Geräte stören.}
-{\textbf{\textcolor{DARCgreen}{Das Funkgerät könnte unerwartet auf Sendung schalten und somit unerwünschte Aussendungen verursachen oder Menschen in Gefahr bringen.}}}
-\end{QQuestion}
-
-}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NF115}{Manche FM-Transceiver verfügen über einen analogen Datenanschluss (z.~B. mit DATA beschriftet oder als 9600-Port bezeichnet). Dieser dient im Wesentlichen dazu,~...}{durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}
-{mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern und Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}
-{das empfangene HF-Signal möglichst ungefiltert an einen Computer auszuleiten und mittels digitaler Signalverarbeitung weiterzuverarbeiten.}
-{ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NF115}{Manche FM-Transceiver verfügen über einen analogen Datenanschluss (z.~B. mit DATA beschriftet oder als 9600-Port bezeichnet). Dieser dient im Wesentlichen dazu,~...}{\textbf{\textcolor{DARCgreen}{durch Umgehung von Verstärker- und Filterstufen ein NF-Signal (z.~B. für DV oder POCSAG) möglichst verzerrungsfrei abzugreifen oder einzuspeisen.}}}
-{mittels eines seriellen Kommunikationsprotokolls den Transceiver z.~B. mit einem Computer zu steuern und Werte abzufragen, z.~B. Frequenz, Sendeleistung oder PTT.}
-{das empfangene HF-Signal möglichst ungefiltert an einen Computer auszuleiten und mittels digitaler Signalverarbeitung weiterzuverarbeiten.}
-{ohne weitere Beschaltung einen Drehwinkelgeber (Encoder) oder ein Potentiometer zur präzisen Frequenzeinstellung anzuschließen.}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

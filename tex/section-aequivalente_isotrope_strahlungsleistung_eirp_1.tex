@@ -1,73 +1,79 @@
-
 \section{Äquivalente isotrope Strahlungsleistung (EIRP)}
 \label{section:aequivalente_isotrope_strahlungsleistung_eirp_1}
 \begin{frame}%STARTCONTENT
 
-\frametitle{Kugelstrahler oder Isotroper Strahler}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{751include}
-    \caption{\scriptsize Isotroper Strahler in der Mitte einer Kugel, der an allen Stellen der Kugeloberfläche die gleiche Strahlungsleistung erzeugt}
-    \label{n_Kugelstrahler}
-\end{figure}
+    \frametitle{Kugelstrahler oder Isotroper Strahler}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{751include}
+                \caption{\scriptsize Isotroper Strahler in der Mitte einer Kugel, der an allen Stellen der Kugeloberfläche die gleiche Strahlungsleistung erzeugt}
+                \label{n_Kugelstrahler}
+            \end{figure}
 
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Theoretische Antenne
-  \item Unendlich klein
-  \item Funkwellen werden gleichmäßig in alle Richtungen abgestrahlt
-  \item Es existiert keine Hauptstrahlrichtung
-  \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Theoretische Antenne (Gedankenexperiment)
+                \item Unendlich klein
+                \item Funkwellen werden gleichmäßig in alle Richtungen abgestrahlt
+                \item Im Gegensatz zum Dipol existiert keine Hauptstrahlrichtung
+                \item Daher bessere \enquote{Antenne} zur \enquote{Normierung} für Vergleiche
+            \end{itemize}
 
-   \end{column}
-\end{columns}
+        \end{column}
+    \end{columns}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{EIRP}
-\begin{itemize}
-  \item Bei Berechnung der Strahlungsleistung in Bezug zum isotropen Strahler wird von \enquote{äquivalenter isotroper Strahlungsleistung} gesprochen
-  \item Englisch \enquote{equivalent isotropic radiated power} (EIRP)
-  \end{itemize}
+    \frametitle{EIRP}
+    \begin{itemize}
+        \item Bei Berechnung der Strahlungsleistung in Bezug zum isotropen Strahler wird von \enquote{äquivalenter isotroper Strahlungsleistung} gesprochen
+        \item Englisch \enquote{equivalent isotropic radiated power} (EIRP)
+        \item Erfolgt gleich zu ERP
+    \end{itemize}
+    \pause
+    \begin{exampleblock}{Beispiele}
+        \begin{itemize}
+            \item Bei 5~W Sendeleistung auf Antenne mit Gewinnfaktor 3 gegenüber
+            dem isotropen Strahler ergibt das die Strahlungsleistung 15~W EIRP
+            \item Ein Parabolspiegel strahlt eine Leistung von
+            \qty{1000}{\watt} EIRP ab. Das bedeutet man muss \qty{1000}{\watt}
+            in einen isotropen Strahler stecken, um die gleiche
+            Strahlungsleistung zu erreichen
+        \end{itemize}
+    \end{exampleblock}
 \end{frame}
 
 \begin{frame}
-\frametitle{Berechnung}
-\begin{itemize}
-  \item Erfolgt gleich zu ERP
-  \item Hat eine Antennen einen Gewinnfaktor von 3 bezogen auf den isotropen Strahler, dann strahlt diese Antenne in Hauptstrahlrichtung dreimal so stark wie ein isotroper Strahler in jede beliebige Richtung
-  \item Bei 5~W Sendeleistung auf Antenne mit Gewinnfaktor 3 gegenüber dem isotropen Strahler ergibt das die Strahlungsleistung 15~W EIRP
-  \end{itemize}
+    \frametitle{Bezug zum Halbwellendipol}
+    \begin{itemize}
+        \item Halbwellendipol hat den Gewinnfaktor 1,64 (\qty{2.15}{dB})
+        gegenüber isotropen Strahler
+        \item Antenne mit Gewinnfaktor 2 (\qty{3}{dB}) gegenüber Halbwellendipol
+        hat einen Gewinnfaktor von $2 \cdot 1,64 = 3,28$ ($\qty{3}{dB} +
+        \qty{2,15}{dB} = \qty{5,15}{dB}$) gegenüber isotropen Strahler
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Bezug zum Halbwellendipol}
-\begin{itemize}
-  \item Halbwellendipol hat den Gewinnfaktor 1,64 gegenüber isotropen Strahler
-  \item Antenne mit Gewinnfaktor 2 gegenüber Halbwellendipol hat einen Gewinnfaktor von 2 $\cdot$ 1,64 = 3,28 gegenüber isotropen Strahler
-  \end{itemize}
-\end{frame}
+    \only<1>{
+        \begin{QQuestion}{NG402}{Die gleichwertige isotrope Strahlungsleistung EIRP (Equivalent Isotropic Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}
+            {einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}
+        \end{QQuestion}
 
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NG402}{Die gleichwertige isotrope Strahlungsleistung EIRP (Equivalent Isotropic Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
-{einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}
-{einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
-{einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NG402}{Die gleichwertige isotrope Strahlungsleistung EIRP (Equivalent Isotropic Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}
+            {einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {\textbf{\textcolor{DARCgreen}{einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NG402}{Die gleichwertige isotrope Strahlungsleistung EIRP (Equivalent Isotropic Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
-{einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}
-{einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
-{\textbf{\textcolor{DARCgreen}{einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}}}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

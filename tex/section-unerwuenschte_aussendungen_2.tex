@@ -1,270 +1,237 @@
-
 \section{Unerwünschte Aussendungen II}
 \label{section:unerwuenschte_aussendungen_2}
-\begin{frame}%STARTCONTENT
-
-\frametitle{Oberwellen}
-\begin{itemize}
-  \item Ganzzahlige Vielfache der Grundfrequenz
-  \item Entstehen durch Signalformen, die nicht sinusförmig sind, insbesondere bei Übersteuerung
-  \item Beeinträchtigung anderer Funkdienste
-  \item Können reduziert werden
-  \end{itemize}
+\begin{frame}\frametitle{Oberwellen}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \DARCimage{0.9\linewidth}{869include}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \begin{itemize}
+                \item Ganzzahlige Vielfache der Grundfrequenz
+                \item Entstehen durch Signalformen, die nicht sinusförmig sind, insbesondere bei Übersteuerung
+                \item Beeinträchtigung anderer Funkdienste
+                \item Können reduziert werden, visible<2->{Wie?}
+            \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EJ201}{Welche Signalform sollte der Träger einer hochfrequenten Schwingung haben, um Störungen durch Oberwellen zu vermeiden?}{kreisförmig}
-{rechteckförmig}
-{dreieckförmig}
-{sinusförmig}
-\end{QQuestion}
+    \frametitle{Tiefpassfilter bzw. Oberwellenfilter}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Nur Frequenzen unterhalb einer bestimmten Grenzfrequenz werden durchgelassen
+                \item Oberwellen können nicht passieren oder werden stark abgeschwächt
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{591include}
+                \caption{\scriptsize Frequenzgang eines Tiefpassfilters}
+                \label{tiefpass}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-}
-\only<2>{
-\begin{QQuestion}{EJ201}{Welche Signalform sollte der Träger einer hochfrequenten Schwingung haben, um Störungen durch Oberwellen zu vermeiden?}{kreisförmig}
-{rechteckförmig}
-{dreieckförmig}
-{\textbf{\textcolor{DARCgreen}{sinusförmig}}}
-\end{QQuestion}
 
-}
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EJ201}{Welche Signalform sollte der Träger einer hochfrequenten Schwingung haben, um Störungen durch Oberwellen zu vermeiden?}{kreisförmig}
+            {rechteckförmig}
+            {dreieckförmig}
+            {sinusförmig}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EJ201}{Welche Signalform sollte der Träger einer hochfrequenten Schwingung haben, um Störungen durch Oberwellen zu vermeiden?}{kreisförmig}
+            {rechteckförmig}
+            {dreieckförmig}
+            {\textbf{\textcolor{DARCgreen}{sinusförmig}}}
+        \end{QQuestion}
+
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EJ202}{Wie kann man hochfrequente Störungen reduzieren, die durch Harmonische hervorgerufen werden? Sie können reduziert werden durch ein~...}{ZF-Filter.}
-{Nachbarkanalfilter.}
-{Oberwellenfilter.}
-{Hochpassfilter.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EJ202}{Wie kann man hochfrequente Störungen reduzieren, die durch Harmonische hervorgerufen werden? Sie können reduziert werden durch ein~...}{ZF-Filter.}
+            {Nachbarkanalfilter.}
+            {Oberwellenfilter.}
+            {Hochpassfilter.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EJ202}{Wie kann man hochfrequente Störungen reduzieren, die durch Harmonische hervorgerufen werden? Sie können reduziert werden durch ein~...}{ZF-Filter.}
-{Nachbarkanalfilter.}
-{\textbf{\textcolor{DARCgreen}{Oberwellenfilter.}}}
-{Hochpassfilter.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EJ202}{Wie kann man hochfrequente Störungen reduzieren, die durch Harmonische hervorgerufen werden? Sie können reduziert werden durch ein~...}{ZF-Filter.}
+            {Nachbarkanalfilter.}
+            {\textbf{\textcolor{DARCgreen}{Oberwellenfilter.}}}
+            {Hochpassfilter.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{Tiefpassfilter}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+    \only<1>{
+        \begin{QQuestion}{EJ204}{Welches Filter wäre zwischen Senderausgang und Antenne eingeschleift am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}{Ein Antennenfilter}
+            {Ein Hochpassfilter}
+            {Ein Tiefpassfilter}
+            {Ein Sperrkreisfilter}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EJ204}{Welches Filter wäre zwischen Senderausgang und Antenne eingeschleift am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}{Ein Antennenfilter}
+            {Ein Hochpassfilter}
+            {\textbf{\textcolor{DARCgreen}{Ein Tiefpassfilter}}}
+            {Ein Sperrkreisfilter}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EJ205}{Um Oberwellenaussendungen eines UHF-Senders zu minimieren, sollte dem Gerät~...}{ein Notchfilter vorgeschaltet werden.}
+            {ein Hochpassfilter nachgeschaltet werden.}
+            {eine Bandsperre vorgeschaltet werden.}
+            {ein Tiefpassfilter nachgeschaltet werden.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EJ205}{Um Oberwellenaussendungen eines UHF-Senders zu minimieren, sollte dem Gerät~...}{ein Notchfilter vorgeschaltet werden.}
+            {ein Hochpassfilter nachgeschaltet werden.}
+            {eine Bandsperre vorgeschaltet werden.}
+            {\textbf{\textcolor{DARCgreen}{ein Tiefpassfilter nachgeschaltet werden.}}}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{P2Question}{EJ206}{Welche Schaltung wäre, zwischen Senderausgang und Antenne eingeschleift, am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}
+            {\DARCimage{1.0\linewidth}{161include}}
+            {\DARCimage{1.0\linewidth}{167include}}
+            {\DARCimage{1.0\linewidth}{165include}}
+            {\DARCimage{1.0\linewidth}{168include}}{}
+        \end{P2Question}
+
+    }
+    \only<2>{
+        \begin{P2Question}{EJ206}{Welche Schaltung wäre, zwischen Senderausgang und Antenne eingeschleift, am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}
+            {\DARCimage{1.0\linewidth}{161include}}
+            {\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{167include}}}}
+            {\DARCimage{1.0\linewidth}{165include}}
+            {\DARCimage{1.0\linewidth}{168include}}{}
+        \end{P2Question}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{question2x2}{EJ207}{Welche Charakteristik sollte ein Filter zur Verringerung der Oberwellen eines KW-Senders haben?}{\DARCimage{0.75\linewidth}{250include}}
+            {\DARCimage{0.75\linewidth}{251include}}
+            {\DARCimage{0.75\linewidth}{258include}}
+            {\DARCimage{0.75\linewidth}{259include}}
+        \end{question2x2}
+
+    }
+    \only<2>{
+        \begin{question2x2}{EJ207}{Welche Charakteristik sollte ein Filter zur Verringerung der Oberwellen eines KW-Senders haben?}{\textbf{\textcolor{DARCgreen}{\DARCimage{0.75\linewidth}{250include}}}}
+            {\DARCimage{0.75\linewidth}{251include}}
+            {\DARCimage{0.75\linewidth}{258include}}
+            {\DARCimage{0.75\linewidth}{259include}}
+        \end{question2x2}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{question2x2}{EJ208}{\small Welche Filtercharakteristik würde sich am besten für den Ausgang eines KW-Mehrband-Senders eignen?}{\DARCimage{0.75\linewidth}{252include}}
+            {\DARCimage{0.75\linewidth}{251include}}
+            {\DARCimage{0.75\linewidth}{250include}}
+            {\DARCimage{0.75\linewidth}{253include}}
+        \end{question2x2}
+
+    }
+    \only<2>{
+        \begin{question2x2}{EJ208}{\small Welche Filtercharakteristik würde sich am besten für den Ausgang eines KW-Mehrband-Senders eignen?}{\DARCimage{0.75\linewidth}{252include}}
+            {\DARCimage{0.75\linewidth}{251include}}
+            {\textbf{\textcolor{DARCgreen}{\DARCimage{0.75\linewidth}{250include}}}}
+            {\DARCimage{0.75\linewidth}{253include}}
+        \end{question2x2}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EJ203}{Was für ein Filter muss zwischen Transceiver und Antennenzuleitung eingefügt werden, um Oberwellen zu reduzieren?}{Hochpassfilter}
+            {Tiefpassfilter}
+            {CW-Filter}
+            {NF-Filter}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EJ203}{Was für ein Filter muss zwischen Transceiver und Antennenzuleitung eingefügt werden, um Oberwellen zu reduzieren?}{Hochpassfilter}
+            {\textbf{\textcolor{DARCgreen}{Tiefpassfilter}}}
+            {CW-Filter}
+            {NF-Filter}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Arbeitspunkt}
     \begin{itemize}
-  \item Nur Frequenzen unterhalb einer bestimmten Grenzfrequenz werden durchgelassen
-  \item Oberwellen können nicht passieren oder werden stark abgeschwächt
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-         
-\begin{figure}
-    \DARCimage{0.85\linewidth}{591include}
-    \caption{\scriptsize Frequenzgang eines Tiefpassfilters}
-    \label{tiefpass}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+        \item Sender-Stufen und Leistungs-Endstufen sollen verzerrungsfrei arbeiten
+        \item Nach Veränderung des Arbeitspunkts auf Linearität (saubere Sinus-Verstärkung) prüfen
+        \item Aussendung auf Oberwellen prüfen
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EJ204}{Welches Filter wäre zwischen Senderausgang und Antenne eingeschleift am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}{Ein Antennenfilter}
-{Ein Hochpassfilter}
-{Ein Tiefpassfilter}
-{Ein Sperrkreisfilter}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EF404}{Wann sollte ein Sender auf mögliche Oberwellenaussendungen überprüft werden?}{Vor jedem Sendebetrieb.
+            }
+            {Bei Empfang eines Störsignals.}
+            {Wenn der Arbeitspunkt der Endstufe neu justiert wurde.
+            }
+            {Wenn Splatter-Störungen zu hören sind.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EJ204}{Welches Filter wäre zwischen Senderausgang und Antenne eingeschleift am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}{Ein Antennenfilter}
-{Ein Hochpassfilter}
-{\textbf{\textcolor{DARCgreen}{Ein Tiefpassfilter}}}
-{Ein Sperrkreisfilter}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EF404}{Wann sollte ein Sender auf mögliche Oberwellenaussendungen überprüft werden?}{Vor jedem Sendebetrieb.
+            }
+            {Bei Empfang eines Störsignals.}
+            {\textbf{\textcolor{DARCgreen}{Wenn der Arbeitspunkt der Endstufe neu justiert wurde.
+                    }}}
+            {Wenn Splatter-Störungen zu hören sind.}
+        \end{QQuestion}
 
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EJ205}{Um Oberwellenaussendungen eines UHF-Senders zu minimieren, sollte dem Gerät~...}{ein Notchfilter vorgeschaltet werden.}
-{ein Hochpassfilter nachgeschaltet werden.}
-{eine Bandsperre vorgeschaltet werden.}
-{ein Tiefpassfilter nachgeschaltet werden.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EJ205}{Um Oberwellenaussendungen eines UHF-Senders zu minimieren, sollte dem Gerät~...}{ein Notchfilter vorgeschaltet werden.}
-{ein Hochpassfilter nachgeschaltet werden.}
-{eine Bandsperre vorgeschaltet werden.}
-{\textbf{\textcolor{DARCgreen}{ein Tiefpassfilter nachgeschaltet werden.}}}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{question2x2}{EJ206}{Welche Schaltung wäre, zwischen Senderausgang und Antenne eingeschleift, am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}{\DARCimage{1.0\linewidth}{161include}}
-{\DARCimage{1.0\linewidth}{167include}}
-{\DARCimage{1.0\linewidth}{165include}}
-{\DARCimage{1.0\linewidth}{168include}}
-\end{question2x2}
-
-}
-\only<2>{
-\begin{question2x2}{EJ206}{Welche Schaltung wäre, zwischen Senderausgang und Antenne eingeschleift, am besten zur Verringerung der Oberwellenausstrahlungen geeignet?}{\DARCimage{1.0\linewidth}{161include}}
-{\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{167include}}}}
-{\DARCimage{1.0\linewidth}{165include}}
-{\DARCimage{1.0\linewidth}{168include}}
-\end{question2x2}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{question2x2}{EJ207}{Welche Charakteristik sollte ein Filter zur Verringerung der Oberwellen eines KW-Senders haben?}{\DARCimage{0.75\linewidth}{250include}}
-{\DARCimage{0.75\linewidth}{251include}}
-{\DARCimage{0.75\linewidth}{258include}}
-{\DARCimage{0.75\linewidth}{259include}}
-\end{question2x2}
-
-}
-\only<2>{
-\begin{question2x2}{EJ207}{Welche Charakteristik sollte ein Filter zur Verringerung der Oberwellen eines KW-Senders haben?}{\textbf{\textcolor{DARCgreen}{\DARCimage{0.75\linewidth}{250include}}}}
-{\DARCimage{0.75\linewidth}{251include}}
-{\DARCimage{0.75\linewidth}{258include}}
-{\DARCimage{0.75\linewidth}{259include}}
-\end{question2x2}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{question2x2}{EJ208}{Welche Filtercharakteristik würde sich am besten für den Ausgang eines KW-Mehrband-Senders eignen?}{\DARCimage{0.75\linewidth}{252include}}
-{\DARCimage{0.75\linewidth}{251include}}
-{\DARCimage{0.75\linewidth}{250include}}
-{\DARCimage{0.75\linewidth}{253include}}
-\end{question2x2}
-
-}
-\only<2>{
-\begin{question2x2}{EJ208}{Welche Filtercharakteristik würde sich am besten für den Ausgang eines KW-Mehrband-Senders eignen?}{\DARCimage{0.75\linewidth}{252include}}
-{\DARCimage{0.75\linewidth}{251include}}
-{\textbf{\textcolor{DARCgreen}{\DARCimage{0.75\linewidth}{250include}}}}
-{\DARCimage{0.75\linewidth}{253include}}
-\end{question2x2}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EJ203}{Was für ein Filter muss zwischen Transceiver und Antennenzuleitung eingefügt werden, um Oberwellen zu reduzieren?}{Hochpassfilter}
-{Tiefpassfilter}
-{CW-Filter}
-{NF-Filter}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EJ203}{Was für ein Filter muss zwischen Transceiver und Antennenzuleitung eingefügt werden, um Oberwellen zu reduzieren?}{Hochpassfilter}
-{\textbf{\textcolor{DARCgreen}{Tiefpassfilter}}}
-{CW-Filter}
-{NF-Filter}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Hochpassfilter}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Nur Frequenzen oberhalb einer bestimmten Grenzfrequenz werden durchgelassen
-  \item Werden im Empfängereingang verwendet, damit tiefe Frequenzen nicht stören
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-          
-\begin{figure}
-    \DARCimage{0.85\linewidth}{592include}
-    \caption{\scriptsize Frequenzgang eines Hochpassfilters}
-    \label{hochpass}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Bandpassfilter}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Bei Einbandsendern
-  \item Sender im VHF/UHF/SHF-Bereich
-  \item Signale aus der Signalaufbereitung unterhalb der Sendefrequenz unterdrücken
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-          
-\begin{figure}
-    \DARCimage{0.85\linewidth}{593include}
-    \caption{\scriptsize Frequenzgang eines Bandpassfilters}
-    \label{bandpass}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Arbeitspunkt}
-\begin{itemize}
-  \item Sender-Stufen und Leistungs-Endstufen sollen verzerrungsfrei arbeiten
-  \item Nach Veränderung des Arbeitspunkts auf Linearität (saubere Sinus-Verstärkung) prüfen
-  \item Aussendung auf Oberwellen prüfen
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EF404}{Wann sollte ein Sender auf mögliche Oberwellenaussendungen überprüft werden?}{Vor jedem Sendebetrieb.
-}
-{Bei Empfang eines Störsignals.}
-{Wenn der Arbeitspunkt der Endstufe neu justiert wurde.
-}
-{Wenn Splatter-Störungen zu hören sind.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EF404}{Wann sollte ein Sender auf mögliche Oberwellenaussendungen überprüft werden?}{Vor jedem Sendebetrieb.
-}
-{Bei Empfang eines Störsignals.}
-{\textbf{\textcolor{DARCgreen}{Wenn der Arbeitspunkt der Endstufe neu justiert wurde.
-}}}
-{Wenn Splatter-Störungen zu hören sind.}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT
+
+
+\begin{frame}{Ausblick Klasse A}
+    Verfügung 33 von 2007\quad\href{https://50ohm.de/vfg33}{\textcolor{DARCblue}{\faLink 50ohm.de/vfg33}}: 
+    \begin{center}
+        \includegraphics[width=0.65\linewidth]{img/vfg33}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Beispiel \qty{145}{\mega\hertz}}
+    \begin{center}
+        \DARCimage{0.8\linewidth}{918include}
+    \end{center}
+\end{frame}

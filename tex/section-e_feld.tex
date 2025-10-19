@@ -15,7 +15,7 @@
    \begin{column}{0.48\textwidth}
        
 \begin{figure}
-    \DARCimage{0.85\linewidth}{191include}
+    \DARCimage{0.85\linewidth}{881include}
     \caption{\scriptsize Homogenes Feld in einem Plattenkondensator}
     \label{e_kondensator_homogenes_feld}
 \end{figure}
@@ -32,7 +32,7 @@
     \begin{itemize}
   \item An zwei elektrisch leitenden Platten wird jeweils der Plus- und Minus-Pol angeschlossen
   \item Zwischen den Platten baut sich ein homogenes elektrisches Feld (\emph{E-Feld}) auf
-  \item Elektrische Feldstärke: $E = \dfrac{U}{d}$ in $\dfrac{V}{m}$
+  \item Elektrische Feldstärke: $E = \dfrac{U}{d}$ in $\dfrac{\unit{\volt}}{\unit{\metre}}$
   \item Mit $d$ als Abstand der Platten
   \end{itemize}
 
@@ -40,7 +40,7 @@
    \begin{column}{0.48\textwidth}
        
 \begin{figure}
-    \DARCimage{0.85\linewidth}{191include}
+    \DARCimage{0.85\linewidth}{881include}
     \caption{\scriptsize Homogenes Feld in einem Plattenkondensator}
     \label{e_kondensator_homogenes_feld}
 \end{figure}
@@ -121,7 +121,9 @@
    \begin{column}{0.48\textwidth}
        
 \begin{figure}
-    \DARCimage{0.85\linewidth}{49include}
+    \small
+    %\DARCimage{0.8\linewidth}{49include}
+    \includegraphics[width=0.75\linewidth]{img/49.pdf}
     \caption{\scriptsize Schematische Darstellung eines Wickelkondensators}
     \label{e_wickelkondensator}
 \end{figure}
@@ -175,15 +177,18 @@
 Der Trick ist hier, dass die Durschlagsfestigkeit die elektrische Feldstärke $E$ ist.
 
 \begin{itemize}
-  \item Gegeben: $d = 0,15mm$ und $E = 400\frac{kV}{cm}$
+  \item Gegeben: $d = \qty{0,15}{\milli\metre}$ und $E = \qty{400}{\kilo\volt\per\centi\metre}$
   \item Gesucht: $U$
-  \item Lösung:
-  \end{itemize}
-$E = \frac{U}{d} \Rightarrow U = E\cdot d$
+\end{itemize}
+\vspace{1cm}
 
-$U = 400\cdot\frac{10^3V}{10^{-2}m}\cdot 0,15\cdot 10^{-3}m$
+\textbf{Lösung:}
 
-$U = 6\cdot10^3V = 6kV$
+$$E = \frac{U}{d} \Rightarrow U = E\cdot d$$
+
+$$U = 400\cdot\frac{10^3\unit{\volt}}{10^{-2}\unit{\metre}}\cdot \qty{0,15}\cdot 10^{-3}\unit{\metre}$$
+
+$$U = 6\cdot10^3\unit{\volt} = \qty{6}{\kilo\volt}$$
 
 \end{frame}
 
@@ -200,7 +205,7 @@ $U = 6\cdot10^3V = 6kV$
    \begin{column}{0.48\textwidth}
        
 \begin{figure}
-    \DARCimage{0.85\linewidth}{193include}
+    \DARCimage{0.85\linewidth}{884include}
     \caption{\scriptsize Feldlinien an einer Vertikalantenne}
     \label{e_feldlinien_vertikalantenne}
 \end{figure}

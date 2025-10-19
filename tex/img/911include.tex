@@ -1,0 +1,18 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{circuitikz}
+    \draw(0,0)
+        node [antenna](){}
+        to [twoportsplit, >, t1=A, t2=D] ++(2,0) coordinate(c1);
+    \draw(c1)
+        node [inputarrow](){}
+        node [twoportshape, circuitikz/bipoles/twoport/width=1.75, anchor=west](c2){};
+    \draw(c2.east)
+        to [twoportsplit, >, t1=D, t2=A] ++(2,0) coordinate(c1)
+        node [inputarrow](){}
+        node [loudspeakershape, anchor=south, rotate=-90](){};
+    \draw(c2.north)
+        node[anchor=north](c4){\footnotesize Digitale Signal-};
+    \draw(c2.south)
+       node[anchor=south](c5){\footnotesize verarbeitung};
+\end{circuitikz}

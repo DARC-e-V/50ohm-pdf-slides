@@ -1,154 +1,133 @@
-
 \section{Einseitenbandmodulation (SSB)}
 \label{section:ssb}
-\begin{frame}%STARTCONTENT
-
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{482include}
-    \caption{\scriptsize Amplitudenmodulation, Träger mit unterem (a) und oberen (b) Seitenband}
-    \label{n_seitenband}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Bei Amplitudenmodulation zusätzlich zum Träger zwei Seitenbänder $\rightarrow$ unteres bzw. oberes Seitenband
-  \item \enquote{lower side band} (\emph{LSB}) und \enquote{upper side band} (\emph{USB})
-  \item Der Träger selbst enthält gar keine Information
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
+\begin{frame}{Einseitenbandmodulation (SSB)}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{482include}
+                \caption{\scriptsize Amplitudenmodulation, Träger mit unterem (a) und oberen (b) Seitenband}
+                \label{n_seitenband}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \textbf{Ausgehend von AM:}
+            \begin{itemize}
+                \item Bei Amplitudenmodulation zusätzlich zum Träger zwei Seitenbänder $\rightarrow$ unteres bzw. oberes Seitenband
+                \item \enquote{\textit{Lower Side Band}} (LSB) und \enquote{\textit{Upper Side Band}} (USB)
+                \item Der Träger selbst enthält gar keine Information
+                \item Im Deutschen wird es gerne mit Unteres Seitenband verwechselt
+            \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Es reicht also, nur ein Seitenband auszusenden und auf den Träger und das andere Seitenband zu verzichten
-  \item Gesamte Sendeleistung wird für die Übertragung der Information genutzt
-  \item Belegte Bandbreite entspricht der Bandbreite des aufmodulierten Signals
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{743include}
-    \caption{\scriptsize Seitenbänder bei AM, LSB und USB im Vergleich}
-    \label{n_seitenband}
-\end{figure}
-
-\emph{Einseitenbandmodulation} bzw. \emph{single-sideband (SSB)}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}USB steht für \emph{Upper Side Band}
-
-(im Deutschen wird es gerne mit Unteres Seitenband verwechselt)
-
+    \begin{columns}
+        \begin{column}{0.38\textwidth}
+            \begin{itemize}
+                \item Beide Seitenbänder übertragen die gleiche Information
+                \item Es reicht also, nur ein Seitenband auszusenden und auf den Träger und das andere Seitenband zu verzichten
+                \item Gesamte Sendeleistung wird für die Übertragung der Information genutzt
+                \item Belegte Bandbreite entspricht der Bandbreite des aufmodulierten Signals
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.58\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{743binclude}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NE203}{Was ist der Unterschied zwischen AM und SSB?}{AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Träger und nur einem Seitenband.}
-{AM hat einen Träger und ein Seitenband, SSB arbeitet mit Trägerunterdrückung und hat zwei Seitenbänder.}
-{AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}
-{AM hat einen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE203}{Was ist der Unterschied zwischen AM und SSB?}{AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Träger und nur einem Seitenband.}
+            {AM hat einen Träger und ein Seitenband, SSB arbeitet mit Trägerunterdrückung und hat zwei Seitenbänder.}
+            {AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}
+            {AM hat einen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NE203}{Was ist der Unterschied zwischen AM und SSB?}{AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Träger und nur einem Seitenband.}
-{AM hat einen Träger und ein Seitenband, SSB arbeitet mit Trägerunterdrückung und hat zwei Seitenbänder.}
-{AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}
-{\textbf{\textcolor{DARCgreen}{AM hat einen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE203}{Was ist der Unterschied zwischen AM und SSB?}{AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Träger und nur einem Seitenband.}
+            {AM hat einen Träger und ein Seitenband, SSB arbeitet mit Trägerunterdrückung und hat zwei Seitenbänder.}
+            {AM hat keinen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}
+            {\textbf{\textcolor{DARCgreen}{AM hat einen Träger und zwei Seitenbänder, SSB arbeitet mit Trägerunterdrückung und nur einem Seitenband.}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NE204}{Was ist der Unterschied zwischen LSB und USB?}{LSB arbeitet mit Trägerunterdrückung und dem unteren Seitenband, USB arbeitet mit Trägerunterdrückung und dem oberen Seitenband.}
-{LSB arbeitet mit Träger und zwei Seitenbändern, USB arbeitet mit Trägerunterdrückung und einem Seitenband.}
-{LSB arbeitet mit Träger und einem Seitenband, USB arbeitet mit Trägerunterdrückung und beiden Seitenbändern.}
-{LSB arbeitet mit Trägerunterdrückung und dem linken Seitenband, USB arbeitet mit Trägerunterdrückung und dem unteren Seitenband.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE204}{Was ist der Unterschied zwischen LSB und USB?}{LSB arbeitet mit Trägerunterdrückung und dem unteren Seitenband, USB arbeitet mit Trägerunterdrückung und dem oberen Seitenband.}
+            {LSB arbeitet mit Träger und zwei Seitenbändern, USB arbeitet mit Trägerunterdrückung und einem Seitenband.}
+            {LSB arbeitet mit Träger und einem Seitenband, USB arbeitet mit Trägerunterdrückung und beiden Seitenbändern.}
+            {LSB arbeitet mit Trägerunterdrückung und dem linken Seitenband, USB arbeitet mit Trägerunterdrückung und dem unteren Seitenband.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NE204}{Was ist der Unterschied zwischen LSB und USB?}{\textbf{\textcolor{DARCgreen}{LSB arbeitet mit Trägerunterdrückung und dem unteren Seitenband, USB arbeitet mit Trägerunterdrückung und dem oberen Seitenband.}}}
-{LSB arbeitet mit Träger und zwei Seitenbändern, USB arbeitet mit Trägerunterdrückung und einem Seitenband.}
-{LSB arbeitet mit Träger und einem Seitenband, USB arbeitet mit Trägerunterdrückung und beiden Seitenbändern.}
-{LSB arbeitet mit Trägerunterdrückung und dem linken Seitenband, USB arbeitet mit Trägerunterdrückung und dem unteren Seitenband.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE204}{Was ist der Unterschied zwischen LSB und USB?}{\textbf{\textcolor{DARCgreen}{LSB arbeitet mit Trägerunterdrückung und dem unteren Seitenband, USB arbeitet mit Trägerunterdrückung und dem oberen Seitenband.}}}
+            {LSB arbeitet mit Träger und zwei Seitenbändern, USB arbeitet mit Trägerunterdrückung und einem Seitenband.}
+            {LSB arbeitet mit Träger und einem Seitenband, USB arbeitet mit Trägerunterdrückung und beiden Seitenbändern.}
+            {LSB arbeitet mit Trägerunterdrückung und dem linken Seitenband, USB arbeitet mit Trägerunterdrückung und dem unteren Seitenband.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{NE208}{Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in LSB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{477include}}
-{\DARCimage{1.0\linewidth}{480include}}
-{\DARCimage{1.0\linewidth}{479include}}
-{\DARCimage{1.0\linewidth}{481include}}
-{\DARCimage{1.0\linewidth}{475include}}\end{PQuestion}
+    \only<1>{
+        \begin{P2Question}{NE208}{~\\Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in LSB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{477include}}
+            {\DARCimage{1.0\linewidth}{480include}}
+            {\DARCimage{1.0\linewidth}{479include}}
+            {\DARCimage{1.0\linewidth}{481include}}
+            {\DARCimage{1.0\linewidth}{475include}}\end{P2Question}
 
-}
-\only<2>{
-\begin{PQuestion}{NE208}{Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in LSB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{477include}}
-{\DARCimage{1.0\linewidth}{480include}}
-{\DARCimage{1.0\linewidth}{479include}}
-{\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{481include}}}}
-{\DARCimage{1.0\linewidth}{475include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{P2Question}{NE208}{~\\Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in LSB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{477include}}
+            {\DARCimage{1.0\linewidth}{480include}}
+            {\DARCimage{1.0\linewidth}{479include}}
+            {\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{481include}}}}
+            {\DARCimage{1.0\linewidth}{475include}}\end{P2Question}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{NE207}{Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in USB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{481include}}
-{\DARCimage{1.0\linewidth}{480include}}
-{\DARCimage{1.0\linewidth}{479include}}
-{\DARCimage{1.0\linewidth}{477include}}
-{\DARCimage{1.0\linewidth}{475include}}\end{PQuestion}
+    \only<1>{
+        \begin{P2Question}{NE207}{~\\Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in USB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{481include}}
+            {\DARCimage{1.0\linewidth}{480include}}
+            {\DARCimage{1.0\linewidth}{479include}}
+            {\DARCimage{1.0\linewidth}{477include}}
+            {\DARCimage{1.0\linewidth}{475include}}\end{P2Question}
 
-}
-\only<2>{
-\begin{PQuestion}{NE207}{Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in USB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{481include}}
-{\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{480include}}}}
-{\DARCimage{1.0\linewidth}{479include}}
-{\DARCimage{1.0\linewidth}{477include}}
-{\DARCimage{1.0\linewidth}{475include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{P2Question}{NE207}{~\\Welche spektrale Darstellung ergibt sich für Einseitenbandmodulation in USB bei diesem Audiospektrum?}{\DARCimage{1.0\linewidth}{481include}}
+            {\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{480include}}}}
+            {\DARCimage{1.0\linewidth}{479include}}
+            {\DARCimage{1.0\linewidth}{477include}}
+            {\DARCimage{1.0\linewidth}{475include}}\end{P2Question}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{NE205}{Welche Begriffe sind den Bereichen a und b des Modulationsverfahrens AM zuzuordnen?}{a = LSB; b = USB}
-{a = USB; b = LSB}
-{a = DSB; b = SSB}
-{a = NF; b = HF}
-{\DARCimage{1.0\linewidth}{482include}}\end{PQuestion}
-
-}
-\only<2>{
-\begin{PQuestion}{NE205}{Welche Begriffe sind den Bereichen a und b des Modulationsverfahrens AM zuzuordnen?}{\textbf{\textcolor{DARCgreen}{a = LSB; b = USB}}}
-{a = USB; b = LSB}
-{a = DSB; b = SSB}
-{a = NF; b = HF}
-{\DARCimage{1.0\linewidth}{482include}}\end{PQuestion}
-
-}
+    \only<1>{
+        \begin{PQuestion}{NE205}{Welche Begriffe sind den Bereichen a und b des Modulationsverfahrens AM zuzuordnen?}{a = LSB; b = USB}
+            {a = USB; b = LSB}
+            {a = DSB; b = SSB}
+            {a = NF; b = HF}
+            {\DARCimage{1.0\linewidth}{482include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{PQuestion}{NE205}{Welche Begriffe sind den Bereichen a und b des Modulationsverfahrens AM zuzuordnen?}{\textbf{\textcolor{DARCgreen}{a = LSB; b = USB}}}
+            {a = USB; b = LSB}
+            {a = DSB; b = SSB}
+            {a = NF; b = HF}
+            {\DARCimage{1.0\linewidth}{482include}}\end{PQuestion}
+    }
 \end{frame}%ENDCONTENT

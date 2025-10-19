@@ -1,0 +1,36 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{circuitikz}
+    \ctikzset{
+        resistors/scale=\getDarcImageFactor,
+        capacitors/scale=\getDarcImageFactor,
+        inductors/scale=\getDarcImageFactor,
+        blocks/scale=\getDarcImageFactor,
+        RF/scale=\getDarcImageFactor,
+        switches/scale=\getDarcImageFactor,
+        misc/scale=\getDarcImageFactor
+    }
+    \draw(0,0) node[antenna]{}
+        to [bandpass, >, l_=HF, name={amp1}] ++ (2,0)
+        node[inputarrow](){}
+        node[mixer, box, anchor=west] (mix1) {};
+    \draw(mix1.east)
+        to [bandpass, >, l_=ZF, name={amp2}] ++ (2,0)
+        node[inputarrow](){}
+        node[mixer, box, anchor=west] (mix2) {};
+    \draw(mix2.east)
+        to [bandpass, >, l_=NF, name={amp3}] ++ (2,0)
+        node[inputarrow](){}
+        node[loudspeakershape, anchor=south, rotate=-90](L){};
+    \draw(mix1.south) node[inputarrow, rotate=90] {} 
+        to [short] ++(0,-1)
+        node [vallpassshape, anchor=north](x){};
+    \draw(mix2.south) node[inputarrow, rotate=90] {} 
+        to [short] ++(0,-1)
+        node [allpassshape, anchor=north](z){};
+    \draw(x.east) node[anchor=west](){VFO};
+    \draw(z.east) node[anchor=west](){BFO};
+    \draw(amp1.north) node[anchor=south](){\qtyrange{3}{30}{\mega\hertz}};
+    \draw(amp2.north) node[anchor=south](){\qty{455}{\kilo\hertz}};
+    \draw(x.west) node[anchor=east](){\qtyrange{3.455}{30.455}{\mega\hertz}};
+\end{circuitikz}

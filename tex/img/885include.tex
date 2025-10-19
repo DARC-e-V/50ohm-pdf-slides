@@ -1,0 +1,39 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% Colored Version of 193 and 192 combined
+\begin{circuitikz}[
+    thick,
+    longL/.style = {american inductor, inductors/coils=5, inductors/scale=.7, inductors/width=1.25},
+    every pin edge/.style={semithick, black}
+  ]
+
+  \draw (-3.5,0) -- (3.5,0);
+  \fill[top color=gray, bottom color=white] (-3.5,0) rectangle (3.5,-.25);
+
+  \foreach \x in {1.3,1.9,2.5} {
+    % right
+    \draw[DARCorange]
+      (0,5) arc[start angle=180, end angle=0, x radius=\x/2, y radius=.3*\x] -- (\x,0);
+    \draw[DARCorange, dash pattern=on 10pt off 5pt, DARCorange]
+      (\x,0) arc[start angle=180, end angle=0, x radius=-\x/2, y radius=-.3*\x];
+    % left
+    \draw[DARCorange]
+      (0,5) arc[start angle=0, end angle=180, x radius=\x/2, y radius=.3*\x] -- (-\x,0);
+    \draw[DARCorange, dash pattern=on 10pt off 5pt, DARCorange]
+      (-\x,0) arc[start angle=0, end angle=180, x radius=-\x/2, y radius=-.3*\x];
+  }
+
+  \foreach \x in {1.3,1.9,2.5}
+    \draw[DARCgreen] (0,2.5) circle[x radius=\x, y radius=\x/2.5];
+
+  \draw (0,0) node[circ] (gnd) {} to[longL, name={spule}] (0,5) node[circ](end){};
+
+  \node[below=.2 of gnd, fill=white, inner sep=1pt] {Erde};
+
+  \path (-1.9,2.5) arc[start angle=180, end angle=75, x radius=1.9, y radius=1.9/2.5]
+    node[coordinate, pin=70:H] {};
+
+  \node[coordinate, pin=0:E] at (2.5,3.5) {};
+
+  \draw(spule.east) -- (end);
+\end{circuitikz}

@@ -6,23 +6,20 @@
 \frametitle{Von der Diode zum Transistor}
 \begin{columns}
     \begin{column}{0.48\textwidth}
-    Die Funktion kann man sich so vorstellen:
-
-\begin{itemize}
-  \item Mittels eines Steuerkanals wird der Durchfluss eines Wehrs geregelt
-  \item Fließt kein Wasser im Steuerkanal ist das Wehr geschlossen
-  \end{itemize}
-
+        Wir betrachten in der Klasse E ein einfaches Modell:
+    \begin{itemize}
+        \item Genaue Funktionsweise des Transistors in der Klasse A
+        \item Wir betrachten in der Klasse E nur Bipolare Transistoren
+        \item Mittels eines Steuerkanals wird der Durchfluss eines Wehrs geregelt
+        \item Fließt kein Wasser im Steuerkanal ist das Wehr geschlossen
+    \end{itemize}
     \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{835include}
-    \caption{\scriptsize Steuerkanal schließt Wehr komplett}
-    \label{e_transistor_wehr_geschlossen}
-\end{figure}
-
-
+    \begin{column}{0.48\textwidth}
+        \begin{figure}
+            \DARCimage{0.85\linewidth}{835include}
+            \caption{\scriptsize Steuerkanal schließt Wehr komplett}
+            \label{e_transistor_wehr_geschlossen}
+        \end{figure}
    \end{column}
 \end{columns}
 
@@ -322,22 +319,21 @@ Die Steuerspannung liegt wie bei einer Siliziumdiode bei etwa \qty{0,6}{\volt}.
 \end{frame}
 
 \begin{frame}
-\frametitle{ Wann schaltet der NPN Transistor durch?}
+\frametitle{Wann schaltet der NPN Transistor durch?}
 Ist die Basis-Emitter-Spannung ausreichend und liegt sie im positiven Potential vor?
 
 Hier muss man auf die Vorzeichen achten und bei negativen Vorzeichen umdenken, Beispiele:
+    
 
 \begin{itemize}
-  \item Basis +\qty{2}{\volt} und Emitter +\qty{1,4}{\volt}<br/> $\rightarrow$ Die Basis-Emitter-Spannung ist positiv und beträgt +\qty{0,6}{\volt}
-  \item Basis -\qty{5,6}{\volt} und Emitter -\qty{6,2}{\volt}<br/> $\rightarrow$ Die Basis-Emitter-Spannung ist positiv und beträgt +\qty{0,6}{\volt}
+  \item Basis +\qty{2}{\volt} und Emitter +\qty{1,4}{\volt} $\rightarrow$ Die Basis-Emitter-Spannung ist positiv und beträgt +\qty{0,6}{\volt}
+  \item Basis -\qty{5,6}{\volt} und Emitter -\qty{6,2}{\volt} $\rightarrow$ Die Basis-Emitter-Spannung ist positiv und beträgt +\qty{0,6}{\volt}
   \end{itemize}
+
+Entweder erkennet man das intuitiv oder man rechnet es (unter Beachtung der Vorzeichen) aus.
+    $U_{ BE } = U_{ B } - U_{ E }$
 \end{frame}
 
-\begin{frame}Entweder erkennet man das intuitiv oder man rechnet es (unter Beachtung der Vorzeichen) aus.
-
-$U_{ BE } = U_{ B } -- U_{ E }$
-
-\end{frame}
 
 \begin{frame}
 \only<1>{
@@ -384,15 +380,11 @@ Ist die Basis-Emitter-Spannung ausreichend und liegt sie im negativen Potential 
 Hier muss man auf die Vorzeichen achten und bei negativen Vorzeichen umdenken, Beispiele:
 
 \begin{itemize}
-  \item Basis +\qty{5,6}{\volt} und Emitter +\qty{6,2}{\volt}<br/> $\rightarrow$ Die Basis-Emitter-Spannung ist ist negativ und beträgt -\qty{0,6}{\volt}
-  \item Basis -\qty{2}{\volt} und Emitter -\qty{1,4}{\volt}<br/> $\rightarrow$ Die Basis-Emitter-Spannung ist negativ und beträgt -\qty{0,6}{\volt}
+  \item Basis +\qty{5,6}{\volt} und Emitter +\qty{6,2}{\volt} $\rightarrow$ Die Basis-Emitter-Spannung ist ist negativ und beträgt -\qty{0,6}{\volt}
+  \item Basis -\qty{2}{\volt} und Emitter -\qty{1,4}{\volt} $\rightarrow$ Die Basis-Emitter-Spannung ist negativ und beträgt -\qty{0,6}{\volt}
   \end{itemize}
-\end{frame}
-
-\begin{frame}Entweder erkennet man das intuitiv oder man rechnet es (unter Beachtung der Vorzeichen) aus.
-
-$U_{ BE } = U_{ B } -- U_{ E }$
-
+    Entweder erkennet man das intuitiv oder man rechnet es (unter Beachtung der Vorzeichen) aus.
+    $U_{ BE } = U_{ B } - U_{ E }$
 \end{frame}
 
 \begin{frame}

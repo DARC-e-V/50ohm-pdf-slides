@@ -4,40 +4,25 @@
 \begin{frame}%STARTCONTENT
 
 \frametitle{Periode}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Dauer einer vollständigen Schwingung
-  \item Wird zur Ermittlung der Frequenz benötigt, z.B. Oszilloskop
-  \end{itemize}
-
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}[<+->]
+                \item Dauer einer vollständigen Schwingung
+                \item Wird zur Ermittlung der Frequenz benötigt, z.B. Oszilloskop
+                \item Periode steht im umgekehrten Verhältnis zur Frequenz
+                \item Formelzeichen T, Einheit Sekunde (s)
+            \end{itemize}
+            \visible<5->{$$T = \dfrac{1}{f} \Rightarrow f = \dfrac{1}{T}$$}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{1.0\linewidth}{790include}
+                \caption{\scriptsize Periode und Amplitude in einer Sinusschwingung}
+                \label{e_periode_amplitude}
+            \end{figure}
     \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{790include}
-    \caption{\scriptsize Periode und Amplitude in einer Sinusschwingung}
-    \label{e_periode_amplitude}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+    \end{columns}
 \end{frame}
-
-\begin{frame}\begin{itemize}
-  \item Periode steht im umgekehrten Verhältnis zur Frequenz
-  \item Formelzeichen T, Einheit Sekunde (s)
-  \end{itemize}
-    \pause
-    $T = \dfrac{1}{f} \Rightarrow f = \dfrac{1}{T}$
-
-
-
-\end{frame}
-
-\begin{frame}\end{frame}
 
 \begin{frame}
 \only<1>{
@@ -104,7 +89,7 @@
 
 \begin{frame}
 \frametitle{Frequenz ermitteln}
-$f = \dfrac{1}{T}$
+$$f = \dfrac{1}{T}$$
 
 Erst Periodendauer ermitteln, dann Frequenz ausrechnen
 
@@ -134,11 +119,9 @@ Erst Periodendauer ermitteln, dann Frequenz ausrechnen
 \frametitle{Lösungsweg}
 Eine Periode ist 4 Kästchen lang
 
-$T = 4\cdot 5ms = 20ms$
+$$T = 4\cdot \qty{5}{\milli\second} = \qty{20}{\milli\second}$$
 
-$f = \dfrac{1}{T} = \dfrac{1}{20\cdot10^{-3}s} = $
-
-$0,05\frac{1}{10^{-3}s} = 0,05\cdot10^3Hz = 0,05kHz = 50Hz$
+$$f = \dfrac{1}{T} = \dfrac{1}{20\cdot10^{-3}\qty{}{\second}} = \qty{0,05}{\kilo\hertz} = \qty{50}{\hertz} $$
 
 \end{frame}
 
@@ -185,11 +168,9 @@ $0,05\frac{1}{10^{-3}s} = 0,05\cdot10^3Hz = 0,05kHz = 50Hz$
 \frametitle{Lösungsweg}
 Eine Periode ist 4 Kästchen lang
 
-$T = 4\cdot 3\mu s = 12\mu s$
+$$T = 4\cdot \qty{3}{\micro\second} = \qty{12}{\micro\second}$$
 
-$f = \dfrac{1}{T} = \dfrac{1}{12\cdot10^{-6}s} = $
-
-$0,0833\frac{1}{10^{-6}s} = 0,0833\cdot10^6Hz = 0,0833MHz = 83,3kHz$
+$$f = \dfrac{1}{T} = \dfrac{1}{12\cdot10^{-6}s} = \qty{0,0833}{\mega\hertz} = \qty{83,3}{\kilo\hertz}$$
 
 \end{frame}
 
@@ -255,12 +236,24 @@ $0,0833\frac{1}{10^{-6}s} = 0,0833\cdot10^6Hz = 0,0833MHz = 83,3kHz$
 }
 \end{frame}
 
-\begin{frame}
-\frametitle{NF-Verzerrungen}
-\begin{itemize}
-  \item Verzerrungen sind Abweichungen von der Sinusform
-  \item Diese können mit einem Oszilloskop sichtbar gemacht werden
-  \end{itemize}
+\begin{frame}{NF-Verzerrungen}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Manchmal werden Signale ungewollt verformt.
+                \item Das geschieht zum Beispiel, wenn in einen Verstärker eine zu hohe Eingangsspannung eingespeist wird.
+                \item Man sagt dann, der Verstärker ist übersteuert und sein Ausgangssignal verzerrt.
+                \item Das kann mit einem Oszilloskop sichtbar gemacht werden.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \includegraphics[width=\linewidth]{foto/215}
+                \caption{\scriptsize NF-Verzerrungen}
+                \label{e_nf_verzerrungen}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}

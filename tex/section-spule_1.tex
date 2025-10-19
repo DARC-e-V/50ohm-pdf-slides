@@ -51,12 +51,9 @@
 \begin{itemize}
   \item Eine Spule optimiert die Induktivität eines Leiters
   \item Wichtigste Eigenschaft der Spule: Energie speichern
-  \end{itemize}
-$L = \dfrac{N\cdot \Phi}{I}$
-
-\begin{itemize}
+    $$H = \dfrac{N\cdot \Phi}{I}$$
   \item mit $N$ Anzahl Windungen und $\Phi$ als magnetischer Fluss
-  \item Einheit: $\frac{Vs}{A}$ bzw. Henry $H$
+  \item Einheit: $\frac{Vs}{A}$ bzw. Henry $\unit{\henry}$
   \item Die Induktivität ist der magnetische Fluss pro Ampere
   \end{itemize}
 
@@ -68,10 +65,7 @@ $L = \dfrac{N\cdot \Phi}{I}$
     \begin{column}{0.48\textwidth}
     \begin{itemize}
   \item Die Induktivität einer Spule kann durch die Bauart erreicht werden
-  \end{itemize}
-$L = \dfrac{\mu_0 \cdot \mu_r \cdot N^2 \cdot A_S}{l}$
-
-\begin{itemize}
+$$L = \dfrac{\mu_0 \cdot \mu_r \cdot N^2 \cdot A_S}{l}$$
   \item $\rightarrow$ Induktivität ist größer bei größerem Querschnitt, anderem Kern oder kleinerer Länge
   \item $\rightarrow$ Induktivität ist viel größer bei höherer Windungszahl
   \end{itemize}
@@ -173,8 +167,8 @@ $L = \dfrac{\mu_0 \cdot \mu_r \cdot N^2 \cdot A_S}{l}$
     \begin{column}{0.48\textwidth}
     \begin{itemize}
   \item Strom braucht länger durch die Spule
-  \item Erst leuchtet Lampe<sub>1</sub>
-  \item Später leuchtet Lampe<sub>2</sub>
+  \item Erst leuchtet $\text{Lampe}_1$
+  \item Später leuchtet $\text{Lampe}_2$
   \end{itemize}
 
     \end{column}
@@ -237,19 +231,19 @@ $L = \dfrac{\mu_0 \cdot \mu_r \cdot N^2 \cdot A_S}{l}$
 
 \begin{frame}
 \only<1>{
-\begin{question2x2}{EC301}{An eine Spule wird über einen Widerstand eine Gleichspannung angelegt. Welches der nachfolgenden Diagramme zeigt den zeitlichen Verlauf der Spannung über der Spule?}{\DARCimage{1.0\linewidth}{185include}}
+\begin{P2Question}{EC301}{An eine Spule wird über einen Widerstand eine Gleichspannung angelegt. Welches der nachfolgenden Diagramme zeigt den zeitlichen Verlauf der Spannung über der Spule?}{\DARCimage{1.0\linewidth}{185include}}
 {\DARCimage{1.0\linewidth}{186include}}
 {\DARCimage{1.0\linewidth}{188include}}
-{\DARCimage{1.0\linewidth}{187include}}
-\end{question2x2}
+{\DARCimage{1.0\linewidth}{187include}}{}
+\end{P2Question}
 
 }
 \only<2>{
-\begin{question2x2}{EC301}{An eine Spule wird über einen Widerstand eine Gleichspannung angelegt. Welches der nachfolgenden Diagramme zeigt den zeitlichen Verlauf der Spannung über der Spule?}{\DARCimage{1.0\linewidth}{185include}}
+\begin{P2Question}{EC301}{An eine Spule wird über einen Widerstand eine Gleichspannung angelegt. Welches der nachfolgenden Diagramme zeigt den zeitlichen Verlauf der Spannung über der Spule?}{\DARCimage{1.0\linewidth}{185include}}
 {\textbf{\textcolor{DARCgreen}{\DARCimage{1.0\linewidth}{186include}}}}
 {\DARCimage{1.0\linewidth}{188include}}
-{\DARCimage{1.0\linewidth}{187include}}
-\end{question2x2}
+{\DARCimage{1.0\linewidth}{187include}}{}
+\end{P2Question}
 
 }
 \end{frame}
@@ -262,6 +256,9 @@ $L = \dfrac{\mu_0 \cdot \mu_r \cdot N^2 \cdot A_S}{l}$
   \item Dadurch entsteht eine Selbstinduktionspannung, die entgegengerichtet ist und stört
   \item Je höher die Frequenz, umso höher ist der Wechselstromwiderstand der Spule
   \end{itemize}
+  \begin{block}{Blindwiderstand}
+    $$ X_L = 2\pi f L $$
+  \end{block}
 \end{frame}
 
 \begin{frame}

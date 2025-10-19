@@ -1,0 +1,73 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% 6-Minuten Grenzwerte BIMSCHV
+\pgfkeys{/pgf/number format/.cd,1000 sep={\,}}
+\begin{tikzpicture}
+    \pgfplotsset{samples=200}
+    \begin{axis}[
+        axis on top,
+        height=5cm,
+        scale only axis,
+        width=\linewidth*\getDarcImageFactor,
+        xmin =  0.01,
+        xmax =  100000,
+        ymin =  0,
+        ymax =  2500,
+        domain = 0:100000,
+        xmode=log,
+        log ticks with fixed point,
+        smooth,
+        xlabel={Frequenz in \unit{\mega\hertz}},
+        ylabel={Feldstärke in \unit{\volt\per\metre}}
+    ]
+        %2,2km
+        \fill[color=DARCgray](axis cs: 135700e-6,1) rectangle (137800e-6,10000);
+        %630m
+        \fill[color=DARCgray](axis cs: 472000e-6,1) rectangle (479000e-6,10000);
+        %160m
+        \fill[color=DARCgray](axis cs: 1810000e-6,1) rectangle (2000000e-6,10000);
+        %80m
+        \fill[color=DARCgray](axis cs: 3500000e-6,1) rectangle (3800000e-6,10000);
+        %60m
+        \fill[color=DARCgray](axis cs: 5351500e-6,1) rectangle (5366500e-6,10000);
+        %40m
+        \fill[color=DARCgray](axis cs: 7000000e-6,1) rectangle (7200000e-6,10000);
+        %30m
+        \fill[color=DARCgray](axis cs: 10100000e-6,1) rectangle (10150000e-6,10000);
+        %20m
+        \fill[color=DARCgray](axis cs: 14000000e-6,1) rectangle (14350000e-6,10000);
+        %17m
+        \fill[color=DARCgray](axis cs: 18068000e-6,1) rectangle (18168000e-6,10000);
+        %15m
+        \fill[color=DARCgray](axis cs: 21000000e-6,1) rectangle (21450000e-6,10000);
+        %12m
+        \fill[color=DARCgray](axis cs: 24890000e-6,1) rectangle (24990000e-6,10000);
+        %10m
+        \fill[color=DARCgray](axis cs: 28000000e-6,1) rectangle (29700000e-6,10000);
+        %6m
+        \fill[color=DARCgray](axis cs: 50000000e-6,1) rectangle (52000000e-6,10000);
+        %4m
+        \fill[color=DARCgray](axis cs: 70000000e-6,1) rectangle (70500000e-6,10000);
+        %2m
+        \fill[color=DARCgray](axis cs: 144000000e-6,1) rectangle (146000000e-6,10000);
+        %70cm
+        \fill[color=DARCgray](axis cs: 430000000e-6,1) rectangle (440000000e-6,10000);
+        %23cm
+        \fill[color=DARCgray](axis cs: 1240000000e-6,1) rectangle (1300000000e-6,10000);
+        %13cm
+        \fill[color=DARCgray](axis cs: 2320000000e-6,1) rectangle (2450000000e-6,10000);
+        %9cm
+        \fill[color=DARCgray](axis cs: 3400000000e-6,1) rectangle (3475000000e-6,10000);
+        %6cm
+        \fill[color=DARCgray](axis cs: 5650000000e-6,1) rectangle (5850000000e-6,10000);
+        %1.2cm
+        \fill[color=DARCgray](axis cs: 24000000000e-6,1) rectangle (24250000000e-6,10000);
+        %
+        \addplot[DARCred, very thick, domain={0.01:0.1}]{(83)*1.5};
+        \addplot[DARCred, very thick, domain={0.1:1}]{(87)*6.93*x^(0.664)};
+        \addplot[DARCred, very thick, domain={1:10}]{(87/sqrt(x))*6.93*x^(0.664)};
+        \addplot[DARCred, very thick, domain={10:400}]{(28)*31.5};
+        \addplot[DARCred, very thick, domain={400:2000}]{(1.375*sqrt(x))*32};
+        \addplot[DARCred, very thick, domain={2000:100000}]{(61)*32};
+    \end{axis}
+\end{tikzpicture}

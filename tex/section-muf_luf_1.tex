@@ -6,35 +6,34 @@
 \frametitle{Maximal Usable Frequency (MUF)}
 \begin{columns}
     \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Höchste zwischen zwei Orten verwendbare Frequenz
-  \item Ist abhängig vom Abstrahlwinkel der Antenne
-  \item Und der kritischen Frequenz der Ionosphäre
-  \end{itemize}
-
+        \small
+        \begin{itemize}
+            \item Höchste zwischen zwei Orten verwendbare Frequenz
+            \item Ist abhängig vom Abstrahlwinkel der Antenne
+            \item Und der kritischen Frequenz der Ionosphäre
+            \item $MUF \approx \frac{f_\text{c}}{\text{sin}(\alpha)} \approx \frac{f_\text{c}}{\text{cos}(\varphi)}$
+            \item $\alpha$ ist der Abstrahlwinkel der Antenne zum Boden
+            \item $f_\text{c}$ (oft auch $f_\text{k}, f_\text{oF2}$) Das ist die
+            höchste Frequenz, bei der die senkrecht in die Ionosphäre
+            eintretende Raumwelle gerade noch reflektiert wird $\rightarrow$ bei
+            stärkerer Ionisation einer Region steigt die kritische Frequenz
+        \end{itemize}
     \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{731include}
-    \caption{\scriptsize Für den Amateurfunk relevante Schichten in der Atmosphäre}
-    \label{e_atmosphaeren_schichten}
-\end{figure}
-
-
-   \end{column}
+    \begin{column}{0.48\textwidth}
+        \begin{figure}
+            \DARCimage{1.0\linewidth}{870include}
+            \caption{\scriptsize MUF}
+            \label{e_muffig}
+        \end{figure}
+    \end{column}
 \end{columns}
-
 \end{frame}
 
-\begin{frame}
-\frametitle{Berechnung der MUF}
-$MUF \approx \dfrac{f_c}{sin(\alpha)}$
-
-$\alpha$ ist der Abstrahlwinkel der Antenne zum Boden
-
-$f_c$ ist die kritische Frequenz bei der senkrecht auf die Ionosphäre auftretende Funkstrahlen von den Regionen gebrochen werden $\rightarrow$ bei stärkerer Ionisation einer Region steigt die kritische Frequenz
-
+\begin{frame}{MUF von Gestern}
+    \begin{center}
+        \includegraphics[width=.75\textwidth]{../img/muf.png}
+        \quad \href{https://www.propquest.co.uk/graphs.php}{\faLink~Live}
+    \end{center}
 \end{frame}
 
 \begin{frame}

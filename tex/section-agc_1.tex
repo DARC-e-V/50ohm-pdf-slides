@@ -1,85 +1,85 @@
 
 \section{Automatische Verstärkungsregelung (AGC) I}
 \label{section:agc_1}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Automatische Verstärkungsregelung (Automatic-Gain-Control, \emph{AGC}) regelt NF-Ausgangssignal bei schwankendem HF-Eingangssignal nach
-  \item Einsatz z.B. bei Fading
-  \item Lautstärkeschwankungen werden verringert
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Funktionsweise}
-\begin{itemize}
-  \item Erfassung des Empfangspegels am Ausgang des Empfängerzweigs
-  \item Damit wird die HF-Verstärkung geregelt
-  \item Beeinflussung der Empfangslautstärke nach der Demodulation
-  \item Anpassung des Ansprechsverhaltens (Ansprechzeit, Abfallzeit) möglich
-  \end{itemize}
-\begin{itemize}
-  \item Nicht verwechseln mit der Automatic-Level-Control (ALC) im Sender
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{AGC-Modi}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}{AGC}
+    \begin{center}
+        \DARCimage{0.75\linewidth}{810include}
+    \end{center}
     \begin{itemize}
-  \item AGC Slow
-  \item AGC Normal
-  \item AGC Fast
-  \item AGC Off
-  \end{itemize}
+        \item Automatische Verstärkungsregelung (Automatic-Gain-Control, \emph{AGC}) regelt NF-Ausgangssignal bei schwankendem HF-Eingangssignal nach
+        \item Einsatz z.B. bei Fading, dadurch werden Lautstärkeschwankungen verringert
+    \end{itemize}
+\end{frame}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item SSB: AGC Slow oder Normal
-  \item Morsen: AGC Normal oder Fast
-  \item Digimodes: AGC Fast oder Off
-  \end{itemize}
+\begin{frame}
+    \frametitle{Funktionsweise}
+    \begin{itemize}
+        \item Erfassung des Empfangspegels am Ausgang des Empfängerzweigs
+        \item Damit wird die HF-Verstärkung geregelt
+        \item Beeinflussung der Empfangslautstärke nach der Demodulation
+        \item Anpassung des Ansprechsverhaltens (Ansprechzeit, Abfallzeit) möglich
+        \item Nicht verwechseln mit der Automatic-Level-Control (ALC) im Sender
+    \end{itemize}
+\end{frame}
 
-   \end{column}
-\end{columns}
+\begin{frame}
+    \frametitle{AGC-Modi}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item AGC Slow
+                \item AGC Normal
+                \item AGC Fast
+                \item AGC Off
+            \end{itemize}
+
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item SSB: AGC Slow oder Normal
+                \item Morsen: AGC Normal oder Fast
+                \item Digimodes: AGC Fast oder Off
+            \end{itemize}
+
+        \end{column}
+    \end{columns}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EF211}{Womit werden Pegelschwankungen des NF-Ausgangssignals verringert, die durch Schwankungen im HF-Eingangssignal hervorgerufen werden?}{NF-Filter}
-{NF-Störaustaster}
-{Automatische Verstärkungsregelung}
-{NF-Vorspannungsregelung}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EF211}{Womit werden Pegelschwankungen des NF-Ausgangssignals verringert, die durch Schwankungen im HF-Eingangssignal hervorgerufen werden?}{NF-Filter}
+            {NF-Störaustaster}
+            {Automatische Verstärkungsregelung}
+            {NF-Vorspannungsregelung}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EF211}{Womit werden Pegelschwankungen des NF-Ausgangssignals verringert, die durch Schwankungen im HF-Eingangssignal hervorgerufen werden?}{NF-Filter}
-{NF-Störaustaster}
-{\textbf{\textcolor{DARCgreen}{Automatische Verstärkungsregelung}}}
-{NF-Vorspannungsregelung}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EF211}{Womit werden Pegelschwankungen des NF-Ausgangssignals verringert, die durch Schwankungen im HF-Eingangssignal hervorgerufen werden?}{NF-Filter}
+            {NF-Störaustaster}
+            {\textbf{\textcolor{DARCgreen}{Automatische Verstärkungsregelung}}}
+            {NF-Vorspannungsregelung}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EF212}{Was bedeutet an einem Schalter eines Empfängers die Abkürzung AGC?}{Automatische Gleichlaufsteuerung}
-{Automatischer Antennentuner}
-{Automatische Verstärkungsregelung}
-{Automatische Frequenzkorrektur}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EF212}{Was bedeutet an einem Schalter eines Empfängers die Abkürzung AGC?}{Automatische Gleichlaufsteuerung}
+            {Automatischer Antennentuner}
+            {Automatische Verstärkungsregelung}
+            {Automatische Frequenzkorrektur}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EF212}{Was bedeutet an einem Schalter eines Empfängers die Abkürzung AGC?}{Automatische Gleichlaufsteuerung}
-{Automatischer Antennentuner}
-{\textbf{\textcolor{DARCgreen}{Automatische Verstärkungsregelung}}}
-{Automatische Frequenzkorrektur}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EF212}{Was bedeutet an einem Schalter eines Empfängers die Abkürzung AGC?}{Automatische Gleichlaufsteuerung}
+            {Automatischer Antennentuner}
+            {\textbf{\textcolor{DARCgreen}{Automatische Verstärkungsregelung}}}
+            {Automatische Frequenzkorrektur}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

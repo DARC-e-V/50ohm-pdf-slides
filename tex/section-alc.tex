@@ -1,53 +1,63 @@
-
 \section{ALC}
 \label{section:alc}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item \emph{Automatic-Level-Control (ALC)} regelt die Aussteuerung der Senderendstufe
-  \item Reduziert bei Übersteuerung die Amplitude im Sendezweig
-  \item Nicht verwechseln mit der AGC (Automatic-Gain-Control) im Empfängerzweig
-  \end{itemize}
+
+\begin{frame}{Automatic Level Control}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \DARCimage{\linewidth}{915include}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \begin{itemize}
+                \item \emph{Automatic-Level-Control} (ALC) regelt die Aussteuerung der Senderendstufe
+                \item Reduziert bei Übersteuerung die Amplitude im Sendezweig
+                \item Nicht verwechseln mit der AGC (Automatic-Gain-Control) im Empfängerzweig
+                \item ALC-Anzeige ist deshalb oft ein Balken
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Funktionsweise ALC}
+    \begin{center}
+        \DARCimage{0.75\linewidth}{914include}
+    \end{center}
+    \begin{itemize}
+        \item Erfassung der Ausgangsleistung und Vergleich mit vorgegebenen maximalen Wert
+        \item Bei Überschreiten wird eine Regelspannung an vorgelagerte HF-Verstärkerstufe gegeben
+        \item Amplitude des Sendesignals wird reduziert
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Anmerkungen zur ALC}
+    \begin{itemize}
+        \item Wenn ALC-Anzeige anspricht, ist Sender durch zu starkes NF-Signal
+        übersteuert
+        \item Bei SSB ist ein geringfügiges Übersteuern erwünscht, da eine
+        kompression vorgenommen wird
+        \item Bei Digimodes mit fester Amplitude, wie FT8, ist das Eingreifen
+        der ALC erstmal nicht schlimm, könnte eine ansprechende ALC ein Indiz
+        sein, dass das NF-Signal übersteuert ist
+        \item NF-Signal überprüfen, dass es sauber und nicht übersteuert ist
+        \item Bei Digimodes wie PSK31 ist die durch die ALC versuchachte
+        \enquote{AM} störend
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{Funktionsweise}
-\begin{itemize}
-  \item Erfassung der Ausgangsleistung und Vergleich mit vorgegebenen maximalen Wert
-  \item Bei Überschreiten wird eine Regelspannung an vorgelagerte HF-Verstärkerstufe gegeben
-  \item Amplitude des Sendesignals wird reduziert
-  \end{itemize}
-\end{frame}
+    \only<1>{
+        \begin{QQuestion}{EF305}{Was bewirkt die ALC (Automatic Level Control) bei zu starkem NF-Signal in einem Transceiver?}{Sie reduziert die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}
+            {Sie erhöht die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}
+            {Sie reduziert die Verstärkung von Verstärkerstufen im Empfangsteil.}
+            {Sie erhöht die Verstärkung von Verstärkerstufen im Empfangsteil.}
+        \end{QQuestion}
 
-\begin{frame}\begin{itemize}
-  \item Wenn ALC-Anzeige anspricht, ist Sender durch zu starkes NF-Signal übersteuert
-  \item Bei SSB ist ein geringfügiges Übersteuern erwünscht
-  \item Gleicht Lautstärkeschwankungen in der Stimme aus
-  \item ALC-Anzeige ist deshalb oft ein Balken
-  \end{itemize}
-\end{frame}
+    }
+    \only<2>{
+        \begin{QQuestion}{EF305}{Was bewirkt die ALC (Automatic Level Control) bei zu starkem NF-Signal in einem Transceiver?}{\textbf{\textcolor{DARCgreen}{Sie reduziert die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}}}
+            {Sie erhöht die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}
+            {Sie reduziert die Verstärkung von Verstärkerstufen im Empfangsteil.}
+            {Sie erhöht die Verstärkung von Verstärkerstufen im Empfangsteil.}
+        \end{QQuestion}
 
-\begin{frame}\begin{itemize}
-  \item Bei Digimodes sollte die ALC nicht ansprechen
-  \item Verzerrung des Sendesignals
-  \item NF-Signal so weit aussteuern, dass ALC gerade nicht anspricht
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EF305}{Was bewirkt die ALC (Automatic Level Control) bei zu starkem NF-Signal in einem Transceiver?}{Sie reduziert die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}
-{Sie erhöht die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}
-{Sie reduziert die Verstärkung von Verstärkerstufen im Empfangsteil.}
-{Sie erhöht die Verstärkung von Verstärkerstufen im Empfangsteil.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EF305}{Was bewirkt die ALC (Automatic Level Control) bei zu starkem NF-Signal in einem Transceiver?}{\textbf{\textcolor{DARCgreen}{Sie reduziert die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}}}
-{Sie erhöht die Amplitude des Signals im Sendezweig vor dem Leistungsverstärker.}
-{Sie reduziert die Verstärkung von Verstärkerstufen im Empfangsteil.}
-{Sie erhöht die Verstärkung von Verstärkerstufen im Empfangsteil.}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

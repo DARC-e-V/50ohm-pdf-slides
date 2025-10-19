@@ -1,0 +1,19 @@
+% Author: Prof. Dr. Matthias Jung
+% Year: 2024
+\begin{tikzpicture}
+    \draw(0,0) node[trxshape, anchor=east](trx){}
+        to [short, name=h1] ++(1,0)
+        node[swrshape, anchor=west](swr){};
+    \draw(swr.east) 
+        to [short] ++(1,0) 
+        node[lowpassshape, anchor=west](lpf){};
+    \draw(lpf.east)
+        to [short] ++(1,0) 
+        to [short] ++(0,1) 
+        node[bareantenna](ant){};
+    \draw(trx.south) node[below]{Transceiver};
+    \draw(swr.south) node[below]{SWR-Meter};
+    \draw(lpf.south) node[below]{Tiefpass};
+    \draw(ant.top) node[anchor=south]{Antenne};
+    \draw[DARCred, Triangle-] (lpf.east) -- ++(0.5,0.5) -- ++(0,0.5) node[anchor=east]{Messung von unerwünschten Aussendungen};
+\end{tikzpicture}

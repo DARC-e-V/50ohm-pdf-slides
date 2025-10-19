@@ -1,148 +1,154 @@
-
 \section{Paketvermittelte Netzwerke}
 \label{section:paketvermittelte_netzwerke}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Das HAMNET, das Netzwerk nur für Funkamateure, basiert auf dem Internet-Protokoll (IP).
-  \item Deswegen kann man das Hamnet mit der gleichen Software, die auch für das Internet verwendet wird, nutzen.
-  \item Im einfachsten Fall ist das ein Webbrowser.
-  \end{itemize}
+\begin{frame}{Hamnet}
+    \begin{columns}
+        \begin{column}{0.38\linewidth}
+            \includegraphics[width=\linewidth]{foto/304}
+        \end{column}
+        \begin{column}{0.58\linewidth}
+            \begin{itemize}
+                \item Das HAMNET, das Netzwerk nur für Funkamateure, basiert auf dem Internet-Protokoll (IP).
+                \item Deswegen kann man das Hamnet mit der gleichen Software, die auch für das Internet verwendet wird, nutzen.
+                \item Im einfachsten Fall ist das ein Webbrowser.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Internet-Protokoll (IP)}
+    \begin{itemize}
+        \item Das Internet-Protokoll (IP) weist den beteiligten Computern IP-Adressen zu, damit sie sich gegenseitig erreichen können.
+        \item IP-Adressen werden als vier Dezimalzahlen mit einem Punkt dazwischen geschrieben. Beispiel: 141.17.5.18
+        \item Jede Dezimalzahl hat eine Länge von 8 Bit, deswegen ist die größtmögliche Zahl 255 (binär: 11111111).
+        \item IP-Adressen sind in einen Netz- und einen Hostanteil aufgeteilt.
+        \item Bei allen Computern, die sich im selben Netzwerk befinden, ist der Anfang der IP-Adressen gleich, diesen Anfang nennt man Netzanteil.
+        \item Der Netzanteil ist unterschiedlich groß, je nachdem wie viele Computer (Hosts) im Netzwerk verwaltet werden sollen.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Beispiele}
+    \textbf{Beispiele:}
+
+    \begin{itemize}
+        \item \texttt{10.100.234.22} (kleiner Netzanteil, großer Hostanteil)
+        \item \texttt{192.168.1.252} (großer Netzanteil, kleiner Hostanteil)
+        \item Dieses Prinzip kennt man vom Telefonnetz. Die großen Städte haben kürzere Vorwahlen als kleine Städte.
+        \item Bereich im Hamnet: \texttt{44.0.0.0/9} und \texttt{44.128.0.0/10} (dies entspricht dem Adressraum \texttt{44.0.0.0} bis \texttt{44.191.255.255})
+    \end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}{Subnetzmaske}
+    \begin{figure}
+        \DARCimage{0.85\linewidth}{699include}
+        \caption{\scriptsize IPv4-Adresse und Netzmaske in Dezimal- und Dualschreibweise}
+        \label{netzmaske}
+    \end{figure}
+
+    \begin{itemize}
+        \item Eine Subnetzmaske gibt die Aufteilung einer IP-Adresse in Netz- und Hostanteil an, indem sie alle Bits des Netzanteils als 1 darstellt.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}\begin{itemize}
-  \item Das Internet-Protokoll (IP) weist den beteiligten Computern IP-Adressen zu, damit sie sich gegenseitig erreichen können.
-  \item IP-Adressen werden als vier Dezimalzahlen mit einem Punkt dazwischen geschrieben. Beispiel: 141.17.5.18
-  \item Jede Dezimalzahl hat eine Länge von 8 Bit, deswegen ist die größtmögliche Zahl 255 (binär: 11111111).
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}\begin{itemize}
-  \item IP-Adressen sind in einen Netz- und einen Hostanteil aufgeteilt.
-  \item Bei allen Computern, die sich im selben Netzwerk befinden, ist der Anfang der IP-Adressen gleich, diesen Anfang nennt man Netzanteil.
-  \item Der Netzanteil ist unterschiedlich groß, je nachdem wie viele Computer (Hosts) im Netzwerk verwaltet werden sollen.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}Beispiele:
-
-\emph{10}.100.234.22 (kleiner Netzanteil, großer Hostanteil)
-
-\emph{192.168.1}.252 (großer Netzanteil, kleiner Hostanteil)
-
-Dieses Prinzip kennt man vom Telefonnetz. Die großen Städte haben kürzere Vorwahlen als kleine Städte.
+        \item Es zwei Möglichkeiten dieses niederzuschreiben, Beispiel für einen Netzanteil von 24:
+        \item 255.255.255.0, was binär 11111111.11111111.11111111.00000000 ist.
+        \item Die Schreibweise mit dem Schrägstrich, zum Beispiel 192.168.111.90/24
+    \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\begin{figure}
-    \DARCimage{0.85\linewidth}{699include}
-    \caption{\scriptsize IPv4-Adresse und Netzmaske in Dezimal- und Dualschreibweise}
-    \label{netzmaske}
-\end{figure}
+    \begin{figure}
+        \DARCimage{0.85\linewidth}{706include}
+        \caption{\scriptsize Ausschnitt aus einer Netzwerk-Infrastruktur}
+        \label{netzwerk}
+    \end{figure}
 
-\begin{itemize}
-  \item Eine Subnetzmaske gibt die Aufteilung einer IP-Adresse in Netz- und Hostanteil an, indem sie alle Bits des Netzanteils als 1 darstellt.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}\begin{itemize}
-  \item Es zwei Möglichkeiten dieses niederzuschreiben, Beispiel für einen Netzanteil von 24:
-  \item 255.255.255.0, was binär 11111111.11111111.11111111.00000000 ist.
-  \item Die Schreibweise mit dem Schrägstrich, zum Beispiel 192.168.111.90/24
-  \end{itemize}
-
+    \begin{itemize}
+        \item Netzwerkgeräte können nur innerhalb ihres eigenen lokalen Netzwerks direkt miteinander kommunizieren.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\begin{figure}
-    \DARCimage{0.85\linewidth}{706include}
-    \caption{\scriptsize Ausschnitt aus einer Netzwerk-Infrastruktur}
-    \label{netzwerk}
-\end{figure}
+    \begin{figure}
+        \DARCimage{0.85\linewidth}{706include}
+        \caption{\scriptsize Ausschnitt aus einer Netzwerk-Infrastruktur}
+        \label{netzwerk}
+    \end{figure}
 
-\begin{itemize}
-  \item Netzwerkgeräte können nur innerhalb ihres eigenen lokalen Netzwerks direkt miteinander kommunizieren.
-  \end{itemize}
+    \begin{itemize}
+        \item Man erkennt sie daran, dass sich aus ihrer eigenen IP-Adresse und Subnetzmaske derselbe Netzanteil ergibt wie beim Partner.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\begin{figure}
-    \DARCimage{0.85\linewidth}{706include}
-    \caption{\scriptsize Ausschnitt aus einer Netzwerk-Infrastruktur}
-    \label{netzwerk}
-\end{figure}
+    \begin{figure}
+        \DARCimage{0.85\linewidth}{706include}
+        \caption{\scriptsize Ausschnitt aus einer Netzwerk-Infrastruktur}
+        \label{netzwerk}
+    \end{figure}
 
-\begin{itemize}
-  \item Man erkennt sie daran, dass sich aus ihrer eigenen IP-Adresse und Subnetzmaske derselbe Netzanteil ergibt wie beim Partner.
-  \end{itemize}
+    \begin{itemize}
+        \item In allen anderen Fällen schicken sie die Daten an einen Router. Das ist eine Zwischenstation, die zwei oder mehr Netzwerke miteinander verbindet, um die Datenpakete weiterzuleiten.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\begin{figure}
-    \DARCimage{0.85\linewidth}{706include}
-    \caption{\scriptsize Ausschnitt aus einer Netzwerk-Infrastruktur}
-    \label{netzwerk}
-\end{figure}
+    \only<1>{
+        \begin{QQuestion}{EE412}{Wie können Informationen innerhalb eines paketvermittelten Netzes zwischen zwei Stationen ausgetauscht werden, die sich nicht direkt erreichen können?}{Durch wiederholte Aussendung (Paketwiederholung)}
+            {Durch Weiterleitung über Zwischenstationen (Paketweiterleitung)}
+            {Durch Entpacken vor der Sendung (Paketdekompression)}
+            {Durch Zusammenfassung von Übertragungen (Paketdefragmentierung)}
+        \end{QQuestion}
 
-\begin{itemize}
-  \item In allen anderen Fällen schicken sie die Daten an einen Router. Das ist eine Zwischenstation, die zwei oder mehr Netzwerke miteinander verbindet, um die Datenpakete weiterzuleiten.
-  \end{itemize}
+    }
+    \only<2>{
+        \begin{QQuestion}{EE412}{Wie können Informationen innerhalb eines paketvermittelten Netzes zwischen zwei Stationen ausgetauscht werden, die sich nicht direkt erreichen können?}{Durch wiederholte Aussendung (Paketwiederholung)}
+            {\textbf{\textcolor{DARCgreen}{Durch Weiterleitung über Zwischenstationen (Paketweiterleitung)}}}
+            {Durch Entpacken vor der Sendung (Paketdekompression)}
+            {Durch Zusammenfassung von Übertragungen (Paketdefragmentierung)}
+        \end{QQuestion}
+
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EE412}{Wie können Informationen innerhalb eines paketvermittelten Netzes zwischen zwei Stationen ausgetauscht werden, die sich nicht direkt erreichen können?}{Durch wiederholte Aussendung (Paketwiederholung)}
-{Durch Weiterleitung über Zwischenstationen (Paketweiterleitung)}
-{Durch Entpacken vor der Sendung (Paketdekompression)}
-{Durch Zusammenfassung von Übertragungen (Paketdefragmentierung)}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EE414}{Kann das Internetprotokoll (IP) im Amateurfunk verwendet werden?}{Nein, Internetnutzern würde so Zugang zum Amateurfunkband ermöglicht.}
+            {Ja, die Kodierung des Amateurfunkrufzeichens erfolgt in der Subnetzmaske.}
+            {Ja, es ist nicht auf das Internet beschränkt.}
+            {Nein, die benötigte Bandbreite steht im Amateurfunk nicht zur Verfügung.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EE412}{Wie können Informationen innerhalb eines paketvermittelten Netzes zwischen zwei Stationen ausgetauscht werden, die sich nicht direkt erreichen können?}{Durch wiederholte Aussendung (Paketwiederholung)}
-{\textbf{\textcolor{DARCgreen}{Durch Weiterleitung über Zwischenstationen (Paketweiterleitung)}}}
-{Durch Entpacken vor der Sendung (Paketdekompression)}
-{Durch Zusammenfassung von Übertragungen (Paketdefragmentierung)}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EE414}{Kann das Internetprotokoll (IP) im Amateurfunk verwendet werden?}{Nein, Internetnutzern würde so Zugang zum Amateurfunkband ermöglicht.}
+            {Ja, die Kodierung des Amateurfunkrufzeichens erfolgt in der Subnetzmaske.}
+            {\textbf{\textcolor{DARCgreen}{Ja, es ist nicht auf das Internet beschränkt.}}}
+            {Nein, die benötigte Bandbreite steht im Amateurfunk nicht zur Verfügung.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EE414}{Kann das Internetprotokoll (IP) im Amateurfunk verwendet werden?}{Nein, Internetnutzern würde so Zugang zum Amateurfunkband ermöglicht.}
-{Ja, die Kodierung des Amateurfunkrufzeichens erfolgt in der Subnetzmaske.}
-{Ja, es ist nicht auf das Internet beschränkt.}
-{Nein, die benötigte Bandbreite steht im Amateurfunk nicht zur Verfügung.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EE413}{Was ergibt sich aus der eingestellten IP-Adresse und Subnetzmaske einer Kommunikationsschnittstelle beim Internetprotokoll (IP)?}{Das Standardgateway und die maximale Anzahl der Zwischenstationen (Hops)}
+            {Die Protokoll- und Portnummer des über die Schnittstelle verwendeten Protokolls}
+            {Die Gegenstelle und die durch das Teilnetz verwendete Bandbreite}
+            {Der direkt (d.~h. ohne Router) über die Schnittstelle erreichbare Adressbereich}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EE414}{Kann das Internetprotokoll (IP) im Amateurfunk verwendet werden?}{Nein, Internetnutzern würde so Zugang zum Amateurfunkband ermöglicht.}
-{Ja, die Kodierung des Amateurfunkrufzeichens erfolgt in der Subnetzmaske.}
-{\textbf{\textcolor{DARCgreen}{Ja, es ist nicht auf das Internet beschränkt.}}}
-{Nein, die benötigte Bandbreite steht im Amateurfunk nicht zur Verfügung.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EE413}{Was ergibt sich aus der eingestellten IP-Adresse und Subnetzmaske einer Kommunikationsschnittstelle beim Internetprotokoll (IP)?}{Das Standardgateway und die maximale Anzahl der Zwischenstationen (Hops)}
+            {Die Protokoll- und Portnummer des über die Schnittstelle verwendeten Protokolls}
+            {Die Gegenstelle und die durch das Teilnetz verwendete Bandbreite}
+            {\textbf{\textcolor{DARCgreen}{Der direkt (d.~h. ohne Router) über die Schnittstelle erreichbare Adressbereich}}}
+        \end{QQuestion}
 
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EE413}{Was ergibt sich aus der eingestellten IP-Adresse und Subnetzmaske einer Kommunikationsschnittstelle beim Internetprotokoll (IP)?}{Das Standardgateway und die maximale Anzahl der Zwischenstationen (Hops)}
-{Die Protokoll- und Portnummer des über die Schnittstelle verwendeten Protokolls}
-{Die Gegenstelle und die durch das Teilnetz verwendete Bandbreite}
-{Der direkt (d.~h. ohne Router) über die Schnittstelle erreichbare Adressbereich}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EE413}{Was ergibt sich aus der eingestellten IP-Adresse und Subnetzmaske einer Kommunikationsschnittstelle beim Internetprotokoll (IP)?}{Das Standardgateway und die maximale Anzahl der Zwischenstationen (Hops)}
-{Die Protokoll- und Portnummer des über die Schnittstelle verwendeten Protokolls}
-{Die Gegenstelle und die durch das Teilnetz verwendete Bandbreite}
-{\textbf{\textcolor{DARCgreen}{Der direkt (d.~h. ohne Router) über die Schnittstelle erreichbare Adressbereich}}}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

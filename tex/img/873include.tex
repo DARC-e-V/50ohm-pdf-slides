@@ -1,0 +1,42 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{tikzpicture}
+    \draw[ultra thick, DARCblue, fill=DARCblue!20] (0,0) circle (2);
+    \draw[ultra thick, DARCred]  (0,0) circle (3);
+    %
+    \foreach \angle in {0,20,...,360} {
+        \path (\angle:2) coordinate(in\angle);
+        \path (\angle:3) coordinate(out\angle);
+    }
+    %
+    \draw[DARCgreen]
+        (in80)   --
+        (out60)  --
+        (in40)   -- 
+        (out20)  --
+        (in0)    --
+        (out340) --
+        (in320);
+    %
+    \draw(in80)  node[antenna, scale=0.25, rotate=-10](){};
+    \draw(in80)  node[anchor=north, rotate=-10](){TX};
+    \draw(in320) node[antenna, scale=0.25, rotate=-130](){};
+    \draw(in320) node[anchor=south, rotate=50](){RX};
+    %
+    \draw[DARCorange]
+        (in80)   --
+        (out100) --
+        (in120)  --
+        (out140) --
+        (in160)  --
+        (out180) --
+        (in200)  --
+        (out220) --
+        (in240)  --
+        (out260) --
+        (in280)  --
+        (out300) --
+        (in320);
+        \draw[decorate, decoration={text along path, text align=center, text={Kurzer Weg}, text color=DARCgreen}]  (80:1.70) arc (80:-40:1.70) -- (-40:1.70);
+        \draw[decorate, decoration={text along path, text align=center, text={Langer Weg}, text color=DARCorange}] (80:1.75) arc (80:320:1.75) -- (320:1.75);
+\end{tikzpicture}%

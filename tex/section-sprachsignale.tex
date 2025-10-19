@@ -1,56 +1,38 @@
 
 \section{Sprachsignale}
 \label{section:sprachsignale}
+
 \begin{frame}%STARTCONTENT
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{742include}
-    \caption{\scriptsize Menschliche Sprache im Amplitudenspektrum, links die tiefen und rechts die hohen Töne}
-    \label{n_sprachspektrum}
-\end{figure}
-
+    \centering
+    \resizebox{0.9\linewidth}{!}{\input{img/742include}}
+    Menschliche Sprache im Amplitudenspektrum, links die tiefen und rechts die hohen Töne (\href{https://50ohm.de/N_slide_n_modulation.html\#/3/1}{Live})
 \end{frame}
 
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}{Sprachsignal}
     \begin{itemize}
-  \item Sprechen wir in ein Mikrofon, dann wandelt es das Sprachsignal in elektrische Schwingungen um.
-  \item Das Sprachsignal liegt nicht mehr als Schallwelle, sondern als elektrische Schwingung vor und kann im Funkgerät verarbeitet werden.
-  \end{itemize}
-
-    \end{column}
-    \pause
-    
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Die „Breite“ des Signals wird übrigens als \emph{Bandbreite} bezeichnet und in Hertz (Hz) angegeben.
-  \item Angenommen es soll Sprache im Frequenzbereich von \qtyrange{300}{2700}{\hertz} übertragen werden.
-  \item Die Bandbreite beträgt in diesem Falle \qty{2700}{\hertz} – \qty{300}{\hertz} = \qty{2400}{\hertz}
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-
-
+        \item Sprechen wir in ein Mikrofon, dann wandelt es das Sprachsignal in elektrische Schwingungen um.
+        \item Das Sprachsignal liegt nicht mehr als Schallwelle, sondern als elektrische Schwingung vor und kann im Funkgerät verarbeitet werden.
+        \item Die „Breite“ des Signals wird übrigens als \emph{Bandbreite} bezeichnet und in Hertz (Hz) angegeben.
+        \item Angenommen es soll Sprache im Frequenzbereich von \qtyrange{300}{2700}{\hertz} übertragen werden.
+        \item Die Bandbreite beträgt in diesem Falle \qty{2700}{\hertz} – \qty{300}{\hertz} = \qty{2400}{\hertz}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EA105}{Welche Einheit wird üblicherweise für die Bandbreite verwendet?}{Dezibel (dB)}
-{Baud (Bd)}
-{Bit pro Sekunde (Bit/s)}
-{Hertz (Hz)}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EA105}{Welche Einheit wird üblicherweise für die Bandbreite verwendet?}{Dezibel (dB)}
+            {Baud (Bd)}
+            {Bit pro Sekunde (Bit/s)}
+            {Hertz (Hz)}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EA105}{Welche Einheit wird üblicherweise für die Bandbreite verwendet?}{Dezibel (dB)}
-{Baud (Bd)}
-{Bit pro Sekunde (Bit/s)}
-{\textbf{\textcolor{DARCgreen}{Hertz (Hz)}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EA105}{Welche Einheit wird üblicherweise für die Bandbreite verwendet?}{Dezibel (dB)}
+            {Baud (Bd)}
+            {Bit pro Sekunde (Bit/s)}
+            {\textbf{\textcolor{DARCgreen}{Hertz (Hz)}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

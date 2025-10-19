@@ -1,13 +1,8 @@
 % Author: Dr. Matthias Jung, DL9MJ
 % Year: 2021
-
-
-
-
 \begin{circuitikz}
     \draw (1.5,0) node[npn, tr circle](Q1){};
-    \draw (Q1.G) -- ++(-0.25,0) ++(-0.6,   0) node[](){-6,2\,V};
-    \draw (Q1.D)                ++(   0, 0.3) node[](){+5,6\,V};
-    \draw (Q1.S)                ++(   0,-0.3) node[](){-6,2\,V};
+    \draw (Q1.G) node[anchor=east ](){-6,2\,V};
+    \draw (Q1.D) node[anchor=south](){+5,6\,V};
+    \draw (Q1.S) node[anchor=north](){-6,2\,V};
 \end{circuitikz}
-

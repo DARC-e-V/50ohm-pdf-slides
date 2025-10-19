@@ -1,0 +1,38 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{tikzpicture}
+    % Earth:
+    \draw[very thick] (0,0) arc (60:120:3);
+    % Ionosphere
+    \fill[DARCgray, name path=P1]
+        (0,1.0) coordinate(start) arc (60:120:3) coordinate(c2)
+        -- ++(0,+0.5)
+        arc (120:60:3) coordinate(c6)
+        -- (start);
+    \path(0,1.00) coordinate(start) arc (60:105:3) coordinate(x1);
+    \path(0,1.50) coordinate(start) arc (60:100:3) coordinate(x2);
+    \path(0,1.75) coordinate(start) arc (60:95:3)  coordinate(x3);
+    \path(0,0) arc (60:110:3) coordinate(tx);
+    \path(0,0) arc (60:70:3)  coordinate(rx);
+    \path(0,0) arc (60:90:3)  coordinate(mid1);
+    \path(mid1) ++(0,1.75) coordinate(mid2);
+    \draw[DARCred, ultra thick, name path=P2] (tx) .. controls (mid2) and (mid2) .. (rx) node[pos=0.5, anchor=south]{Refraktion};
+    \draw[DARCgreen, ultra thick, -Triangle] (tx) -- (x1) -- (x2) -- (x3);
+    \path [name intersections={of=P1 and P2,by={CS1}}];
+    \draw[dashed, name path=P5](CS1) -- ++(276:0.3) node[pos=1.0,anchor=north east]{\textcolor{DARCred}{$\varphi$}};
+    \draw[dashed, name path=P7](tx) -- ++(20:0.5) node[pos=0.55, anchor=south]{\textcolor{DARCred}{$\alpha$}};
+    \path[name path=P3](CS1) circle (0.25);
+    \path[name path=P4](tx) -- (CS1);
+    \path [name intersections={of=P3 and P4,by={CS2}}];
+    \path [name intersections={of=P3 and P5,by={CS3}}];
+    \draw[DARCred](CS2) to [bend right=30] (CS3);
+    \path[name path=P6](tx) circle (0.225);
+    \path [name intersections={of=P6 and P2,by={CS4}}];
+    \path [name intersections={of=P6 and P7,by={CS5}}];
+    \draw[DARCred](CS4) to [bend right=-30] (CS5);
+    \path[name path=P8](tx) -- ++(110:1);
+    \path [name intersections={of=P1 and P8,by={CS6}}];
+    \draw[DARCblue, ultra thick, Triangle-Triangle](tx) ++(110:0.25) -- (CS6) node[anchor=south](){$f_\text{c}$};
+    \draw(tx) node[antenna,scale=0.25,rotate=+20](ant1){};
+    \draw(rx) node[antenna,scale=0.25,rotate=-20](ant2){};
+\end{tikzpicture}

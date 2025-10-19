@@ -1,31 +1,5 @@
-
 \section{Einseitenbandmodulation (SSB) II}
 \label{section:ssb_2}
-\begin{frame}%STARTCONTENT
-
-\frametitle{Bandbreite}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Im Gegensatz zu AM wird weniger als die halbe Bandbreite verwendet
-  \item Maximal \qty{2,7}{\kilo\hertz}
-  \item Entspricht dem NF-Signal
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{743include}
-    \caption{\scriptsize Bandbreite von AM, USB und LSB}
-    \label{e_bandbreite_am_ssb}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
 
 \begin{frame}
 \only<1>{
@@ -85,108 +59,69 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Modulation}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Durch Mischung und Filterung
-  \item Mit der Vorauswahl von USB und LSB wird die Trägerfrequenz gewählt
-  \item Durch den Mischer entstehen zwei Frequenzen
-  \item Im Bandfilter wird nur eine Frequenz durchgelassen
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{500include}
-    \caption{\scriptsize Blockschaltbild zur Modulation von SSB mit der Filtermethode}
-    \label{e_ssb_modulation}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+    \frametitle{Modulation}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \small
+            \begin{itemize}
+                \item Durch Mischung und Filterung
+                \item Mit der Vorauswahl von USB und LSB wird die Trägerfrequenz gewählt
+                \item Durch den Mischer entstehen zwei Frequenzen
+                \item Im Bandfilter wird nur eine Frequenz durchgelassen
+                \item Der Trick ist hier, dass das Bandfilter nur eine Resonanzfrequenz hat
+                \item Durch die Verschiebung der Trägerfrequenz im Oszillator wird dann das gewünschte Seitenband durchgelassen
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{500include}
+                \caption{\scriptsize Blockschaltbild zur Modulation von SSB mit der Filtermethode}
+                \label{e_ssb_modulation}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Der Trick ist hier, dass das Bandfilter nur eine Resonanzfrequenz hat
-  \item Durch die Verschiebung der Trägerfrequenz im Oszillator wird dann das gewünschte Seitenband durchgelassen
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{500include}
-    \caption{\scriptsize Blockschaltbild zur Modulation von SSB mit der Filtermethode}
-    \label{e_ssb_modulation}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+    \begin{exampleblock}{Beispiel LSB:}
+        \begin{columns}[T]
+            \begin{column}{0.48\textwidth}
+                \begin{itemize}
+                    \item Mikrofon: \qty{300}{\hertz} -- \qty{3}{\kilo\hertz}
+                    \item LSB-Oszillator: \qty{9001,5}{\kilo\hertz}
+                    \item DSB-Signal:\\ a) 8998,5 -- 9001,2\\ b) 9001,8 -- 9004,5
+                    \item Filter: \qty{9000}{\kilo\hertz}  $\pm$  \qty{1,5}{\kilo\hertz}
+                    \item SSB-Signal:\\\qtyrange{8998,5}{9001,2}{\kilo\hertz}
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.48\textwidth}
+                \begin{figure}
+                    \DARCimage{\linewidth}{831include}
+                \end{figure}
+            \end{column}
+        \end{columns}
+    \end{exampleblock}
 \end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    Beispiel LSB:
-
-\begin{itemize}
-  \item Mikrofon: \qty{300}{\hertz} -- \qty{3}{\kilo\hertz}
-  \item LSB-Oszillator: \qty{9001,5}{\kilo\hertz}
-  \item DSB-Signal:<br/> a) 8998,5 -- 9001,2<br/> b) 9001,8 -- 9004,5 
-  \item Filter: \qty{9000}{\kilo\hertz}  $\pm$  \qty{1,5}{\kilo\hertz}
-  \item SSB-Signal:<br/> \qtyrange{8998,5}{9001,2}{\kilo\hertz}
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{831include}
-    \caption{\scriptsize Frequenzen mit der Filtermethode bei LSB}
-    \label{e_ssb_modulation_lsb}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    Beispiel USB:
-
-\begin{itemize}
-  \item Mikrofon: \qty{300}{\hertz} -- \qty{3}{\kilo\hertz}
-  \item USB-Oszillator: \qty{8998,5}{\kilo\hertz}
-  \item DSB-Signal:<br/> a) \qtyrange{8995,5}{8998,2}{\kilo\hertz}<br/> b) \qtyrange{8998,8}{9001,5}{\kilo\hertz}
-  \item Filter: \qty{9000}{\kilo\hertz}  $\pm$  \qty{1,5}{\kilo\hertz}
-  \item SSB-Signal:<br/> \qtyrange{8998,8}{9001,5}{\kilo\hertz}
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{832include}
-    \caption{\scriptsize Frequenzen mit der Filtermethode bei USB}
-    \label{e_ssb_modulation_usb}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+    \begin{exampleblock}{Beispiel USB:}
+        \begin{columns}[T]
+            \begin{column}{0.48\textwidth}
+                \begin{itemize}
+                    \item Mikrofon: \qty{300}{\hertz} -- \qty{3}{\kilo\hertz}
+                    \item USB-Oszillator: \qty{8998,5}{\kilo\hertz}
+                    \item DSB-Signal:\\ a) \qtyrange{8995,5}{8998,2}{\kilo\hertz}\\ b) \qtyrange{8998,8}{9001,5}{\kilo\hertz}
+                    \item Filter: \qty{9000}{\kilo\hertz}  $\pm$  \qty{1,5}{\kilo\hertz}
+                    \item SSB-Signal:\\ \qtyrange{8998,8}{9001,5}{\kilo\hertz}
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.48\textwidth}
+                \begin{figure}
+                    \DARCimage{\linewidth}{832include}
+                \end{figure}
+            \end{column}
+        \end{columns}
+    \end{exampleblock}
 \end{frame}
 
 \begin{frame}

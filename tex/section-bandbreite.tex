@@ -1,169 +1,163 @@
-
 \section{Bandbreite}
 \label{section:bandbreite}
 \begin{frame}%STARTCONTENT
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Für die verschiedenen Amateurfunkbänder sind jeweils maximal zulässige Bandbreiten festgelegt
+                \item Besonders aufpassen muss man bei Sendungen in der Nähe der Grenzen der Amateurfunkbänder
+                \item Nehmen wir an, ein FM-Signal ist \qty{15}{\kilo\hertz} breit und wir senden auf auf \qty{430}{\mega\hertz}
+                \item Das Sendesignal befindet sich jeweils \qty{7,5}{\kilo\hertz} unterhalb und oberhalb
+                \item Senden auserhalb der Bandgrenzen!
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \DARCimage{\linewidth}{908include}
 
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Für die verschiedenen Amateurfunkbänder sind jeweils maximal zulässige Bandbreiten festgelegt
-  \item Besonders aufpassen muss man bei Sendungen in der Nähe der Grenzen der Amateurfunkbänder
-  \end{itemize}
-
-    \end{column}
-    \pause
-    
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Nehmen wir an, ein FM-Signal ist \qty{15}{\kilo\hertz} breit und wir senden auf auf \qty{430}{\mega\hertz}
-  \item Das Sendesignal befindet sich jeweils \qty{7,5}{\kilo\hertz} unterhalb und oberhalb
-  \item Es würde sich also von \qtyrange{429,9925}{430,0075}{\mega\hertz} erstrecken
-  \end{itemize}
-
-   \end{column}
-\end{columns}
+            \DARCimage{\linewidth}{909include}
+        \end{column}
+    \end{columns}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NE305}{Die gesamte Bandbreite einer FM-Übertragung beträgt \qty{15}{\kHz}. Wie weit muss die am Transceiver eingestellte Sendefrequenz von einer Bandgrenze mindestens entfernt sein, damit die Aussendung innerhalb des Bandes bleibt?}{\qty{0}{\kHz}}
-{\qty{7,5}{\kHz}}
-{\qty{15}{\kHz}}
-{\qty{2,7}{\kHz}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NE305}{Die gesamte Bandbreite einer FM-Übertragung beträgt \qty{15}{\kHz}. Wie weit muss die am Transceiver eingestellte Sendefrequenz von einer Bandgrenze mindestens entfernt sein, damit die Aussendung innerhalb des Bandes bleibt?}{\qty{0}{\kHz}}
+            {\qty{7,5}{\kHz}}
+            {\qty{15}{\kHz}}
+            {\qty{2,7}{\kHz}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NE305}{Die gesamte Bandbreite einer FM-Übertragung beträgt \qty{15}{\kHz}. Wie weit muss die am Transceiver eingestellte Sendefrequenz von einer Bandgrenze mindestens entfernt sein, damit die Aussendung innerhalb des Bandes bleibt?}{\qty{0}{\kHz}}
-{\textbf{\textcolor{DARCgreen}{\qty{7,5}{\kHz}}}}
-{\qty{15}{\kHz}}
-{\qty{2,7}{\kHz}}
-\end{QQuestion}
-
-}
+    }
+    \only<2>{
+        \begin{QQuestion}{NE305}{Die gesamte Bandbreite einer FM-Übertragung beträgt \qty{15}{\kHz}. Wie weit muss die am Transceiver eingestellte Sendefrequenz von einer Bandgrenze mindestens entfernt sein, damit die Aussendung innerhalb des Bandes bleibt?}{\qty{0}{\kHz}}
+            {\textbf{\textcolor{DARCgreen}{\qty{7,5}{\kHz}}}}
+            {\qty{15}{\kHz}}
+            {\qty{2,7}{\kHz}}
+        \end{QQuestion}
+    }
 \end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    Bei SSB  ist das Signal nur auf einer Seite der Trägerfrequenz zu finden:
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            Bei SSB  ist das Signal nur auf einer Seite der Trägerfrequenz zu finden:
 
-\begin{itemize}
-  \item Bei LSB vollständig unterhalb der Trägerfrequenz
-  \item Bei USB vollständig oberhalb der Trägerfrequenz
-  \end{itemize}
+            \begin{itemize}
+                \item Bei LSB vollständig unterhalb der Trägerfrequenz
+                \item Bei USB vollständig oberhalb der Trägerfrequenz
+            \end{itemize}
 
-    \end{column}
-    \pause
-    
-   \begin{column}{0.48\textwidth}
-       Beispiel:
+        \end{column}
+        \pause
 
-\begin{itemize}
-  \item Am Funkgerät Sendefrequenz auf obere Bandgrenze einstellen
-  \item Mit LSB darf gesendet werden
-  \item Mit USB ist das Signal außerhalb des Bandes
-  \end{itemize}
+        \begin{column}{0.48\textwidth}
+            Beispiel:
 
-   \end{column}
-\end{columns}
+            \begin{itemize}
+                \item Am Funkgerät Sendefrequenz auf obere Bandgrenze einstellen
+                \item Mit LSB darf gesendet werden
+                \item Mit USB ist das Signal außerhalb des Bandes
+            \end{itemize}
+
+        \end{column}
+    \end{columns}
 
 
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD738}{In welchen Amateurfunkfrequenzbereichen beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{800}{\Hz}?}{\qtyrange{18068}{18168}{\kHz} und \qtyrange{24890}{24990}{\kHz}}
-{\qtyrange{1810}{2000}{\kHz}, \qtyrange{3500}{3800}{\kHz} und \qtyrange{7000}{7200}{\kHz}}
-{\qtyrange{7000}{7100}{\kHz} und \qtyrange{14000}{14350}{\kHz}}
-{\qtyrange{135,7}{137,8}{\kHz}, \qtyrange{472}{479}{\kHz} und \qtyrange{10100}{10150}{\kHz}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD738}{In welchen Amateurfunkfrequenzbereichen beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{800}{\Hz}?}{\qtyrange{18068}{18168}{\kHz} und \qtyrange{24890}{24990}{\kHz}}
+            {\qtyrange{1810}{2000}{\kHz}, \qtyrange{3500}{3800}{\kHz} und \qtyrange{7000}{7200}{\kHz}}
+            {\qtyrange{7000}{7100}{\kHz} und \qtyrange{14000}{14350}{\kHz}}
+            {\qtyrange{135,7}{137,8}{\kHz}, \qtyrange{472}{479}{\kHz} und \qtyrange{10100}{10150}{\kHz}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD738}{In welchen Amateurfunkfrequenzbereichen beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{800}{\Hz}?}{\qtyrange{18068}{18168}{\kHz} und \qtyrange{24890}{24990}{\kHz}}
-{\qtyrange{1810}{2000}{\kHz}, \qtyrange{3500}{3800}{\kHz} und \qtyrange{7000}{7200}{\kHz}}
-{\qtyrange{7000}{7100}{\kHz} und \qtyrange{14000}{14350}{\kHz}}
-{\textbf{\textcolor{DARCgreen}{\qtyrange{135,7}{137,8}{\kHz}, \qtyrange{472}{479}{\kHz} und \qtyrange{10100}{10150}{\kHz}}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD738}{In welchen Amateurfunkfrequenzbereichen beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{800}{\Hz}?}{\qtyrange{18068}{18168}{\kHz} und \qtyrange{24890}{24990}{\kHz}}
+            {\qtyrange{1810}{2000}{\kHz}, \qtyrange{3500}{3800}{\kHz} und \qtyrange{7000}{7200}{\kHz}}
+            {\qtyrange{7000}{7100}{\kHz} und \qtyrange{14000}{14350}{\kHz}}
+            {\textbf{\textcolor{DARCgreen}{\qtyrange{135,7}{137,8}{\kHz}, \qtyrange{472}{479}{\kHz} und \qtyrange{10100}{10150}{\kHz}}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD739}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2,7}{\kHz}?}{\qtyrange{135,7}{137,8}{\kHz}}
-{\qtyrange{10100}{10150}{\kHz}}
-{\qtyrange{3500}{3800}{\kHz}}
-{\qtyrange{28000}{29700}{\kHz}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD739}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2,7}{\kHz}?}{\qtyrange{135,7}{137,8}{\kHz}}
+            {\qtyrange{10100}{10150}{\kHz}}
+            {\qtyrange{3500}{3800}{\kHz}}
+            {\qtyrange{28000}{29700}{\kHz}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD739}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2,7}{\kHz}?}{\qtyrange{135,7}{137,8}{\kHz}}
-{\qtyrange{10100}{10150}{\kHz}}
-{\textbf{\textcolor{DARCgreen}{\qtyrange{3500}{3800}{\kHz}}}}
-{\qtyrange{28000}{29700}{\kHz}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD739}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2,7}{\kHz}?}{\qtyrange{135,7}{137,8}{\kHz}}
+            {\qtyrange{10100}{10150}{\kHz}}
+            {\textbf{\textcolor{DARCgreen}{\qtyrange{3500}{3800}{\kHz}}}}
+            {\qtyrange{28000}{29700}{\kHz}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD740}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{7}{\kHz}?}{\qtyrange{21000}{21450}{\kHz}}
-{\qtyrange{14000}{14350}{\kHz}}
-{\qtyrange{28000}{29000}{\kHz}}
-{\qtyrange{10100}{10150}{\kHz}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD740}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{7}{\kHz}?}{\qtyrange{21000}{21450}{\kHz}}
+            {\qtyrange{14000}{14350}{\kHz}}
+            {\qtyrange{28000}{29000}{\kHz}}
+            {\qtyrange{10100}{10150}{\kHz}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD740}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{7}{\kHz}?}{\qtyrange{21000}{21450}{\kHz}}
-{\qtyrange{14000}{14350}{\kHz}}
-{\textbf{\textcolor{DARCgreen}{\qtyrange{28000}{29000}{\kHz}}}}
-{\qtyrange{10100}{10150}{\kHz}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD740}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{7}{\kHz}?}{\qtyrange{21000}{21450}{\kHz}}
+            {\qtyrange{14000}{14350}{\kHz}}
+            {\textbf{\textcolor{DARCgreen}{\qtyrange{28000}{29000}{\kHz}}}}
+            {\qtyrange{10100}{10150}{\kHz}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD741}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{40}{\kHz}?}{\qtyrange{144}{146}{\MHz}}
-{\qtyrange{430}{440}{\MHz}}
-{\qtyrange{1240}{1300}{\MHz}}
-{\qtyrange{7000}{7200}{\kHz}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD741}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{40}{\kHz}?}{\qtyrange{144}{146}{\MHz}}
+            {\qtyrange{430}{440}{\MHz}}
+            {\qtyrange{1240}{1300}{\MHz}}
+            {\qtyrange{7000}{7200}{\kHz}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD741}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{40}{\kHz}?}{\textbf{\textcolor{DARCgreen}{\qtyrange{144}{146}{\MHz}}}}
-{\qtyrange{430}{440}{\MHz}}
-{\qtyrange{1240}{1300}{\MHz}}
-{\qtyrange{7000}{7200}{\kHz}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD741}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{40}{\kHz}?}{\textbf{\textcolor{DARCgreen}{\qtyrange{144}{146}{\MHz}}}}
+            {\qtyrange{430}{440}{\MHz}}
+            {\qtyrange{1240}{1300}{\MHz}}
+            {\qtyrange{7000}{7200}{\kHz}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VD742}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2}{\MHz} bzw. für amplitudenmodulierte Fernsehaussendungen \qty{7}{\MHz}?}{\qtyrange{2320}{2450}{\MHz}}
-{\qtyrange{430}{440}{\MHz}}
-{\qtyrange{3400}{3475}{\MHz}}
-{\qtyrange{10,0}{10,5}{\GHz}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VD742}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2}{\MHz} bzw. für amplitudenmodulierte Fernsehaussendungen \qty{7}{\MHz}?}{\qtyrange{2320}{2450}{\MHz}}
+            {\qtyrange{430}{440}{\MHz}}
+            {\qtyrange{3400}{3475}{\MHz}}
+            {\qtyrange{10,0}{10,5}{\GHz}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VD742}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2}{\MHz} bzw. für amplitudenmodulierte Fernsehaussendungen \qty{7}{\MHz}?}{\qtyrange{2320}{2450}{\MHz}}
-{\textbf{\textcolor{DARCgreen}{\qtyrange{430}{440}{\MHz}}}}
-{\qtyrange{3400}{3475}{\MHz}}
-{\qtyrange{10,0}{10,5}{\GHz}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VD742}{In welchem der folgenden Amateurfunkfrequenzbereiche beträgt die maximal zulässige belegte Bandbreite einer Aussendung \qty{2}{\MHz} bzw. für amplitudenmodulierte Fernsehaussendungen \qty{7}{\MHz}?}{\qtyrange{2320}{2450}{\MHz}}
+            {\textbf{\textcolor{DARCgreen}{\qtyrange{430}{440}{\MHz}}}}
+            {\qtyrange{3400}{3475}{\MHz}}
+            {\qtyrange{10,0}{10,5}{\GHz}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

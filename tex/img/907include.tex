@@ -1,0 +1,42 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% Colored Version of 359
+\begin{tikzpicture}
+	\pgfplotsset{
+		every axis plot/.append style={line width=0.8pt},
+	}
+    \begin{axis}[%
+        /pgf/number format/1000 sep={ },
+        /pgf/number format/use comma,        
+        axis lines=middle,
+        axis line style={-Triangle},
+		width=\linewidth*\getDarcImageFactor,
+        height=3cm,
+        scale only axis,
+        ytick={-1,0,1},
+        every major tick/.append style={thick, black},
+        xtick={0.25*pi,0.5*pi,0.75*pi,pi,1.25*pi,1.5*pi,1.75*pi,2*pi,2.5*pi},
+        grid=major,
+        grid style={line width=.1pt, draw=gray!10},
+        major grid style={line width=.2pt,draw=gray!50},
+        xticklabel=\empty,
+        yticklabel=\empty,
+        xtick style={draw=none},
+        ytick style={draw=none},
+        xmin=0,
+        xmax=2.2*pi,
+        ymin=-1.5,
+        ymax=1.5,
+        xmajorgrids=false,
+        ymajorgrids=false,
+        xlabel style={at={(ticklabel* cs:1)},anchor=north east},
+        ylabel style={at={(ticklabel* cs:1)},anchor=south east, rotate=90},
+        ylabel={Amplitude},
+        xlabel={$t$},
+    ]
+    \addplot[domain=0.0*pi:0.5*pi,DARCblue,samples=300] {cos(28*x*180/pi+90)};
+    \addplot[domain=0.5*pi:1.0*pi,DARCblue,samples=300] {sin(28*x*180/pi)};
+    \addplot[domain=1.0*pi:1.5*pi,DARCblue,samples=300] {cos(28*x*180/pi+90)};
+    \addplot[domain=1.5*pi:2.0*pi,DARCblue,samples=300] {sin(28*x*180/pi)};
+\end{axis}
+\end{tikzpicture}%

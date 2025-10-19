@@ -4,12 +4,19 @@
 \begin{frame}%STARTCONTENT
 
 \frametitle{Konverter}
-\begin{itemize}
-  \item Signale auf einem Frequenzband werden in ein anderes Frequenzband umgesetzt
-  \item z.B. wird ein 2m-Signal im Empfang als ein 70cm-Signal ausgesendet
-  \item Signal wird nur in eine Richtung umgewandelt
-  \item Im Grunde ein einfacher Mischer
-  \end{itemize}
+\begin{columns}
+    \begin{column}{0.48\linewidth}
+        \DARCimage{1.0\linewidth}{651include}
+    \end{column}
+    \begin{column}{0.48\linewidth}
+        \begin{itemize}
+            \item Signale auf einem Frequenzband werden in ein anderes Frequenzband umgesetzt
+            \item z.B. wird ein 2m-Signal im Empfang als ein 70cm-Signal ausgesendet
+            \item Signal wird nur in eine Richtung umgewandelt
+            \item Im Grunde ein einfacher Mischer
+        \end{itemize}
+    \end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -57,6 +64,18 @@
   \item Beim Transverter funktioniert die Umsetzung in beide Richtungen
   \item Die Umsetzung erfolgt auch hier durch Mischung
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Transverter \only<1>{(TX)}\only<2>{(RX)}}
+    \only<1>{%
+        \begin{center}
+            \DARCimage{0.8\linewidth}{843include}
+        \end{center}
+    }\only<2>{%
+        \begin{center}
+            \DARCimage{0.8\linewidth}{842include}
+        \end{center}
+    }
 \end{frame}
 
 \begin{frame}
@@ -117,89 +136,25 @@
 
 \end{frame}
 
-\begin{frame}
-\frametitle{Lösungsweg}
-Frequenz des Generators wird ver-3-facht: $38,666MHz \cdot 3 = 116MHz$
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \emph{TX Weg}
 
-\begin{itemize}
-  \item Die \qtyrange{28}{30}{\mega\hertz} vom TRX werden mit \qty{116}{\mega\hertz} gemischt
-  \item Das Signal kann 80-90MHz oder \qtyrange{144}{146}{\mega\hertz} sein
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{843include}
-    \caption{\scriptsize Transverter im TX-Pfad}
-    \label{e_transverter_tx}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \emph{RX Weg}
-
-\begin{itemize}
-  \item Das Antennensignal wird mit \qty{116}{\mega\hertz} gemischt und es kommen \qtyrange{28}{30}{\mega\hertz} raus
-  \item Das Antennensignal liegt somit u.a. bei \qtyrange{144}{146}{\mega\hertz}
-  \item $\rightarrow$ Es ist nur die Antwort mit \qty{2}{\metre} und der Transverter richtig
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{842include}
-    \caption{\scriptsize Transverter im RX-Pfad}
-    \label{e_transverter_rx}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Frequenzstabilität}
-\begin{itemize}
-  \item Konverter und Transverter sollten mit frequenzstabilen Oszillatoren gebaut werden
-  \item Weicht die Frequenz ab, ist die Ausgangsfrequenz auch abweichend
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Grafik aus vorheriger Frage
-  \item Aus \qty{10}{\mega\hertz} werden \qty{2,256}{\giga\hertz}, also 225,6 Vervielfachung
-  \item Statt \qty{10}{\mega\hertz} erzeugt der Oszillator aufgrund eines Fehlers \qty{10,01}{\mega\hertz}
-  \item \qty{10,01}{\mega\hertz} $\cdot$ 225,6 = \qty{2,258256}{\giga\hertz}
-  \item Mischer: \qty{144}{\mega\hertz} + \qty{2,258256}{\giga\hertz} = \qty{2,402256}{\giga\hertz} $\rightarrow$ \qty{2,256}{\mega\hertz} daneben
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{651include}
-    \caption{\scriptsize Konverter für das 13cm-Band}
-    \label{e_konverter_13cm}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+\begin{frame}{Frequenzstabilität}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Konverter und Transverter sollten mit frequenzstabilen Oszillatoren gebaut werden
+                \item Weicht die Frequenz ab, ist die Ausgangsfrequenz auch abweichend
+                \item Aus \qty{10}{\mega\hertz} werden \qty{2,256}{\giga\hertz}, also 225,6 Vervielfachung
+                \item Statt \qty{10}{\mega\hertz} erzeugt der Oszillator aufgrund eines Fehlers \qty{10,01}{\mega\hertz}
+                \item \qty{10,01}{\mega\hertz} $\cdot$ 225,6 = \qty{2,258256}{\giga\hertz}
+                \item Mischer: \qty{144}{\mega\hertz} + \qty{2,258256}{\giga\hertz} = \qty{2,402256}{\giga\hertz} $\rightarrow$ \qty{2,256}{\mega\hertz} daneben
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{651include}
+                \caption{\scriptsize Konverter für das 13cm-Band}
+                \label{e_konverter_13cm}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}%ENDCONTENT

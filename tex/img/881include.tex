@@ -1,0 +1,48 @@
+% Author: Prof. Dr. Mathtias Jung, DL9MJ
+% Year: 2023
+% Farbiges Alternativbild
+\begin{tikzpicture}
+
+    \def\d{3}   % Distance between plates, and lenght of arms
+    \def\t{0.2} % Thickness of plates 
+    \def\o{0.1} % Overlap
+    
+    \draw(0,0)
+        ++(  0, 0.00) coordinate(s1) to [open] ++(\d,0) coordinate(e1)
+        ++(-\d,-0.25) coordinate(s2) to [open] ++(\d,0) coordinate(e2)
+        ++(-\d,-0.25) coordinate(s3) to [open] ++(\d,0) coordinate(e3)
+        ++(-\d,-0.25) coordinate(s4) to [open] ++(\d,0) coordinate(e4)
+        ++(-\d,-0.25) coordinate(s5) to [open] ++(\d,0) coordinate(e5)
+        ++(-\d,-0.25) coordinate(s6) to [open] ++(\d,0) coordinate(e6)
+        ++(-\d,-0.25) coordinate(s7) to [open] ++(\d,0) coordinate(e7)
+        ++(-\d,-0.25) coordinate(s8) to [open] ++(\d,0) coordinate(e8)
+        ++(-\d,-0.25) coordinate(s9) to [open] ++(\d,0) coordinate(e9)
+        ++(-\d,-0.25) coordinate(sA) to [open] ++(\d,0) coordinate(eA)
+        ++(-\d,-0.25) coordinate(sB) to [open] ++(\d,0) coordinate(eB)
+        ++(-\d,-0.25) coordinate(sC) to [open] ++(\d,0) coordinate(eC)
+        ++(-\d,-0.25) coordinate(sD) to [open] ++(\d,0) coordinate(eD)
+        ++(-\d,-0.25) coordinate(sE) to [open] ++(\d,0) coordinate(eE)
+        ++(-\d,-0.25) coordinate(sF) to [open] ++(\d,0) coordinate(eF);
+
+    \draw[-Triangle, DARCorange](s1) -- (e1);
+    \draw[-Triangle, DARCorange](s2) -- (e2);
+    \draw[-Triangle, DARCorange](s3) -- (e3);
+    \draw[-Triangle, DARCorange](s4) -- (e4);
+    \draw[-Triangle, DARCorange](s5) -- (e5);
+    \draw[-Triangle, DARCorange](s6) -- (e6);
+    \draw[-Triangle, DARCorange](s7) -- (e7);
+    \draw[-Triangle, DARCorange](s8) -- (e8);
+    \draw[-Triangle, DARCorange](s9) -- (e9);
+    \draw[-Triangle, DARCorange](sA) -- (eA);
+    \draw[-Triangle, DARCorange](sB) -- (eB);
+    \draw[-Triangle, DARCorange](sC) -- (eC);
+    \draw[-Triangle, DARCorange](sD) -- (eD);
+    \draw[-Triangle, DARCorange](sE) -- (eE);
+    \draw[-Triangle, DARCorange](sF) -- (eF);
+
+    \fill [black] ($(s1) + (0,\o)$) rectangle ($(sF) + (-\t,-\o)$);
+    \fill [black] ($(e1) + (0,\o)$) rectangle ($(eF) + (+\t,-\o)$);
+
+    \draw[line width=4pt](s8) ++(-\o,0) -- ++(-\d,0);
+    \draw[line width=4pt](e8) ++(+\o,0) -- ++(+\d,0);
+\end{tikzpicture}

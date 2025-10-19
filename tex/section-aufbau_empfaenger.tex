@@ -3,146 +3,30 @@
 \label{section:aufbau_empfaenger}
 \begin{frame}%STARTCONTENT
 
-\frametitle{1. Antenne}
+\frametitle{Grundsätzlicher Aufbau eines Empfängers}
 \begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{736include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Empfängers}
-    \label{aufbau_empfaenger_blockdiagramm}
-\end{figure}
-
-
+    \begin{column}{0.38\textwidth}
+        \begin{figure}
+            \DARCimage{\linewidth}{736include}
+            \caption{\scriptsize Blockdiagramm eines einfachen Empfängers}
+            \label{aufbau_empfaenger_blockdiagramm}
+        \end{figure}
     \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Nimmt Vielzahl von Funkwellen auf
-  \item Leitet sie als elektrische Schwingungen weiter
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{2. Bandpassfilter}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{736include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Empfängers}
-    \label{aufbau_empfaenger_blockdiagramm}
-\end{figure}
-
-
+    \begin{column}{0.58\textwidth}
+        \small
+        \begin{enumerate}[<+->]
+            \item \textbf{Antenne:} Nimmt Vielzahl von Funkwellen auf und leitet sie als
+            elektrische Schwingungen weiter
+            \item \textbf{Bandpassfilter:} Lässt nur gewünschten Frequenzbereich
+            durch und sperrt alle anderen ungewünschten Frequenzen
+            \item \textbf{HF-Verstärker:} Verstärkt das herausgefilterte Signal
+            \item \textbf{Demodulator:} Zurückgewinnung des ursprünglichen
+            Signals -- Ergebnis ist das Niederfrequenz-Signal (NF)
+            \item \textbf{NF-Verstärker:} Verstärkt das demodulierte Signal
+            \item \textbf{Lautsprecher:} Wandelt elektrische Schwingung in Schallwellen um
+        \end{enumerate}
     \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Lässt nur gewünschten Frequenzbereich durch
-  \item Sperrt alle anderen ungewünschten Frequenzen
-  \end{itemize}
-
-   \end{column}
 \end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{3. HF-Verstärker}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{736include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Empfängers}
-    \label{aufbau_empfaenger_blockdiagramm}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Verstärkt das herausgefilterte Signal
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{4. Demodulator}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{736include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Empfängers}
-    \label{aufbau_empfaenger_blockdiagramm}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Zurückgewinnung des ursprünglichen Signals, z.B. Sprachsignal
-  \item Ergebnis ist das Niederfrequenz-Signal (NF)
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{5. NF-Verstärker}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{736include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Empfängers}
-    \label{aufbau_empfaenger_blockdiagramm}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Verstärkt das demodulierte Signal
-  \item NF-Verstärker zum Verstärken des Signals für den Lautsprecher
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{6. Lautsprecher}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    
-\begin{figure}
-    \DARCimage{0.85\linewidth}{736include}
-    \caption{\scriptsize Blockdiagramm eines einfachen Empfängers}
-    \label{aufbau_empfaenger_blockdiagramm}
-\end{figure}
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Wandelt elektrische Schwingung in Schallwelle um
-  \item Signal wird wieder hörbar gemacht
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
 \end{frame}
 
 \begin{frame}
@@ -151,7 +35,7 @@
 {Tongenerator}
 {Relaisfunkstelle}
 {Empfänger}
-{\DARCimage{1.0\linewidth}{525include}}\end{PQuestion}
+{\centering\DARCimage{0.9\linewidth}{525include}}\end{PQuestion}
 
 }
 \only<2>{
@@ -159,7 +43,7 @@
 {Tongenerator}
 {Relaisfunkstelle}
 {\textbf{\textcolor{DARCgreen}{Empfänger}}}
-{\DARCimage{1.0\linewidth}{525include}}\end{PQuestion}
+{\centering\DARCimage{0.9\linewidth}{525include}}\end{PQuestion}
 
 }
 \end{frame}

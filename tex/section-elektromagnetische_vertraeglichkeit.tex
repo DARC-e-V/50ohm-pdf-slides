@@ -1,182 +1,205 @@
 
 \section{Elektromagnetische Verträglichkeit}
 \label{section:elektromagnetische_vertraeglichkeit}
+
+\begin{frame}{Grundsätzliche Definition}
+    \begin{alertblock}{Wichtig:}
+        Ein sauberes Amateurfunknutzsignal ist nie eine Störung!
+    \end{alertblock}
+
+    \visible<2->{\textbf{Wir unterscheiden:}}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\linewidth}
+            \visible<2->{
+                \textcolor{DARCblue}{1.} Störungen:
+
+                \DARCimage{0.7\linewidth}{745include}
+
+                \small z.\,B. durch 4. Harmonische
+            }
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \visible<3->{\textcolor{DARCblue}{2.} Störende Beeinflussung:}
+
+            \only<3>{\DARCimage{0.7\linewidth}{744include}}%
+            \only<4>{\DARCimage{0.7\linewidth}{746include}}%
+            \only<5>{\DARCimage{0.7\linewidth}{747include}}%
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \begin{frame}%STARTCONTENT
-
-\frametitle{Beim Senden}
+    \frametitle{EMV Beim Senden}
+    \begin{columns}[T]
+        \begin{column}{0.33\textwidth}
+            Funkwellen von
+            \begin{itemize}
+                \item von Antennen
+                \item von Transceivern
+                \item von Zuleitungen
+            \end{itemize}
+        \end{column}
+        \pause
+        \begin{column}{0.63\textwidth}
+            Elektrische Schwingungen gelangen in andere Leitungen:
+            \begin{itemize}
+                \item Zerstörungen von anderen elektronischen Geräten
+                \item Geräusche aus Lautsprechern
+                \item Internetausfall
+                \item Fehler in Heizungssteuerung
+            \end{itemize}
+        \end{column}
+    \end{columns}
     \pause
-    
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    Funkwellen von
 
-\begin{itemize}
-  \item von Antennen
-  \item von Transceivern
-  \item von Zuleitungen
-  \end{itemize}
+    \vspace{0.5cm}
 
-    \end{column}
-    \pause
-    
-   \begin{column}{0.48\textwidth}
-       Elektrische Schwingungen gelangen in andere Leitungen
+    Einhalten der Schutzanforderungen zur Gewährleistung der elektromagnetischen Verträglichkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG)
+\end{frame}
 
-\begin{itemize}
-  \item Zerstörungen von anderen elektronischen Geräten
-  \item Geräusche aus Lautsprechern
-  \item Internetausfall
-  \item Fehler in Heizungssteuerung
-  \end{itemize}
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{VC118}{Was muss ein Funkamateur beim Betrieb seiner Amateurfunkstelle in Bezug auf die elektromagnetische Verträglichkeit beachten?}{Die Amateurfunkstelle darf nur aus baumustergeprüften Funkgeräten bestehen, die den Anforderungen des Gesetzes über Funkanlagen (FuAG) entsprechen.}
+            {Der Funkamateur benötigt für seine Amateurfunkstelle eine aktuelle  Verträglichkeitsbescheinigung der BNetzA.}
+            {Der Funkamateur muss die Schutzanforderungen zur Gewährleistung der elektromagnetischen Verträglichkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) einhalten.}
+            {Die Amateurfunkstelle muss von einem zertifizierten Elektromeister auf die Einhaltung der elektromagnetischen Verträglichkeit geprüft werden. Das Abnahmeprotokoll ist für die BNetzA bereitzuhalten.}
+        \end{QQuestion}
 
-   \end{column}
-\end{columns}
+    }
+    \only<2>{
+        \begin{QQuestion}{VC118}{Was muss ein Funkamateur beim Betrieb seiner Amateurfunkstelle in Bezug auf die elektromagnetische Verträglichkeit beachten?}{Die Amateurfunkstelle darf nur aus baumustergeprüften Funkgeräten bestehen, die den Anforderungen des Gesetzes über Funkanlagen (FuAG) entsprechen.}
+            {Der Funkamateur benötigt für seine Amateurfunkstelle eine aktuelle  Verträglichkeitsbescheinigung der BNetzA.
+            }
+            {\textbf{\textcolor{DARCgreen}{Der Funkamateur muss die Schutzanforderungen zur Gewährleistung der elektromagnetischen Verträglichkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) einhalten.}}}
+            {Die Amateurfunkstelle muss von einem zertifizierten Elektromeister auf die Einhaltung der elektromagnetischen Verträglichkeit geprüft werden. Das Abnahmeprotokoll ist für die BNetzA bereitzuhalten.
+            }
+        \end{QQuestion}
 
+    }
+\end{frame}
 
+\begin{frame}
+    \frametitle{EMV Beim Empfang}
+    \begin{itemize}
+        \item Der Funkamateur darf von den grundlegenden Anforderungen nach dem Gesetz über
+        die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen 
+        \item Der Funkamateur darf Störfestigkeit der eigenen Geräte selbst bestimmen.
+        \item Die Abweichung vom EMVG ist ein Privileg.
+    \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\frametitle{Beim Senden}
-Einhalten der Schutzanforderungen zur Gewährleistung der elektromagnetischen Verträglichkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG)
+    \only<1>{
+        \begin{QQuestion}{VC120}{Darf der Funkamateur bei Selbstbaugeräten von den grundlegenden Anforderungen zur Störfestigkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen?}{Nein, die Störfestigkeit ist vorgegeben und muss eingehalten werden.}
+            {Ja, aber nur in Richtung Verbesserung der Störfestigkeit}
+            {Ja, er kann den Grad der Störfestigkeit seiner Geräte selbst bestimmen.}
+            {Nein, selbstgebaute Amateurfunkgeräte müssen im Bezug auf Störfestigkeit  kommerziell hergestellten Geräten entsprechen.}
+        \end{QQuestion}
 
+    }
+    \only<2>{
+        \begin{QQuestion}{VC120}{Darf der Funkamateur bei Selbstbaugeräten von den grundlegenden Anforderungen zur Störfestigkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen?}{Nein, die Störfestigkeit ist vorgegeben und muss eingehalten werden.}
+            {Ja, aber nur in Richtung Verbesserung der Störfestigkeit}
+            {\textbf{\textcolor{DARCgreen}{Ja, er kann den Grad der Störfestigkeit seiner Geräte selbst bestimmen.}}}
+            {Nein, selbstgebaute Amateurfunkgeräte müssen im Bezug auf Störfestigkeit  kommerziell hergestellten Geräten entsprechen.}
+        \end{QQuestion}
+
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VC118}{Was muss ein Funkamateur beim Betrieb seiner Amateurfunkstelle in Bezug auf die elektromagnetische Verträglichkeit beachten?}{Die Amateurfunkstelle darf nur aus baumustergeprüften Funkgeräten bestehen, die den Anforderungen des Gesetzes über Funkanlagen (FuAG) entsprechen.}
-{Der Funkamateur benötigt für seine Amateurfunkstelle eine aktuelle  Verträglichkeitsbescheinigung der BNetzA.
-}
-{Der Funkamateur muss die Schutzanforderungen zur Gewährleistung der elektromagnetischen Verträglichkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) einhalten.}
-{Die Amateurfunkstelle muss von einem zertifizierten Elektromeister auf die Einhaltung der elektromagnetischen Verträglichkeit geprüft werden. Das Abnahmeprotokoll ist für die BNetzA bereitzuhalten.
-}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{VC119}{Was gilt hinsichtlich der Störfestigkeit der Amateurfunkstelle nach dem Wortlaut des Amateurfunkgesetzes (AFuG)? }{Der Funkamateur darf von den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen und kann den Grad der Störfestigkeit seiner Amateurfunkstelle selbst bestimmen.}
+            {Der Funkamateur muss seine Amateurfunkstelle im Abstand von 2 Jahren einer Störfestigkeitsprüfung durch die BNetzA unterziehen lassen.}
+            {Amateurfunkstellen sind hinsichtlich ihrer Störfestigkeit anderen Betriebsmitteln gleichgestellt.}
+            {Amateurfunkstellen müssen elektromagnetische Störungen durch andere Betriebsmittel hinnehmen, selbst wenn diese nicht den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) entsprechen.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VC118}{Was muss ein Funkamateur beim Betrieb seiner Amateurfunkstelle in Bezug auf die elektromagnetische Verträglichkeit beachten?}{Die Amateurfunkstelle darf nur aus baumustergeprüften Funkgeräten bestehen, die den Anforderungen des Gesetzes über Funkanlagen (FuAG) entsprechen.}
-{Der Funkamateur benötigt für seine Amateurfunkstelle eine aktuelle  Verträglichkeitsbescheinigung der BNetzA.
-}
-{\textbf{\textcolor{DARCgreen}{Der Funkamateur muss die Schutzanforderungen zur Gewährleistung der elektromagnetischen Verträglichkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) einhalten.}}}
-{Die Amateurfunkstelle muss von einem zertifizierten Elektromeister auf die Einhaltung der elektromagnetischen Verträglichkeit geprüft werden. Das Abnahmeprotokoll ist für die BNetzA bereitzuhalten.
-}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{VC119}{Was gilt hinsichtlich der Störfestigkeit der Amateurfunkstelle nach dem Wortlaut des Amateurfunkgesetzes (AFuG)? }{\textbf{\textcolor{DARCgreen}{Der Funkamateur darf von den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen und kann den Grad der Störfestigkeit seiner Amateurfunkstelle selbst bestimmen.}}}
+            {Der Funkamateur muss seine Amateurfunkstelle im Abstand von 2 Jahren einer Störfestigkeitsprüfung durch die BNetzA unterziehen lassen.}
+            {Amateurfunkstellen sind hinsichtlich ihrer Störfestigkeit anderen Betriebsmitteln gleichgestellt.}
+            {Amateurfunkstellen müssen elektromagnetische Störungen durch andere Betriebsmittel hinnehmen, selbst wenn diese nicht den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) entsprechen.}
+        \end{QQuestion}
 
-}
+    }
+\end{frame}
+
+\begin{frame}{Maßnahmen}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \begin{figure}
+                \includegraphics[width=\linewidth]{img/PA2420_V2}
+                \caption{Beispiel \qty{2.4}{\giga\hertz} PA für QO-100}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            Zur Einhaltung der vorgeschriebenen elektromagnetischen Verträglichkeit (EMV)
+            \begin{itemize}
+                \item Abschirmen
+                \item Erden
+            \end{itemize}
+            Schutz vor Störungen in beide Richtungen
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Beim Empfang}
-Funkamateur darf Störfestigkeit der eigenen Geräte selbst bestimmen. Die Abweichung vom EMVG ist ein Privileg.
+    \only<1>{
+        \begin{QQuestion}{NK101}{In Bezug auf EMV sollten HF-Stufen~...}{gut abgeschirmt werden.}
+            {eine besonders abgeschirmte Masseleitung erhalten.}
+            {in Kunststoff eingehüllt werden.}
+            {nur kapazitive Auskopplungen enthalten.}
+        \end{QQuestion}
 
+    }
+    \only<2>{
+        \begin{QQuestion}{NK101}{In Bezug auf EMV sollten HF-Stufen~...}{\textbf{\textcolor{DARCgreen}{gut abgeschirmt werden.}}}
+            {eine besonders abgeschirmte Masseleitung erhalten.}
+            {in Kunststoff eingehüllt werden.}
+            {nur kapazitive Auskopplungen enthalten.}
+        \end{QQuestion}
+
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VC120}{Darf der Funkamateur bei Selbstbaugeräten von den grundlegenden Anforderungen zur Störfestigkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen?}{Nein, die Störfestigkeit ist vorgegeben und muss eingehalten werden.}
-{Ja, aber nur in Richtung Verbesserung der Störfestigkeit}
-{Ja, er kann den Grad der Störfestigkeit seiner Geräte selbst bestimmen.}
-{Nein, selbstgebaute Amateurfunkgeräte müssen im Bezug auf Störfestigkeit  kommerziell hergestellten Geräten entsprechen.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NJ101}{Alle Geräte, die HF-Ströme übertragen, sollten~...}{möglichst gut geschirmt sein.}
+            {nicht geerdet sein.}
+            {über das Stromversorgungsnetz geerdet sein.}
+            {durch Kunststoffabdeckungen geschützt sein.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VC120}{Darf der Funkamateur bei Selbstbaugeräten von den grundlegenden Anforderungen zur Störfestigkeit im Sinne des Gesetzes über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen?}{Nein, die Störfestigkeit ist vorgegeben und muss eingehalten werden.}
-{Ja, aber nur in Richtung Verbesserung der Störfestigkeit}
-{\textbf{\textcolor{DARCgreen}{Ja, er kann den Grad der Störfestigkeit seiner Geräte selbst bestimmen.}}}
-{Nein, selbstgebaute Amateurfunkgeräte müssen im Bezug auf Störfestigkeit  kommerziell hergestellten Geräten entsprechen.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NJ101}{Alle Geräte, die HF-Ströme übertragen, sollten~...}{\textbf{\textcolor{DARCgreen}{möglichst gut geschirmt sein.}}}
+            {nicht geerdet sein.}
+            {über das Stromversorgungsnetz geerdet sein.}
+            {durch Kunststoffabdeckungen geschützt sein.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{VC119}{Was gilt hinsichtlich der Störfestigkeit der Amateurfunkstelle nach dem Wortlaut des Amateurfunkgesetzes (AFuG)? }{Der Funkamateur darf von den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen und kann den Grad der Störfestigkeit seiner Amateurfunkstelle selbst bestimmen.}
-{Der Funkamateur muss seine Amateurfunkstelle im Abstand von 2 Jahren einer Störfestigkeitsprüfung durch die BNetzA unterziehen lassen.}
-{Amateurfunkstellen sind hinsichtlich ihrer Störfestigkeit anderen Betriebsmitteln gleichgestellt.}
-{Amateurfunkstellen müssen elektromagnetische Störungen durch andere Betriebsmittel hinnehmen, selbst wenn diese nicht den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) entsprechen.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NK102}{Um eine Amateurfunkstelle in Bezug auf EMV zu optimieren,~...}{sollten alle hochohmigen Erdverbindungen entfernt werden.}
+            {sollte der Sender mit der Wasserleitung im Haus verbunden werden.}
+            {sollten alle Einrichtungen mit einer guten HF-Erdung versehen werden.}
+            {sollte der Sender mit der Abwasserleitung im Haus verbunden werden.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{VC119}{Was gilt hinsichtlich der Störfestigkeit der Amateurfunkstelle nach dem Wortlaut des Amateurfunkgesetzes (AFuG)? }{\textbf{\textcolor{DARCgreen}{Der Funkamateur darf von den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) abweichen und kann den Grad der Störfestigkeit seiner Amateurfunkstelle selbst bestimmen.}}}
-{Der Funkamateur muss seine Amateurfunkstelle im Abstand von 2 Jahren einer Störfestigkeitsprüfung durch die BNetzA unterziehen lassen.}
-{Amateurfunkstellen sind hinsichtlich ihrer Störfestigkeit anderen Betriebsmitteln gleichgestellt.}
-{Amateurfunkstellen müssen elektromagnetische Störungen durch andere Betriebsmittel hinnehmen, selbst wenn diese nicht den grundlegenden Anforderungen nach dem Gesetz über die elektromagnetische Verträglichkeit von Betriebsmitteln (EMVG) entsprechen.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NK102}{Um eine Amateurfunkstelle in Bezug auf EMV zu optimieren,~...}{sollten alle hochohmigen Erdverbindungen entfernt werden.}
+            {sollte der Sender mit der Wasserleitung im Haus verbunden werden.}
+            {\textbf{\textcolor{DARCgreen}{sollten alle Einrichtungen mit einer guten HF-Erdung versehen werden.}}}
+            {sollte der Sender mit der Abwasserleitung im Haus verbunden werden.}
+        \end{QQuestion}
 
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Maßnahmen}
-Zur Einhaltung der vorgeschriebenen elektromagnetischen Verträglichkeit (EMV)
-
-\begin{itemize}
-  \item Abschirmen
-  \item Erden
-  \end{itemize}
-    \pause
-    Schutz vor Störungen in beide Richtungen
-
-
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NK101}{In Bezug auf EMV sollten HF-Stufen~...}{gut abgeschirmt werden.}
-{eine besonders abgeschirmte Masseleitung erhalten.}
-{in Kunststoff eingehüllt werden.}
-{nur kapazitive Auskopplungen enthalten.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NK101}{In Bezug auf EMV sollten HF-Stufen~...}{\textbf{\textcolor{DARCgreen}{gut abgeschirmt werden.}}}
-{eine besonders abgeschirmte Masseleitung erhalten.}
-{in Kunststoff eingehüllt werden.}
-{nur kapazitive Auskopplungen enthalten.}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NJ101}{Alle Geräte, die HF-Ströme übertragen, sollten~...}{möglichst gut geschirmt sein.}
-{nicht geerdet sein.}
-{über das Stromversorgungsnetz geerdet sein.}
-{durch Kunststoffabdeckungen geschützt sein.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NJ101}{Alle Geräte, die HF-Ströme übertragen, sollten~...}{\textbf{\textcolor{DARCgreen}{möglichst gut geschirmt sein.}}}
-{nicht geerdet sein.}
-{über das Stromversorgungsnetz geerdet sein.}
-{durch Kunststoffabdeckungen geschützt sein.}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{NK102}{Um eine Amateurfunkstelle in Bezug auf EMV zu optimieren,~...}{sollten alle hochohmigen Erdverbindungen entfernt werden.}
-{sollte der Sender mit der Wasserleitung im Haus verbunden werden.}
-{sollten alle Einrichtungen mit einer guten HF-Erdung versehen werden.}
-{sollte der Sender mit der Abwasserleitung im Haus verbunden werden.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{NK102}{Um eine Amateurfunkstelle in Bezug auf EMV zu optimieren,~...}{sollten alle hochohmigen Erdverbindungen entfernt werden.}
-{sollte der Sender mit der Wasserleitung im Haus verbunden werden.}
-{\textbf{\textcolor{DARCgreen}{sollten alle Einrichtungen mit einer guten HF-Erdung versehen werden.}}}
-{sollte der Sender mit der Abwasserleitung im Haus verbunden werden.}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

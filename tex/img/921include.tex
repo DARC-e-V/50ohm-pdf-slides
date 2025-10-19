@@ -1,0 +1,20 @@
+% Author: Prof. Dr. Matthias Jung
+% Year: 2024
+\begin{tikzpicture}
+    \tikzset{dailpad/.style={draw, fill=DARCgray, minimum width=1.25cm, minimum height=1.25cm, align=center, node distance=0.25cm}}
+    \draw node[dailpad]                (key1){\textbf{1}\\~~~};
+    \draw node[dailpad, right=of key1] (key2){\textbf{2}\\ABC};
+    \draw node[dailpad, right=of key2] (key3){\textbf{3}\\DEF};
+    %
+    \draw node[dailpad, below=of key1] (key4){\textbf{4}\\GHI};
+    \draw node[dailpad, right=of key4] (key5){\textbf{5}\\JKL};
+    \draw node[dailpad, right=of key5] (key6){\textbf{6}\\MNO};
+    %
+    \draw node[dailpad, below=of key4] (key7){\textbf{7}\\PQRS};
+    \draw node[dailpad, right=of key7] (key8){\textbf{8}\\TUV};
+    \draw node[dailpad, right=of key8] (key9){\textbf{9}\\WXYZ};
+    %
+    \draw node[dailpad, below=of key7] (keyA){\textbf{\Huge *}};
+    \draw node[dailpad, right=of keyA] (keyB){\textbf{0}\\~~~};
+    \draw node[dailpad, right=of keyB] (keyC){\textbf{\Huge \#}};
+\end{tikzpicture}

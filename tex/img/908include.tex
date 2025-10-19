@@ -1,0 +1,12 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{tikzpicture}
+    \draw[-Triangle](0.0,0.0) -- ++(5.0,0.0) node[anchor=west] (end) {$f$};
+	\draw[-Triangle](0.0,0.0) -- ++(0.0,1.75);
+    \fill[thick, fill=DARCblue!50](1.5, 0.0) -- ++ (0,1.5) -- ++ ( 0.5, -0.0) -- ++(0, -1.5) coordinate(h1);
+    \fill[thick, fill=DARCblue!50](1.5, 0.0) -- ++ (0,1.5) -- ++ (-0.5, -0.0) -- ++(0, -1.5) coordinate(h2);
+    \draw[thick, black] (1.5, 0) -- ++(0,1.5) node[anchor=south](){$f_T$};
+    %
+    \draw(1.50,0.1) -- ++(0,-0.2) node[anchor=north](caption){\qty{430}{\mega\hertz}};
+    \draw[Triangle-, DARCred](caption.south) ++(0,-0.25) coordinate(start) -- (start-|end) node[midway,fill=white](){\qty{70}{\centi\metre} Band};
+\end{tikzpicture}%

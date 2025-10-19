@@ -1,316 +1,362 @@
-
 \section{Äquivalente isotrope Strahlungsleistung (EIRP) II}
 \label{section:aequivalente_isotrope_strahlungsleistung_eirp_2}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Bei der Berechnung nur die Energie berücksichtigen, die an der Antenne ankommt
-  \item Verluste $a$ durch Kabel, Stecker oder andere Bauteile abziehen
-  \item Erst dann mit dem Gewinnfaktor multiplizieren
-  \item Es folgen diverse allgemeine Formeln für ERP und EIRP
-  \end{itemize}
+\begin{frame}{Vorgehensweise bei den Rechnungen}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \DARCimage{\linewidth}{439include}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \begin{itemize}
+                \item Bei der Berechnung nur die Leistung berücksichtigen, die an der Antenne ankommt
+                \item Verluste $a$ durch Kabel, Stecker oder andere Bauteile abziehen
+                \item Erst dann mit dem Gewinnfaktor multiplizieren
+                \item Es folgen diverse allgemeine Formeln für ERP und EIRP
+            \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{ERP}
-Aus Klasse~N bekannt:
-
-$P_{\mathrm{ERP}} = (P_{\mathrm{Sender}} -- P_{\mathrm{Verluste}}) \cdot G_{\mathrm{Antenne}}$
-    \pause
+    \frametitle{ERP}
+    Aus Klasse~N bekannt:
+    $$P_{\text{ERP}} = (P_{\text{Sender}} - P_{\text{Verluste}}) \cdot G_{\text{Antenne}}$$
     Bei der Rechnung mit dB zu verwenden:
-
-$P_{\mathrm{ERP}} = P_{\mathrm{Sender}} -- a + g_d$
-    \pause
+    $$P_{\text{ERP}} = P_{\text{Sender}} - a + g_d$$
     Aus der Formelsammlung mit Umwandlung von dB in Leistungsfaktor:
-
-$P_{\mathrm{ERP}} = P_{\mathrm{Sender}} \cdot 10^{\frac{g_d -- a}{10\mathrm{dB}}}$
-
-
-
+    $$P_{\text{ERP}} = P_{\text{Sender}} \cdot 10^{\frac{g_d - a}{10\text{dB}}}$$
 \end{frame}
 
 \begin{frame}
-\frametitle{EIRP}
-Umrechnung ERP zu EIRP:
-
-$P_{\mathrm{EIRP}} = P_{\mathrm{ERP}} + 2,15 \mathrm{dB}$
-    \pause
+    \frametitle{EIRP}
+    Umrechnung ERP zu EIRP:
+    $$P_{\text{EIRP}} = P_{\text{ERP}} + 2,15 \text{dB}$$
     Aus der Formelsammlung mit Umwandlung von dB in Leistungsfaktor:
-
-$P_{\mathrm{EIRP}} = P_{\mathrm{Sender}} \cdot 10^{\frac{g_d -- a + 2,15\mathrm{dB}}{10\mathrm{dB}}}$
-    \pause
+    $$P_{\text{EIRP}} = P_{\text{Sender}} \cdot 10^{\frac{g_d - a + 2,15\text{dB}}{10\text{dB}}}$$
     Wenn der Gewinn in dBi angegeben ist:
+    $$P_{\text{EIRP}} = P_{\text{Sender}} \cdot 10^{\frac{g_i - a}{10\text{dB}}}$$
+\end{frame}
 
-$P_{\mathrm{EIRP}} = P_{\mathrm{Sender}} \cdot 10^{\frac{g_i -- a}{10\mathrm{dB}}}$
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EG501}{Die äquivalente isotrope Strahlungsleistung (EIRP) ist~...}{die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}
+            {das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
+            {das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}
+            {die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
+        \end{QQuestion}
 
+    }
+    \only<2>{
+        \begin{QQuestion}{EG501}{Die äquivalente isotrope Strahlungsleistung (EIRP) ist~...}{die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}
+            {das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
+            {\textbf{\textcolor{DARCgreen}{das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}}}
+            {die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
+        \end{QQuestion}
 
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EG502}{Nach welcher der Antworten kann die EIRP berechnet werden?}{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}
+            {$P_{\symup{EIRP}} = (P_{\symup{Sender}} \cdot P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
+            {$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}
+            {$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EG502}{Nach welcher der Antworten kann die EIRP berechnet werden?}{\textbf{\textcolor{DARCgreen}{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}}}
+            {$P_{\symup{EIRP}} = (P_{\symup{Sender}} \cdot P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
+            {$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}
+            {$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ortsfeste Amateurfunkanlage}
+    \begin{itemize}
+        \item Eine ortsfeste Amateurfunkanlage ist nach §~9 BEMFV bei der BNetzA anzuzeigen, wenn eine Strahlungsleistung von \qty{10}{\watt} EIRP überschritten wird.
+        \item Unglücklicherweise wird in der Anlage 1 der AFuV die Leistung seit neustem in ERP angegeben:
+        \item \qty{10}{\watt} EIRP entsprechen einer Leistung von \qty{6,1}{\watt} ERP an einem Dipol
+    \end{itemize}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG501}{Die äquivalente isotrope Strahlungsleistung (EIRP) ist~...}{die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}
-{das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
-{das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}
-{die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG503}{Ein HF-Verstärker für \qty{5,7}{\GHz} speist eine Ausgangsleistung von \qty{250}{\mW} ohne Leitungsverluste direkt in einen Parabolspiegel mit einem Gewinn von \qty{26}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{100}{\W}}
+            {\qty{61}{\W}}
+            {\qty{6,5}{\W}}
+            {\qty{3,4}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG501}{Die äquivalente isotrope Strahlungsleistung (EIRP) ist~...}{die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}
-{das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
-{\textbf{\textcolor{DARCgreen}{das Produkt aus der Leistung, die unmittelbar der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den isotropen Strahler.}}}
-{die durchschnittliche Leistung bei der höchsten Spitze der Modulationshüllkurve, die der Antenne zugeführt wird, und ihrem Gewinn in einer Richtung, bezogen auf den Dipol.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG503}{Ein HF-Verstärker für \qty{5,7}{\GHz} speist eine Ausgangsleistung von \qty{250}{\mW} ohne Leitungsverluste direkt in einen Parabolspiegel mit einem Gewinn von \qty{26}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\textbf{\textcolor{DARCgreen}{\qty{100}{\W}}}}
+            {\qty{61}{\W}}
+            {\qty{6,5}{\W}}
+            {\qty{3,4}{\W}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG502}{Nach welcher der Antworten kann die EIRP berechnet werden?}{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}
-{$P_{\symup{EIRP}} = (P_{\symup{Sender}} \cdot P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
-{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}
-{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG502}{Nach welcher der Antworten kann die EIRP berechnet werden?}{\textbf{\textcolor{DARCgreen}{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}}}
-{$P_{\symup{EIRP}} = (P_{\symup{Sender}} \cdot P_{\symup{Verluste}}) \cdot G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
-{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen isotropen Strahler}
-{$P_{\symup{EIRP}} = (P_{\symup{Sender}} - P_{\symup{Verluste}}) + G_{\symup{Antenne}}$, bezogen auf einen Halbwellendipol}
-\end{QQuestion}
-
-}
+    \frametitle{Lösungsweg}
+    \begin{itemize}
+        \item gegeben: $P_{\mathrm{Sender}} = 250mW$
+        \item gegeben: $g_i = 26\mathrm{dB}$
+        \item gegeben: $a = 0$
+        \item gesucht: $P_{\mathrm{EIRP}}$
+    \end{itemize}
+    \vspace{10pt}
+    \begin{columns}[T]
+        \begin{column}{0.48\linewidth}
+            \pause
+            Möglichkeit 1:
+            \begin{equation*}
+                \begin{split}
+                    P_{\text{EIRP}} & = P_{\text{Sender}} \cdot 10^{\frac{g_i - a}{10\text{dB}}} \\
+                                      & = \qty{250}{\milli\watt} \cdot 10^{\frac{26\text{dB}}{10\text{dB}}}         \\
+                                      & = \qty{250}{\milli\watt} \cdot 398                                              \\
+                                      & \approx \qty{100}{\watt}
+                \end{split}
+            \end{equation*}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \pause
+            Möglichkeit 1:
+            \begin{equation*}
+                \begin{split}
+                    \qty{26}{dB}      = & ~\qty{10}{dB} + \qty{10}{dB} + \qty{3}{dB} + \qty{3}{dB}\\
+                    \rightarrow         & ~10 \cdot 10 \cdot 2 \cdot 2 = 400\\
+                    P_{\mathrm{EIRP}} = & ~\qty{250}{\milli\watt} \cdot 400\\
+                                      = & ~\qty{100}{\watt}
+                \end{split}
+            \end{equation*}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Ortsfeste Amateurfunkanlage}
-Eine ortsfeste Amateurfunkanlage ist nach §~9 BEMFV bei der BNetzA anzuzeigen, wenn eine Strahlungsleistung von \qty{10}{\watt} EIRP überschritten wird.
+    \only<1>{
+        \begin{QQuestion}{EG504}{Ein HF-Verstärker für \qty{10,4}{\GHz} speist eine Ausgangsleistung von \qty{5}{\W} direkt in einen Parabolspiegel mit einem Gewinn von \qty{36}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{180}{\W}}
+            {\qty{12195}{\W}}
+            {\qty{20000}{\W}}
+            {\qty{110}{\W}}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EG504}{Ein HF-Verstärker für \qty{10,4}{\GHz} speist eine Ausgangsleistung von \qty{5}{\W} direkt in einen Parabolspiegel mit einem Gewinn von \qty{36}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{180}{\W}}
+            {\qty{12195}{\W}}
+            {\textbf{\textcolor{DARCgreen}{\qty{20000}{\W}}}}
+            {\qty{110}{\W}}
+        \end{QQuestion}
+
+    }
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG503}{Ein HF-Verstärker für \qty{5,7}{\GHz} speist eine Ausgangsleistung von \qty{250}{\mW} ohne Leitungsverluste direkt in einen Parabolspiegel mit einem Gewinn von \qty{26}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{100}{\W}}
-{\qty{61}{\W}}
-{\qty{6,5}{\W}}
-{\qty{3,4}{\W}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG511}{Sie möchten für Ihre Sendeanlage keine Anzeige einer ortsfesten Amateurfunkanlage nach \S~9~BEMFV abgeben. Wie hoch darf die Sendeleistung für ihre Vertikalantenne mit \qty{5,15}{\dBi} Gewinn ohne Berücksichtigung der Kabelverluste maximal sein, damit die Strahlungsleistung von \qty{10}{\W} EIRP nicht überschritten wird?}{\qty{3}{\W}}
+            {\qty{10}{\W}}
+            {\qty{5}{\W}}
+            {\qty{2}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG503}{Ein HF-Verstärker für \qty{5,7}{\GHz} speist eine Ausgangsleistung von \qty{250}{\mW} ohne Leitungsverluste direkt in einen Parabolspiegel mit einem Gewinn von \qty{26}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\textbf{\textcolor{DARCgreen}{\qty{100}{\W}}}}
-{\qty{61}{\W}}
-{\qty{6,5}{\W}}
-{\qty{3,4}{\W}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG511}{Sie möchten für Ihre Sendeanlage keine Anzeige einer ortsfesten Amateurfunkanlage nach \S~9~BEMFV abgeben. Wie hoch darf die Sendeleistung für ihre Vertikalantenne mit \qty{5,15}{\dBi} Gewinn ohne Berücksichtigung der Kabelverluste maximal sein, damit die Strahlungsleistung von \qty{10}{\W} EIRP nicht überschritten wird?}{\textbf{\textcolor{DARCgreen}{\qty{3}{\W}}}}
+            {\qty{10}{\W}}
+            {\qty{5}{\W}}
+            {\qty{2}{\W}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{Lösungsweg}
-\begin{itemize}
-  \item gegeben: $P_{\mathrm{Sender}} = 250mW$
-  \item gegeben: $g_i = 26\mathrm{dB}$
-  \item gegeben: $a = 0$
-  \item gesucht: $P_{\mathrm{EIRP}}$
-  \end{itemize}
+    \frametitle{Lösungsweg}
+    \begin{itemize}
+        \item gegeben: $P_{\text{EIRP}} = 10W$
+        \item gegeben: $g_i = \qty{5,15}{dB}$
+        \item gegeben: $a = 0$
+        \item gesucht: $P_{\text{Sender}}$
+    \end{itemize}
     \pause
-    \begin{equation}\begin{split} \nonumber P_{\mathrm{EIRP}} &= P_{\mathrm{Sender}} \cdot 10^{\frac{g_i -- a}{10\mathrm{dB}}}\\ &= 250mW \cdot 10^{\frac{26\mathrm{dB}}{10\mathrm{dB}}}\\ &= 250mW \cdot 398\\ &\approx 100W \end{split}\end{equation}
 
-
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG504}{Ein HF-Verstärker für \qty{10,4}{\GHz} speist eine Ausgangsleistung von \qty{5}{\W} direkt in einen Parabolspiegel mit einem Gewinn von \qty{36}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{180}{\W}}
-{\qty{12195}{\W}}
-{\qty{20000}{\W}}
-{\qty{110}{\W}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG504}{Ein HF-Verstärker für \qty{10,4}{\GHz} speist eine Ausgangsleistung von \qty{5}{\W} direkt in einen Parabolspiegel mit einem Gewinn von \qty{36}{\dBi} ein. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{180}{\W}}
-{\qty{12195}{\W}}
-{\textbf{\textcolor{DARCgreen}{\qty{20000}{\W}}}}
-{\qty{110}{\W}}
-\end{QQuestion}
-
-}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG511}{Sie möchten für Ihre Sendeanlage keine Anzeige einer ortsfesten Amateurfunkanlage nach \S~9~BEMFV abgeben. Wie hoch darf die Sendeleistung für ihre Vertikalantenne mit \qty{5,15}{\dBi} Gewinn ohne Berücksichtigung der Kabelverluste maximal sein, damit die Strahlungsleistung von \qty{10}{\W} EIRP nicht überschritten wird?}{\qty{3}{\W}}
-{\qty{10}{\W}}
-{\qty{5}{\W}}
-{\qty{2}{\W}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG511}{Sie möchten für Ihre Sendeanlage keine Anzeige einer ortsfesten Amateurfunkanlage nach \S~9~BEMFV abgeben. Wie hoch darf die Sendeleistung für ihre Vertikalantenne mit \qty{5,15}{\dBi} Gewinn ohne Berücksichtigung der Kabelverluste maximal sein, damit die Strahlungsleistung von \qty{10}{\W} EIRP nicht überschritten wird?}{\textbf{\textcolor{DARCgreen}{\qty{3}{\W}}}}
-{\qty{10}{\W}}
-{\qty{5}{\W}}
-{\qty{2}{\W}}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Lösungsweg}
-\begin{itemize}
-  \item gegeben: $P_{\mathrm{EIRP}} = 10W$
-  \item gegeben: $g_i = 5,15\mathrm{dB}$
-  \item gegeben: $a = 0$
-  \item gesucht: $P_{\mathrm{Sender}}$
-  \end{itemize}
-    \pause
-    \begin{equation}\begin{split} \nonumber P_{\mathrm{EIRP}} &= P_{\mathrm{Sender}} \cdot 10^{\frac{g_i -- a}{10\mathrm{dB}}}\\ \Rightarrow P_{\mathrm{Sender}} &= \dfrac{P_{\mathrm{EIRP}}}{10^{\frac{g_i -- a}{10\mathrm{dB}}}}\\ &= \dfrac{10W}{10^{\frac{5,15\mathrm{dB}}{10\mathrm{dB}}}}\\ &\approx \frac{10W}{3,27} \approx 3W \end{split}\end{equation}
+    \vspace{1pt}
+    \begin{columns}[T]
+        \begin{column}{0.48\linewidth}
+            \pause
+            Möglichkeit 1:
+            \begin{equation*}
+                \begin{split}
+                    P_{\text{EIRP}}               &= P_{\text{Sender}} \cdot 10^{\frac{g_i -- a}{10\text{dB}}}\\
+                    \Rightarrow P_{\text{Sender}} &= \dfrac{P_{\text{EIRP}}}{10^{\frac{g_i -- a}{10\text{dB}}}}\\
+                                                    &= \dfrac{\qty{10}{\watt}}{10^{\frac{5,15\text{dB}}{10\text{dB}}}}\\
+                                                    &\approx \frac{\qty{10}{\watt}}{3,27} \approx 3W
+                \end{split}
+            \end{equation*}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \pause
+            Möglichkeit 2:
+            \begin{equation*}
+                \begin{split}
+                    \qty{5,15}{dB}      = & ~\qty{3}{dB} + \qty{2,15}{dB}\\
+                    \rightarrow           & ~2 \cdot 1,64 = 3,28\\
+                    P_{\mathrm{Sender}} = & ~\qty{10}{\watt}/3,28\\
+                                  \approx & ~\qty{3}{\watt}
+                \end{split}
+            \end{equation*}
+        \end{column}
+    \end{columns}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG505}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Antenne mit einem Gewinn von \qty{11}{\dBi} angeschlossen. Die Dämpfung des Kabels beträgt \qty{1}{\decibel}. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{164}{\W}}
-{\qty{1000}{\W}}
-{\qty{100}{\W}}
-{\qty{1640}{\W}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG505}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Antenne mit einem Gewinn von \qty{11}{\dBi} angeschlossen. Die Dämpfung des Kabels beträgt \qty{1}{\decibel}. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{164}{\W}}
+            {\qty{1000}{\W}}
+            {\qty{100}{\W}}
+            {\qty{1640}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG505}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Antenne mit einem Gewinn von \qty{11}{\dBi} angeschlossen. Die Dämpfung des Kabels beträgt \qty{1}{\decibel}. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{164}{\W}}
-{\textbf{\textcolor{DARCgreen}{\qty{1000}{\W}}}}
-{\qty{100}{\W}}
-{\qty{1640}{\W}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG505}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Antenne mit einem Gewinn von \qty{11}{\dBi} angeschlossen. Die Dämpfung des Kabels beträgt \qty{1}{\decibel}. Wie hoch ist die äquivalente Strahlungsleistung (EIRP)?}{\qty{164}{\W}}
+            {\textbf{\textcolor{DARCgreen}{\qty{1000}{\W}}}}
+            {\qty{100}{\W}}
+            {\qty{1640}{\W}}
+        \end{QQuestion}
 
-}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG507}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Dipol-Antenne angeschlossen. Die Dämpfung des Kabels beträgt \qty{10}{\decibel}. Wie hoch ist die äquivalente isotrope Strahlungsleistung (EIRP)?}{\qty{16,4}{\W}}
-{\qty{90}{\W}}
-{\qty{164}{\W}}
-{\qty{10}{\W}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG507}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Dipol-Antenne angeschlossen. Die Dämpfung des Kabels beträgt \qty{10}{\decibel}. Wie hoch ist die äquivalente isotrope Strahlungsleistung (EIRP)?}{\textbf{\textcolor{DARCgreen}{\qty{16,4}{\W}}}}
-{\qty{90}{\W}}
-{\qty{164}{\W}}
-{\qty{10}{\W}}
-\end{QQuestion}
-
-}
+    }
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG506}{Ein Sender mit \qty{75}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2,15}{\decibel} (Faktor $1,64$) Kabelverluste hat, an eine Dipol-Antenne angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\qty{75}{\W}}
-{\qty{123}{\W}}
-{\qty{45,7}{\W}}
-{\qty{60,6}{\W}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG507}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Dipol-Antenne angeschlossen. Die Dämpfung des Kabels beträgt \qty{10}{\decibel}. Wie hoch ist die äquivalente isotrope Strahlungsleistung (EIRP)?}{\qty{16,4}{\W}}
+            {\qty{90}{\W}}
+            {\qty{164}{\W}}
+            {\qty{10}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG506}{Ein Sender mit \qty{75}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2,15}{\decibel} (Faktor $1,64$) Kabelverluste hat, an eine Dipol-Antenne angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\textbf{\textcolor{DARCgreen}{\qty{75}{\W}}}}
-{\qty{123}{\W}}
-{\qty{45,7}{\W}}
-{\qty{60,6}{\W}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG507}{An einen Sender mit \qty{100}{\W} Ausgangsleistung ist eine Dipol-Antenne angeschlossen. Die Dämpfung des Kabels beträgt \qty{10}{\decibel}. Wie hoch ist die äquivalente isotrope Strahlungsleistung (EIRP)?}{\textbf{\textcolor{DARCgreen}{\qty{16,4}{\W}}}}
+            {\qty{90}{\W}}
+            {\qty{164}{\W}}
+            {\qty{10}{\W}}
+        \end{QQuestion}
 
-}
+    }
+
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EG506}{Ein Sender mit \qty{75}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2,15}{\decibel} (Faktor $1,64$) Kabelverluste hat, an eine Dipol-Antenne angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\qty{75}{\W}}
+            {\qty{123}{\W}}
+            {\qty{45,7}{\W}}
+            {\qty{60,6}{\W}}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EG506}{Ein Sender mit \qty{75}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2,15}{\decibel} (Faktor $1,64$) Kabelverluste hat, an eine Dipol-Antenne angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\textbf{\textcolor{DARCgreen}{\qty{75}{\W}}}}
+            {\qty{123}{\W}}
+            {\qty{45,7}{\W}}
+            {\qty{60,6}{\W}}
+        \end{QQuestion}
+
+    }
 
 \end{frame}
 
 \begin{frame}\begin{itemize}
-  \item Ist der Antennengewinn bezogen auf den Dipol angegeben, müssen wir den Gewinn des Dipols noch zusätzlich berücksichtigen, wenn nach der EIRP gefragt ist.
-  \end{itemize}
+        \item Ist der Antennengewinn bezogen auf den Dipol angegeben, müssen wir den Gewinn des Dipols noch zusätzlich berücksichtigen, wenn nach der EIRP gefragt ist.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG508}{Ein Sender mit \qty{5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{5}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\qty{9,98}{\W}}
-{\qty{8,2}{\W}}
-{\qty{41,2}{\W}}
-{\qty{16,4}{\W}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG508}{Ein Sender mit \qty{5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{5}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\qty{9,98}{\W}}
+            {\qty{8,2}{\W}}
+            {\qty{41,2}{\W}}
+            {\qty{16,4}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG508}{Ein Sender mit \qty{5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{5}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\qty{9,98}{\W}}
-{\qty{8,2}{\W}}
-{\qty{41,2}{\W}}
-{\textbf{\textcolor{DARCgreen}{\qty{16,4}{\W}}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG508}{Ein Sender mit \qty{5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{2}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{5}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\qty{9,98}{\W}}
+            {\qty{8,2}{\W}}
+            {\qty{41,2}{\W}}
+            {\textbf{\textcolor{DARCgreen}{\qty{16,4}{\W}}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{Lösungsweg}
-\begin{itemize}
-  \item gegeben: $P_{\mathrm{Sender}} = 5W$
-  \item gegeben: $g_d = 5\mathrm{dB}$
-  \item gegeben: $a = 2\mathrm{dB}$
-  \item gesucht: $P_{\mathrm{EIRP}}$
-  \end{itemize}
+    \frametitle{Lösungsweg}
+    \begin{itemize}
+        \item gegeben: $P_{\mathrm{Sender}} = 5W$
+        \item gegeben: $g_d = 5\mathrm{dB}$
+        \item gegeben: $a = 2\mathrm{dB}$
+        \item gesucht: $P_{\mathrm{EIRP}}$
+    \end{itemize}
     \pause
-    \begin{equation}\begin{split} \nonumber P_{\mathrm{EIRP}} &= P_{\mathrm{Sender}} \cdot 10^{\frac{g_d -- a + 2,15\mathrm{dB}}{10\mathrm{dB}}}\\ &= 5W \cdot 10^{\frac{5\mathrm{dB} -- 2\mathrm{dB} + 2,15\mathrm{dB}}{10\mathrm{dB}}}\\ &= 5W \cdot 3,27\\ &\approx 16,4W \end{split}\end{equation}
+    \begin{equation}
+        \begin{split}
+            P_{\text{EIRP}} &= P_{\text{Sender}} \cdot 10^{\frac{g_d - a + 2,15\text{dB}}{10\text{dB}}}\\
+                            &= \qty{5}{\watt} \cdot 10^{\frac{5\text{dB} - 2\text{dB} + 2,15\text{dB}}{10\text{dB}}}\\
+                            &= \qty{5}{\watt} \cdot 3,27\\ &\approx \qty{16,4}{\watt}
+        \end{split}
+    \end{equation}
+\end{frame}
 
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EG509}{Ein Sender mit \qty{0,6}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{11}{\decibel}~Gewinn (auf Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\qty{12,7}{\W}}
+            {\qty{6,0}{\W}}
+            {\qty{7,8}{\W}}
+            {\qty{9,8}{\W}}
+        \end{QQuestion}
 
+    }
+    \only<2>{
+        \begin{QQuestion}{EG509}{Ein Sender mit \qty{0,6}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{11}{\decibel}~Gewinn (auf Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\qty{12,7}{\W}}
+            {\qty{6,0}{\W}}
+            {\qty{7,8}{\W}}
+            {\textbf{\textcolor{DARCgreen}{\qty{9,8}{\W}}}}
+        \end{QQuestion}
+
+    }
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG509}{Ein Sender mit \qty{0,6}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{11}{\decibel}~Gewinn (auf Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\qty{12,7}{\W}}
-{\qty{6,0}{\W}}
-{\qty{7,8}{\W}}
-{\qty{9,8}{\W}}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG510}{Ein Sender mit \qty{8,5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1,5}{\decibel} Kabelverluste hat, an eine Antenne mit \qty{0}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\qty{9,9}{\W}}
+            {\qty{19,7}{\W}}
+            {\qty{12,0}{\W}}
+            {\qty{6,0}{\W}}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG509}{Ein Sender mit \qty{0,6}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1}{\decibel} Kabelverluste hat, an eine Richtantenne mit \qty{11}{\decibel}~Gewinn (auf Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne maximal abgestrahlt?}{\qty{12,7}{\W}}
-{\qty{6,0}{\W}}
-{\qty{7,8}{\W}}
-{\textbf{\textcolor{DARCgreen}{\qty{9,8}{\W}}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG510}{Ein Sender mit \qty{8,5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1,5}{\decibel} Kabelverluste hat, an eine Antenne mit \qty{0}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\textbf{\textcolor{DARCgreen}{\qty{9,9}{\W}}}}
+            {\qty{19,7}{\W}}
+            {\qty{12,0}{\W}}
+            {\qty{6,0}{\W}}
+        \end{QQuestion}
 
-}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EG510}{Ein Sender mit \qty{8,5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1,5}{\decibel} Kabelverluste hat, an eine Antenne mit \qty{0}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\qty{9,9}{\W}}
-{\qty{19,7}{\W}}
-{\qty{12,0}{\W}}
-{\qty{6,0}{\W}}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EG510}{Ein Sender mit \qty{8,5}{\W} Ausgangsleistung ist über eine Antennenleitung, die \qty{1,5}{\decibel} Kabelverluste hat, an eine Antenne mit \qty{0}{\decibel} Gewinn (auf den Dipol bezogen) angeschlossen. Welche EIRP wird von der Antenne abgestrahlt?}{\textbf{\textcolor{DARCgreen}{\qty{9,9}{\W}}}}
-{\qty{19,7}{\W}}
-{\qty{12,0}{\W}}
-{\qty{6,0}{\W}}
-\end{QQuestion}
-
-}
+    }
 
 \end{frame}%ENDCONTENT

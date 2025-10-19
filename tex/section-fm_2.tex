@@ -1,175 +1,168 @@
-
 \section{Frequenzmodulation (FM) II}
 \label{section:fm_2}
-\begin{frame}%STARTCONTENT
 
-\frametitle{Frequenzmodulation}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}
+    \only<1>{
+        \begin{PQuestion}{EE301}{Welches Modulationsverfahren zeigt das Bild?}{AM}
+            {FM}
+            {USB}
+            {LSB}
+            {\DARCimage{1.0\linewidth}{301include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{PQuestion}{EE301}{Welches Modulationsverfahren zeigt das Bild?}{AM}
+            {\textbf{\textcolor{DARCgreen}{FM}}}
+            {USB}
+            {LSB}
+            {\DARCimage{1.0\linewidth}{301include}}\end{PQuestion}
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EE302}{FM hat gegenüber SSB den Vorteil der~...}{geringeren Leistungsaufnahme bei fehlender Modulation.}
+            {geringen Anforderungen an die Bandbreite.}
+            {größeren Entfernungsüberbrückung.}
+            {geringeren Beeinflussung durch Amplitudenstörungen.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EE302}{FM hat gegenüber SSB den Vorteil der~...}{geringeren Leistungsaufnahme bei fehlender Modulation.}
+            {geringen Anforderungen an die Bandbreite.}
+            {größeren Entfernungsüberbrückung.}
+            {\textbf{\textcolor{DARCgreen}{geringeren Beeinflussung durch Amplitudenstörungen.}}}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EE303}{Welches der nachfolgenden Modulationsverfahren wird am wenigsten durch Amplitudenstörungen in Kraftfahrzeugen beeinträchtigt?}{FM}
+            {SSB}
+            {DSB}
+            {AM}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EE303}{Welches der nachfolgenden Modulationsverfahren wird am wenigsten durch Amplitudenstörungen in Kraftfahrzeugen beeinträchtigt?}{\textbf{\textcolor{DARCgreen}{FM}}}
+            {SSB}
+            {DSB}
+            {AM}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Frequenzhub}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Lautstärkeinformation wird bei FM durch \emph{Trägerfrequenzauslenkung} (Frequenzhub) übertragen
+                \item Lautes NF-Signal\\$\rightarrow$ größerer Hub\\$\rightarrow$ höhere Bandbreite
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.85\linewidth}{827include}
+                \caption{\scriptsize Trägerauslenkung bei Frequenzmodulation}
+                \label{e_frequenzmodulation_frequenzhub}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bandbreite bei FM}
+    \begin{columns}
+        \begin{column}{0.55\textwidth}
+            \begin{itemize}
+                \item FM erzeugt auch Seitenbänder
+                \item Im Amateurfunk wird ein geringer Hub verwendet ($\Delta f_T=\qty{3}{\kilo\hertz}$)
+                \item Annahme: Sprachsignal ($f_\text{mod~max}=\qty{3}{\kilo\hertz}$)
+            \end{itemize}
+            \begin{block}{Ungefähre Bandbreite (Carson Bandbreite)}
+                $B \approx 2 \cdot (\Delta f_T + f_\text{mod~max})$
+            \end{block}
+            \begin{exampleblock}{Bandbreiten Beispiele}
+                \begin{itemize}
+                    \item Amateurfunk: $B \approx 2 \cdot (\SI{3}{\kilo\hertz} + \SI{3}{\kilo\hertz}) \approx \SI{12}{\kilo\hertz} $
+                    \item UKW-Hörfunk (mono): $B \approx 2 \cdot (75 + 15) \approx \SI{180}{\kilo\hertz}$
+                \end{itemize}
+            \end{exampleblock}
+        \end{column}
+        \begin{column}{0.43\textwidth}
+            \scriptsize
+            \DARCimage{1.0\linewidth}{910include}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EE306}{Wodurch wird bei Frequenzmodulation die Lautstärke-Information übertragen?}{Durch die Häufigkeit der Trägerfrequenzänderung.}
+            {Durch die Trägerfrequenzauslenkung.}
+            {Durch die Häufigkeit des Frequenzhubes.}
+            {Durch die Größe der Amplitude des HF-Signals.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EE306}{Wodurch wird bei Frequenzmodulation die Lautstärke-Information übertragen?}{Durch die Häufigkeit der Trägerfrequenzänderung.}
+            {\textbf{\textcolor{DARCgreen}{Durch die Trägerfrequenzauslenkung.}}}
+            {Durch die Häufigkeit des Frequenzhubes.}
+            {Durch die Größe der Amplitude des HF-Signals.}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EE304}{Größerer Frequenzhub führt bei einem FM-Sender zu~...}{einer Erhöhung der Senderausgangsleistung.}
+            {einer größeren HF-Bandbreite.}
+            {einer Erhöhung der Amplitude der Trägerfrequenz.}
+            {einer Reduktion der Amplituden der Seitenbänder.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EE304}{Größerer Frequenzhub führt bei einem FM-Sender zu~...}{einer Erhöhung der Senderausgangsleistung.}
+            {\textbf{\textcolor{DARCgreen}{einer größeren HF-Bandbreite.}}}
+            {einer Erhöhung der Amplitude der Trägerfrequenz.}
+            {einer Reduktion der Amplituden der Seitenbänder.}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Modulation}
     \begin{itemize}
-  \item Konstante Amplitude
-  \item Veränderliche Frequenz
-  \item Relativ unempfindlich gegenüber Amplitudenstörungen (z.B. Kfz, Blitze)
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{301include}
-    \caption{\scriptsize Frequenzmodulation}
-    \label{e_fm}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+        \item Zur Einschränkung der Bandbreite wird das Mikrofonsignal in der Amplitude begrenzt
+        \item Dieses Signal wird auf den Träger mittels FM aufmoduliert
+        \item Der Frequenzhub kann dabei fest sein oder einstellbar mittels eines Hub-Reglers
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{EE301}{Welches Modulationsverfahren zeigt das Bild?}{AM}
-{FM}
-{USB}
-{LSB}
-{\DARCimage{1.0\linewidth}{301include}}\end{PQuestion}
+    \only<1>{
+        \begin{QQuestion}{EE305}{Durch welche Maßnahme kann eine zu große Bandbreite einer FM-Aussendung verringert werden? Durch die Verringerung der~...}{Vorspannungsreglereinstellung.}
+            {HF-Begrenzung.}
+            {Hubeinstellung.}
+            {Trägerfrequenz.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{PQuestion}{EE301}{Welches Modulationsverfahren zeigt das Bild?}{AM}
-{\textbf{\textcolor{DARCgreen}{FM}}}
-{USB}
-{LSB}
-{\DARCimage{1.0\linewidth}{301include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EE305}{Durch welche Maßnahme kann eine zu große Bandbreite einer FM-Aussendung verringert werden? Durch die Verringerung der~...}{Vorspannungsreglereinstellung.}
+            {HF-Begrenzung.}
+            {\textbf{\textcolor{DARCgreen}{Hubeinstellung.}}}
+            {Trägerfrequenz.}
+        \end{QQuestion}
 
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EE302}{FM hat gegenüber SSB den Vorteil der~...}{geringeren Leistungsaufnahme bei fehlender Modulation.}
-{geringen Anforderungen an die Bandbreite.}
-{größeren Entfernungsüberbrückung.}
-{geringeren Beeinflussung durch Amplitudenstörungen.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EE302}{FM hat gegenüber SSB den Vorteil der~...}{geringeren Leistungsaufnahme bei fehlender Modulation.}
-{geringen Anforderungen an die Bandbreite.}
-{größeren Entfernungsüberbrückung.}
-{\textbf{\textcolor{DARCgreen}{geringeren Beeinflussung durch Amplitudenstörungen.}}}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EE303}{Welches der nachfolgenden Modulationsverfahren wird am wenigsten durch Amplitudenstörungen in Kraftfahrzeugen beeinträchtigt?}{FM}
-{SSB}
-{DSB}
-{AM}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EE303}{Welches der nachfolgenden Modulationsverfahren wird am wenigsten durch Amplitudenstörungen in Kraftfahrzeugen beeinträchtigt?}{\textbf{\textcolor{DARCgreen}{FM}}}
-{SSB}
-{DSB}
-{AM}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Frequenzhub}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Lautstärkeinformation wird bei FM durch \emph{Trägerfrequenzauslenkung} (Frequenzhub) übertragen
-  \item Lautes NF-Signal $\rightarrow$ größerer Hub $\rightarrow$ höhere Bandbreite
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{827include}
-    \caption{\scriptsize Trägerauslenkung bei Frequenzmodulation}
-    \label{e_frequenzmodulation_frequenzhub}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EE306}{Wodurch wird bei Frequenzmodulation die Lautstärke-Information übertragen?}{Durch die Häufigkeit der Trägerfrequenzänderung.}
-{Durch die Trägerfrequenzauslenkung.}
-{Durch die Häufigkeit des Frequenzhubes.}
-{Durch die Größe der Amplitude des HF-Signals.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EE306}{Wodurch wird bei Frequenzmodulation die Lautstärke-Information übertragen?}{Durch die Häufigkeit der Trägerfrequenzänderung.}
-{\textbf{\textcolor{DARCgreen}{Durch die Trägerfrequenzauslenkung.}}}
-{Durch die Häufigkeit des Frequenzhubes.}
-{Durch die Größe der Amplitude des HF-Signals.}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EE304}{Größerer Frequenzhub führt bei einem FM-Sender zu~...}{einer Erhöhung der Senderausgangsleistung.}
-{einer größeren HF-Bandbreite.}
-{einer Erhöhung der Amplitude der Trägerfrequenz.}
-{einer Reduktion der Amplituden der Seitenbänder.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EE304}{Größerer Frequenzhub führt bei einem FM-Sender zu~...}{einer Erhöhung der Senderausgangsleistung.}
-{\textbf{\textcolor{DARCgreen}{einer größeren HF-Bandbreite.}}}
-{einer Erhöhung der Amplitude der Trägerfrequenz.}
-{einer Reduktion der Amplituden der Seitenbänder.}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Modulation}
-\begin{itemize}
-  \item Zur Einschränkung der Bandbreite wird das Mikrofonsignal in der Amplitude begrenzt
-  \item Dieses Signal wird auf den Träger mittels FM aufmoduliert
-  \item Der Frequenzhub kann dabei fest sein oder einstellbar mittels eines Hub-Reglers
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EE305}{Durch welche Maßnahme kann eine zu große Bandbreite einer FM-Aussendung verringert werden? Durch die Verringerung der~...}{Vorspannungsreglereinstellung.}
-{HF-Begrenzung.}
-{Hubeinstellung.}
-{Trägerfrequenz.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EE305}{Durch welche Maßnahme kann eine zu große Bandbreite einer FM-Aussendung verringert werden? Durch die Verringerung der~...}{Vorspannungsreglereinstellung.}
-{HF-Begrenzung.}
-{\textbf{\textcolor{DARCgreen}{Hubeinstellung.}}}
-{Trägerfrequenz.}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

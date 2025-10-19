@@ -1,0 +1,95 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{tikzpicture}[scale=0.7, every node/.style={scale=0.5}]
+    \draw(0,0) coordinate(feed)
+        to [open] ++(0,0.625) coordinate(up1)
+        to [american inductor] ++(0,1.25) coordinate(up2) 
+        to [american inductor] ++(0,1.25) coordinate(up3)
+        to [american inductor] ++(0,1.25) coordinate(up4);
+    \draw(feed) 
+        to [open] ++(0,-0.625) coordinate(dn1)
+        to [american inductor, mirror] ++(0,-1.25) coordinate(dn2) 
+        to [american inductor, mirror] ++(0,-1.25) coordinate(dn3)
+        to [american inductor, mirror] ++(0,-1.25) coordinate(dn4);
+    %
+    \draw(feed) to [open] ++(1,+0.25) coordinate(c1a);
+    \draw(feed) to [open] ++(1,-0.25) coordinate(c1b);
+    \draw(c1a) to [C] (c1b);
+    %
+    \draw(c1a) to [open] ++(1,+0) coordinate(c2a);
+    \draw(c1b) to [open] ++(1,-0) coordinate(c2b);
+    \draw(c2a) to [C] (c2b);
+    %
+    \draw(c2a) to [open] ++(1,+0) coordinate(c3a);
+    \draw(c2b) to [open] ++(1,-0) coordinate(c3b);
+    \draw(c3a) to [C] (c3b);
+    %
+    \draw(c3a) to [open] ++(1,+0) coordinate(c4a);
+    \draw(c3b) to [open] ++(1,-0) coordinate(c4b);
+    \draw(c4a) to [C] (c4b);
+    %
+    \draw[dashed, DARCred](up4) edge [bend left=45 ] node(i1)[inputarrow, rotate=135, scale=2, fill=DARCred]{} (c4a);
+    \draw[dashed, DARCred](up3) edge [bend left=45 ] node(i2)[inputarrow, rotate=135, scale=2, fill=DARCred]{} (c3a);
+    \draw[dashed, DARCred](up2) edge [bend left=45 ] node(i3)[inputarrow, rotate=135, scale=2, fill=DARCred]{} (c2a);
+    \draw[dashed, DARCred](up1) edge [bend left=45 ] node(i4)[inputarrow, rotate=135, scale=2, fill=DARCred]{} (c1a);
+    \draw[dashed, DARCred](dn4) edge [bend right=45]            (c4b);
+    \draw[dashed, DARCred](dn3) edge [bend right=45]            (c3b);
+    \draw[dashed, DARCred](dn2) edge [bend right=45]            (c2b);
+    \draw[dashed, DARCred](dn1) edge [bend right=45]            (c1b);
+    %
+    \draw[DARCred](i1) node[above right, scale=2, DARCred](){\textcolor{DARCred}{$I_1$}};
+    \draw[DARCred](i2) node[above right, scale=2, DARCred](){\textcolor{DARCred}{$I_2$}};
+    \draw[DARCred](i3) node[above right, scale=2, DARCred](){\textcolor{DARCred}{$I_3$}};
+    \draw[DARCred](i4) node[above right, scale=2, DARCred](){\textcolor{DARCred}{$I_4$}};
+    %
+    \draw(up1) ++(-1.00,+0.375) coordinate(up1a);
+    \draw(up2) ++(-1.00,-0.375) coordinate(up2a);
+    \draw(up1a) to [C] (up2a);
+    \draw[dashed, DARCred](up1)  to [short, bend left=45] (up1a);
+    \draw[dashed, DARCred](up2a) to [short, bend left=45] (up2);
+    %
+    \draw(up2) ++(-1.00,+0.375) coordinate(up2a);
+    \draw(up3) ++(-1.00,-0.375) coordinate(up3a);
+    \draw(up2a) to [C] (up3a);
+    \draw[dashed, DARCred](up2)  to [short, bend left=45] (up2a);
+    \draw[dashed, DARCred](up3a) to [short, bend left=45] (up3);
+    %
+    \draw(up3) ++(-1.00,+0.375) coordinate(up3a);
+    \draw(up4) ++(-1.00,-0.375) coordinate(up4a);
+    \draw(up3a) to [C] (up4a);
+    \draw[dashed, DARCred](up3)  to [short, bend left=45] (up3a);
+    \draw[dashed, DARCred](up4a) to [short, bend left=45] (up4);
+    %
+    \draw(dn1) ++(-1.00,-0.375) coordinate(dn1a);
+    \draw(dn2) ++(-1.00,+0.375) coordinate(dn2a);
+    \draw(dn1a) to [C] (dn2a);
+    \draw[dashed, DARCred](dn1)  to [short, bend right=45] (dn1a);
+    \draw[dashed, DARCred](dn2a) to [short, bend right=45] (dn2);
+    %
+    \draw(dn2) ++(-1.00,-0.375) coordinate(dn2a);
+    \draw(dn3) ++(-1.00,+0.375) coordinate(dn3a);
+    \draw(dn2a) to [C] (dn3a);
+    \draw[dashed, DARCred](dn2)  to [short, bend right=45] (dn2a);
+    \draw[dashed, DARCred](dn3a) to [short, bend right=45] (dn3);
+    %
+    \draw(dn3) ++(-1.00,-0.375) coordinate(dn3a);
+    \draw(dn4) ++(-1.00,+0.375) coordinate(dn4a);
+    \draw(dn3a) to [C] (dn4a);
+    \draw[dashed, DARCred](dn3)  to [short, bend right=45] (dn3a);
+    \draw[dashed, DARCred](dn4a) to [short, bend right=45] (dn4);
+    %%%%%%%
+    \draw[ultra thick](0,0) to [open] ++(6,+0.1) to [short] ++(0.5,0) coordinate(start) to [short] (start|-up4);
+    \draw[ultra thick](0,0) to [open] ++(6,-0.1) to [short] ++(0.5,0) coordinate(start) to [short] (start|-dn4);
+    %
+    \draw[very thick, DARCred, -Triangle] (feed|-dn1) to [open] ++(8.50,0) coordinate(h) to [short] (h|-up1) node[above, scale=2](){$I_4$};
+    \draw[very thick, DARCred, -Triangle] (feed|-dn2) to [open] ++(8.00,0) coordinate(h) to [short] (h|-up2) node[above, scale=2](){$I_3$};
+    \draw[very thick, DARCred, -Triangle] (feed|-dn3) to [open] ++(7.50,0) coordinate(h) to [short] (h|-up3) node[above, scale=2](){$I_2$};
+    \draw[very thick, DARCred, -Triangle] (feed|-dn4) to [open] ++(7.00,0) coordinate(h) to [short] (h|-up4) node[above, scale=2](){$I_1$};
+    %%%%%%%
+    \draw[ultra thick](0,0) to [open] ++(10,+0.1) to [short] ++(0.5,0) coordinate(start) to [short] (start|-up4) coordinate(foo);
+    \draw[ultra thick](0,0) to [open] ++(10,-0.1) to [short] ++(0.5,0) coordinate(start) to [short] (start|-dn4) coordinate(bar);
+    \draw (0,0) ++(12,0) coordinate(help);
+    
+    \draw[very thick, DARCred, rotate=90] (foo) sin (help);
+    \draw[very thick, DARCred, rotate=90] (help) cos (bar);
+\end{tikzpicture}

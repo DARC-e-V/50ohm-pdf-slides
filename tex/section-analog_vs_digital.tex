@@ -1,35 +1,26 @@
 
 \section{Analog vs. Digital}
 \label{section:analog_vs_digital}
-\begin{frame}%STARTCONTENT
-
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}{Analog vs. Digital}%STARTCONTENT
     Bei der Informationsübertragung unterscheidet man grundsätzlich zwischen analogen und digitalen Verfahren.
-
-\begin{itemize}
-  \item \emph{Digital}: in Stufen, nur bestimmte Werte, keine Werte dazwischen
-  \item \emph{Analog}: kontinuierlich, beliebige Zwischenwerte
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{411include}
-    \caption{\scriptsize Digitales Signal (abgestuft)}
-    \label{n_digital_einleitung_digitales_signal}
-\end{figure}
-
-
-\begin{figure}
-    \DARCimage{0.85\linewidth}{408include}
-    \caption{\scriptsize Analoges Signal (kontinuierlich)}
-    \label{n_digital_einleitung_analoges_signal}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item<2-> \textbf{Analog}: kontinuierlich, beliebige Zwischenwerte
+                \item<3-> \textbf{Digital}: in Stufen, nur bestimmte Werte, keine Werte dazwischen
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \only<2>{\begin{figure}
+                \DARCimage{0.85\linewidth}{408include}
+                \caption{\scriptsize Analoges Signal (kontinuierlich)}
+                \label{n_digital_einleitung_analoges_signal}
+            \end{figure}}%
+            \only<3->{\begin{figure}
+                \DARCimage{0.85\linewidth}{411include}
+                \caption{\scriptsize Digitales Signal (abgestuft)}
+                \label{n_digital_einleitung_digitales_signal}
+            \end{figure}}%
+        \end{column}
+    \end{columns}
 \end{frame}%ENDCONTENT

@@ -1,0 +1,9 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+\begin{circuitikz}
+    \draw(0,0) node[mixer, box](mix){};
+    \draw(mix.west) node[inputarrow](){} -- ++(-2,0) node[anchor=east](){Eingangssignal $f_e$};
+    \draw(mix.south) node[inputarrow, rotate=90](){} -- ++(0,-0.5) node[bgeneratorshape, t={G}, anchor=north](gen){};
+    \draw(mix.east) -- ++(+2,0) node[inputarrow](){} node[anchor=west](){Frequenzgemisch $f_z=|f_e \pm f_o|$};
+    \draw(gen.east) node [anchor=west](){$f_o$};
+\end{circuitikz}

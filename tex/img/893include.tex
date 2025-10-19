@@ -1,0 +1,73 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% (3)
+\begin{tikzpicture}
+    \ctikzset{
+        inductors/scale=2.5,
+        capacitors/scale=2.5
+    }
+
+    % Schwingkreis
+    \draw (0,0) coordinate(h0)
+        to [cute inductor, inductors/coils=5, name={l}] ++(0,-2)
+        to [short] ++(2,0) coordinate(h1)
+        to [C, name={c}] ++(0,2)
+        to [short, i={I}] (h0);
+
+    % Margin:
+    \useasboundingbox[red] (-0.5,+0.25) rectangle (+2.5,-2.25);
+
+    % Feldlinien Kapazität:
+    \Distance{(c.north east)}{(c.south east)}{\d}
+    \foreach \i in {0,2,4,6}{
+        \draw[DARCorange, -Triangle]
+            (c.north east) ++(\i*\d/\getDarcImageFactor/6, 0) coordinate(start\i)
+            -- (start\i|-c.north west) coordinate(end\i);
+        \draw[DARCred]  (start\i) node[anchor=south](){$+$};
+        \draw[DARCblue] (end\i)   node[anchor=north](){$-$};
+    }
+    \draw(c.north east) to [open, name={x1}] (c.north west);
+    \draw[DARCorange](x1.center) node[anchor=east](){E};
+
+    % Feldlinien Induktivität:
+    \Distance{(l.south west)}{(l.north west)}{\e}
+    \foreach \i in {2,3}{
+        % Geraden:
+        \draw[DARCgreen]
+            (l.south west) ++(\i*\e/\getDarcImageFactor/5, 0) coordinate(start\i)
+            -- (start\i|-l.south east) coordinate(end\i);
+        
+        \ifthenelse{\i<3}
+        {
+            \tikzmath{
+                \j = \i + 0;
+                \dir = -1.0;
+                \h = \i*\e/5;
+                \w = \dir*\e/5*\j;
+            }
+        }{
+            \tikzmath{
+                \j = \i - 2;
+                \dir = +1.0;
+                \h = (3-(\i-2))*\e/5;
+                \w = \dir*\e/5*(5-\i);
+            }
+        }
+
+        % Oben:
+        \draw(start\i) ++( 0,+\h) coordinate(c1);
+        \draw(start\i) ++(\w,+\h) coordinate(c2);
+        \draw[DARCgreen] (start\i) .. controls (c1) and (c2) .. (c2|-l.north);
+        % Unten:
+        \draw(end\i) ++( 0,-\h) coordinate(c1);
+        \draw(end\i) ++(\w,-\h) coordinate(c2);
+        \draw[DARCgreen] (end\i) .. controls (c1) and (c2) .. (c2|-l.north);
+
+        \draw[DARCgreen, fill=DARCgreen](c2|-l.north) node [draw=DARCgreen, fill=DARCgreen, inputarrow, rotate=+90] () {};
+
+        \ifthenelse{\i=3}{
+            \draw[DARCgreen](c2|-l.north) node [anchor=west] () {H};
+        }{}
+    }
+
+\end{tikzpicture}%

@@ -48,24 +48,14 @@
 \begin{frame}
 \frametitle{Transponder}
 Relaisfunkstelle auf dem Satellit wird \enquote{Transponder} genannt
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    Uplink: Funkstrecke von der Erde zum Satelliten
-
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       Downlink: Funkstrecke vom Satelliten zur Erde
-
-
-   \end{column}
-\end{columns}
 
 \begin{itemize}
+  \item Uplink: Funkstrecke von der Erde zum Satelliten
+  \item Downlink: Funkstrecke vom Satelliten zur Erde
   \item Unterschiedliche Frequenzbänder für Up- und Downlink
   \item Einfachere Trennung von Sende- und Empfangssignal
   \item Baugröße von Filtern wird reduziert
-  \end{itemize}
+\end{itemize}
 
 \end{frame}
 
@@ -147,29 +137,33 @@ Relaisfunkstelle auf dem Satellit wird \enquote{Transponder} genannt
 
 \begin{frame}
 \frametitle{Azimut und Elevation}
-Satellitenantennen müssen ausgerichtet sein
 \begin{columns}
     \begin{column}{0.48\textwidth}
-    Azimut
+    \small
+    \textbf{Azimut:}
+    \begin{itemize}
+        %\item stammt von arabisch \RL{السموت}(as-sumūt, \enquote{die Wege})
+        \item Richtung entlang des Horizonts
+        \item Wird wie beim Kompass in Grad gemessen
+        \item \qty{0}{\degree}/\qty{360}{\degree} N – \qty{90}{\degree} O – \qty{180}{\degree} S – \qty{270}{\degree} W
+    \end{itemize}
 
-\begin{itemize}
-  \item stammt von arabisch السموت (as-sumūt, \enquote{die Wege})
-  \item Richtung entlang des Horizonts
-  \item Wird wie beim Kompass in Grad gemessen
-  \item \qty{0}{\degree}/\qty{360}{\degree} Norden – \qty{90}{\degree} Osten – \qty{180}{\degree} Süden – \qty{270}{\degree} Westen
-  \end{itemize}
+    \textbf{Elevation:}
+    \begin{itemize}
+        \item leitet sich von lat. elevare (\enquote{erheben}) ab
+        \item Vertikaler Winkel über dem Horizont
+        \item \qty{0}{\degree} $\rightarrow$ direkt am Horizont
+        \item \qty{90}{\degree} $\rightarrow$ senkrecht über einem
+    \end{itemize}
 
     \end{column}
-   \begin{column}{0.48\textwidth}
-       Elevation
-
-\begin{itemize}
-  \item leitet sich von lateinisch elevare (\enquote{erheben}) ab
-  \item Vertikaler Winkel über dem Horizont
-  \item \qty{0}{\degree} $\rightarrow$ direkt am Horizont
-  \item \qty{90}{\degree} $\rightarrow$ senkrecht über einem
-  \end{itemize}
-
+    \begin{column}{0.48\textwidth}
+        \begin{figure}
+            \small
+            \DARCimage{0.85\linewidth}{876include}
+            \caption{\scriptsize Azimut und Elevation}
+            \label{n_satellit_azimut_elevation}
+        \end{figure}
    \end{column}
 \end{columns}
 

@@ -103,13 +103,75 @@
 \end{table}
     \pause
     Keinen Funkbetrieb dort durchführen!
-
-
-
-
    \end{column}
 \end{columns}
 
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Funkbaken: VHF/UHF}
+
+  Baken im VHF/UHF-Bereich (Region 1):
+
+  \begin{itemize}
+    \item VHF: \SIrange[range-phrase={ - }]{144,400}{144,490}{\mega\hertz}
+    \item UHF: \SIrange[range-phrase={ - }]{432,800}{432,990}{\mega\hertz}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funkbaken: IARU Bakensystem}
+
+  Globales HF Bakensystem \textbf{IBP}\footnote{International Beacon Project}
+  mit 18 Baken nach festem Sendeplan:
+
+  \begin{itemize}
+    \item Zyklus: 3min
+    \item QRGs \num{14100}, \num{18110}, \num{21150}, \num{24930} und \SI{28200}{\kilo\hertz}
+      \footnote{Deshalb nach IARU-Empfehlung vorgesehen und freizuhalten: \\
+      \scriptsize \numrange{14099}{14101}, \numrange{18109}{18111}, \numrange{21149}{21151}, \numrange{24929}{24931}, \SIrange{28190}{28225}{\kilo\hertz}}
+    \item Call + 4x Träger: 100, 10, 1 und \num{0,1} Watt
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Funkbaken: IARU Bakensystem (tabellarisch)}
+
+  \begin{center}
+    \scriptsize
+    \begin{tblr}{|l|l|l|l|l|l|l|}\hline
+      Call   & Location                          & 14100 & 18110 & 21150 & 24930 & 28200 \\ \hline \hline
+      4U1UN  & United Nations                    & 00:00 & 00:10 & 00:20 & 00:30 & 00:40 \\ \hline
+      VE8AT  & \only<1>?\only<2>{Canada}         & 00:10 & 00:20 & 00:30 & 00:40 & 00:50 \\ \hline
+      W6WX   & \only<1>?\only<2>{United States}  & 00:20 & 00:30 & 00:40 & 00:50 & 01:00 \\ \hline
+      KH6WO  & \only<1>?\only<2>{Hawaii}         & 00:30 & 00:40 & 00:50 & 01:00 & 01:10 \\ \hline
+      ZL6B   & \only<1>?\only<2>{New Zealand}    & 00:40 & 00:50 & 01:00 & 01:10 & 01:20 \\ \hline
+      VK6RBP & \only<1>?\only<2>{Australia}      & 00:50 & 01:00 & 01:10 & 01:20 & 01:30 \\ \hline
+      JA2IGY & \only<1>?\only<2>{Japan}          & 01:00 & 01:10 & 01:20 & 01:30 & 01:40 \\ \hline
+      RR9O   & \only<1>?\only<2>{Russia}         & 01:10 & 01:20 & 01:30 & 01:40 & 01:50 \\ \hline
+      VR2B   & \only<1>?\only<2>{Hong Kong}      & 01:20 & 01:30 & 01:40 & 01:50 & 02:00 \\ \hline
+      4S7B   & Sri Lanka                         & 01:30 & 01:40 & 01:50 & 02:00 & 02:10 \\ \hline
+      ZS6DN  & South Africa                      & 01:40 & 01:50 & 02:00 & 02:10 & 02:20 \\ \hline
+      5Z4B   & Kenya                             & 01:50 & 02:00 & 02:10 & 02:20 & 02:30 \\ \hline
+      4X6TU  & Israel                            & 02:00 & 02:10 & 02:20 & 02:30 & 02:40 \\ \hline
+      OH2B   & \only<1>?\only<2>{Finland}        & 02:10 & 02:20 & 02:30 & 02:40 & 02:50 \\ \hline
+      CS3B   & Madeira                           & 02:20 & 02:30 & 02:40 & 02:50 & 00:00 \\ \hline
+      LU4AA  & \only<1>?\only<2>{Argentina}      & 02:30 & 02:40 & 02:50 & 00:00 & 00:10 \\ \hline
+      OA4B   & \only<1>?\only<2>{Peru}           & 02:40 & 02:50 & 00:00 & 00:10 & 00:20 \\ \hline
+      YV5B   & \only<1>?\only<2>{Venezuela}      & 02:50 & 00:00 & 00:10 & 00:20 & 00:30 \\ \hline
+    \end{tblr}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}{Funkbaken: IBP Live Karte und mehr}
+    \begin{itemize}
+        \item Karte ind Live Liste der IARU-Baken \href{https://www.ncdxf.org/beacon/index.html\#transmission}{\faLink~Baken Live}
+        \item \href{http://websdr.ewi.utwente.nl:8901}{\faLink~WebSDR Twente} 
+    \end{itemize}
 \end{frame}
 
 \begin{frame}

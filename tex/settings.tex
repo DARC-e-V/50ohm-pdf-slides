@@ -879,6 +879,16 @@
     }
     \node[anchor=west,inner sep=0,outer sep=0] at (#1,#4+1.25*\dist) {#6};
 }
+% 
+\newcommand{\alc}[6]{% 1:x1 2:y1 3:x2 4:y2 5:percent 6:Label
+    \pgfmathsetlengthmacro \val {(#1)+(#5)*((#3)-(#1))}
+    \pgfmathsetlengthmacro \alcmax {(#1)+(0.66)*((#3)-(#1))}
+    \fill[gray] (#1,#2) rectangle (\val,#4);
+    \draw[very thick] (#1,#2) rectangle (#3,#4);
+    \draw[ultra thick, DARCgreen] (#1,#2-0.5*\dist) -- (\alcmax,#2-0.5*\dist);
+    \draw[ultra thick, DARCred] (\alcmax,#2-0.5*\dist) -- (#3,#2-0.5*\dist);
+    \node[anchor=west,inner sep=0,outer sep=0] at (#1,#4+1.25*\dist) {#6};
+}
 %
 \newcommand{\pwr}[5]{% 1:x1 2:y1 3:x2 4:y2 5:percent
     \pgfmathsetlengthmacro \val {(#1)+(#5)*((#3)-(#1))}

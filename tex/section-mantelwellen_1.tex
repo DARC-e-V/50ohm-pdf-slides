@@ -1,138 +1,131 @@
-
 \section{Mantelwellen I}
 \label{section:mantelwellen_1}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Ziel beim Aufbau einer Funkanlage: Nur die Antenne soll Signale abstrahlen bzw. aufnehmen
-  \item Dazu eignen sich geschirmte Leitungen, z.B. Koaxialkabel
-  \item Im Idealfall strahlen sie selbst nicht oder nehmen keine Strahlung auf
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}{Mantelwellen}
     \begin{itemize}
-  \item Unsymmetrisches Koaxialkabel wird an symmetrischen Dipol angeschlossen
-  \item Auf der Außenseite des Koaxialkabels können hochfrequente Ströme fließen
-  \item Dadurch strahlt das Kabel selbst $\rightarrow$ \emph{Mantelwellen}
-  \item Mantelströme fehlen, was zur Verformung der Richtcharakteristik führt
-  \end{itemize}
+        \item Ziel beim Aufbau einer Funkanlage: Nur die Antenne soll Signale abstrahlen bzw. aufnehmen
+        \item Dazu eignen sich geschirmte Leitungen, z.B. Koaxialkabel
+        \item Im Idealfall strahlen sie selbst nicht oder nehmen keine Strahlung auf
+    \end{itemize}
+\end{frame}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{633include}
-    \caption{\scriptsize Mantelstrom bei I<sub>3</sub>}
-    \label{e_mantelwelle_effekt}
-\end{figure}
+\begin{frame}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Unsymmetrisches Koaxialkabel wird an symmetrischen Dipol angeschlossen
+                \item Auf der Außenseite des Koaxialkabels können hochfrequente Ströme fließen
+                \item Dadurch strahlt das Kabel selbst $\rightarrow$ \emph{Mantelwellen}
+                \item Mantelströme fehlen, was zur Verformung der Richtcharakteristik führt
+            \end{itemize}
 
-
-   \end{column}
-\end{columns}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \footnotesize
+            \DARCimage{0.85\linewidth}{633include}
+        \end{column}
+    \end{columns}
 
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG405}{Mantelwellen auf dem Koaxialkabel zur Antenne~...}{werden durch Fehlanpassung und Überlastung des Transceivers verursacht.}
-{sind für die Funktionsweise jeder koaxial-gespeisten Antenne notwendig.}
-{können zu Störungen anderer Geräte und Störungen des eigenen Empfangs führen.}
-{werden für die Messung des Stromes beim SWR verwendet.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG405}{Mantelwellen auf dem Koaxialkabel zur Antenne~...}{werden durch Fehlanpassung und Überlastung des Transceivers verursacht.}
+            {sind für die Funktionsweise jeder koaxial-gespeisten Antenne notwendig.}
+            {können zu Störungen anderer Geräte und Störungen des eigenen Empfangs führen.}
+            {werden für die Messung des Stromes beim SWR verwendet.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG405}{Mantelwellen auf dem Koaxialkabel zur Antenne~...}{werden durch Fehlanpassung und Überlastung des Transceivers verursacht.}
-{sind für die Funktionsweise jeder koaxial-gespeisten Antenne notwendig.}
-{\textbf{\textcolor{DARCgreen}{können zu Störungen anderer Geräte und Störungen des eigenen Empfangs führen.}}}
-{werden für die Messung des Stromes beim SWR verwendet.}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG405}{Mantelwellen auf dem Koaxialkabel zur Antenne~...}{werden durch Fehlanpassung und Überlastung des Transceivers verursacht.}
+            {sind für die Funktionsweise jeder koaxial-gespeisten Antenne notwendig.}
+            {\textbf{\textcolor{DARCgreen}{können zu Störungen anderer Geräte und Störungen des eigenen Empfangs führen.}}}
+            {werden für die Messung des Stromes beim SWR verwendet.}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG406}{Welche Effekte treten auf, wenn ein Halbwellendipol mit einem Koaxkabel gleicher Impedanz mittig gespeist wird?}{Es treten Polarisationsdrehungen auf, die von der Kabellänge abhängig sind.}
-{Es treten keine nennenswerten Effekte auf, da die Antenne angepasst ist und die Speisung über ein Koaxkabel erfolgt, dessen Außenleiter Erdpotential hat.}
-{Am Speisepunkt der Antenne treten gegenphasige Spannungen und Ströme gleicher Größe auf, die eine Fehlanpassung hervorrufen.}
-{Die Richtcharakteristik der Antenne wird verformt und es treten Mantelwellen auf.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG406}{Welche Effekte treten auf, wenn ein Halbwellendipol mit einem Koaxkabel gleicher Impedanz mittig gespeist wird?}{Es treten Polarisationsdrehungen auf, die von der Kabellänge abhängig sind.}
+            {Es treten keine nennenswerten Effekte auf, da die Antenne angepasst ist und die Speisung über ein Koaxkabel erfolgt, dessen Außenleiter Erdpotential hat.}
+            {Am Speisepunkt der Antenne treten gegenphasige Spannungen und Ströme gleicher Größe auf, die eine Fehlanpassung hervorrufen.}
+            {Die Richtcharakteristik der Antenne wird verformt und es treten Mantelwellen auf.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG406}{Welche Effekte treten auf, wenn ein Halbwellendipol mit einem Koaxkabel gleicher Impedanz mittig gespeist wird?}{Es treten Polarisationsdrehungen auf, die von der Kabellänge abhängig sind.}
-{Es treten keine nennenswerten Effekte auf, da die Antenne angepasst ist und die Speisung über ein Koaxkabel erfolgt, dessen Außenleiter Erdpotential hat.}
-{Am Speisepunkt der Antenne treten gegenphasige Spannungen und Ströme gleicher Größe auf, die eine Fehlanpassung hervorrufen.}
-{\textbf{\textcolor{DARCgreen}{Die Richtcharakteristik der Antenne wird verformt und es treten Mantelwellen auf.}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG406}{Welche Effekte treten auf, wenn ein Halbwellendipol mit einem Koaxkabel gleicher Impedanz mittig gespeist wird?}{Es treten Polarisationsdrehungen auf, die von der Kabellänge abhängig sind.}
+            {Es treten keine nennenswerten Effekte auf, da die Antenne angepasst ist und die Speisung über ein Koaxkabel erfolgt, dessen Außenleiter Erdpotential hat.}
+            {Am Speisepunkt der Antenne treten gegenphasige Spannungen und Ströme gleicher Größe auf, die eine Fehlanpassung hervorrufen.}
+            {\textbf{\textcolor{DARCgreen}{Die Richtcharakteristik der Antenne wird verformt und es treten Mantelwellen auf.}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{EG404}{Die Darstellung zeigt die bei Ankopplung eines Koaxialkabels an eine Antenne auftretenden Ströme. Wie wird der mit $I_3$ bezeichnete Strom genannt?}{Mantelstrom}
-{Rückwärtsstrom}
-{Potentialstrom}
-{Phantomstrom}
-{\DARCimage{1.0\linewidth}{633include}}\end{PQuestion}
+    \only<1>{
+        \begin{PQuestion}{EG404}{Die Darstellung zeigt die bei Ankopplung eines Koaxialkabels an eine Antenne auftretenden Ströme. Wie wird der mit $I_3$ bezeichnete Strom genannt?}{Mantelstrom}
+            {Rückwärtsstrom}
+            {Potentialstrom}
+            {Phantomstrom}
+            {\footnotesize\DARCimage{0.85\linewidth}{633include}}\end{PQuestion}
 
-}
-\only<2>{
-\begin{PQuestion}{EG404}{Die Darstellung zeigt die bei Ankopplung eines Koaxialkabels an eine Antenne auftretenden Ströme. Wie wird der mit $I_3$ bezeichnete Strom genannt?}{\textbf{\textcolor{DARCgreen}{Mantelstrom}}}
-{Rückwärtsstrom}
-{Potentialstrom}
-{Phantomstrom}
-{\DARCimage{1.0\linewidth}{633include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{PQuestion}{EG404}{Die Darstellung zeigt die bei Ankopplung eines Koaxialkabels an eine Antenne auftretenden Ströme. Wie wird der mit $I_3$ bezeichnete Strom genannt?}{\textbf{\textcolor{DARCgreen}{Mantelstrom}}}
+            {Rückwärtsstrom}
+            {Potentialstrom}
+            {Phantomstrom}
+            {\footnotesize\DARCimage{0.85\linewidth}{633include}}\end{PQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\frametitle{Mantelwellen verhindern}
-\begin{itemize}
-  \item Durch ein \emph{Symmetrierglied}, einen Balun (balanced-unbalanced)
-  \item Oder zur Dämpfung Koaxialkabel auf einen Ferritkern wickeln
-  \end{itemize}
+    \frametitle{Mantelwellen verhindern}
+    \begin{itemize}
+        \item Durch ein \emph{Symmetrierglied}, einen Balun (balanced-unbalanced)
+        \item Oder zur Dämpfung Koaxialkabel auf einen Ferritkern wickeln
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EG407}{Wozu wird ein Symmetrierglied (Balun) beispielsweise verwendet?}{Zur Nutzung einer Wechselspannungsversorgung am Gleichstromanschluss eines Transceivers}
-{Zur Einstellung der Frequenzablage für Relaisbetrieb}
-{Zum Anschluss eines Koaxialkabels an eine Dipol-Antenne}
-{Zur Umschaltung zwischen horizontaler und vertikaler Polarisation einer Kreuz-Yagi-Uda}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EG407}{Wozu wird ein Symmetrierglied (Balun) beispielsweise verwendet?}{Zur Nutzung einer Wechselspannungsversorgung am Gleichstromanschluss eines Transceivers}
+            {Zur Einstellung der Frequenzablage für Relaisbetrieb}
+            {Zum Anschluss eines Koaxialkabels an eine Dipol-Antenne}
+            {Zur Umschaltung zwischen horizontaler und vertikaler Polarisation einer Kreuz-Yagi-Uda}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EG407}{Wozu wird ein Symmetrierglied (Balun) beispielsweise verwendet?}{Zur Nutzung einer Wechselspannungsversorgung am Gleichstromanschluss eines Transceivers}
-{Zur Einstellung der Frequenzablage für Relaisbetrieb}
-{\textbf{\textcolor{DARCgreen}{Zum Anschluss eines Koaxialkabels an eine Dipol-Antenne}}}
-{Zur Umschaltung zwischen horizontaler und vertikaler Polarisation einer Kreuz-Yagi-Uda}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EG407}{Wozu wird ein Symmetrierglied (Balun) beispielsweise verwendet?}{Zur Nutzung einer Wechselspannungsversorgung am Gleichstromanschluss eines Transceivers}
+            {Zur Einstellung der Frequenzablage für Relaisbetrieb}
+            {\textbf{\textcolor{DARCgreen}{Zum Anschluss eines Koaxialkabels an eine Dipol-Antenne}}}
+            {Zur Umschaltung zwischen horizontaler und vertikaler Polarisation einer Kreuz-Yagi-Uda}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{PQuestion}{EG408}{Auf einem Ferritkern sind einige Windungen Koaxialkabel aufgewickelt. Mit diesem Aufbau~...}{lassen sich Oberwellen unterdrücken.}
-{lassen sich statische Aufladungen verhindern.}
-{lässt sich die Trennschärfe verbessern.}
-{lassen sich Mantelwellen dämpfen.}
-{\DARCimage{0.5\linewidth}{40include}}\end{PQuestion}
+    \only<1>{
+        \begin{PQuestion}{EG408}{Auf einem Ferritkern sind einige Windungen Koaxialkabel aufgewickelt. Mit diesem Aufbau~...}{lassen sich Oberwellen unterdrücken.}
+            {lassen sich statische Aufladungen verhindern.}
+            {lässt sich die Trennschärfe verbessern.}
+            {lassen sich Mantelwellen dämpfen.}
+            {\DARCimage{0.5\linewidth}{40include}}\end{PQuestion}
 
-}
-\only<2>{
-\begin{PQuestion}{EG408}{Auf einem Ferritkern sind einige Windungen Koaxialkabel aufgewickelt. Mit diesem Aufbau~...}{lassen sich Oberwellen unterdrücken.}
-{lassen sich statische Aufladungen verhindern.}
-{lässt sich die Trennschärfe verbessern.}
-{\textbf{\textcolor{DARCgreen}{lassen sich Mantelwellen dämpfen.}}}
-{\DARCimage{0.5\linewidth}{40include}}\end{PQuestion}
+    }
+    \only<2>{
+        \begin{PQuestion}{EG408}{Auf einem Ferritkern sind einige Windungen Koaxialkabel aufgewickelt. Mit diesem Aufbau~...}{lassen sich Oberwellen unterdrücken.}
+            {lassen sich statische Aufladungen verhindern.}
+            {lässt sich die Trennschärfe verbessern.}
+            {\textbf{\textcolor{DARCgreen}{lassen sich Mantelwellen dämpfen.}}}
+            {\DARCimage{0.5\linewidth}{40include}}\end{PQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

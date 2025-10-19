@@ -1,59 +1,52 @@
-
 \section{Effektive Strahlungsleistung (ERP)}
 \label{section:effektive_strahlungsleistung_erp_1}
-\begin{frame}%STARTCONTENT
-Kurze Wiederholung zu Antennen:
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    Groundplane-Antenne strahlt in alle Himmelsrichtungen nahezu gleichmäßig ab, aber nicht nach oben oder unten
+\begin{frame}{Kurze Wiederholung zu Antennen:}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \DARCimage{0.5\linewidth}{268include}
+            Die Groundplane-Antenne strahlt in alle Himmelsrichtungen nahezu gleichmäßig ab, aber nicht nach oben oder unten
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \DARCimage{0.85\linewidth}{262include}
+            Die Yagi-Uda-Antenne bündelt die Funkstrahlen nach vorn und reduziert in alle anderen Richtungen
+        \end{column}
+    \end{columns}
 
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       Yagi-Uda-Antenne bündelt die Funkstrahlen nach vorn und reduziert in alle anderen Richtungen
-
-
-   \end{column}
-\end{columns}
-    \pause
+    \vspace{10pt}
     Bei der Berechnung der Grenzwerte für den Schutzabstand wird die \emph{Hauptstrahlrichtung} verwendet
-
-
-
 \end{frame}
 
 \begin{frame}
-\frametitle{Gewinnfaktor}
-\begin{itemize}
-  \item Wie viel besser eine Antenne in Hauptstrahlrichtung im Vergleich zu einem Halbwellendipol abstrahlt
-  \item Gewinnfaktor 2: Antenne strahlt in Hauptstrahlrichtung doppelt so stark wie ein Halbwellendipol in seine Hauptstrahlrichtung
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Effektive Strahlungsleistung (ERP)}
-Sendeleistung zur Antenne multipliziert mit Gewinnfaktor
+    \frametitle{Effektive Strahlungsleistung (ERP)}
+    \begin{itemize}
+        \item ERP gibt an wie viel besser (oder schlechter) eine Antenne in
+        Hauptstrahlrichtung im Vergleich zu einem Halbwellendipol abstrahlt
+        \item Die effektive Strahlungsleistung ERP (Effective Radiated Power)
+        ist die von einer Antenne abgestrahlte Leistung, bezogen auf einen
+        Halbwellendipol.
+    \end{itemize}
     \pause
-    Beispiel: 5~W auf eine Antenne mit Gewinnfaktor 2 ergibt die effektive Strahlungsleistung von 10~W
-
+    \begin{exampleblock}{Beispiel}
+        Beispiel: 5~W auf eine Antenne mit Gewinnfaktor 2 (i.e. \qty{3}{dB}) auf einen Dipol bezogen ergibt die effektive Strahlungsleistung von 10~W ERP
+    \end{exampleblock}
+    \pause
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{NG401}{Die effektive Strahlungsleistung ERP (Effective Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
-{einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}
-{einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
-{einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{NG401}{Die effektive Strahlungsleistung ERP (Effective Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}
+            {einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{NG401}{Die effektive Strahlungsleistung ERP (Effective Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
-{einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}
-{einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
-{\textbf{\textcolor{DARCgreen}{einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{NG401}{Die effektive Strahlungsleistung ERP (Effective Radiated Power) ist die von~...}{einem isotropen Strahler abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {einer Antenne abgestrahlte Leistung, bezogen auf einen isotropen Strahler.}
+            {einem Halbwellendipol abgestrahlte Leistung, bezogen auf eine Antenne.}
+            {\textbf{\textcolor{DARCgreen}{einer Antenne abgestrahlte Leistung, bezogen auf einen Halbwellendipol.}}}
+        \end{QQuestion}
 
-}
+    }
 \end{frame}%ENDCONTENT

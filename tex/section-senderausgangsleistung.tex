@@ -1,89 +1,67 @@
+%\section{Senderausgangsleistung}
+%\label{section:senderausgangsleistung}
 
-\section{Senderausgangsleistung}
-\label{section:senderausgangsleistung}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Verpflichtung von Funkamateuren die Leistungsgrenzwerte ihrer Funkanlage einzuhalten
-  \item Auf vielen Amateurfunkbändern gilt eine \emph{maximale Senderausgangsleistung} (\emph{PEP}, Peak-Envelope-Power) als Grenzwert
-  \item Auch unerwünschte Aussendungen sind von Bedeutung
-  \end{itemize}
+\begin{frame}
+    \frametitle{Messung der Senderausgangsleistung}
+    \begin{columns}
+        \begin{column}{0.48\linewidth}
+            \begin{figure}
+                \centering
+                \DARCimage{1.0\linewidth}{916include}
+                \caption{Messung der Senderausgangsleistung}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \begin{itemize}
+                \item Direkt am Senderausgang
+                \item Ohne Zusatzgeräte, Filter oder Kabel
+                \item Bei SSB $\rightarrow$ mit Modulation
+                \item Ein- oder Zweitonaussteuerung, aber keine Sprache
+                \item Messung der maximalen \emph{Hüllkurvenleistung} (PEP)
+                \item Spitzenleistung des Senders bei maximaler Aussteuerung
+            \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Messung von unerwünschten Aussendungen}
-\begin{itemize}
-  \item Am Senderausgang
-  \item Unter Einzebiehung von Stehwellenmessgerät, Anpassgerät(e), Tiefpassfilter etc.
-  \item Messsung von unerwünschen Aussendungen, die die Antenne erreichen können
-  \end{itemize}
+    \only<1>{
+        \begin{QQuestion}{EF401}{Die Ausgangsleistung eines Senders ist die unmittelbar nach~...}
+            {dem Senderausgang gemessene Summe aus vorlaufender und rücklaufender Leistung.}
+            {dem Senderausgang gemessene Differenz aus vorlaufender und rücklaufender Leistung.}
+            {der Antenne messbaren Leistung, die durch ein Feldstärkenmessgerät im Nahfeld ermittelt werden kann.}
+            {dem Senderausgang messbare Leistung, bevor sie Zusatzgeräte durchläuft.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EF401}{Die Ausgangsleistung eines Senders ist die unmittelbar nach~...}
+            {dem Senderausgang gemessene Summe aus vorlaufender und rücklaufender Leistung.}
+            {dem Senderausgang gemessene Differenz aus vorlaufender und rücklaufender Leistung.}
+            {der Antenne messbaren Leistung, die durch ein Feldstärkenmessgerät im Nahfeld ermittelt werden kann.}
+            {\textbf{\textcolor{DARCgreen}{dem Senderausgang messbare Leistung, bevor sie Zusatzgeräte durchläuft.}}}
+        \end{QQuestion}
+
+    }
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EJ209}{Wie erfolgt die Messung der Leistungen, die zu unerwünschten Aussendungen führen?}{Die Messung erfolgt am Senderausgang mit einem hochohmigen HF-Tastkopf und angeschlossenem Transistorvoltmeter.}
-{Die Messung erfolgt am Fußpunkt der im Funkbetrieb verwendeten Antenne unter Einbeziehung des gegebenenfalls verwendeten Antennenanpassgeräts.}
-{Die Messung erfolgt am Ausgang der Antennenleitung unter Einbeziehung des im Funkbetrieb verwendeten Antennenanpassgeräts.}
-{Die Messung erfolgt am Senderausgang unter Einbeziehung des gegebenenfalls verwendeten Stehwellenmessgeräts und des gegebenenfalls verwendeten Tiefpassfilters.}
-\end{QQuestion}
+    \only<1>{
+        \begin{QQuestion}{EF402}{Wie und wo wird die Ausgangsleistung eines SSB-Senders gemessen? Die maximale Hüllkurvenleistung (PEP) wird gemessen...}
+            {zwischen Antennentuner und Speisepunkt bei Sprachmodulation.}
+            {zwischen Antennentuner und Speisepunkt der Antenne mit unmoduliertem Träger.}
+            {direkt am Senderausgang bei Ein- oder Zweitonaussteuerung.}
+            {direkt am Senderausgang mit unmoduliertem Träger.}
+        \end{QQuestion}
 
-}
-\only<2>{
-\begin{QQuestion}{EJ209}{Wie erfolgt die Messung der Leistungen, die zu unerwünschten Aussendungen führen?}{Die Messung erfolgt am Senderausgang mit einem hochohmigen HF-Tastkopf und angeschlossenem Transistorvoltmeter.}
-{Die Messung erfolgt am Fußpunkt der im Funkbetrieb verwendeten Antenne unter Einbeziehung des gegebenenfalls verwendeten Antennenanpassgeräts.}
-{Die Messung erfolgt am Ausgang der Antennenleitung unter Einbeziehung des im Funkbetrieb verwendeten Antennenanpassgeräts.}
-{\textbf{\textcolor{DARCgreen}{Die Messung erfolgt am Senderausgang unter Einbeziehung des gegebenenfalls verwendeten Stehwellenmessgeräts und des gegebenenfalls verwendeten Tiefpassfilters.}}}
-\end{QQuestion}
+    }
+    \only<2>{
+        \begin{QQuestion}{EF402}{Wie und wo wird die Ausgangsleistung eines SSB-Senders gemessen? Die maximale Hüllkurvenleistung (PEP) wird gemessen...}
+            {zwischen Antennentuner und Speisepunkt bei Sprachmodulation.}
+            {zwischen Antennentuner und Speisepunkt der Antenne mit unmoduliertem Träger.}
+            {\textbf{\textcolor{DARCgreen}{direkt am Senderausgang bei Ein- oder Zweitonaussteuerung.}}}
+            {direkt am Senderausgang mit unmoduliertem Träger.}
+        \end{QQuestion}
 
-}
-\end{frame}
-
-\begin{frame}
-\frametitle{Messung der Senderausgangsleistung}
-\begin{itemize}
-  \item Direkt am Senderausgang
-  \item Ohne Zusatzgeräte, Filter oder Kabel
-  \item Bei SSB $\rightarrow$ mit Modulation
-  \item Ein- oder Zweitonaussteuerung, aber keine Sprache
-  \item Messung der maximalen \emph{Hüllkurvenleistung} (PEP)
-  \item Spitzenleistung des Senders bei maximaler Aussteuerung
-  \end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EF401}{Die Ausgangsleistung eines Senders ist die unmittelbar nach~...}{dem Senderausgang gemessene Summe aus vorlaufender und rücklaufender Leistung.}
-{dem Senderausgang gemessene Differenz aus vorlaufender und rücklaufender Leistung.}
-{der Antenne messbaren Leistung, die durch ein Feldstärkenmessgerät im Nahfeld ermittelt werden kann.}
-{dem Senderausgang messbare Leistung, bevor sie Zusatzgeräte durchläuft.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EF401}{Die Ausgangsleistung eines Senders ist die unmittelbar nach~...}{dem Senderausgang gemessene Summe aus vorlaufender und rücklaufender Leistung.}
-{dem Senderausgang gemessene Differenz aus vorlaufender und rücklaufender Leistung.}
-{der Antenne messbaren Leistung, die durch ein Feldstärkenmessgerät im Nahfeld ermittelt werden kann.}
-{\textbf{\textcolor{DARCgreen}{dem Senderausgang messbare Leistung, bevor sie Zusatzgeräte durchläuft.}}}
-\end{QQuestion}
-
-}
-\end{frame}
-
-\begin{frame}
-\only<1>{
-\begin{QQuestion}{EF402}{Wie und wo wird die Ausgangsleistung eines SSB-Senders gemessen? Die maximale Hüllkurvenleistung (PEP) wird gemessen...}{zwischen Antennentuner und Speisepunkt bei Sprachmodulation.}
-{zwischen Antennentuner und Speisepunkt der Antenne mit unmoduliertem Träger.}
-{direkt am Senderausgang bei Ein- oder Zweitonaussteuerung.}
-{direkt am Senderausgang mit unmoduliertem Träger.}
-\end{QQuestion}
-
-}
-\only<2>{
-\begin{QQuestion}{EF402}{Wie und wo wird die Ausgangsleistung eines SSB-Senders gemessen? Die maximale Hüllkurvenleistung (PEP) wird gemessen...}{zwischen Antennentuner und Speisepunkt bei Sprachmodulation.}
-{zwischen Antennentuner und Speisepunkt der Antenne mit unmoduliertem Träger.}
-{\textbf{\textcolor{DARCgreen}{direkt am Senderausgang bei Ein- oder Zweitonaussteuerung.}}}
-{direkt am Senderausgang mit unmoduliertem Träger.}
-\end{QQuestion}
-
-}
+    }
 \end{frame}%ENDCONTENT

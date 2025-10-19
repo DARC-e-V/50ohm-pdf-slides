@@ -1,0 +1,30 @@
+% Author: Prof. Dr. Matthias Jung, DL9MJ
+% Year: 2024
+% Max. Grenzwerte BIMSCHV
+\pgfkeys{/pgf/number format/.cd,1000 sep={\,}}
+\begin{tikzpicture}
+    \pgfplotsset{samples=200}
+    \begin{axis}[
+        axis on top,
+        height=5cm,
+        scale only axis,
+        width=\linewidth*\getDarcImageFactor,
+        xmin =  1,
+        xmax =  300000,
+        ymin =  0,
+        ymax =  6,
+        domain = 0:300000,
+        xmode=log,
+        log ticks with fixed point,
+        smooth,
+        xlabel={Frequenz in \unit{\hertz}},
+        ylabel={Feldstärke in \unit{\kilo\volt\per\metre}}
+    ]
+        \addplot[DARCred, very thick, domain={1:8}]{5};
+        \addplot[DARCred, very thick, domain={8:25}]{5};
+        \addplot[DARCred, very thick, domain={25:50}]{5};
+        \addplot[DARCred, very thick, domain={50:400}]{250/x};
+        \addplot[DARCred, very thick, domain={400:3000}]{250/x};
+        \addplot[DARCred, very thick, domain={3000:10000000}]{0.083};
+    \end{axis}
+\end{tikzpicture}

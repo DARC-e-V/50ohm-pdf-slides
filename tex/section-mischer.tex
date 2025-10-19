@@ -1,31 +1,35 @@
-
 \section{Mischer}
-\label{section:mischer}
-\begin{frame}%STARTCONTENT
 
-\begin{columns}
-    \begin{column}{0.48\textwidth}
+\begin{frame}{Prinzip des Mischens:}
+
     \begin{itemize}
-  \item Beim Mischen von zwei Eingangs-Frequenzen entstehen immer zwei Ausgangs-Frequenzen
-  \end{itemize}
-\begin{equation}f_\text{A1} = f_\text{E1} + f_\text{E2}\end{equation}
+        \item Mit Hilfe eines Mischers kann eine bestimmte Frequenz (bzw.
+        Frequenzband mit definierter Bandbreite) in eine höhere oder niedrigere
+        Frequenz umgesetzt werden.
+        \item Eine Multiplikation im Zeitbereich wird zu einer Addition im
+        Frequenzbereich:
+    \end{itemize}
+    \begin{block}{Trigonometrische Identität:}
+        $$ \sin(x) \cdot \sin(y) = \frac{1}{2} \cdot \Big( \cos(x-y) - \cos(x+y) \Big) $$
+    \end{block}
+    \begin{itemize}
+        \item Es entstehen dadurch zwei Frequenzen
+        \item In der Regel wollen wir nur eine dieser Frequenzen $\rightarrow$ Filter
+        \item Genaugenommen können hier negative Frequenzen entstehen $\rightarrow$ Betrag
+    \end{itemize}
+\end{frame}
 
-\begin{equation}f_\text{A2} = |f_\text{E1} - f_\text{E2}|\end{equation}
+\begin{frame}{Idealer Mischer}
+    \DARCimage{\linewidth}{903include}
 
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{102include}
-    \caption{\scriptsize Mischer mit zwei Eingangsfrequenzen}
-    \label{e_mischer}
-\end{figure}
-
-
-   \end{column}
-\end{columns}
-
+    \visible<2->{Es fallen also immer zwei Frequenzen als Geschmisch heraus: $f_\text{z} = |f_\text{e} \pm f_\text{o}|$}
+    \begin{enumerate}
+        \item[1.]<3-> $f_\text{z1} = f_\text{e} + f_\text{o}$ (Aufwärtsmischer)
+        \item[2a.]<4-> $f_\text{z2} = f_\text{e} - f_\text{o}$ für $f_\text{e} > f_\text{o}$ (Abwärtsmischer)
+        \item[2b.]<5-> $f_\text{z2} = f_\text{o} - f_\text{e}$ für $f_\text{e} < f_\text{o}$ (Abwärtsmischer)
+    \end{enumerate}
+    \vspace{10pt}
+    \visible<6->{In der Realität, je nach implementierung, z.\,B. durch Nichtlinearitäten: $f_\text{z} = m\cdot f_\text{o} \pm n\cdot f_\text{e}$}
 \end{frame}
 
 \begin{frame}
@@ -49,13 +53,23 @@
 
 \begin{frame}
 \frametitle{Lösungsweg}
-\begin{itemize}
-  \item Gegeben: $f_{E1} = 21MHz$, $f_{E2} = 31,7MHz$
-  \item Lösung:
-  \end{itemize}
-\begin{equation}\begin{split}f_{A1} &= 21MHz + 31,7MHz\\ &= 52,7MHz\end{split}\end{equation}
-\begin{equation}\begin{split}f_{A2} &= |21MHz - 31,7MHz|\\ &= |-10,7MHz|\\ &= 10,7MHz\end{split}\end{equation}
-
+    \begin{itemize}
+        \item Gegeben: $f_\text{E1} = \qty{21}{\mega\hertz},~f_\text{E2} = \qty{31,7}{\mega\hertz}$
+        \item Lösung:
+            \begin{equation}
+                \begin{split}
+                    f_\text{A1} &= \qty{21  }{\mega\hertz} + \qty{31,7}{\mega\hertz}\\
+                           &= \qty{52,7}{\mega\hertz} 
+                \end{split}
+            \end{equation}
+            \begin{equation}
+                \begin{split}
+                    f_\text{A2} &= |\qty{21   }{\mega\hertz} - \qty{31,7}{\mega\hertz}|\\
+                           &= |\qty{-10,7}{\mega\hertz}|\\
+                           &=  \qty{10,7 }{\mega\hertz}
+                \end{split}
+            \end{equation}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}

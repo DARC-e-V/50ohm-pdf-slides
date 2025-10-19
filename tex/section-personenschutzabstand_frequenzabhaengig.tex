@@ -1,53 +1,161 @@
-
-\section{Frequenzabhängigkeit des Personenschutzabstands}
+\section{Grenzwerte}
 \label{section:personenschutzabstand_frequenzabhaengig}
+\begin{frame}{Grenzwerte}
+    \begin{itemize}
+        \item Der menschliche Körper kann hochfrequente Strahlung absorbieren (\textcolor{DARCblue}{\faLink~\href{https://50ohm.de/bfs}{50ohm.de/bfs}})
+        \item Die Strahlung wird dabei in Wärme umgewandelt
+        \item Thermoregulation des Körpers schafft begrenzt einen Ausgleich
+    \end{itemize}
+    \vspace{10pt}
+
+    \begin{columns}[T]
+        \begin{column}{0.48\textwidth}
+            Eindringtiefe der Strahlung:
+
+            \begin{itemize}
+                \item MHz ca. \qtyrange{10}{30}{\centi\metre}
+                \item GHz wenige cm
+                \item $>$\qty{10}{\giga\hertz} ca. $<$ \qty{1}{\milli\metre}
+            \end{itemize}
+
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Resonanz bei $\textrm{Körpergröße} \approx \frac{\lambda}{2}$
+                \item Hohe Aufnahme von Strahlungsenergie bei Resonanz
+                \item Deshalb sind die \emph{Feldstärkegrenzwerte} für den Schutz von Personen in elektromagnetischen Feldern \emph{von der Frequenz abhängig}
+            \end{itemize}
+
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EK101}{Die Feldstärkegrenzwerte für den Schutz von Personen in elektromagnetischen Feldern sind von der Frequenz abhängig, weil~...}{auf den Amateurfunkbändern unterschiedlich hohe Sendeleistungen zugelassen sind.}
+            {niederfrequente elektromagnetische Felder energiereicher sind als hochfrequente.}
+            {die Fähigkeit des Körpers, hochfrequente Strahlung zu absorbieren, frequenzabhängig ist.}
+            {die spezifische Absorptionsrate bei einigen Frequenzen nicht messbar ist.}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EK101}{Die Feldstärkegrenzwerte für den Schutz von Personen in elektromagnetischen Feldern sind von der Frequenz abhängig, weil~...}{auf den Amateurfunkbändern unterschiedlich hohe Sendeleistungen zugelassen sind.}
+            {niederfrequente elektromagnetische Felder energiereicher sind als hochfrequente.}
+            {\textbf{\textcolor{DARCgreen}{die Fähigkeit des Körpers, hochfrequente Strahlung zu absorbieren, frequenzabhängig ist.}}}
+            {die spezifische Absorptionsrate bei einigen Frequenzen nicht messbar ist.}
+        \end{QQuestion}
+
+    }
+\end{frame}%ENDCONTENT
+
+
 \begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Der menschliche Körper kann hochfrequente Strahlung absorbieren (\textcolor{DARCblue}{\faLink~\href{https://50ohm.de/bfs}{50ohm.de/bfs}})
-  \item Die Strahlung wird dabei in Wärme umgewandelt
-  \item Thermoregulation des Körpers schafft begrenzt einen Ausgleich
-  \end{itemize}
+    \frametitle{Zeitbezug}
+    \begin{itemize}
+        \item In der \enquote{26. Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes} wird ein zeitlicher Bezug zur Einhaltung der Feldstärke-Gernzwerte hinzugefügt
+        \item Es muss nach drei Fällen für Grenzwerte unterschieden werden
+              \begin{itemize}
+                  \item 6-Minuten Intervalle
+                  \item Momentaner Spitzenwert
+                  \item Gepulste Felder
+              \end{itemize}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    Eindringtiefe der Strahlung:
-
-\begin{itemize}
-  \item MHz ca. \qtyrange{10}{30}{\centi\metre}
-  \item GHz wenige cm
-  \item $>$\qty{10}{\giga\hertz} ca. $<$ \qty{1}{\milli\metre}
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Resonanz bei $\textrm{Körpergröße} \approx \frac{\lambda}{2}$
-  \item Hohe Aufnahme von Strahlungsenergie bei Resonanz
-  \item Deshalb sind die \emph{Feldstärkegrenzwerte} für den Schutz von Personen in elektromagnetischen Feldern \emph{von der Frequenz abhängig}
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
+    \frametitle{6-Minuten-Intervalle}
+    \begin{columns}
+        \begin{column}{0.38\linewidth}
+            \begin{itemize}
+                \item Da nicht ständig gesendet wird, Verwendung des quadratischen Mittels der Feldstärke (V/m) über 6 Minuten
+                \item Grenzwerte sind frequenzabhängig
+                \item z.B. \qty{28}{\volt}/m bei \qty{14}{\mega\hertz}
+                \item Berechnung erfolgt mit Näherungsformel (im nächsten Abschnitt)
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.58\linewidth}
+            \DARCimage{\linewidth}{979include}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-\only<1>{
-\begin{QQuestion}{EK101}{Die Feldstärkegrenzwerte für den Schutz von Personen in elektromagnetischen Feldern sind von der Frequenz abhängig, weil~...}{auf den Amateurfunkbändern unterschiedlich hohe Sendeleistungen zugelassen sind.}
-{niederfrequente elektromagnetische Felder energiereicher sind als hochfrequente.}
-{die Fähigkeit des Körpers, hochfrequente Strahlung zu absorbieren, frequenzabhängig ist.}
-{die spezifische Absorptionsrate bei einigen Frequenzen nicht messbar ist.}
-\end{QQuestion}
+    \frametitle{Momentaner Spitzenwert}
+    \begin{columns}
+        \begin{column}{0.38\linewidth}
+            \begin{itemize}
+                \item Maximaler momentaner Spitzenwert
+                \item Elektrische Feldstärke in \unit{\kilo\volt\per\metre}
+                \item Grenzwerte sind frequenzabhängig
+                \item z.B. \qty{83}{\volt\per\metre} bei \qty{3,5}{\mega\hertz}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.58\linewidth}
+            \DARCimage{\linewidth}{980include}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-}
-\only<2>{
-\begin{QQuestion}{EK101}{Die Feldstärkegrenzwerte für den Schutz von Personen in elektromagnetischen Feldern sind von der Frequenz abhängig, weil~...}{auf den Amateurfunkbändern unterschiedlich hohe Sendeleistungen zugelassen sind.}
-{niederfrequente elektromagnetische Felder energiereicher sind als hochfrequente.}
-{\textbf{\textcolor{DARCgreen}{die Fähigkeit des Körpers, hochfrequente Strahlung zu absorbieren, frequenzabhängig ist.}}}
-{die spezifische Absorptionsrate bei einigen Frequenzen nicht messbar ist.}
-\end{QQuestion}
+\begin{frame}
+    \frametitle{Gepulste Felder}
+    \begin{columns}
+        \begin{column}{0.38\linewidth}
+            \begin{itemize}
+                \item Schnelles Ein- und Ausschalten
+                \item Als Faktor für den momentanen Spitzenwert oder das 6-Minuten-Intervall
+                \item Grenzwerte sind frequenzabhängig
+                \item z.B. 32-fache des 6-Minuten-Intervalls bei \qty{14}{\mega\hertz}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.58\linewidth}
+            \DARCimage{\linewidth}{981include}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-}
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EK102}{Mit welchem zeitlichen Bezug ist die Feldstärke für die Einhaltung der Grenzwerte der 26. Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes (Verordnung über elektromagnetische Felder - 26. BImSchV) zu betrachten?}{Quadratisch gemittelt über 6 Minuten für Grenzwerte nach Anhang 1b, als kurzfristiger Effektivwert für Grenzwerte nach Anhang 1a und als momentaner Spitzenwert für Grenzwerte nach Anhang 3}
+            {Quadratisch gemittelt über 3 Minuten für Grenzwerte nach Anhang 1b, als kurzfristiger Effektivwert für Grenzwerte nach Anhang 1a und als momentaner Spitzenwert für Grenzwerte nach Anhang 3}
+            {Tagsüber maximale Momentanwerte und in den Nachtstunden zwischen Einbruch der Dunkelheit und Sonnenaufgang quadratisch gemittelt über 6 Minuten}
+            {Tagsüber maximale Momentanwerte und in den Nachtstunden zwischen Einbruch der Dunkelheit und Sonnenaufgang quadratisch gemittelt über 3 Minuten}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EK102}{Mit welchem zeitlichen Bezug ist die Feldstärke für die Einhaltung der Grenzwerte der 26. Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes (Verordnung über elektromagnetische Felder - 26. BImSchV) zu betrachten?}{\textbf{\textcolor{DARCgreen}{Quadratisch gemittelt über 6 Minuten für Grenzwerte nach Anhang 1b, als kurzfristiger Effektivwert für Grenzwerte nach Anhang 1a und als momentaner Spitzenwert für Grenzwerte nach Anhang 3}}}
+            {Quadratisch gemittelt über 3 Minuten für Grenzwerte nach Anhang 1b, als kurzfristiger Effektivwert für Grenzwerte nach Anhang 1a und als momentaner Spitzenwert für Grenzwerte nach Anhang 3}
+            {Tagsüber maximale Momentanwerte und in den Nachtstunden zwischen Einbruch der Dunkelheit und Sonnenaufgang quadratisch gemittelt über 6 Minuten}
+            {Tagsüber maximale Momentanwerte und in den Nachtstunden zwischen Einbruch der Dunkelheit und Sonnenaufgang quadratisch gemittelt über 3 Minuten}
+        \end{QQuestion}
+
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Körperhilfen}
+    \begin{itemize}
+        \item Aktive Körperhilfen (z.B. Herzschrittmacher) dürfen nicht in elektrische Felder gebracht werden, deren Stärke die Grenzwerte der aktiven Körperhilfe überschreiten
+        \item Der Genzwert ist hier immer der maximale Momentanwert
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \only<1>{
+        \begin{QQuestion}{EK103}{Zum Schutz von Personen in elektromagnetischen Feldern sind in bestimmten Fällen auch Grenzwerte für aktive Körperhilfen einzuhalten. Mit welchem zeitlichen Bezug ist die Feldstärke hierbei zu betrachten?}{Quadratisch gemittelt über 6 Minuten}
+            {Als minimaler Momentanwert}
+            {Als maximaler Momentanwert}
+            {Quadratisch gemittelt über 3 Minuten}
+        \end{QQuestion}
+
+    }
+    \only<2>{
+        \begin{QQuestion}{EK103}{Zum Schutz von Personen in elektromagnetischen Feldern sind in bestimmten Fällen auch Grenzwerte für aktive Körperhilfen einzuhalten. Mit welchem zeitlichen Bezug ist die Feldstärke hierbei zu betrachten?}{Quadratisch gemittelt über 6 Minuten}
+            {Als minimaler Momentanwert}
+            {\textbf{\textcolor{DARCgreen}{Als maximaler Momentanwert}}}
+            {Quadratisch gemittelt über 3 Minuten}
+        \end{QQuestion}
+
+    }
 \end{frame}%ENDCONTENT

@@ -1,37 +1,72 @@
 
 \section{Oszillatoren}
 \label{section:oszillatoren}
-\begin{frame}%STARTCONTENT
-\begin{itemize}
-  \item Oszillatoren erzeugen eine Wechselspannung
-  \item Es gibt verschiedene Methoden
-  \end{itemize}
+%
+\begin{frame}{LC-Oszillator}
+    \begin{columns}
+        \begin{column}{0.38\textwidth}
+            \DARCimage{0.90\linewidth}{891include}
+        \end{column}
+        \begin{column}{0.58\textwidth}
+            \begin{itemize}
+                \item Oszillatoren erzeugen eine Wechselspannung
+                \item Z.\,B. Schwingungserzeugung mit Spule und Kondensator als Schwingkreis
+                \item Ein aufgeladener Kondensator entlädt sich an der Spule
+                \item Eine aufgeladene Spule entlädt sich am Kondensator
+                \item Je nach Wert der Bauteile in einer bestimmten Frequenz:
+                $$ f_0 = \frac{1}{2\cdot\pi\cdot\sqrt{L\cdot C}}$$
+            \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}
-\frametitle{LC-Oszillator}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Schwingungserzeugung mit Spule und Kondensator als Schwingkreis
-  \item Ein aufgeladener Kondensator entlädt sich an der Spule
-  \item Eine aufgeladene Spule entlädt sich am Kondensator
-  \item Je nach Wert der Bauteile in einer bestimmten Frequenz
-  \end{itemize}
+\begin{frame}{LC-Oszillator}
+    \begin{columns}
+        \begin{column}{0.38\textwidth}
+            \only<1> {\DARCimage{0.90\linewidth}{891include}}%
+            \only<2> {\DARCimage{0.90\linewidth}{892include}}%
+            \only<3> {\DARCimage{0.90\linewidth}{893include}}%
+            \only<4> {\DARCimage{0.90\linewidth}{894include}}%
+            \only<5> {\DARCimage{0.90\linewidth}{895include}}%
+            \only<6> {\DARCimage{0.90\linewidth}{896include}}%
+            \only<7> {\DARCimage{0.90\linewidth}{897include}}%
+            \only<8> {\DARCimage{0.90\linewidth}{898include}}%
+            \only<9> {\DARCimage{0.90\linewidth}{899include}}%
+            \only<10>{\DARCimage{0.90\linewidth}{892include}}%
+        \end{column}
+        \begin{column}{0.58\textwidth}
+            \begin{tikzpicture}
+                    % X-Axis:
+                    \draw[-Triangle](0,+0.0) -- (7.0,0.0) node[anchor=north](){$t$} coordinate(x1end);
+                    \draw(x1end) ++(0.25,0) node[anchor=west](){Zeit};
+                
+                    % Y-Axis:
+                    \draw[-Triangle](0,-2) -- (0,2) node[anchor=south east](){$I$};
+                
+                    % Sine Wave:
+                    \only<3> {\draw[domain=0:1/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
+                    \only<4> {\draw[domain=0:2/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
+                    \only<5> {\draw[domain=0:3/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
+                    \only<6> {\draw[domain=0:4/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
+                    \only<7> {\draw[domain=0:5/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
+                    \only<8> {\draw[domain=0:6/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
+                    \only<9> {\draw[domain=0:7/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
+                    \only<10>{\draw[domain=0:8/8*2*pi, samples=100, DARCred, thick] plot (\x, {1.5*sin(deg(\x))});}
 
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       
-\begin{figure}
-    \DARCimage{0.85\linewidth}{755include}
-    \caption{\scriptsize Parallelschwingkreis aus Kondensator und Spule}
-    \label{e_parallelschwingkreis_cl}
-\end{figure}
+            \end{tikzpicture}
+        \end{column}
+    \end{columns}
+\end{frame}
 
-
-   \end{column}
-\end{columns}
-
+\begin{frame}{LC-Oszillator mit Dämpfung}
+    \begin{columns}
+        \begin{column}{0.38\textwidth}
+            \DARCimage{0.90\linewidth}{900include}
+        \end{column}
+        \begin{column}{0.58\textwidth}
+            \DARCimage{\linewidth}{901include} 
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -55,22 +90,18 @@
 
 \begin{frame}
 \frametitle{Temperaturstabilität}
-\begin{columns}
-    \begin{column}{0.48\textwidth}
-    \begin{itemize}
-  \item Die passiven Bauelemente haben bei veränderlicher Temperatur unterschiedliche Werte
-  \end{itemize}
-
-    \end{column}
-   \begin{column}{0.48\textwidth}
-       \begin{itemize}
-  \item Höhere Frequenz bei \emph{kleinerer} Kapazität oder Induktivität
-  \item Niedrigere Frequenz bei \emph{höherer} Kapazität oder Induktivität
-  \end{itemize}
-
-   \end{column}
-\end{columns}
-
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Die passiven Bauelemente haben bei veränderlicher Temperatur unterschiedliche Werte
+                \item Höhere Frequenz bei \emph{kleinerer} Kapazität oder Induktivität
+                \item Niedrigere Frequenz bei \emph{höherer} Kapazität oder Induktivität
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            $$ f_0 = \frac{1}{2\cdot\pi\cdot\sqrt{L\cdot C}}$$
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -168,15 +199,22 @@
 }
 \end{frame}
 
-\begin{frame}
-\frametitle{Quarz-Oszillator}
-\begin{itemize}
-  \item Schwingungserzeugung mit Quarz (Siliziumdioxid SiO<sub>2</sub>)
-  \item Umgekehrter Piezoelektrischer Effekt an einem Quarzkristall
-  \item Quarz wird mit einem (schlechten) LC-Oszillator zum stabilen Schwingen angeregt
-  \item Bessere Frequenzstabilität
-  \end{itemize}
-
+\begin{frame}{Quarz-Oszillator}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \begin{itemize}
+                \item Schwingungserzeugung mit Quarz (Siliziumdioxid SiO$_2$)
+                \item Umgekehrter Piezoelektrischer Effekt an einem Quarzkristall
+                \item Quarz wird mit einem (schlechten) LC-Oszillator zum stabilen Schwingen angeregt
+                \item Bessere Frequenzstabilität
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\textwidth}
+            \begin{figure}
+                \DARCimage{0.90\linewidth}{39include}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -243,3 +281,63 @@
 
 }
 \end{frame}%ENDCONTENT
+
+\begin{frame}{Oszillatoren}
+    \begin{block}{VCO / VFO}
+        \begin{columns}
+            \begin{column}{0.05\textwidth}
+                ~
+                \begin{circuitikz}
+                    \draw(0,0) node[vallpassshape, t={G}, anchor=north](gen2){};
+                \end{circuitikz}
+            \end{column}
+            \begin{column}{0.58\textwidth}
+                \begin{itemize}
+                \item Voltage Controlled Oszillator
+                \item Auch VFO (Variable Frequency Oszillator)
+                \item Spannungsabhängiger Oszillator \\ ""
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.33\textwidth}
+                \begin{circuitikz}[scale=0.5, every node/.style={scale=0.75}]
+                    \draw(0,0)
+                        to [battery2, invert] ++(0,3)
+                        to [short] ++(2,0)
+                        to [vR,-*,mirror, name=var] ++(0,-3) coordinate(c1)
+                        to [short] (0,0);
+                    \draw(c1)
+                        to [short] ++(4,0) coordinate(c2)
+                        to [stroke diode,*-*,name=diode] ++(0,2) coordinate(c3)
+                        to [R,] ++(-3.0,0)
+                        -| (var.wiper);
+                    \draw(c2)
+                        to [short] ++(2,0)
+                        to [american inductor,mirror] ++(0,4)
+                        to [short] ++(-2,0)
+                        to [C,-*] (c3);
+                    \draw (diode.south west) ++(0.25,0) to [C, /tikz/circuitikz/bipoles/length=0.4cm] ($(diode.south east)+(0.25,0)$);
+                    \draw(var.south west) node[anchor=south east](){X};
+                \end{circuitikz}
+            \end{column}
+        \end{columns}
+    \end{block}
+    \begin{block}{BFO}
+        \begin{columns}
+            \begin{column}{0.05\textwidth}
+                ~
+                \begin{circuitikz}
+                    \draw(0,0) node[bgeneratorshape, t={G}, anchor=north](gen2){};
+                \end{circuitikz}
+            \end{column}
+            \begin{column}{0.58\textwidth}
+                \begin{itemize}
+                \item Beat Frequency Oszillator
+                \item Möglichst frequenzstabil auf einer Frequenz
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.35\textwidth}
+                ~
+            \end{column}
+        \end{columns}
+    \end{block}
+\end{frame}
