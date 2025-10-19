@@ -1,0 +1,4 @@
+This directory is used by the release pipeline.
+
+Not sure it hurts when it doesn't pre-exist.
+But it doesn't hurt if it does pre-exist.
